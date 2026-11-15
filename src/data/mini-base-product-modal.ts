@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type MiniBaseFeature = {
   icon: string;
   title: string;
@@ -9,17 +10,17 @@ export type MiniBaseSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/mini-base";
-const FEATURE_ICON = "/images/product-modal/rythmwall/icon-install.svg";
+const BASE = asset("/images/product-modal/mini-base");
+const FEATURE_ICON = asset("/images/product-modal/rythmwall/icon-install.svg");
 
 export const MINI_BASE_PRODUCT_MODAL_ID = "mini-base-product-modal";
 
 export const miniBaseModalAssets = {
   gallery: [`${BASE}/gallery-node.webp`, `${BASE}/gallery-studio.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -38,17 +39,17 @@ export const miniBaseProductModal = {
       description: "Панель встаёт на верхнюю полку плинтуса за кант.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Типоразмеры QBTU",
       description: "QBTU 10/10 и QBTU 20/10: расстояние от пола до полки 10 или 20 мм.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-bounding-box.svg",
+      icon: asset("/images/product-modal/icons/phosphor-bounding-box.svg"),
       title: "Под панель 10 мм",
       description: "Совместим с панелями WINAL™ СМЛ 10 мм.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-link.svg",
+      icon: asset("/images/product-modal/icons/phosphor-link.svg"),
       title: "Монтаж",
       description: "Плинтус клеится к стене тыльной полосой, пазы на полосе держат клей.",
     },

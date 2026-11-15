@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import {
   useEffect,
@@ -229,11 +230,11 @@ export function LumenStage({
             <picture>
               <source
                 media="(max-width: 720px)"
-                srcSet="/tech/montazh/room-v8p-1280.webp"
+                srcSet={asset("/tech/montazh/room-v8p-1280.webp")}
               />
               <img
                 className={styles.room}
-                src="/tech/montazh/room-v8p-2560.webp"
+                src={asset("/tech/montazh/room-v8p-2560.webp")}
                 width={2560}
                 height={1440}
                 alt="Комната в разрезе: стены, колонна, перегородка WallPro и потолок на профилях WINAL"

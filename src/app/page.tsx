@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { dealerConfig } from "@/lib/dealer-config";
 import { CatalogSection } from "@/app/catalog-section";
 import { HomeScrollExperience } from "@/app/home-scroll-experience";
@@ -6,12 +7,12 @@ import { ProjectFormSection } from "@/app/project-form-section";
 import { MontazhSection } from "@/app/montazh-section";
 import { ComplexApproachInterior } from "@/app/complex-approach-a/interior-section";
 
-const IMAGES = "/images/home";
+const IMAGES = asset("/images/home");
 
 const assets = {
   headerLogo: `${IMAGES}/header-logo.svg`,
   headerLogoGlass: `${IMAGES}/decor-glass-logo.webp`,
-  heroVideoSrc: `/video/winal-short-nosub.mp4`,
+  heroVideoSrc: asset(`/video/winal-short-nosub.mp4`),
   heroVideoPoster: `${IMAGES}/hero-video-poster.webp`,
   heroLiquidIcon: `${IMAGES}/video-play-icon.svg`,
   heroCornerMark: `${IMAGES}/hero-corner-winal-mark.svg`,
@@ -49,7 +50,7 @@ const assets = {
 const heroAssets = {
   headerLogo: `${IMAGES}/header-logo.svg`,
   headerLogoGlass: `${IMAGES}/decor-glass-logo.webp`,
-  heroVideoSrc: `/video/winal-short-nosub.mp4`,
+  heroVideoSrc: asset(`/video/winal-short-nosub.mp4`),
   heroVideoPoster: `${IMAGES}/hero-video-poster.webp`,
   heroVideoStill: `${IMAGES}/hero-video-still.webp`,
   heroLiquidIcon: `${IMAGES}/video-play-icon.svg`,

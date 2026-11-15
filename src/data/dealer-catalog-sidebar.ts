@@ -1,4 +1,5 @@
-const CATALOG_IMAGES = "/images/catalog";
+import { asset } from "@/lib/asset";
+const CATALOG_IMAGES = asset("/images/catalog");
 
 export const catalogSidebarAssets = {
   iconNoise: `${CATALOG_IMAGES}/icon-noise.svg`,

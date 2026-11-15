@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { montazhPoints } from "@/data/tech-tehnologii-montazha";
 
 /**
@@ -38,7 +39,7 @@ const img = (
   alt: string,
   portrait = false,
 ): MontazhNodeImage => ({
-  src: `/tech/montazh/nodes/${name}`,
+  src: asset(`/tech/montazh/nodes/${name}`),
   alt,
   portrait,
 });
@@ -359,8 +360,8 @@ export function mobileBlockNodes(
 }
 
 export const mobileBlockImage = (block: MontazhMobileBlock) => ({
-  src: `/tech/montazh/room-v8p-m${block.id}-1080.webp`,
-  srcSet: `/tech/montazh/room-v8p-m${block.id}-640.webp 640w, /tech/montazh/room-v8p-m${block.id}-1080.webp 1080w`,
+  src: asset(`/tech/montazh/room-v8p-m${block.id}-1080.webp`),
+  srcSet: `${asset("/tech/montazh/")}room-v8p-m${block.id}-640.webp 640w, ${asset("/tech/montazh/")}room-v8p-m${block.id}-1080.webp 1080w`,
   width: BLOCK_W,
   height: 1440,
   alt: `Комната, кадр для телефона: ${block.title.toLowerCase()}`,

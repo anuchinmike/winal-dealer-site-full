@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallHplCoatingGroups } from "@/data/wall-hpl-coatings";
 
 export type SlatSmlHplFeature = {
@@ -16,10 +17,10 @@ export type SlatSmlHplGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const HPL_ICONS = "/images/product-modal/wall-hpl-shared/icons";
-const DEALER_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/slat-sml-hpl/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const HPL_ICONS = asset("/images/product-modal/wall-hpl-shared/icons");
+const DEALER_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/slat-sml-hpl/gallery");
 
 export const SLAT_SML_HPL_PRODUCT_MODAL_ID = "slat-sml-hpl-product-modal";
 
@@ -28,13 +29,13 @@ export const slatSmlHplModalAssets = {
     { src: `${GALLERY}/paneli-reechnie-hpl-sml-alumini-lm1003.webp`, caption: "Реечные панели WINAL™ СМЛ HPL Металлик LM-1003" },
     { src: `${GALLERY}/paneli-reechnie-hpl-sml-alumini-lm1003-sk.webp`, caption: "Реечные панели WINAL™ СМЛ HPL Металлик LM-1003, скрытое крепление" },
   ] as const satisfies readonly SlatSmlHplGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,

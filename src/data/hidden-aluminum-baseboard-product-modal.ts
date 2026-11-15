@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type HiddenAluminumBaseboardFeature = {
   icon: string;
   title: string;
@@ -9,17 +10,17 @@ export type HiddenAluminumBaseboardSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/hidden-aluminum-baseboard";
-const FEATURE_ICON = "/images/product-modal/rythmwall/icon-install.svg";
+const BASE = asset("/images/product-modal/hidden-aluminum-baseboard");
+const FEATURE_ICON = asset("/images/product-modal/rythmwall/icon-install.svg");
 
 export const HIDDEN_ALUMINUM_BASEBOARD_PRODUCT_MODAL_ID = "hidden-aluminum-baseboard-product-modal";
 
 export const hiddenAluminumBaseboardModalAssets = {
   gallery: [`${BASE}/gallery-node.webp`, `${BASE}/gallery-studio.webp`, `${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -37,17 +38,17 @@ export const hiddenAluminumBaseboardProductModal = {
       description: "Формирует западающий цоколь и ровную теневую линию по периметру помещения.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Типоразмеры WNL",
       description: "Профили WNL 40×15 и 100×13 для стандартных панелей, а также 101×74 для окрашенного ГКЛ.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-bounding-box.svg",
+      icon: asset("/images/product-modal/icons/phosphor-bounding-box.svg"),
       title: "Специфика WNL 101×74",
       description: "Специализированный узел, применяемый исключительно для окрашенного ГКЛ.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-link.svg",
+      icon: asset("/images/product-modal/icons/phosphor-link.svg"),
       title: "Интеграция в систему",
       description: "Подбор зависит от основания, отделки и примыкания пола; Slim 70×13 не смешивать.",
     },

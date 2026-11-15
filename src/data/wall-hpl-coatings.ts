@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallHplCoatingSwatch = {
   id: string;
   image: string;
@@ -9,7 +10,7 @@ export type WallHplCoatingGroup = {
   swatches: WallHplCoatingSwatch[];
 };
 
-const BASE = "/images/product-modal/wall-hpl-shared/coatings";
+const BASE = asset("/images/product-modal/wall-hpl-shared/coatings");
 
 export const wallHplCoatingGroups = [
   {

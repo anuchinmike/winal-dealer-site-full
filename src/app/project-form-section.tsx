@@ -1,8 +1,9 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useId, useRef, useState, type DragEvent, type FormEvent } from "react";
 
-const IMAGES = "/images/home/project-form";
+const IMAGES = asset("/images/home/project-form");
 
 const assets = {
   uploadIcon: `${IMAGES}/upload-icon.svg`,

@@ -1,6 +1,7 @@
 "use client";
+import { asset } from "@/lib/asset";
 
-const CHEVRON_SRC = "/images/home/cases/ui/chevron-right-glass.svg";
+const CHEVRON_SRC = asset("/images/home/cases/ui/chevron-right-glass.svg");
 
 export type ModalNeighborItem = {
   title: string;

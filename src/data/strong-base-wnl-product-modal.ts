@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type StrongBaseWnlFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type StrongBaseWnlSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/strong-base-wnl";
+const BASE = asset("/images/product-modal/strong-base-wnl");
 
 export const STRONG_BASE_WNL_PRODUCT_MODAL_ID = "strong-base-wnl-product-modal";
 
 export const strongBaseWnlModalAssets = {
   gallery: [`${BASE}/gallery-node.webp`, `${BASE}/gallery-studio.webp`, `${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const strongBaseWnlProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/figma-shield-check.svg",
+      icon: asset("/images/product-modal/icons/figma-shield-check.svg"),
       title: "Защита нижнего узла",
       description: "Усиленное сечение предохраняет кромку стеновых панелей WINAL™ от механических воздействий.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Типоразмеры BS",
       description: "Доступен в базовых типоразмерах BS 40/13, 60/13 и 100/13 для различных высот примыкания.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Проектная окраска",
       description: "Окраска и отделка подбираются по проекту, без универсальных заявлений о пожарности или влагостойкости.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-toolbox.svg",
+      icon: asset("/images/product-modal/icons/phosphor-toolbox.svg"),
       title: "Монтаж в систему",
       description: "Штатная интеграция с панельными конструкциями WINAL™ по проектной схеме установки.",
     },

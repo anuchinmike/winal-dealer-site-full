@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallAcrylCoatingSwatch = {
   id: string;
   image: string;
@@ -9,7 +10,7 @@ export type WallAcrylCoatingGroup = {
   swatches: WallAcrylCoatingSwatch[];
 };
 
-const COATINGS = "/images/product-modal/wall-sml-acryl/coatings";
+const COATINGS = asset("/images/product-modal/wall-sml-acryl/coatings");
 
 export const wallAcrylCoatingGroups = [
   {

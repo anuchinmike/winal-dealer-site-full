@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallAcrylCoatingGroups } from "@/data/wall-acryl-coatings";
 
 export type SlatSmlAcrylFeature = {
@@ -16,8 +17,8 @@ export type SlatSmlAcrylGalleryImage = {
   caption: string;
 };
 
-const SML_BASE = "/images/product-modal/wall-sml-acryl";
-const GALLERY = "/images/product-modal/slat-sml-acryl/gallery";
+const SML_BASE = asset("/images/product-modal/wall-sml-acryl");
+const GALLERY = asset("/images/product-modal/slat-sml-acryl/gallery");
 
 export const SLAT_SML_ACRYL_PRODUCT_MODAL_ID = "slat-sml-acryl-product-modal";
 
@@ -38,13 +39,13 @@ export const slatSmlAcrylModalAssets = {
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl.webp`, caption: "Реечные стеновые панели в офисе" },
   ] as const satisfies readonly SlatSmlAcrylGalleryImage[],
   ralChart: `${SML_BASE}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_BASE}/icon-hero-uv.svg`,
     moisture: `${SML_BASE}/icon-hero-moisture.svg`,
     color: `${SML_BASE}/icon-hero-color.svg`,
@@ -115,7 +116,7 @@ export const slatSmlAcrylProductModal = {
       description: "Достаточно протирать поверхность влажной тканью.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-leaf.svg",
+      icon: asset("/images/product-modal/icons/phosphor-leaf.svg"),
       title: "Экологичность компонентов",
       description:
         "СМЛ с окраской акрилом не содержит вредных химических добавок и не выделяет токсичных соединений.",

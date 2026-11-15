@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import Image from "next/image";
 import { type MouseEvent, useEffect } from "react";
@@ -6,7 +7,7 @@ import { useLenis } from "lenis/react";
 import { dealerMotionColors } from "./dealer-motion";
 import styles from "./complex-approach-section.module.css";
 
-const IMAGE_ROOT = "/images/complex-approach-v1/";
+const IMAGE_ROOT = asset("/images/complex-approach-v1/");
 
 const solutions = [
   { id: "wall", title: "Стеновые панели", text: "Декоративная отделка стен в цветах и фактурах вашего проекта.", tab: "wall" },
@@ -95,7 +96,7 @@ export function ComplexApproachSection({ cardsVariant = "original", catalogBase 
             <div className={styles.cardInner}>
               <div className={styles.visual}>
                 <Image
-                  src={portrait ? "/images/complex-approach-v2/" + solution.id + "-" + cardsVariant + ".webp" : IMAGE_ROOT + solution.id + ".webp"}
+                  src={portrait ? asset("/images/complex-approach-v2/") + solution.id + "-" + cardsVariant + ".webp" : IMAGE_ROOT + solution.id + ".webp"}
                   alt=""
                   unoptimized
                   width={portrait ? 720 : 800}
@@ -107,7 +108,7 @@ export function ComplexApproachSection({ cardsVariant = "original", catalogBase 
               <div className={styles.cardCopy}>
                 <div className={styles.cardHeading}>
                   <h3>{solution.title}</h3>
-                  <Image src="/images/home/arrow-blue.svg" alt="" width={12} height={10} />
+                  <Image src={asset("/images/home/arrow-blue.svg")} alt="" width={12} height={10} />
                 </div>
                 <p>{solution.text}</p>
               </div>
@@ -120,7 +121,7 @@ export function ComplexApproachSection({ cardsVariant = "original", catalogBase 
         <p>Расскажите об объекте — обсудим подходящие материалы и комплектующие.</p>
         <a href={catalogBase + "#project-form"} className={["dealer-btn-primary", styles.button].join(" ")}>
           Подобрать комплектацию
-          <Image src="/images/home/arrow-white.svg" alt="" width={12} height={10} />
+          <Image src={asset("/images/home/arrow-white.svg")} alt="" width={12} height={10} />
         </a>
       </div>
     </section>

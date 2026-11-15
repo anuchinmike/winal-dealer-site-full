@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 // Вопросы производству по монтажным профилям WINAL (19.10.2026).
 // Источник: claude-plans/html-sceny/voprosy-proizvodstvu-uzly.md. Иллюстрации лежат в public/tech/voprosy/.
 
@@ -80,42 +81,42 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "Сечение 1 (3D)",
-        "src": "/tech/voprosy/hidden-clips-v1_studio.jpg",
+        "src": asset("/tech/voprosy/hidden-clips-v1_studio.jpg"),
         "vec": false
       },
       {
         "cap": "Сечение 1, чертёж",
-        "src": "/tech/voprosy/hidden-clips-v1-section.svg",
+        "src": asset("/tech/voprosy/hidden-clips-v1-section.svg"),
         "vec": true
       },
       {
         "cap": "Сечение 3 (3D)",
-        "src": "/tech/voprosy/hidden-clips-v3_studio.jpg",
+        "src": asset("/tech/voprosy/hidden-clips-v3_studio.jpg"),
         "vec": false
       },
       {
         "cap": "Сечение 3, чертёж",
-        "src": "/tech/voprosy/hidden-clips-v3-section.svg",
+        "src": asset("/tech/voprosy/hidden-clips-v3-section.svg"),
         "vec": true
       },
       {
         "cap": "Сечение 5 (3D)",
-        "src": "/tech/voprosy/hidden-clips-v5_studio.jpg",
+        "src": asset("/tech/voprosy/hidden-clips-v5_studio.jpg"),
         "vec": false
       },
       {
         "cap": "Сечение 5, чертёж",
-        "src": "/tech/voprosy/hidden-clips-v5-section.svg",
+        "src": asset("/tech/voprosy/hidden-clips-v5-section.svg"),
         "vec": true
       },
       {
         "cap": "Как я собрал узел 4.1 с сечением 1 (допущение)",
-        "src": "/tech/voprosy/hidden-clips-v1.jpg",
+        "src": asset("/tech/voprosy/hidden-clips-v1.jpg"),
         "vec": false
       },
       {
         "cap": "То же с сечением 3 (допущение)",
-        "src": "/tech/voprosy/hidden-clips-v3.jpg",
+        "src": asset("/tech/voprosy/hidden-clips-v3.jpg"),
         "vec": false
       }
     ]
@@ -162,17 +163,17 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "Профиль со вставкой (3D)",
-        "src": "/tech/voprosy/slat-inserts-v1_studio.jpg",
+        "src": asset("/tech/voprosy/slat-inserts-v1_studio.jpg"),
         "vec": false
       },
       {
         "cap": "«П-шка» реечная (3D)",
-        "src": "/tech/voprosy/slat-inserts-v2_studio.jpg",
+        "src": asset("/tech/voprosy/slat-inserts-v2_studio.jpg"),
         "vec": false
       },
       {
         "cap": "Экран для «П-шки» (3D)",
-        "src": "/tech/voprosy/slat-inserts-v3_studio.jpg",
+        "src": asset("/tech/voprosy/slat-inserts-v3_studio.jpg"),
         "vec": false
       }
     ]
@@ -211,7 +212,7 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "Угловой профиль с порожком (3D)",
-        "src": "/tech/voprosy/threshold-corner-v1_studio.jpg",
+        "src": asset("/tech/voprosy/threshold-corner-v1_studio.jpg"),
         "vec": false
       }
     ]
@@ -248,12 +249,12 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "«Ёлочка» (3D)",
-        "src": "/tech/voprosy/end-caps-v4_studio.jpg",
+        "src": asset("/tech/voprosy/end-caps-v4_studio.jpg"),
         "vec": false
       },
       {
         "cap": "«Ёлочка», чертёж",
-        "src": "/tech/voprosy/end-caps-v4-section.svg",
+        "src": asset("/tech/voprosy/end-caps-v4-section.svg"),
         "vec": true
       }
     ]
@@ -278,12 +279,12 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "QBY (3D)",
-        "src": "/tech/voprosy/hidden-outer-corners-v3_studio.jpg",
+        "src": asset("/tech/voprosy/hidden-outer-corners-v3_studio.jpg"),
         "vec": false
       },
       {
         "cap": "QBY, чертёж",
-        "src": "/tech/voprosy/hidden-outer-corners-v3-section.svg",
+        "src": asset("/tech/voprosy/hidden-outer-corners-v3-section.svg"),
         "vec": true
       }
     ]
@@ -329,12 +330,12 @@ export const techQuestions: TechQuestion[] = [
     "imgs": [
       {
         "cap": "R10 (3D)",
-        "src": "/tech/voprosy/hidden-outer-corners-v4_studio.jpg",
+        "src": asset("/tech/voprosy/hidden-outer-corners-v4_studio.jpg"),
         "vec": false
       },
       {
         "cap": "R10, чертёж",
-        "src": "/tech/voprosy/hidden-outer-corners-v4-section.svg",
+        "src": asset("/tech/voprosy/hidden-outer-corners-v4-section.svg"),
         "vec": true
       }
     ]

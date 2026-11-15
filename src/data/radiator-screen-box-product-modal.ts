@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type RadiatorScreenBoxFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type RadiatorScreenBoxSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/radiator-screen-box";
+const BASE = asset("/images/product-modal/radiator-screen-box");
 
 export const RADIATOR_SCREEN_BOX_PRODUCT_MODAL_ID = "radiator-screen-box-product-modal";
 
 export const radiatorScreenBoxModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`, `${BASE}/gallery-04.webp`, `${BASE}/gallery-05.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const radiatorScreenBoxProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-eye-slash.svg",
+      icon: asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
       title: "Полное скрытие прибора",
       description: "Короб полностью закрывает радиатор и формирует законченный вид инженерной зоны.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-clockwise.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-clockwise.svg"),
       title: "Свободная циркуляция",
       description: "Перфорация сохраняет проход воздуха, не обещая рост эффективности отопления.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-shield-check.svg",
+      icon: asset("/images/product-modal/icons/phosphor-shield-check.svg"),
       title: "Стабильная СМЛ-база",
       description: "Основа подходит для декоративной отделки и перфорации.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Единый стиль отделки",
       description: "Короб можно согласовать с панелями, цветом и общей геометрией стены.",
     },

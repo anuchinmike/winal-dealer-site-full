@@ -1,8 +1,9 @@
+import { asset } from "@/lib/asset";
 export const UFR_PRINT_PRODUCT_MODAL_ID = "ufr-print-product-modal";
 
 export const ufrPrintModalAssets = {
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
-  arrow: "/images/product-modal/rythmwall/arrow-white.svg",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
+  arrow: asset("/images/product-modal/rythmwall/arrow-white.svg"),
 } as const;
 
 export const ufrPrintProjects = [
@@ -13,15 +14,15 @@ export const ufrPrintProjects = [
     description: "Паттерн со стилизованными лошадьми на СМЛ с акриловым покрытием.",
     photos: [
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261104-p12.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261104-p12.webp"),
         caption: "Кафе в кинопарке «Москино» — печатный паттерн на панелях СМЛ с акриловым покрытием",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261104-p13.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261104-p13.webp"),
         caption: "Кафе в кинопарке «Москино» — крупный план рисунка и стыка панелей",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261105-p14.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261105-p14.webp"),
         caption: "Кафе в кинопарке «Москино» — паттерн со стилизованными лошадьми в интерьере",
       },
     ],
@@ -33,15 +34,15 @@ export const ufrPrintProjects = [
     description: "Полноцветная иллюстрация и контурная графика на СМЛ HPL.",
     photos: [
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261104-p01.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261104-p01.webp"),
         caption: "Академия падела Ходынка — полноцветная иллюстрация на панелях СМЛ HPL",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261104-p02.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261104-p02.webp"),
         caption: "Академия падела Ходынка — контурный рисунок на панелях СМЛ HPL",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261105-p03.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261105-p03.webp"),
         caption: "Академия падела Ходынка — деталь полноцветной иллюстрации на СМЛ HPL",
       },
     ],
@@ -53,15 +54,15 @@ export const ufrPrintProjects = [
     description: "Силуэты спортсменов на панелях СМЛ Полимер.",
     photos: [
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261104-p16.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261104-p16.webp"),
         caption: "Спортивная база «Подмосковные Зори» — силуэты на панелях СМЛ Полимер",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261105-p15.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261105-p15.webp"),
         caption: "Спортивная база «Подмосковные Зори» — силуэт спортсмена крупным планом, СМЛ Полимер",
       },
       {
-        src: "/images/product-modal/ufr-print/winal-ufr-20261105-p17.webp",
+        src: asset("/images/product-modal/ufr-print/winal-ufr-20261105-p17.webp"),
         caption: "Спортивная база «Подмосковные Зори» — печатная графика в интерьере, СМЛ Полимер",
       },
     ],
@@ -110,22 +111,22 @@ export const ufrPrintProductModal = {
   primaryCta: "Обсудить печать",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-squares-four.svg",
+      icon: asset("/images/product-modal/icons/phosphor-squares-four.svg"),
       title: "Паттерны и декоры",
       description: "Орнамент по рисунку проекта. В Москино мотив с лошадьми переходит с панели на панель.",
     },
     {
-      icon: "/images/product-modal/icons/figma-copy.svg",
+      icon: asset("/images/product-modal/icons/figma-copy.svg"),
       title: "Надписи и навигация",
       description: "Названия зон, номера помещений и указатели на панелях.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-square.svg",
+      icon: asset("/images/product-modal/icons/phosphor-square.svg"),
       title: "Графика и силуэты",
       description: "Контурные рисунки, силуэты и фирменные знаки для отдельных зон.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-sun.svg",
+      icon: asset("/images/product-modal/icons/phosphor-sun.svg"),
       title: "Полноцветные изображения",
       description: "Иллюстрации, фотографии и панно на нескольких панелях.",
     },

@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useMemo, type Dispatch, type RefObject, type SetStateAction } from "react";
 import { Fancybox } from "@fancyapps/ui";
@@ -14,8 +15,8 @@ import { DealerProductModalShell } from "@/app/dealer-product-modal-shell";
 import { HeroGlassNavButton } from "@/app/hero-glass-nav-button";
 import { ModalNeighborNav } from "@/app/dealer-modal-neighbor-nav";
 
-const UI = "/images/home/cases/ui";
-const CLOSE_ICON = "/images/product-modal/rythmwall/icon-close.webp";
+const UI = asset("/images/home/cases/ui");
+const CLOSE_ICON = asset("/images/product-modal/rythmwall/icon-close.webp");
 const CASES_DIALOG_ID = "dealer-cases-modal";
 
 const uiAssets = {

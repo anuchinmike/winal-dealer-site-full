@@ -1,4 +1,5 @@
 "use client";
+import { BASE_PATH } from "@/lib/asset";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { TechField, TechQuestion } from "@/data/tech-voprosy-proizvodstvu";
@@ -11,7 +12,7 @@ type Doc = {
 };
 type SaveState = { text: string; kind: "" | "ok" | "err" };
 
-const API = "/api/tech/answers";
+const API = `${BASE_PATH}/api/tech/answers`;
 const WHO_KEY = "tech-voprosy-who";
 const keyOf = (q: TechQuestion, f: TechField) => `${q.id}_${f.id}`;
 

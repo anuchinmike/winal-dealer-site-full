@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
@@ -307,7 +308,7 @@ export function CloseUp({ k, mobile = false }: { k: KartaState; mobile?: boolean
                   <span className={cu.plaqueGlass} data-depth={8 + i * 5}>
                     <span className={cu.plaqueIn}>
                       <span className={cu.plaqueIcon} aria-hidden="true">
-                        <img src={`/images/tech/icons/${p.icon ?? "ugol-v-cvet"}.svg`} alt="" width={20} height={20} />
+                        <img src={asset(`/images/tech/icons/${p.icon ?? "ugol-v-cvet"}.svg`)} alt="" width={20} height={20} />
                       </span>
                       <span className={cu.plaqueText}>
                         <b>{p.t}</b>

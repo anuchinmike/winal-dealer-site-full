@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CeilingGklAcrylFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CeilingGklAcrylSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/ceiling-gkl-acryl";
+const BASE = asset("/images/product-modal/ceiling-gkl-acryl");
 
 export const CEILING_GKL_ACRYL_PRODUCT_MODAL_ID = "ceiling-gkl-acryl-product-modal";
 
 export const ceilingGklAcrylModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const ceilingGklAcrylProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожарная безопасность КМ-1",
       description: "Сертифицированное решение на гипсокартонной основе для стандартных требований пожарной безопасности.",
     },
     {
-      icon: "/images/product-modal/icons/tabler-spray.svg",
+      icon: asset("/images/product-modal/icons/tabler-spray.svg"),
       title: "Заводская покраска акрилом",
       description: "Готовая однотонная поверхность без покраски на объекте.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-coins.svg",
+      icon: asset("/images/product-modal/icons/phosphor-coins.svg"),
       title: "Рациональный бюджет",
       description: "ГКЛ-основа не переносит на себя влагостойкость СМЛ и другие чужие свойства.",
     },
     {
-      icon: "/images/product-modal/icons/figma-dry-mount.svg",
+      icon: asset("/images/product-modal/icons/figma-dry-mount.svg"),
       title: "Системы монтажа T-24 и 60×27",
       description: "Быстрая укладка в ячейки T-24 либо крепление на скрытый каркас 60×27 мм.",
     },

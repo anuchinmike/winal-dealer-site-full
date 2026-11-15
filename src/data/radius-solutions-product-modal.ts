@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type RadiusSolutionsFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type RadiusSolutionsSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/radius-solutions";
+const BASE = asset("/images/product-modal/radius-solutions");
 
 export const RADIUS_SOLUTIONS_PRODUCT_MODAL_ID = "radius-solutions-product-modal";
 
 export const radiusSolutionsModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const radiusSolutionsProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/figma-radius.svg",
+      icon: asset("/images/product-modal/icons/figma-radius.svg"),
       title: "Криволинейные поверхности",
       description: "Индивидуальный расчет узлов для отделки круглых колонн, криволинейных стен и перегородок.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-swatches.svg",
+      icon: asset("/images/product-modal/icons/phosphor-swatches.svg"),
       title: "Совместимость с гаммой WINAL™",
       description: "Единый визуальный стиль с прямыми стеновыми панелями: совпадение декоров и оттенков.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-link.svg",
+      icon: asset("/images/product-modal/icons/phosphor-link.svg"),
       title: "Проектная связка материалов",
       description: "Подбор типа основы, покрытия и декора под геометрию и технические условия объекта.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-path.svg",
+      icon: asset("/images/product-modal/icons/phosphor-path.svg"),
       title: "Без таблицы радиусов",
       description: "Радиусы, пожарность и конструкция зависят от выбранной связки.",
     },

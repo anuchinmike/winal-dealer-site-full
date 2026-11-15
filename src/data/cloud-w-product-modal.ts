@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CloudWFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CloudWSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/cloud-w";
+const BASE = asset("/images/product-modal/cloud-w");
 
 export const CLOUD_W_PRODUCT_MODAL_ID = "cloud-w-product-modal";
 
 export const cloudWModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`, `${BASE}/gallery-04.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const cloudWProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-speaker-high.svg",
+      icon: asset("/images/product-modal/icons/phosphor-speaker-high.svg"),
       title: "Акустика NRC до 0,95",
       description: "Высокое звукопоглощение в диапазоне 500–4000 Гц снижает гулкость в рабочих и общественных зонах.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожаробезопасность КМ1",
       description: "Панели соответствуют классу пожарной опасности КМ1 и подходят для помещений с повышенными требованиями.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Легкость и форматы",
       description: "Вес ~3–4 кг/м² упрощает монтаж. Доступны типоразмеры 1200×600 и 600×600 мм с окраской RAL/NCS.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-wrench.svg",
+      icon: asset("/images/product-modal/icons/phosphor-wrench.svg"),
       title: "Варианты монтажа",
       description: "Установка непосредственно на стену или на каркасную подсистему при влажности воздуха до 95%.",
     },
