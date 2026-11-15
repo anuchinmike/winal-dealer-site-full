@@ -920,3 +920,24 @@ button.opt:hover {
     flex: none;
   }
 }
+
+/* ---------- standalone pages ---------- */
+
+.card,
+.opt,
+.backButton,
+.btn {
+  text-decoration: none;
+}
+
+.pageNav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pageNavSiblings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type MouseEvent, type RefObject } from "react";
 import { DEALER_MOTION_DURATION_MS } from "@/app/dealer-motion";
 import { DealerProductModalShell } from "@/app/dealer-product-modal-shell";
@@ -153,7 +154,7 @@ function holdScene(frame: HTMLIFrameElement | null) {
   }
 }
 
-function ProfileScene({ src, active, replayToken }: { src: string; active: boolean; replayToken: number }) {
+function ProfileScene({ src, active, replayToken, startDelay = SCENE_START_MS }: { src: string; active: boolean; replayToken: number; startDelay?: number }) {
   const slotRef = useRef<HTMLDivElement | null>(null);
   const frameRef = useRef<HTMLIFrameElement | null>(null);
   const [mounted, setMounted] = useState(active);
@@ -191,7 +192,7 @@ function ProfileScene({ src, active, replayToken }: { src: string; active: boole
     if (!active) {
       return;
     }
-    const delay = firstActivationRef.current ? SCENE_START_MS : 80;
+    const delay = firstActivationRef.current ? startDelay : 80;
     firstActivationRef.current = false;
     const timer = window.setTimeout(() => {
       startedRef.current = true;
@@ -202,7 +203,7 @@ function ProfileScene({ src, active, replayToken }: { src: string; active: boole
       window.clearTimeout(timer);
       window.clearTimeout(settle);
     };
-  }, [active]);
+  }, [active, startDelay]);
 
   const handleLoad = () => {
     const frame = frameRef.current;
@@ -239,7 +240,7 @@ function ProfileScene({ src, active, replayToken }: { src: string; active: boole
   );
 }
 
-function ProfileMedia({ slides }: { slides: readonly ProfileSlide[] }) {
+function ProfileMedia({ slides, startDelay }: { slides: readonly ProfileSlide[]; startDelay?: number }) {
   const [index, setIndex] = useState(0);
   const [replayToken, setReplayToken] = useState(0);
   const current = slides[index];
@@ -254,7 +255,7 @@ function ProfileMedia({ slides }: { slides: readonly ProfileSlide[] }) {
         const className = `${styles.slide} ${on ? styles.slideOn : ""} ${slide.kind === "svg" ? styles.slideWhite : ""}`;
         return (
           <div key={`${slide.name}-${slideIndex}`} className={className} aria-hidden={!on}>
-            {slide.kind === "scene" ? <ProfileScene src={slide.src} active={on} replayToken={on ? replayToken : 0} /> : null}
+            {slide.kind === "scene" ? <ProfileScene src={slide.src} active={on} replayToken={on ? replayToken : 0} startDelay={startDelay} /> : null}
             {slide.kind === "img" ? <img src={slide.src} alt={slide.name} loading="lazy" /> : null}
             {slide.kind === "svg" ? (
               <div className={`${styles.svgs} ${slide.svgs.length > 1 ? styles.svgs2 : ""}`}>
@@ -295,21 +296,33 @@ function ProfileMedia({ slides }: { slides: readonly ProfileSlide[] }) {
 
 /* ---------- profile modal ---------- */
 
-function ProfileContent({ profile, onOpenProfile, onOpenHub }: {
+export const PROFILES_HUB_HREF = "/catalog/profiles";
+
+export function profileHref(id: ProfileId) {
+  return `${PROFILES_HUB_HREF}/${id}`;
+}
+
+/** `page`: rendered as a standalone page — related profiles, back and CTAs become links, the title is the page h1. */
+function ProfileContent({ profile, onOpenProfile, onOpenHub, page = false }: {
   profile: ProfileData;
-  onOpenProfile: (id: ProfileId, trigger: HTMLElement) => void;
-  onOpenHub: (trigger: HTMLElement) => void;
+  onOpenProfile?: (id: ProfileId, trigger: HTMLElement) => void;
+  onOpenHub?: (trigger: HTMLElement) => void;
+  page?: boolean;
 }) {
+  const TitleTag = page ? "h1" : "h2";
+  const position = PROFILE_IDS.indexOf(profile.id);
+  const prevId = PROFILE_IDS[(position - 1 + PROFILE_IDS.length) % PROFILE_IDS.length];
+  const nextId = PROFILE_IDS[(position + 1) % PROFILE_IDS.length];
   const fullName = profile.title;
   const prep = profile.prep;
 
   return (
     <div className={styles.root}>
       <div className={styles.row1}>
-        <ProfileMedia slides={profile.slides} />
+        <ProfileMedia slides={profile.slides} startDelay={page ? 400 : undefined} />
         <div className={`${styles.panel} ${styles.info}`}>
           <p className={styles.kicker}>{profile.kicker}</p>
-          <h2 className={`${styles.h1} ${fullName.length > 26 ? styles.h1Long : ""}`}>{fullName}</h2>
+          <TitleTag className={`${styles.h1} ${fullName.length > 26 ? styles.h1Long : ""}`}>{fullName}</TitleTag>
           <p className={styles.lead} dangerouslySetInnerHTML={html(profile.lead)} />
           <div className={styles.feats}>
             {profile.feats.map((feat) => (
@@ -324,16 +337,29 @@ function ProfileContent({ profile, onOpenProfile, onOpenHub }: {
               </div>
             ))}
           </div>
-          <div className={styles.ctas}>
-            <button type="button" tabIndex={-1} className={`${styles.btn} ${styles.btnPrimary}`}>
-              Обсудить проект
-              <img src={profilesHub.arrowWhite} alt="" width={16} height={16} />
-            </button>
-            <button type="button" tabIndex={-1} className={`${styles.btn} ${styles.btnSecondary}`}>
-              Получить образцы
-              <img src={profilesHub.sampleIcon} alt="" width={16} height={16} />
-            </button>
-          </div>
+          {page ? (
+            <div className={styles.ctas}>
+              <a href="#project-form" className={`${styles.btn} ${styles.btnPrimary}`}>
+                Обсудить проект
+                <img src={profilesHub.arrowWhite} alt="" width={16} height={16} />
+              </a>
+              <a href="#project-form" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Получить образцы
+                <img src={profilesHub.sampleIcon} alt="" width={16} height={16} />
+              </a>
+            </div>
+          ) : (
+            <div className={styles.ctas}>
+              <button type="button" tabIndex={-1} className={`${styles.btn} ${styles.btnPrimary}`}>
+                Обсудить проект
+                <img src={profilesHub.arrowWhite} alt="" width={16} height={16} />
+              </button>
+              <button type="button" tabIndex={-1} className={`${styles.btn} ${styles.btnSecondary}`}>
+                Получить образцы
+                <img src={profilesHub.sampleIcon} alt="" width={16} height={16} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -373,8 +399,19 @@ function ProfileContent({ profile, onOpenProfile, onOpenHub }: {
                   </div>
                   <span className={styles.optTag}>Этот узел</span>
                 </div>
+              ) : page ? (
+                <Link key={item.id} href={profileHref(item.id)} className={styles.opt}>
+                  <img src={item.thumb} alt="" />
+                  <div>
+                    <b>{item.title}</b>
+                    <span>{item.text}</span>
+                  </div>
+                  <span className={styles.optGo}>
+                    <ChevronIcon direction="right" />
+                  </span>
+                </Link>
               ) : (
-                <button key={item.id} type="button" className={styles.opt} onClick={(event) => onOpenProfile(item.id, event.currentTarget)}>
+                <button key={item.id} type="button" className={styles.opt} onClick={(event) => onOpenProfile?.(item.id, event.currentTarget)}>
                   <img src={item.thumb} alt="" />
                   <div>
                     <b>{item.title}</b>
@@ -430,12 +467,31 @@ function ProfileContent({ profile, onOpenProfile, onOpenHub }: {
         </div>
       </div>
 
-      <div className={styles.row4}>
-        <button type="button" className={styles.backButton} onClick={(event) => onOpenHub(event.currentTarget)}>
-          <ChevronIcon direction="left" />
-          Все профили WINAL™
-        </button>
-      </div>
+      {page ? (
+        <div className={`${styles.row4} ${styles.pageNav}`}>
+          <Link href={PROFILES_HUB_HREF} className={styles.backButton}>
+            <ChevronIcon direction="left" />
+            Все профили WINAL™
+          </Link>
+          <div className={styles.pageNavSiblings}>
+            <Link href={profileHref(prevId)} className={styles.backButton}>
+              <ChevronIcon direction="left" />
+              {profilesById[prevId].name}
+            </Link>
+            <Link href={profileHref(nextId)} className={styles.backButton}>
+              {profilesById[nextId].name}
+              <ChevronIcon direction="right" />
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.row4}>
+          <button type="button" className={styles.backButton} onClick={(event) => onOpenHub?.(event.currentTarget)}>
+            <ChevronIcon direction="left" />
+            Все профили WINAL™
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -588,5 +644,88 @@ export function ProfilesHubModal({ open, onClose, returnFocusRef, compact = fals
     >
       <ProfilesHubContent returnFocusRef={returnFocusRef} />
     </DealerProductModalShell>
+  );
+}
+
+/* ---------- standalone pages ---------- */
+
+/** Profile as a page: same content as the modal, links instead of modal hops. */
+export function ProfilePageContent({ profileId }: { profileId: ProfileId }) {
+  return <ProfileContent profile={profilesById[profileId]} page />;
+}
+
+function readNodeFromUrl(): HubFilter {
+  const node = new URLSearchParams(window.location.search).get("node");
+  return node && PROFILE_NODES.some((item) => item.id === node) ? (node as ProfileNodeId) : "all";
+}
+
+/** Profiles catalogue as a page: the hub grid with the node filter kept in `?node=`. */
+export function ProfilesHubPageContent() {
+  const [filter, setFilter] = useState<HubFilter>("all");
+  const visibleIds = idsForFilter(filter);
+
+  useEffect(() => {
+    const sync = () => setFilter(readNodeFromUrl());
+    sync();
+    window.addEventListener("popstate", sync);
+    return () => window.removeEventListener("popstate", sync);
+  }, []);
+
+  const choose = (next: HubFilter) => {
+    setFilter(next);
+    const url = new URL(window.location.href);
+    if (next === "all") {
+      url.searchParams.delete("node");
+    } else {
+      url.searchParams.set("node", next);
+    }
+    window.history.replaceState(window.history.state, "", url);
+  };
+
+  const filters: { id: HubFilter; label: string; count: number }[] = [
+    { id: "all", label: "Все профили", count: profiles.length },
+    ...PROFILE_NODES.map((node) => ({ id: node.id, label: node.label, count: idsForFilter(node.id).length })),
+  ];
+
+  return (
+    <div className={styles.root}>
+      <div className={`${styles.panel} ${styles.hubHead}`}>
+        <div className={styles.hubIntro}>
+          <p className={styles.kicker}>{profilesHub.categoryLabel}</p>
+          <h1 className={styles.h1}>{profilesHub.title}</h1>
+          <p className={styles.lead}>{profilesHub.description}</p>
+        </div>
+      </div>
+
+      <div className={styles.filters} role="group" aria-label="Фильтр по узлу">
+        {filters.map((item) => (
+          <button key={item.id} type="button" className={styles.filter} aria-pressed={filter === item.id} onClick={() => choose(item.id)}>
+            {item.label}
+            <span className={styles.filterCount}>{item.count}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className={styles.grid}>
+        {visibleIds.map((id) => {
+          const profile = profilesById[id];
+          return (
+            <Link key={id} href={profileHref(id)} data-profile-id={id} className={styles.card}>
+              <span className={styles.cardMedia}>
+                <img src={profile.cardImage} alt="" loading="lazy" />
+              </span>
+              <span className={styles.cardBody}>
+                <span className={styles.cardTags}>
+                  <span className={`${styles.tag} ${styles.tagBrand}`}>{NODE_LABEL[profile.node]}</span>
+                  {profile.fastening ? <span className={styles.tag}>{profile.fastening}</span> : null}
+                </span>
+                <span className={styles.cardTitle}>{profile.name}</span>
+                <span className={styles.cardText}>{profile.card}</span>
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
   );
 }
