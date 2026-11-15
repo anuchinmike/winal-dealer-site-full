@@ -1,0 +1,622 @@
+{
+  "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+  "figmaNodeId": "541:781",
+  "exportedAt": "2026-06-08",
+  "assetCount": 34,
+  "assets": [
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "548:1115",
+      "assetConst": "imgLogo",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/52b372b8-7867-483a-bb43-eae42e133861",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-548-1115--header-logo.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-548-1115--header-logo.svg",
+      "figmaRenderSize": {
+        "width": 214,
+        "height": 48
+      },
+      "usedIn": [
+        "header"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "554:1130",
+      "assetConst": "imgWinalLogoGlass1",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/03cd820c-1b3c-46f2-8e95-afc7bc5788d5",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-554-1130--winal-logo-glass-1.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 86,
+        "height": 86
+      },
+      "usedIn": [
+        "header"
+      ],
+      "notes": "decor raster, not svg"
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "582:528",
+      "assetConst": "imgFigma1",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/fee1f27a-0b9f-47c2-8bb7-d835e8428244",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-582-528--video-liquid-button-icon.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-582-528--video-liquid-button-icon.svg",
+      "figmaRenderSize": {
+        "width": 17.8125,
+        "height": 17.8125
+      },
+      "usedIn": [
+        "hero"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "button-primary",
+      "assetConst": "imgVector",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/eab1c4a5-bf84-449d-8849-7ca991aa49e3",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-button--arrow-white.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-button--arrow-white.svg",
+      "figmaRenderSize": {
+        "width": 12,
+        "height": 10
+      },
+      "usedIn": [
+        "hero",
+        "surface"
+      ],
+      "notes": "reused primary CTA arrow"
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "button-outlined",
+      "assetConst": "imgVector1",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/43d75d51-e553-4be9-9b15-e2377f3575b7",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-button--arrow-blue.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-button--arrow-blue.svg",
+      "figmaRenderSize": {
+        "width": 12,
+        "height": 10
+      },
+      "usedIn": [
+        "hero",
+        "surface"
+      ],
+      "notes": "reused outlined CTA arrow"
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "587:472",
+      "assetConst": "imgVector2",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/f4935b64-668d-4f0e-ac04-142c9f1bd196",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-587-472--hero-corner-winal-mark.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-587-472--hero-corner-winal-mark.svg",
+      "figmaRenderSize": {
+        "width": 142,
+        "height": 124
+      },
+      "usedIn": [
+        "hero"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "550:1128",
+      "assetConst": "imgWinal1",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/4b00830b-41c0-483e-945f-e3c23ee78caa",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-550-1128--hero-video-poster.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 664,
+        "height": 373.4067
+      },
+      "usedIn": [
+        "hero"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:651",
+      "assetConst": "imgVector3",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/aa8fc743-a85e-420a-b24b-e609e633002b",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-651--feature-icon-materials.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-651--feature-icon-materials.svg",
+      "figmaRenderSize": {
+        "width": 24,
+        "height": 24
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:654",
+      "assetConst": "imgVector4",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/ccfc3ebb-2c0c-440a-bd1e-5885157e7fab",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-654--feature-icon-acoustic.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-654--feature-icon-acoustic.svg",
+      "figmaRenderSize": {
+        "width": 18,
+        "height": 24
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:657",
+      "assetConst": "imgVector15",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/1fc7cd5a-e79c-48ae-a84a-a2c61807e532",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-657--feature-icon-support.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-657--feature-icon-support.svg",
+      "figmaRenderSize": {
+        "width": 18,
+        "height": 24
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:663",
+      "assetConst": "imgGsh116812",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/2165e790-fba0-467c-9612-2e9d1a31dae2",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-696-663--surface-main-image.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 1262,
+        "height": 839
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:663",
+      "assetConst": "imgGsh116811",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/f608c3f7-8d7f-41ea-9e27-a8848d6cf401",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-663--surface-main-mask.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-663--surface-main-mask.svg",
+      "figmaRenderSize": {
+        "width": 808.5,
+        "height": 839
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": "mask asset for surface main image; mcp returned svg, saved as svg"
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:665",
+      "assetConst": "imgFeatureSectionImage",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/4674befe-473e-4a35-9708-14a0800ca163",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-696-665--feature-card-joints.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 284,
+        "height": 184
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:674",
+      "assetConst": "imgFeatureSectionImage1",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/c878b00a-4cb2-40f2-a3c2-12376616536a",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-696-674--feature-card-acoustic.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 284,
+        "height": 184
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:683",
+      "assetConst": "imgFeatureSectionImage2",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/a0801ec3-9b4e-42a5-9baa-9d3e7d15d0a7",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-696-683--feature-card-geometry.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 284,
+        "height": 184
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:692",
+      "assetConst": "imgFeatureSectionImage3",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/237704c1-89ea-4b21-b5d3-810c1f50c7ae",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-696-692--feature-card-surface.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 284,
+        "height": 184
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:667",
+      "assetConst": "imgVector5",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/67064f00-b275-4cdf-a548-1c1381affdd4",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-667--card-icon-joints.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-667--card-icon-joints.svg",
+      "figmaRenderSize": {
+        "width": 12.5,
+        "height": 15
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:676",
+      "assetConst": "imgVector6",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/cd48d16e-6bf1-45dc-802d-f77c80e76ef7",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-676--card-icon-acoustic.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-676--card-icon-acoustic.svg",
+      "figmaRenderSize": {
+        "width": 11.25,
+        "height": 15
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:685",
+      "assetConst": "imgVector7",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/d212c664-81b5-4c10-abd6-219b2900fded",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-685--card-icon-geometry.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-685--card-icon-geometry.svg",
+      "figmaRenderSize": {
+        "width": 15,
+        "height": 15
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "696:694",
+      "assetConst": "imgVector8",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/da4b7f7f-92b8-4f28-b98f-3e0292c0925f",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-696-694--card-icon-surface.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-696-694--card-icon-surface.svg",
+      "figmaRenderSize": {
+        "width": 15,
+        "height": 15
+      },
+      "usedIn": [
+        "surface"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "675:520",
+      "assetConst": "imgPaintBrush",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/2e4a5d2e-c2ff-4e22-97f5-e215ad57cb93",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-675-520--paint-brush.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-675-520--paint-brush.svg",
+      "figmaRenderSize": {
+        "width": 32,
+        "height": 32
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "675:538",
+      "assetConst": "imgFrame106",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/03358978-a8b5-43c1-8c01-75d332d1d9d6",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-675-538--design-card-ufr.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 332,
+        "height": 575
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "675:539",
+      "assetConst": "imgFrame109",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/382e9a66-401e-4c2d-9ea2-6e98db8a9496",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-675-539--design-card-ral.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 332,
+        "height": 575
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "675:540",
+      "assetConst": "imgFrame110",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/7d6da518-80be-4e90-b106-4ecd61d5e9bf",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-675-540--design-card-veneer.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 332,
+        "height": 575
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "675:541",
+      "assetConst": "imgFrame108",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/30b4b418-405e-4cbc-a080-e40b9e42100c",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-675-541--design-card-patterns.jpg",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 332,
+        "height": 575
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "662:348",
+      "assetConst": "imgGroup13",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/70fef8f9-25fb-4ead-8cfc-7fabbf16165b",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-662-348--small-card-icon.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-662-348--small-card-icon.svg",
+      "figmaRenderSize": {
+        "width": 12,
+        "height": 12
+      },
+      "usedIn": [
+        "design"
+      ],
+      "notes": "reused in design cards"
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "676:893",
+      "assetConst": "imgWinalGlass1",
+      "kind": "raster",
+      "detectedKind": "raster",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/d7d859b6-289b-428b-8ce4-bf3cc462a962",
+      "sourcePath": "assets-src/figma/node-541-781/raster/node-676-893--winal-glass-1.png",
+      "publicPath": null,
+      "figmaRenderSize": {
+        "width": 2560,
+        "height": 482
+      },
+      "usedIn": [
+        "background"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:689",
+      "assetConst": "imgLogo1",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/b49716c2-7b5b-41eb-86d8-fe483c76d72d",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-689--footer-logo.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-689--footer-logo.svg",
+      "figmaRenderSize": {
+        "width": 150,
+        "height": 27
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:705",
+      "assetConst": "imgUser",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/724ad008-64ff-4402-8487-60f6b0973f6c",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-705--contact-user.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-705--contact-user.svg",
+      "figmaRenderSize": {
+        "width": 24,
+        "height": 24
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:709",
+      "assetConst": "imgPhoneTransfer",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/fca004b1-2085-42a8-9e0d-686ee85fb67d",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-709--contact-phone.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-709--contact-phone.svg",
+      "figmaRenderSize": {
+        "width": 24,
+        "height": 24
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:713",
+      "assetConst": "imgAt",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/262906cd-afbc-4f63-b7de-47a90fd2a0ae",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-713--contact-email.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-713--contact-email.svg",
+      "figmaRenderSize": {
+        "width": 24,
+        "height": 24
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:717",
+      "assetConst": "imgSocialTelegram",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/15ff9002-bf18-4280-8874-662483b6b478",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-717--social-telegram.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-717--social-telegram.svg",
+      "figmaRenderSize": {
+        "width": 36,
+        "height": 36
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:719",
+      "assetConst": "imgSocialWhatsapp",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/e3d1f903-1c82-4c0f-9223-83fee3af1bb0",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-719--social-whatsapp.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-719--social-whatsapp.svg",
+      "figmaRenderSize": {
+        "width": 36,
+        "height": 36
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    },
+    {
+      "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+      "figmaNodeId": "711:721",
+      "assetConst": "imgSocialChat",
+      "kind": "svg",
+      "detectedKind": "svg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/ebf4ea42-ed56-47ec-9826-90728ce5ff8c",
+      "sourcePath": "assets-src/figma/node-541-781/svg/node-711-721--social-chat.svg",
+      "publicPath": "public/assets/figma/node-541-781/svg/node-711-721--social-chat.svg",
+      "figmaRenderSize": {
+        "width": 36,
+        "height": 36
+      },
+      "usedIn": [
+        "footer"
+      ],
+      "notes": null
+    }
+  ]
+}

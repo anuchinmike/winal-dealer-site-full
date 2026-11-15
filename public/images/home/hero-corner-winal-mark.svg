@@ -1,0 +1,45 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 158 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-4" y="-6" width="166" height="148"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6px);clip-path:url(#bgblur_0_0_154_clip_path);height:100%;width:100%"></div></foreignObject><g id="Vector" filter="url(#filter0_dii_0_154)" data-figma-bg-blur-radius="12">
+<path d="M76.6316 65.7523L83.5389 6.00325H80.2406C31.0526 5.78368 21.7093 16.5938 15.2983 65.7523H76.6316Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M88.6667 6.00325L81.7594 65.7523H142.652C144.782 48.0538 150 6.00325 150 6.00325H88.6667Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M81.1078 70.9148L74.2306 130H78.1855C127.674 130 135.018 123.321 142 70.9148H81.1078Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M76.2106 70.9148H14.6567C12.3008 88.838 8 130 8 130H69.3333L76.2106 70.9148Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M76.6316 65.7523L83.5389 6.00325H80.2406C31.0526 5.78368 21.7093 16.5938 15.2983 65.7523H76.6316Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M88.6667 6.00325L81.7594 65.7523H142.652C144.782 48.0538 150 6.00325 150 6.00325H88.6667Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M81.1078 70.9148L74.2306 130H78.1855C127.674 130 135.018 123.321 142 70.9148H81.1078Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+<path d="M76.2106 70.9148H14.6567C12.3008 88.838 8 130 8 130H69.3333L76.2106 70.9148Z" fill="var(--fill-0, #07AC6A)" fill-opacity="0.15" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_dii_0_154" x="-4" y="-6" width="166" height="148" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_154"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_154" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.666667 0 0 0 0 0.666667 0 0 0 0 0.666667 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_0_154"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_innerShadow_0_154"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_0_154" result="effect3_innerShadow_0_154"/>
+</filter>
+<clipPath id="bgblur_0_0_154_clip_path" transform="translate(4 6)"><path d="M76.6316 65.7523L83.5389 6.00325H80.2406C31.0526 5.78368 21.7093 16.5938 15.2983 65.7523H76.6316Z"/>
+<path d="M88.6667 6.00325L81.7594 65.7523H142.652C144.782 48.0538 150 6.00325 150 6.00325H88.6667Z"/>
+<path d="M81.1078 70.9148L74.2306 130H78.1855C127.674 130 135.018 123.321 142 70.9148H81.1078Z"/>
+<path d="M76.2106 70.9148H14.6567C12.3008 88.838 8 130 8 130H69.3333L76.2106 70.9148Z"/>
+<path d="M76.6316 65.7523L83.5389 6.00325H80.2406C31.0526 5.78368 21.7093 16.5938 15.2983 65.7523H76.6316Z"/>
+<path d="M88.6667 6.00325L81.7594 65.7523H142.652C144.782 48.0538 150 6.00325 150 6.00325H88.6667Z"/>
+<path d="M81.1078 70.9148L74.2306 130H78.1855C127.674 130 135.018 123.321 142 70.9148H81.1078Z"/>
+<path d="M76.2106 70.9148H14.6567C12.3008 88.838 8 130 8 130H69.3333L76.2106 70.9148Z"/>
+</clipPath></defs>
+</svg>

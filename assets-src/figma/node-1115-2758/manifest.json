@@ -1,0 +1,71 @@
+{
+  "assets": [
+    {
+      "renderSize": "1552x1032",
+      "publicPath": null,
+      "sourcePath": "assets-src/figma/node-1115-2758/reference/node-1115-2758--form-frame.png",
+      "figmaNodeId": "1115:2758",
+      "format": "png",
+      "role": "reference-frame"
+    },
+    {
+      "renderSize": "48x56",
+      "publicPath": "public/images/home/project-form/upload-icon.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/upload-icon.svg",
+      "figmaNodeId": "1115:2778",
+      "format": "svg",
+      "role": "upload-icon"
+    },
+    {
+      "renderSize": "392x1",
+      "publicPath": "public/images/home/project-form/divider-line.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/divider-line.svg",
+      "figmaNodeId": "1115:2818",
+      "format": "svg",
+      "role": "divider-line"
+    },
+    {
+      "renderSize": "36x36",
+      "publicPath": "public/images/home/project-form/icon-phone.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/icon-phone.svg",
+      "figmaNodeId": "1115:2822",
+      "format": "svg",
+      "role": "contact-phone-icon"
+    },
+    {
+      "renderSize": "36x33",
+      "publicPath": "public/images/home/project-form/icon-telegram.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/icon-telegram.svg",
+      "figmaNodeId": "1115:2828",
+      "format": "svg",
+      "role": "contact-telegram-icon"
+    },
+    {
+      "renderSize": "36x36",
+      "publicPath": "public/images/home/project-form/icon-email.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/icon-email.svg",
+      "figmaNodeId": "1115:2834",
+      "format": "svg",
+      "role": "contact-email-icon"
+    },
+    {
+      "renderSize": "12x10",
+      "publicPath": "public/images/home/project-form/arrow-white.svg",
+      "sourcePath": "assets-src/figma/node-1115-2758/svg/arrow-white.svg",
+      "figmaNodeId": "1115:2809",
+      "format": "svg",
+      "role": "submit-arrow"
+    },
+    {
+      "renderSize": "392x155",
+      "publicPath": "public/images/home/project-form/interior.png",
+      "sourcePath": "assets-src/figma/node-1115-2758/raster/node-1115-2840--interior.png",
+      "figmaNodeId": "1115:2840",
+      "format": "png",
+      "role": "interior-image"
+    }
+  ],
+  "figmaNodeId": "1115:2758",
+  "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+  "exportedAt": "2026-07-24"
+}

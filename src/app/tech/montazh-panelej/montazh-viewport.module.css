@@ -1,0 +1,117 @@
+/* Viewport layout is separate from the room's content and render registry.
+   LumenStage: first child = image/markers plane, last aria-hidden child = CloseUp.
+   CloseUp: last child = flex layout, its first/last children = frame/info. */
+.viewport [data-montazh-stage],
+.viewport [aria-label="Загрузка интерактивной комнаты"] {
+  background: transparent;
+  box-shadow: none;
+}
+
+@media (min-width: 721px) {
+  /* 12.11 (Михаил): высоту секции под окно больше не подгоняем — на невысоких окнах комната
+     сжималась по высоте и оставляла пустые поля по бокам. Комната 16:9 занимает всю ширину контента. */
+  .viewport .panel.panel {
+    scroll-margin-top: 104px;
+  }
+  .viewport .inner.inner {
+    gap: 20px;
+  }
+  .viewport .header.header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 16px 40px;
+    align-items: center;
+  }
+  .viewport .heading.heading {
+    max-width: none;
+  }
+  .viewport .body,
+  .viewport .body > div {
+    min-width: 0;
+  }
+  .viewport .body > div > div {
+    display: grid;
+    gap: 10px;
+  }
+  .viewport .body > div > div > div:first-child { gap: 8px 24px; }
+  .viewport .body > div > div > div:first-child p { max-width: 49ch; font-size: 13px; }
+  /* Сцена сама держит 16:9 по ширине; контейнер нужен кадру и колонке крупного плана. */
+  .viewport [data-montazh-stage] {
+    container: montazh-stage / size;
+  }
+  /* 13.11 (Михаил: «небрежная вёрстка»): кадр и колонка выровнены по верху и по краям контента
+     секции — по тем же линиям, что «Вся комната» и выбор узла; без внутренних отступов и белой карточки. */
+  .viewport [data-montazh-stage] > div[aria-hidden] > div:last-child {
+    align-items: flex-start;
+    padding: 0;
+    gap: 40px;
+  }
+  .viewport [data-montazh-stage] > div[aria-hidden] > div:last-child > div:first-child {
+    width: min(46cqw, 100cqh);
+    height: min(46cqw, 100cqh);
+    aspect-ratio: 1;
+  }
+  /* Белая подложка крупного кадра не нужна: комнату под ним прячем после подлёта камеры,
+     и крупный кадр лежит прямо на фоне секции. */
+  .viewport [data-montazh-closeup] > div:first-child {
+    background: transparent;
+  }
+  .viewport [data-montazh-stage] > :not([data-montazh-closeup]) {
+    transition: opacity 300ms ease;
+  }
+  .viewport [data-montazh-stage]:has(> [data-montazh-closeup][aria-hidden="false"]) > :not([data-montazh-closeup]) {
+    opacity: 0;
+    transition: opacity 600ms ease 900ms;
+  }
+  .viewport [data-montazh-stage] > div[aria-hidden] > div:last-child > div:last-child {
+    height: 100%;
+    max-width: none;
+    gap: clamp(8px, 1.3vh, 16px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dealer-color-brand-primary) transparent;
+    overscroll-behavior: contain;
+  }
+  .viewport .action.action { gap: 12px 24px; }
+  .viewport .action p { font-size: 14px; }
+  .viewport .action a { padding: 12px 28px; }
+
+  /* On low windows, keep readable text and put variants in one native rail. */
+  @container montazh-stage (max-height: 480px) {
+    .viewport [data-montazh-plaques] {
+      width: 138.889%;
+      height: 138.889%;
+      transform: scale(0.72);
+      transform-origin: top left;
+    }
+    .viewport [data-montazh-profile-name] { font-size: 16px; }
+    .viewport [data-montazh-stage] > div[aria-hidden] h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      line-height: 1.05;
+    }
+    .viewport [data-montazh-stage] > div[aria-hidden] > div:last-child > div:last-child > div:has(> button[aria-pressed]) {
+      display: flex;
+      gap: 8px;
+      min-height: 0;
+      overflow-x: auto;
+      padding: 2px 2px 6px;
+      scrollbar-width: thin;
+      overscroll-behavior-x: contain;
+    }
+    .viewport [data-montazh-stage] > div[aria-hidden] button[aria-pressed] {
+      flex: 0 0 clamp(92px, 8.5vw, 120px);
+      padding: 5px;
+    }
+    .viewport [data-montazh-stage] > div[aria-hidden] button[aria-pressed] > span > span:last-child {
+      font-size: 13px;
+      line-height: 1.1;
+      top: 8px;
+      right: 6px;
+      left: 6px;
+    }
+  }
+  @media (max-width: 1000px) {
+    .viewport .header.header { gap: 16px 24px; }
+    .viewport .action p { max-width: 35ch; }
+  }
+}

@@ -1,0 +1,709 @@
+/* Крупный кадр точки по макету Figma (Winal, 1617:1983). Только токены дилерского сайта.
+   Белое поле без рамок: остаток сцены не виден. Кадр укрупняется, уезжает влево и закругляется
+   за 2000 мс (контракт dealer-motion.ts). Анимируем transform, opacity, mask-size. */
+
+.root {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.on {
+  pointer-events: auto;
+}
+
+/* Белое поле вокруг кадра */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: var(--dealer-surface-white);
+  opacity: 0;
+  transition: opacity var(--slide) var(--ease);
+}
+.on .bg {
+  opacity: 1;
+  transition: opacity 900ms var(--ease) 300ms;
+}
+
+.layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Квадратный кадр; справа его обрезает дуга маски */
+.frame {
+  position: relative;
+  flex: none;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+  transform: translateX(22%) scale(1.22);
+  transition:
+    opacity var(--slide) var(--ease),
+    transform var(--dealer-motion-duration) var(--ease);
+}
+.on .frame {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 600ms var(--ease) 200ms,
+    transform var(--dealer-motion-duration) var(--ease) 200ms;
+}
+.shot {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: url(/images/tech/closeup-mask.svg);
+  mask-image: url(/images/tech/closeup-mask.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  /* Дуга за правым краем: кадр квадратный */
+  -webkit-mask-size: 170% 100%;
+  mask-size: 170% 100%;
+  transition:
+    -webkit-mask-size var(--dealer-motion-duration) var(--ease),
+    mask-size var(--dealer-motion-duration) var(--ease);
+}
+.on .shot {
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transition-delay: 200ms;
+}
+.shotImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--slide) var(--ease);
+}
+/* Сцена узла показывается целым квадратом, как в модалке профиля: дуга маски срезала бы
+   подписи сцены справа (Михаил 13.11). Для кадров комнаты дуга остаётся. */
+.shotScene,
+.on .shotScene {
+  -webkit-mask-image: none;
+  mask-image: none;
+  border-radius: var(--dealer-radius-sm);
+}
+/* Сцена узла поверх кадра: квадрат во всю рамку, фон как у сцен модалки профиля */
+.sceneFrame {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #3a3b3c;
+  animation: plaqueFade var(--slide) var(--ease) both;
+}
+.shotImgOn {
+  opacity: 1;
+}
+
+/* Стеклянные плашки (Figma: winal-glass-linear-white, размытие 10, тень winal-glass) */
+.plaques {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.plaque {
+  position: absolute;
+  transform: translateY(6px);
+  animation: plaqueRise var(--label-ms) var(--ease) forwards;
+  animation-delay: calc(2000ms + var(--i) * 80ms);
+}
+.plaqueGlass {
+  display: block;
+  padding: 8px;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--dealer-surface-glass-linear);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--dealer-effect-winal-glass-shadow);
+  overflow: hidden;
+  opacity: 0;
+  animation: plaqueFade var(--label-ms) var(--ease) forwards;
+  animation-delay: calc(2000ms + var(--i) * 80ms);
+  transition: transform var(--slide) var(--ease);
+}
+.root:not(.on) .plaque,
+.root:not(.on) .plaqueGlass {
+  animation: none;
+}
+@keyframes plaqueRise {
+  to {
+    transform: none;
+  }
+}
+@keyframes plaqueFade {
+  to {
+    opacity: 1;
+  }
+}
+.plaqueIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--dealer-radius-sm);
+}
+.plaqueIcon {
+  flex: none;
+  display: flex;
+  padding: 6px;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-icon-float);
+}
+.plaqueIcon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.plaqueText {
+  display: grid;
+  gap: 10px;
+  width: 175px;
+  text-align: right;
+  color: var(--dealer-color-brand-white);
+}
+.plaqueText b {
+  font: 600 16px/1 var(--dealer-font-family);
+  white-space: nowrap;
+}
+.plaqueText small {
+  font: 400 12px/1.15 var(--dealer-font-family);
+}
+
+/* Правая колонка: прямо на белом поле, без рамки */
+.info {
+  flex: 1;
+  min-width: 0;
+  max-width: 516px;
+  /* Без полос прокрутки (Михаил 29.10): содержимое ужато так, чтобы помещаться */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2.2vh, 24px);
+  padding: 0;
+  opacity: 0;
+  transform: translateX(24px);
+  transition:
+    opacity var(--slide) var(--ease),
+    transform var(--slide) var(--ease);
+}
+.on .info {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 900ms var(--ease) 1000ms,
+    transform var(--dealer-motion-duration) var(--ease) 1000ms;
+}
+.info > * {
+  flex: none;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--dealer-color-brand-primary);
+  font: 600 16px/1 var(--dealer-font-family);
+  text-transform: uppercase;
+}
+.title {
+  margin: 0;
+  color: var(--dealer-color-text-primary);
+  font: 600 clamp(36px, 3.6vw, 56px) / 0.95 var(--dealer-font-family);
+}
+
+/* Выход в комнату — слева снизу на кадре (прежний тёмный стеклянный вид), название профиля сверху свободно */
+.back {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: var(--ink-glass);
+  -webkit-backdrop-filter: blur(var(--dealer-effect-main-liquid-glass-backdrop-blur));
+  backdrop-filter: blur(var(--dealer-effect-main-liquid-glass-backdrop-blur));
+  color: var(--dealer-color-brand-white);
+  font: 600 14px/1 var(--dealer-font-family);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--fast) var(--ease);
+}
+.on .back {
+  opacity: 1;
+  transition-delay: 1200ms;
+}
+
+/* Название профиля и ссылка на его карточку — на кадре слева сверху */
+.profileTag {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  max-width: 72%;
+  z-index: 2;
+}
+/* Проявление — на самом стекле, как у плашек. Прозрачность на обёртке отрезает стекло от фото
+   (обёртка становится «корнем подложки»), и blur нечего размывать — стекло выглядело просто прозрачным */
+.root:not(.on) .profileTagGlass {
+  animation: none;
+}
+.profileTagGlass {
+  display: block;
+  padding: 8px;
+  /* Стекло по макету Figma (шапка 1320:1184): светлый ободок 1 px 40% белого */
+  border: 1px solid var(--dealer-border-glass);
+  border-radius: var(--dealer-radius-sm);
+  background: var(--dealer-surface-glass-linear);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--dealer-effect-winal-glass-shadow);
+  overflow: hidden;
+  opacity: 0;
+  animation: plaqueFade var(--label-ms) var(--ease) forwards;
+  animation-delay: 2000ms;
+}
+.profileTagIn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 104px;
+  padding: 12px 16px;
+  border-radius: var(--dealer-radius-sm);
+  color: var(--dealer-color-brand-white);
+}
+.profileTagName {
+  font: 600 20px/1.15 var(--dealer-font-family);
+}
+/* Без «Подробнее» (у варианта нет карточки профиля) плашка — только название, без пустой полосы */
+.profileTagIn:not(:has(.profileTagMore)) {
+  min-height: 0;
+}
+/* «Подробнее» у нижнего края стекла с тем же внутренним отступом, что у названия. */
+.profileTagMore {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  margin-top: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--dealer-radius-xs);
+  background: none;
+  color: var(--dealer-color-brand-primary);
+  font: 600 14px/1 var(--dealer-font-family);
+  text-decoration: none;
+  cursor: pointer;
+}
+.profileTagMore:focus-visible {
+  outline: 2px solid var(--dealer-color-brand-primary);
+  outline-offset: 4px;
+}
+
+/* «Подробнее» — ссылка на карточку профиля, в правой колонке под описанием варианта */
+.more {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--dealer-color-brand-primary);
+  font: 600 15px/1 var(--dealer-font-family);
+  cursor: pointer;
+}
+.desc {
+  display: grid;
+  gap: 16px;
+}
+.desc p,
+.text {
+  margin: 0;
+  color: var(--dealer-color-text-description);
+  font: 500 15px/1.3 var(--dealer-font-family);
+}
+
+/* Вкладки как в каталоге дилерского сайта (catalog-section.tsx) */
+.tablist {
+  flex: none;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 1px solid var(--dealer-color-brand-decoration);
+}
+.tab {
+  flex: 1;
+  height: 43px;
+  padding: 0 24px;
+  border: 1px solid var(--dealer-color-brand-decoration);
+  border-bottom: 0;
+  border-radius: var(--dealer-radius-sm) var(--dealer-radius-sm) 0 0;
+  background: rgba(241, 241, 241, 0.5);
+  color: var(--dealer-color-text-description);
+  font: 400 16px/1 var(--dealer-font-family);
+  white-space: nowrap;
+  cursor: pointer;
+  transform: translateY(8px);
+  transform-origin: bottom;
+  transition:
+    transform var(--dealer-motion-duration) var(--ease),
+    background-color var(--dealer-motion-duration) var(--ease),
+    color var(--dealer-motion-duration) var(--ease);
+}
+.tabOn {
+  transform: none;
+  background: transparent;
+  color: var(--dealer-color-brand-primary);
+  font-weight: 600;
+}
+
+/* Плитки вариантов по системе WINAL Dealer (MountingCloseUp): стеклянная карточка с фото и названием
+   16 / 600 белым по фото; выбранная — внутренняя рамка 2 px brand-primary. Мельче прежних: 3 в ряд вместо 2 */
+.tiles {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.tile {
+  padding: 8px;
+  border: 1px solid var(--dealer-border-glass);
+  border-radius: var(--dealer-radius-sm);
+  background: var(--dealer-surface-glass-linear);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--dealer-effect-winal-glass-shadow);
+  cursor: pointer;
+  text-align: right;
+}
+.tileOn {
+  box-shadow:
+    inset 0 0 0 2px var(--dealer-color-brand-primary),
+    var(--dealer-effect-winal-glass-shadow);
+}
+.tileIn {
+  position: relative;
+  display: block;
+  aspect-ratio: 234 / 229;
+  border-radius: var(--dealer-radius-sm);
+  overflow: hidden;
+}
+.tileImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tileName {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  left: 10px;
+  color: var(--dealer-color-brand-white);
+  font: 600 16px/1 var(--dealer-font-family);
+}
+
+/* Плитка без рендера: нейтральная заглушка вместо фото */
+.tileEmpty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  background: var(--dealer-color-brand-decoration);
+  color: var(--dealer-color-text-description);
+  font: 500 12px/1.2 var(--dealer-font-family);
+}
+.tileEmpty + .tileName {
+  color: var(--dealer-color-text-primary);
+}
+
+/* Точка-рассказ: сравнение двух подходов */
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font: 500 14px/1.3 var(--dealer-font-family);
+}
+.compare th,
+.compare td {
+  padding: 8px 10px 8px 0;
+  border-bottom: 1px solid var(--dealer-color-brand-decoration);
+  text-align: left;
+  vertical-align: top;
+}
+.compare thead th {
+  color: var(--dealer-color-brand-primary);
+  font-weight: 600;
+}
+.compare tbody th {
+  width: 26%;
+  color: var(--dealer-color-text-primary);
+  font-weight: 600;
+}
+.compare td {
+  color: var(--dealer-color-text-secondary);
+}
+
+/* Точка-рассказ: пункты */
+.points {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.points li {
+  display: grid;
+  gap: 4px;
+}
+.points b {
+  color: var(--dealer-color-text-primary);
+  font: 600 16px/1.2 var(--dealer-font-family);
+}
+.points span {
+  color: var(--dealer-color-text-secondary);
+  font: 500 15px/1.35 var(--dealer-font-family);
+}
+
+.detail {
+  flex: none;
+  display: grid;
+  gap: 14px;
+}
+.props {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.prop {
+  display: grid;
+  gap: 4px;
+}
+.prop b {
+  color: var(--dealer-color-text-primary);
+  font: 600 14px/1.2 var(--dealer-font-family);
+}
+/* Не помещается без прокрутки — свойства убираем: они повторяют плашки на кадре (closeup.tsx, infoTight) */
+.infoTight .props,
+.infoTighter .intro {
+  display: none;
+}
+/* Шаг 3: компактно — плитки по 4 в ряд, заголовок и таблица сравнения мельче */
+.infoCompact .tiles {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.infoCompact .tileName {
+  top: 10px;
+  font-size: 13px;
+}
+.infoCompact .title {
+  font-size: 34px;
+}
+.infoCompact .compare th,
+.infoCompact .compare td {
+  padding: 5px 8px 5px 0;
+  font-size: 13px;
+}
+/* Замер (closeup.tsx): data-measure="0" — всё на месте, "1" — без свойств, "2" — ещё и без вступления; компактный шаг снят */
+.info[data-measure] .props,
+.info[data-measure] .intro {
+  display: block;
+}
+.info[data-measure] .props {
+  display: grid;
+}
+.info[data-measure="1"] .props,
+.info[data-measure="2"] .props,
+.info[data-measure="2"] .intro {
+  display: none;
+}
+.info[data-measure] .tiles {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.info[data-measure] .title {
+  font-size: clamp(36px, 3.6vw, 56px);
+}
+.info[data-measure] .compare th,
+.info[data-measure] .compare td {
+  padding: 8px 10px 8px 0;
+  font-size: 14px;
+}
+.info[data-measure] .tileName {
+  top: 14px;
+  font-size: 16px;
+}
+.prop span {
+  color: var(--dealer-color-text-description);
+  font: 500 13px/1.3 var(--dealer-font-family);
+}
+/* Телефон: слой на весь экран, кадр сверху во всю ширину, площадка ниже, прокрутка внутри слоя */
+.mobile {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  transition: visibility 0s linear var(--slide);
+}
+.mobile.on {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.mobile .bg {
+  position: fixed;
+}
+.mobile.on .bg {
+  transition: opacity var(--slide) var(--ease);
+}
+.mobile .layout {
+  position: relative;
+  inset: auto;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+  padding: 16px 16px 40px;
+}
+.mobile .frame {
+  width: 100%;
+  height: auto;
+  transform: translateY(12px);
+}
+.mobile.on .frame {
+  transform: none;
+  transition:
+    opacity var(--slide) var(--ease) 150ms,
+    transform var(--slide) var(--ease) 150ms;
+}
+/* дуга маски на узком экране съедает кадр — на телефоне просто скруглённый квадрат */
+.mobile .shot,
+.mobile.on .shot {
+  -webkit-mask-image: none;
+  mask-image: none;
+  border-radius: var(--dealer-radius-sm);
+}
+/* плашки мельче: контейнер увеличен и сжат обратно, проценты привязки сохраняются */
+.mobile .plaques {
+  width: 138.9%;
+  height: 138.9%;
+  transform: scale(0.72);
+  transform-origin: top left;
+}
+.mobile .plaque,
+.mobile .plaqueGlass {
+  animation-delay: 600ms;
+}
+.mobile .profileTag {
+  top: 12px;
+  left: 12px;
+  max-width: calc(100% - 24px);
+}
+.mobile .profileTagGlass {
+  animation-delay: 500ms;
+}
+.mobile .profileTagIn {
+  min-height: 88px;
+  gap: 6px 12px;
+  padding: 8px 10px;
+}
+.mobile .profileTagMore {
+  min-height: 44px;
+}
+.mobile .profileTagName {
+  font-size: 15px;
+}
+.mobile .back {
+  bottom: 12px;
+  left: 12px;
+  height: 40px;
+}
+.mobile.on .back {
+  transition-delay: 300ms;
+}
+.mobile .info {
+  max-width: none;
+  overflow: visible;
+  gap: 16px;
+}
+.mobile.on .info {
+  transition:
+    opacity var(--slide) var(--ease) 250ms,
+    transform var(--slide) var(--ease) 250ms;
+}
+.mobile .title {
+  font-size: 32px;
+}
+.mobile .tiles {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 0;
+}
+.mobile .tile {
+  padding: 5px;
+}
+.mobile .tileName {
+  top: 8px;
+  right: 6px;
+  left: 6px;
+  font-size: 12px;
+}
+.mobile .tab {
+  padding: 0 10px;
+  font-size: 14px;
+}
+.mobile .compare th,
+.mobile .compare td {
+  padding: 6px 8px 6px 0;
+  font-size: 13px;
+}
+.mobile .props {
+  grid-template-columns: 1fr;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .back:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .tab:not(.tabOn):hover {
+    transform: none;
+    color: var(--dealer-color-text-secondary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame,
+  .info,
+  .tab,
+  .plaqueGlass {
+    transition: opacity var(--fast) var(--ease);
+    transform: none;
+  }
+  .shot,
+  .on .shot {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  .plaque,
+  .plaqueGlass {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+  }
+}

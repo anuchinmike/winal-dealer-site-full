@@ -1,0 +1,2659 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+    url("/fonts/gilroy/Gilroy-SemiBold.woff2") format("woff2"),
+    url("/fonts/gilroy/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/Gilroy-Black.woff2") format("woff2");
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --dealer-font-family: "Gilroy", Arial, Helvetica, sans-serif;
+
+  --dealer-color-text-primary: #000912;
+  --dealer-color-text-secondary: #30425a;
+  --dealer-color-text-muted: #5a7290;
+  --dealer-color-text-description: #888888;
+
+  --dealer-color-brand-primary: #0158ab;
+  --dealer-color-brand-secondary: #07ac6a;
+  --dealer-color-brand-accent: #ff5400;
+  --dealer-color-brand-decoration: #f1f1f1;
+  --dealer-color-brand-white: #ffffff;
+  --dealer-color-brand-white-25: #ffffff40;
+
+  --dealer-color-surface-page: #fcfdfe;
+  --dealer-surface-white: #ffffff;
+  --dealer-surface-glass-panel: var(--dealer-color-brand-white-25);
+  --dealer-decoration-glass-opacity: 0.25;
+  --dealer-surface-glass-linear:
+    linear-gradient(
+      110.795deg,
+      rgba(255, 255, 255, 0.153) 0.41224%,
+      rgba(243, 246, 255, 0.117) 100%
+    );
+  --dealer-surface-image-scrim-soft: rgba(0, 0, 0, 0.2);
+  --dealer-surface-image-scrim-strong: rgba(0, 0, 0, 0.5);
+  --dealer-surface-liquid-button-base: #1d1d1d;
+  --dealer-surface-liquid-button-overlay: rgba(29, 29, 29, 0.2);
+  --dealer-surface-liquid-button-highlight-bottom:
+    linear-gradient(
+      180deg,
+      rgba(102, 102, 102, 0) 50%,
+      rgba(102, 102, 102, 0.4) 100%
+    );
+  --dealer-surface-liquid-button-highlight-top:
+    linear-gradient(
+      180deg,
+      rgba(102, 102, 102, 0.2) 0%,
+      rgba(102, 102, 102, 0) 32.692%
+    );
+
+  --dealer-border-glass: rgba(255, 255, 255, 0.4);
+  --dealer-border-video: rgba(255, 255, 255, 0.1);
+  --dealer-border-brand-soft: rgba(1, 88, 171, 0.16);
+
+  --dealer-shadow-glass: 0 4px 40px rgba(0, 0, 0, 0.06);
+  --dealer-shadow-video: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --dealer-shadow-icon-float: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --dealer-shadow-liquid-inner-stack:
+    inset 7.5px 7.5px 4.219px -8.438px #ffffff,
+    inset -5.625px -5.625px 2.813px -6.563px #b3b3b3,
+    inset 0.938px 0.938px 0.469px -0.938px #b3b3b3,
+    inset 0 0 10.313px rgba(242, 242, 242, 0.5);
+
+  --dealer-effect-winal-glass-backdrop-blur: 20px;
+  --dealer-effect-winal-glass-shadow: 0 4px 40px #0000000f;
+  --dealer-effect-main-liquid-glass-backdrop-blur: 12px;
+  --dealer-effect-main-liquid-glass-drop-shadow: 0 2px 8px #0000001a;
+  --dealer-effect-main-liquid-glass-inner-shadow-dark: inset 0 0 8px #aaaaaa80;
+  --dealer-effect-main-liquid-glass-inner-shadow-light: inset 0 0 0.5px -2px #ffffff80;
+
+  --dealer-radius-xs: 4px;
+  --dealer-radius-sm: 8px;
+  --dealer-radius-md: 16px;
+  --dealer-radius-pill-liquid: 112.031px;
+
+  --dealer-motion-duration: 2000ms;
+  --dealer-motion-easing: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@theme inline {
+  --duration-dealer: 2000ms;
+
+  --color-dealer-brand-primary: var(--dealer-color-brand-primary);
+  --color-dealer-brand-secondary: var(--dealer-color-brand-secondary);
+  --color-dealer-brand-accent: var(--dealer-color-brand-accent);
+  --color-dealer-brand-decoration: var(--dealer-color-brand-decoration);
+  --color-dealer-brand-white: var(--dealer-color-brand-white);
+  --color-dealer-brand-white-25: var(--dealer-color-brand-white-25);
+  --color-dealer-text-primary: var(--dealer-color-text-primary);
+  --color-dealer-text-secondary: var(--dealer-color-text-secondary);
+  --color-dealer-text-muted: var(--dealer-color-text-muted);
+  --color-dealer-text-description: var(--dealer-color-text-description);
+  --color-dealer-surface-page: var(--dealer-color-surface-page);
+  --color-dealer-surface-white: var(--dealer-surface-white);
+  --color-dealer-surface-glass-panel: var(--dealer-surface-glass-panel);
+  --color-dealer-surface-image-scrim-soft: var(--dealer-surface-image-scrim-soft);
+  --color-dealer-surface-image-scrim-strong: var(--dealer-surface-image-scrim-strong);
+}
+
+html {
+  font-size: 16px !important;
+}
+
+body {
+  margin: 0;
+  background: var(--dealer-color-surface-page);
+  color: var(--dealer-color-text-primary);
+  font-family: var(--dealer-font-family);
+  font-size: 16px !important;
+}
+
+.dealer-decoration-glass img {
+  opacity: var(--dealer-decoration-glass-opacity);
+}
+
+.dealer-scroll-glass img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dealer-text-trim {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* Shared landing-section roles. Reference: "Свобода в дизайне".
+   Keep the complete glass effect together, not only its fill token. */
+.dealer-section-glass {
+  @apply backdrop-blur-[10px];
+  background: var(--dealer-surface-glass-panel);
+  border-radius: var(--dealer-radius-sm);
+  box-shadow: var(--dealer-shadow-video);
+}
+
+.dealer-section-title.dealer-section-title {
+  font-family: var(--dealer-font-family);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--dealer-color-text-primary);
+}
+
+.dealer-section-lead.dealer-section-lead {
+  font-family: var(--dealer-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--dealer-color-text-description);
+}
+
+@media (max-width: 1279px) {
+  .dealer-section-title.dealer-section-title {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.15;
+  }
+}
+
+/* Figma text styles — folder Dealer */
+.dealer-type-h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dealer-type-h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dealer-type-h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dealer-type-base-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dealer-type-base-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dealer-type-mini-semibold {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dealer-type-mini-regular {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dealer-motion-transition {
+  transition-duration: var(--dealer-motion-duration);
+  transition-timing-function: var(--dealer-motion-easing);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dealer-motion-transition {
+    transition-duration: 0ms;
+  }
+}
+
+@media (pointer: fine) and (min-width: 1024px) {
+  .hero-video-scroll-cursor {
+    cursor: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Catalog responsive tiers — desktop 1280+ only */
+@media (min-width: 1280px) {
+  [data-catalog-section] {
+    --catalog-section-pad-y: 48px;
+    /* W0: viewport < 1376 — контент уже не 1376, компактная горизонтальная адаптация */
+    --catalog-section-pad-x: 24px;
+    --catalog-inner-gap-tabs-content: 64px;
+    --catalog-tab-h: 81px;
+    --catalog-tab-px: 12px;
+    --catalog-tab-icon-gap: 8px;
+    --catalog-logo-w: 176px;
+    --catalog-sidebar-w: 280px;
+    --catalog-sidebar-rail-gap: 12px;
+    --catalog-sidebar-gap: 24px;
+    --catalog-sidebar-pt: 32px;
+    --catalog-title-desc-gap: 16px;
+    --catalog-feature-py: 8px;
+    --catalog-rail-h: 814px;
+    --catalog-base-card-h: 750px;
+    --catalog-rail-pagination-gap: 16px;
+    --catalog-pagination-h: 20px;
+    --catalog-card-py: 48px;
+    --catalog-card-content-gap: 32px;
+    --catalog-tabs-reserve-right: 0px;
+    --catalog-tabs-logo-gap: 16px;
+    --catalog-tab-compact-px: 12px;
+    --catalog-logo-img-w: 148px;
+    --catalog-logo-img-h: 30px;
+  }
+
+  @media (min-width: 1376px) {
+    [data-catalog-section] {
+      /* W1: 1376–1471 — панель fluid, inset 32px */
+      --catalog-section-pad-x: 32px;
+      --catalog-sidebar-w: 300px;
+      --catalog-sidebar-rail-gap: 16px;
+      --catalog-tab-px: 24px;
+      --catalog-tab-icon-gap: 12px;
+      --catalog-logo-w: 210px;
+      --catalog-tabs-logo-gap: 24px;
+      --catalog-tab-compact-px: 32px;
+      --catalog-logo-img-w: 177px;
+      --catalog-logo-img-h: 36px;
+    }
+  }
+
+  @media (min-width: 1472px) {
+    [data-catalog-section] {
+      /* W2: канон — панель 1472, контент 1376, inset 48px */
+      --catalog-section-pad-x: var(--dealer-layout-pad-x);
+      --catalog-sidebar-w: 332px;
+      --catalog-tab-px: 32px;
+      --catalog-tab-icon-gap: 16px;
+      --catalog-logo-w: 238px;
+      --catalog-tabs-logo-gap: 32px;
+      --catalog-logo-img-w: 200px;
+      --catalog-logo-img-h: 41px;
+    }
+  }
+
+  @media (max-height: 1279px) and (min-height: 961px) {
+    [data-catalog-section] {
+      --catalog-tab-h: 68px;
+      --catalog-inner-gap-tabs-content: 32px;
+      --catalog-sidebar-gap: 20px;
+      --catalog-title-desc-gap: 12px;
+      --catalog-feature-py: 6px;
+      --catalog-rail-pagination-gap: 16px;
+      --catalog-pagination-h: 20px;
+      --catalog-card-py: 32px;
+      --catalog-card-content-gap: 24px;
+      --catalog-rail-h: min(814px, calc(100dvh - 292px));
+      --catalog-base-card-h: min(750px, calc(var(--catalog-rail-h) - 56px));
+    }
+  }
+
+  @media (max-height: 960px) and (min-height: 841px) {
+    [data-catalog-section] {
+      --catalog-tab-h: 60px;
+      --catalog-inner-gap-tabs-content: 24px;
+      --catalog-sidebar-gap: 16px;
+      --catalog-sidebar-pt: 16px;
+      --catalog-title-desc-gap: 12px;
+      --catalog-feature-py: 4px;
+      --catalog-rail-pagination-gap: 12px;
+      --catalog-pagination-h: 20px;
+      --catalog-card-py: 24px;
+      --catalog-card-content-gap: 20px;
+      --catalog-rail-h: min(736px, calc(100dvh - 272px));
+      --catalog-base-card-h: calc(var(--catalog-rail-h) - 48px);
+    }
+  }
+
+  @media (max-height: 840px) and (min-height: 720px) {
+    [data-catalog-section] {
+      --catalog-tab-h: 52px;
+      --catalog-inner-gap-tabs-content: 16px;
+      --catalog-sidebar-gap: 12px;
+      --catalog-sidebar-pt: 8px;
+      --catalog-title-desc-gap: 8px;
+      --catalog-feature-py: 4px;
+      --catalog-rail-pagination-gap: 8px;
+      --catalog-pagination-h: 18px;
+      --catalog-card-py: 20px;
+      --catalog-card-content-gap: 16px;
+      --catalog-rail-h: min(656px, calc(100dvh - 248px));
+      --catalog-base-card-h: calc(var(--catalog-rail-h) - 40px);
+      --catalog-tab-compact-px: 24px;
+    }
+  }
+
+  [data-catalog-section][data-header-compact="true"] {
+    --catalog-tab-compact-px: 24px;
+  }
+
+  @media (max-width: 1375px) {
+    [data-catalog-section][data-header-compact="true"] {
+      --catalog-tab-compact-px: 12px;
+    }
+  }
+}
+
+.catalog-section-shell {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--dealer-layout-panel-w);
+  padding: var(--catalog-section-pad-y) var(--catalog-section-pad-x);
+  overflow: hidden;
+}
+
+.catalog-section-inner {
+  width: 100%;
+  max-width: var(--dealer-layout-content-w);
+  margin-inline: auto;
+  gap: var(--catalog-inner-gap-tabs-content);
+}
+
+.catalog-sidebar {
+  width: var(--catalog-sidebar-w);
+  gap: var(--catalog-sidebar-gap);
+  padding-top: var(--catalog-sidebar-pt);
+  max-height: calc(
+    var(--catalog-rail-h) + var(--catalog-rail-pagination-gap) + var(--catalog-pagination-h)
+  );
+  min-height: 0;
+  overflow: hidden;
+}
+
+.catalog-rail-column {
+  height: calc(
+    var(--catalog-rail-h) + var(--catalog-rail-pagination-gap) + var(--catalog-pagination-h)
+  );
+  min-height: 0;
+}
+
+.catalog-sidebar-header {
+  gap: var(--catalog-title-desc-gap);
+}
+
+.catalog-feature-row {
+  padding-top: var(--catalog-feature-py);
+  padding-bottom: var(--catalog-feature-py);
+}
+
+.catalog-content-row {
+  gap: var(--catalog-sidebar-rail-gap);
+}
+
+.catalog-tabs-row {
+  gap: var(--catalog-tabs-logo-gap);
+}
+
+.catalog-tablist {
+  justify-content: flex-end;
+}
+
+/* Шапка каталога: плитка со знаком WINAL (как иконка блока «Индивидуальные решения»)
+   + постоянное название. Колонка 176px на W0, 210 на W1, 238 на W2. */
+.catalog-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  align-self: center;
+}
+
+.catalog-heading-tile {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-glass);
+}
+
+.catalog-heading-title {
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--dealer-color-text-secondary);
+}
+
+@media (max-width: 1375px) {
+  .catalog-heading { gap: 10px; }
+  .catalog-heading-tile { width: 36px; height: 36px; }
+  .catalog-heading-title { font-size: 14px; }
+}
+
+.catalog-tabs-reserve {
+  padding-right: var(--catalog-tabs-reserve-right);
+  overflow: hidden;
+}
+
+.catalog-tab-button {
+  height: var(--catalog-tab-h);
+  padding-left: var(--catalog-tab-px);
+  padding-right: var(--catalog-tab-px);
+  gap: var(--catalog-tab-icon-gap);
+}
+
+[data-catalog-section][data-header-compact="true"] .catalog-tab-button {
+  padding-left: var(--catalog-tab-compact-px);
+  padding-right: var(--catalog-tab-compact-px);
+}
+
+.catalog-logo-block {
+  width: var(--catalog-logo-w);
+  min-height: var(--catalog-tab-h);
+}
+
+.catalog-rail-shell {
+  height: var(--catalog-rail-h);
+}
+
+.catalog-rail-viewport {
+  height: var(--catalog-base-card-h);
+}
+
+.catalog-base-card {
+  height: var(--catalog-base-card-h);
+}
+
+.catalog-hover-card {
+  height: var(--catalog-rail-h);
+}
+
+.catalog-card-inner {
+  padding-top: var(--catalog-card-py);
+  padding-bottom: var(--catalog-card-py);
+}
+
+.catalog-card-content-stack {
+  gap: var(--catalog-card-content-gap);
+}
+
+.catalog-rail-pagination-gap {
+  gap: var(--catalog-rail-pagination-gap);
+}
+
+.catalog-pagination-shell {
+  min-height: var(--catalog-pagination-h);
+}
+
+.catalog-sidebar-middle {
+  min-height: 0;
+}
+
+.catalog-sidebar-panel {
+  transition:
+    opacity 180ms cubic-bezier(0, 0, 0.2, 1),
+    transform 180ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.catalog-sidebar-panel[data-active="false"] {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.catalog-sidebar-panel[data-active="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog-sidebar-panel {
+    transition: none;
+  }
+}
+
+/* Dealer header responsive tiers */
+:root {
+  /* Канон: панель 1472px, внутренний контейнер 1376px (см. responsive-adaptation.md). */
+  --dealer-header-panel-w: 1472px;
+  --dealer-header-content-w: 1376px;
+  --dealer-header-pad-x: calc((var(--dealer-header-panel-w) - var(--dealer-header-content-w)) / 2);
+  --dealer-layout-panel-w: var(--dealer-header-panel-w);
+  --dealer-layout-content-w: var(--dealer-header-content-w);
+  --dealer-layout-pad-x: var(--dealer-header-pad-x);
+  --dealer-header-pad-y: 8px;
+  --dealer-header-logo-w: 214px;
+  --dealer-header-logo-h: 48px;
+  --dealer-header-glass-size: 64px;
+  --dealer-header-glass-frame: 60px;
+  --dealer-header-glass-compact: var(--dealer-header-glass-size);
+  --dealer-header-inner-h: 80px;
+  --dealer-header-h: calc(2 * var(--dealer-header-pad-y) + var(--dealer-header-inner-h));
+  --dealer-header-top: 24px;
+  --dealer-header-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dealer-header-duration: 480ms;
+}
+
+@media (max-width: 1599px) {
+  :root {
+    --dealer-header-logo-w: 200px;
+    --dealer-header-logo-h: 44px;
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --dealer-header-logo-w: 186px;
+    --dealer-header-logo-h: 42px;
+    --dealer-header-pad-x: 32px;
+  }
+}
+
+@media (max-height: 960px) and (min-height: 841px) {
+  :root {
+    --dealer-header-pad-y: 6px;
+    --dealer-header-inner-h: 72px;
+    --dealer-header-logo-w: 186px;
+    --dealer-header-logo-h: 40px;
+  }
+}
+
+@media (max-height: 840px) and (min-height: 720px) {
+  :root {
+    --dealer-header-pad-y: 4px;
+    --dealer-header-inner-h: 64px;
+    --dealer-header-logo-w: 168px;
+    --dealer-header-logo-h: 36px;
+    --dealer-header-glass-size: 56px;
+    --dealer-header-glass-frame: 52px;
+  }
+}
+
+/* Compact sticky header */
+.dealer-header-slot {
+  position: sticky;
+  top: var(--dealer-header-top);
+  z-index: 50;
+  width: 100%;
+  max-width: var(--dealer-header-panel-w);
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.dealer-sticky-header {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  height: var(--dealer-header-h);
+  padding: var(--dealer-header-pad-y) var(--dealer-header-pad-x);
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition:
+    width var(--dealer-header-duration) var(--dealer-header-ease),
+    height var(--dealer-header-duration) var(--dealer-header-ease),
+    padding var(--dealer-header-duration) var(--dealer-header-ease),
+    background-color var(--dealer-header-duration) var(--dealer-header-ease),
+    border-color var(--dealer-header-duration) var(--dealer-header-ease),
+    box-shadow var(--dealer-header-duration) var(--dealer-header-ease),
+    backdrop-filter var(--dealer-header-duration) var(--dealer-header-ease),
+    border-radius var(--dealer-header-duration) var(--dealer-header-ease);
+}
+
+.dealer-sticky-header[data-compact="false"],
+.dealer-sticky-header[data-compact="true"][data-expanded="true"] {
+  background: var(--dealer-surface-glass-linear);
+  border-color: var(--dealer-border-glass);
+  box-shadow: var(--dealer-shadow-glass);
+  backdrop-filter: blur(10px);
+}
+
+.dealer-header-shell {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: var(--dealer-header-content-w);
+  margin-inline: auto;
+  min-height: var(--dealer-header-inner-h);
+  height: var(--dealer-header-inner-h);
+}
+
+.dealer-header-logo-cell {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.dealer-header-nav-cell {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Same four labels as before, now a real list so the compact mobile panel can
+   stack them; desktop re-joins them with a generated "  |  " separator so the
+   inline "A | B | C | D" reading is pixel-identical to the previous markup. */
+.dealer-header-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dealer-header-nav-item {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--dealer-color-text-secondary);
+  white-space: nowrap;
+}
+
+.dealer-header-nav-item:not(:last-child)::after {
+  content: "\00a0\00a0|\00a0\00a0";
+}
+
+.dealer-header-glass-cell {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: visible;
+}
+
+.dealer-header-logo {
+  display: block;
+  width: var(--dealer-header-logo-w);
+  height: var(--dealer-header-logo-h);
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) {
+  height: auto;
+  padding: 0 var(--dealer-header-pad-x);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  border-radius: 0;
+}
+
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-shell {
+  height: auto;
+  min-height: var(--dealer-header-inner-h);
+  grid-template-columns: 1fr;
+}
+
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-logo-cell,
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-nav-cell {
+  opacity: 0;
+  transform: translateX(12px);
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.dealer-header-main {
+  transition:
+    opacity var(--dealer-header-duration) var(--dealer-header-ease),
+    transform var(--dealer-header-duration) var(--dealer-header-ease);
+}
+
+.dealer-header-glass-btn {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  width: var(--dealer-header-glass-frame);
+  height: var(--dealer-header-glass-frame);
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: visible;
+  transition: transform 160ms ease-out;
+}
+
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-glass-btn {
+  animation: dealer-logo-heartbeat 2.3s ease-in-out infinite;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  min-width: 44px;
+  min-height: 44px;
+  gap: 2px;
+  padding: 0 4px 4px;
+}
+
+.dealer-header-menu-label {
+  display: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--dealer-color-brand-primary);
+}
+
+.dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-menu-label {
+  display: block;
+}
+
+.dealer-header-glass-btn:hover,
+.dealer-header-glass-btn:focus-visible {
+  transform: scale(1.02);
+}
+
+.dealer-header-glass-btn:active {
+  transform: scale(0.98);
+}
+
+.dealer-header-glass-btn:focus-visible {
+  outline: 2px solid rgba(7, 172, 106, 0.7);
+  outline-offset: 2px;
+}
+
+.dealer-header-glass-img {
+  width: var(--dealer-header-glass-size);
+  height: var(--dealer-header-glass-size);
+  margin-top: -2px;
+  object-fit: cover;
+}
+
+@keyframes dealer-logo-heartbeat {
+  0% {
+    scale: 1;
+  }
+
+  11% {
+    scale: 1.07;
+  }
+
+  22% {
+    scale: 1;
+  }
+
+  33% {
+    scale: 1.045;
+  }
+
+  44% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.dealer-product-modal-nav-glyph {
+  transition: transform var(--dealer-motion-duration) var(--dealer-motion-easing);
+}
+
+.dealer-product-modal-nav-btn:hover .dealer-product-modal-nav-glyph,
+.dealer-product-modal-nav-btn:focus-visible .dealer-product-modal-nav-glyph {
+  transform: scale(1.08);
+}
+
+.dealer-product-modal-nav-glyph img {
+  animation: dealer-logo-heartbeat 2.3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dealer-sticky-header,
+  .dealer-header-main,
+  .dealer-header-glass-btn {
+    transition: none;
+  }
+
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-glass-btn {
+    animation: none;
+  }
+
+  .dealer-product-modal-nav-glyph,
+  .dealer-product-modal-nav-glyph img {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ================================================================================
+   T-02A/T-02C — catalog compact/split/stack composition.
+
+   Everything in this block is scoped to `[data-catalog-lab]`. The QA route
+   `/catalog` provides that scope via its own <main data-catalog-lab>; the
+   homepage (T-02C) reuses the identical block by wrapping its `CatalogSection
+   variant="lab"` call in a `display:contents` div carrying the same attribute
+   (see `page.tsx`) — zero rule duplication between the two routes. Desktop
+   fine-pointer ≥1280px is untouched on both: `use-catalog-compact-layout.ts`
+   only flips to compact below that contract.
+   ================================================================================ */
+
+.catalog-lab-page {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: flex-start;
+  /* clip, а не hidden: не создаём лишний scroll container вокруг каталога. */
+  overflow-x: clip;
+  background: var(--dealer-color-surface-page);
+  padding-block: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-bottom));
+  padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
+}
+
+@media (min-width: 1280px) {
+  .catalog-lab-page {
+    /* Совпадает с геометрией главной: стеклянная панель идёт до 1472px без гаттера. */
+    padding-inline: 0;
+    padding-block: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------------
+   Compact-композиция.
+
+   Условие держим синхронным с `use-catalog-compact-layout.ts`:
+   compact = НЕ (min-width:1280 AND hover:hover AND pointer:fine).
+   Hover-overlay и wheel-rail требуют настоящей мыши, поэтому touch-планшет
+   шириной 1280+ тоже получает compact.
+   -------------------------------------------------------------------------------- */
+@media (max-width: 1279px), (hover: none), (pointer: coarse) {
+  /* ---- Базовый tier: телефон portrait, вертикальная последовательность ---- */
+  [data-catalog-lab] [data-catalog-section] {
+    --catalog-section-pad-y: 20px;
+    --catalog-section-pad-x: 16px;
+    --catalog-inner-gap-tabs-content: 20px;
+
+    --catalog-tab-h: 48px;
+    --catalog-tab-px: 12px;
+    --catalog-tab-icon-gap: 8px;
+    --catalog-tab-compact-px: 12px;
+    --catalog-tabs-reserve-right: 0px;
+    --catalog-tabs-logo-gap: 12px;
+    --catalog-logo-w: auto;
+    --catalog-logo-img-w: 148px;
+    --catalog-logo-img-h: 30px;
+
+    --catalog-sidebar-gap: 16px;
+    --catalog-sidebar-pt: 0px;
+    --catalog-sidebar-rail-gap: 24px;
+    --catalog-title-desc-gap: 12px;
+    --catalog-feature-py: 6px;
+
+    --catalog-card-py: 24px;
+    --catalog-card-content-gap: 20px;
+    --catalog-rail-pagination-gap: 12px;
+    --catalog-pagination-h: 20px;
+
+    /* Локальные токены compact-режима. */
+    --catalog-lab-tabs-gap: 8px;
+    --catalog-lab-tab-basis: calc(50% - (var(--catalog-lab-tabs-gap) / 2));
+    --catalog-lab-tab-font: 12px;
+    --catalog-lab-title-size: 24px;
+    --catalog-lab-fact-size: 16px;
+    --catalog-lab-card-title: 22px;
+    --catalog-lab-features-cols: repeat(2, minmax(0, 1fr));
+    --catalog-lab-touch-target: 44px;
+    /* Запас под классический горизонтальный скроллбар на desktop-мыши. */
+    --catalog-lab-scroll-gutter: 12px;
+    --catalog-card-w: min(300px, 78vw);
+    --catalog-card-gap: 12px;
+    /* svh, не dvh: высота карточки не должна прыгать при сворачивании адресной строки. */
+    --catalog-base-card-h: clamp(440px, 64svh, 540px);
+    --catalog-rail-h: calc(var(--catalog-base-card-h) + var(--catalog-lab-scroll-gutter));
+  }
+
+  [data-catalog-lab] .catalog-section-shell {
+    max-width: 100%;
+  }
+
+  [data-catalog-lab] .catalog-section-inner {
+    max-width: 100%;
+  }
+
+  /* ---- Шапка блока: логотип над строкой чипов ---- */
+  [data-catalog-lab] .catalog-tabs-reserve,
+  [data-catalog-lab] .catalog-tabs-row {
+    flex-direction: column;
+    align-items: stretch;
+    overflow: visible;
+  }
+
+  [data-catalog-lab] .catalog-logo-block {
+    width: auto;
+    min-height: 0;
+    border-bottom-color: transparent;
+  }
+
+  [data-catalog-lab] .catalog-heading {
+    align-self: flex-start;
+  }
+
+  [data-catalog-lab] .catalog-tablist {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--catalog-lab-tabs-gap);
+    border-bottom-color: transparent;
+  }
+
+  /* Вкладки-«папки» превращаются в чипы: без подъёма, с полным радиусом. */
+  [data-catalog-lab] .catalog-tab-button {
+    flex: 1 1 var(--catalog-lab-tab-basis);
+    min-width: 0;
+    height: auto;
+    min-height: var(--catalog-tab-h);
+    padding-block: 8px;
+    transform: none;
+    translate: none;
+    border-radius: var(--dealer-radius-sm);
+    background: rgba(241, 241, 241, 0.5);
+  }
+
+  [data-catalog-lab] .catalog-tab-button[aria-selected="true"] {
+    background: var(--dealer-surface-white);
+    box-shadow: var(--dealer-shadow-video);
+  }
+
+  [data-catalog-lab] .catalog-tab-button:focus-visible {
+    outline: 2px solid var(--dealer-color-brand-primary);
+    outline-offset: 2px;
+  }
+
+  [data-catalog-lab] .catalog-tab-button p {
+    font-size: var(--catalog-lab-tab-font);
+    line-height: 1.2;
+    text-align: left;
+    white-space: normal;
+  }
+
+  /* ---- Порядок блоков: заголовок → лид → карточки → факты → CTA ----
+     Последовательность задана разметкой (CatalogSection, ветка isCompact),
+     поэтому CSS здесь только про геометрию. */
+  [data-catalog-lab] .catalog-content-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--catalog-sidebar-rail-gap);
+  }
+
+  [data-catalog-lab] .catalog-sidebar-header {
+    padding-top: 0;
+    gap: var(--catalog-title-desc-gap);
+  }
+
+  [data-catalog-lab] .catalog-sidebar-header h2 {
+    font-size: var(--catalog-lab-title-size);
+    line-height: 1.1;
+  }
+
+  [data-catalog-lab] .catalog-rail-column {
+    flex: none;
+  }
+
+  [data-catalog-lab] .catalog-sidebar-middle {
+    flex: none;
+  }
+
+  [data-catalog-lab] .catalog-sidebar-cta {
+    margin-top: 0;
+  }
+
+  [data-catalog-lab] .catalog-features-grid {
+    display: grid;
+    grid-template-columns: var(--catalog-lab-features-cols);
+    gap: 4px 16px;
+  }
+
+  /* Длинные подписи преимуществ не должны выходить за колонку. */
+  [data-catalog-lab] .catalog-features-grid p {
+    overflow-wrap: break-word;
+  }
+
+  /* Уже 390px две колонки преимуществ не помещаются по слову. */
+  @media (max-width: 389px) {
+    [data-catalog-lab] [data-catalog-section] {
+      --catalog-lab-features-cols: minmax(0, 1fr);
+    }
+  }
+
+  [data-catalog-lab] .catalog-sidebar-facts p {
+    font-size: var(--catalog-lab-fact-size);
+  }
+
+  [data-catalog-lab] .catalog-facts-toggle,
+  [data-catalog-lab] .catalog-card-primary-btn,
+  [data-catalog-lab] .catalog-card-inline-action {
+    min-height: var(--catalog-lab-touch-target);
+  }
+
+  [data-catalog-lab] .catalog-child-link {
+    display: flex;
+    min-height: var(--catalog-lab-touch-target);
+    align-items: center;
+  }
+
+  [data-catalog-lab] .catalog-sidebar-cta-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* ---- Лента: нативная горизонтальная прокрутка со snap ---- */
+  [data-catalog-lab] .catalog-rail-shell {
+    height: var(--catalog-rail-h);
+    /* Снимаем pan-y десктопной ленты, иначе браузер не отдаст горизонтальный жест. */
+    touch-action: auto;
+  }
+
+  [data-catalog-lab] .catalog-rail-viewport {
+    position: static;
+    height: var(--catalog-rail-h);
+    translate: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(1, 88, 171, 0.35) transparent;
+  }
+
+  [data-catalog-lab] .catalog-rail-viewport > div {
+    align-items: flex-start;
+  }
+
+  [data-catalog-lab] [data-catalog-track] {
+    align-items: flex-start;
+    gap: var(--catalog-card-gap);
+  }
+
+  [data-catalog-lab] .catalog-base-card {
+    width: var(--catalog-card-w);
+    height: var(--catalog-base-card-h);
+    scroll-snap-align: start;
+  }
+
+  [data-catalog-lab] .catalog-card-title {
+    font-size: var(--catalog-lab-card-title);
+    line-height: 1.15;
+  }
+
+  /* ---- Пагинация: счётчик остаётся, штрихи делят доступную ширину ---- */
+  [data-catalog-lab] .catalog-pagination-shell {
+    gap: 12px;
+  }
+
+  [data-catalog-lab] .catalog-pagination-counter-row {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  [data-catalog-lab] .catalog-pagination-counter {
+    font-size: 16px;
+  }
+
+  [data-catalog-lab] .catalog-pagination-dots {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 4px;
+  }
+
+  [data-catalog-lab] .catalog-pagination-dots img {
+    width: auto;
+    min-width: 3px;
+    max-width: 50px;
+    flex: 1 1 0;
+  }
+
+  /* ---- Планшет portrait ---- */
+  @media (min-width: 600px) {
+    [data-catalog-lab] [data-catalog-section] {
+      --catalog-section-pad-y: 32px;
+      --catalog-section-pad-x: 24px;
+      --catalog-inner-gap-tabs-content: 24px;
+      --catalog-sidebar-rail-gap: 28px;
+      --catalog-lab-tab-basis: calc(25% - 6px);
+      --catalog-lab-title-size: 28px;
+      --catalog-lab-card-title: 24px;
+      --catalog-lab-features-cols: repeat(2, minmax(0, 1fr));
+      --catalog-logo-img-w: 177px;
+      --catalog-logo-img-h: 36px;
+      --catalog-card-w: 288px;
+      --catalog-card-gap: 16px;
+      --catalog-base-card-h: clamp(460px, 56svh, 600px);
+    }
+
+    /* На планшете CTA во всю ширину колонки выглядит растянутым. */
+    [data-catalog-lab] .catalog-sidebar-cta-btn {
+      width: auto;
+      min-width: 240px;
+    }
+  }
+
+  /* ---- Split: две колонки там, где ширина есть, а высоты мало ----
+     Планшет landscape, крупный планшет / малый ноутбук, телефон landscape. */
+  @media (min-width: 880px), (orientation: landscape) and (min-width: 700px) and (max-height: 560px) {
+    [data-catalog-lab] [data-catalog-section] {
+      --catalog-section-pad-y: 24px;
+      --catalog-section-pad-x: 24px;
+      --catalog-inner-gap-tabs-content: 20px;
+      --catalog-sidebar-w: 300px;
+      --catalog-sidebar-rail-gap: 24px;
+      --catalog-lab-tab-basis: calc(25% - 6px);
+      --catalog-lab-title-size: 26px;
+      --catalog-lab-fact-size: 14px;
+      --catalog-lab-card-title: 24px;
+      --catalog-lab-features-cols: minmax(0, 1fr);
+      --catalog-card-w: 240px;
+      --catalog-card-gap: 16px;
+      --catalog-base-card-h: clamp(360px, calc(100svh - 260px), 620px);
+    }
+
+    /* Grid, а не flex-row: лента занимает правую колонку целиком,
+       текстовые блоки остаются в левой в порядке разметки. */
+    [data-catalog-lab] .catalog-content-row {
+      display: grid;
+      grid-template-columns: var(--catalog-sidebar-w) minmax(0, 1fr);
+      grid-template-areas:
+        "heading rail"
+        "facts   rail"
+        "cta     rail";
+      align-items: stretch;
+      row-gap: var(--catalog-sidebar-gap);
+      column-gap: var(--catalog-sidebar-rail-gap);
+    }
+
+    [data-catalog-lab] .catalog-sidebar-header {
+      grid-area: heading;
+    }
+
+    [data-catalog-lab] .catalog-sidebar-middle {
+      grid-area: facts;
+    }
+
+    [data-catalog-lab] .catalog-sidebar-cta {
+      grid-area: cta;
+    }
+
+    [data-catalog-lab] .catalog-rail-column {
+      grid-area: rail;
+      min-width: 0;
+      min-height: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    [data-catalog-lab] .catalog-rail-shell {
+      flex: 1 1 auto;
+      height: auto;
+      min-height: var(--catalog-rail-h);
+    }
+
+    [data-catalog-lab] .catalog-rail-viewport {
+      height: 100%;
+    }
+
+    [data-catalog-lab] .catalog-rail-viewport > div,
+    [data-catalog-lab] [data-catalog-track] {
+      height: 100%;
+      align-items: stretch;
+    }
+
+    [data-catalog-lab] .catalog-base-card {
+      height: 100% !important;
+    }
+
+    [data-catalog-lab] .catalog-sidebar-cta-btn {
+      width: auto;
+    }
+  }
+
+  /* ---- Телефон landscape: минимальная вертикальная нагрузка ---- */
+  @media (orientation: landscape) and (max-height: 560px) {
+    [data-catalog-lab] [data-catalog-section] {
+      --catalog-section-pad-y: 12px;
+      --catalog-inner-gap-tabs-content: 12px;
+      --catalog-sidebar-w: 260px;
+      --catalog-lab-title-size: 22px;
+      --catalog-lab-card-title: 20px;
+      --catalog-logo-img-w: 148px;
+      --catalog-logo-img-h: 30px;
+      --catalog-card-w: 320px;
+      --catalog-base-card-h: clamp(340px, calc(100svh - 190px), 460px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-catalog-lab] .catalog-rail-viewport {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* ================================================================
+   Compact product modal — /catalog lab route only (T-02B).
+   Opt-in exclusively via the `compact` prop threaded from
+   CatalogSection (variant=lab, non-desktop pointer) through
+   CatalogProductRail into every product modal and, from there, into
+   DealerProductModalShell, which sets data-compact-modal="true" on
+   the backdrop/dialog it portals to document.body. [data-catalog-lab]
+   ancestry does not reach here (the portal breaks it), and variant=page
+   never passes compact=true, so the homepage and desktop /catalog
+   composition are untouched.
+
+   Contract: every modal content file marks its own fixed-size desktop
+   building blocks with these stable `dealer-modal-*` hook classes
+   (harmless no-ops on desktop — nothing here matches without the
+   data-compact-modal ancestor). Do not add more Tailwind-exact-class
+   selectors here; add a hook class at the JSX call site instead.
+   ================================================================ */
+
+[data-compact-modal="true"].dealer-modal-backdrop {
+  padding: max(0.75rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right))
+    max(0.75rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
+}
+
+[data-compact-modal="true"][data-product-swipe-x] {
+  touch-action: none;
+}
+
+.dealer-product-modal-nav-btn {
+  touch-action: none;
+}
+
+.dealer-modal-compact-scroll {
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dealer-modal-compact-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Root 1376×846 canvas -> fluid single column. */
+[data-compact-modal="true"] .dealer-modal-canvas {
+  height: auto;
+  width: 100%;
+}
+
+/* Top-level two-up row (hero+info, coatings+specs, …) -> stacked. */
+[data-compact-modal="true"] .dealer-modal-row {
+  height: auto;
+  flex-direction: column;
+}
+
+/* Any fixed-width/fixed-height desktop card -> fluid, natural height. */
+[data-compact-modal="true"] .dealer-modal-panel {
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  gap: 16px;
+  overflow: visible;
+}
+
+/* Any two-up desktop grouping (feature pairs, CTA/specs splits, …). */
+[data-compact-modal="true"] .dealer-modal-compact-stack {
+  flex-direction: column;
+  align-items: stretch;
+  overflow: visible;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-stack > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Any fixed-width desktop column (feature card, chip, …) -> fluid. */
+[data-compact-modal="true"] .dealer-modal-compact-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Hero photo/gallery box: was a fixed px column relying on a fixed-height
+   row for its own height (incl. next/image `fill`) — needs an explicit
+   ratio once the row is no longer a fixed 415px box. */
+[data-compact-modal="true"] .dealer-modal-hero-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+/* Small square art (RAL chart) that relied on a fixed-height row. */
+[data-compact-modal="true"] .dealer-modal-swatch-media {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* H1/H2: never let font-size alone dictate dialog width; text wraps and
+   stays >=16px equivalent readable body copy stays untouched elsewhere. */
+[data-compact-modal="true"] .dealer-modal-compact-h1 {
+  font-size: clamp(28px, 8vw, 40px);
+  line-height: 1.15;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-h2 {
+  font-size: clamp(20px, 6vw, 26px);
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* CTA row: stacks to full-width, >=44px-tall buttons instead of relying
+   on shrinking nowrap text to fit two side-by-side buttons. */
+[data-compact-modal="true"] .dealer-modal-compact-cta {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-cta > * {
+  width: 100%;
+  min-height: 44px;
+  white-space: normal;
+}
+
+/* Label+value / icon+text rows: stack instead of nowrap-truncating or
+   squeezing body text into an unreadable sliver. */
+[data-compact-modal="true"] .dealer-modal-compact-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  white-space: normal;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-row * {
+  white-space: normal;
+}
+
+/* Named native-scroll rail (coating swatches, model thumbnails, small
+   pattern/coating icons, variant cards, …) — no wheel/drag/autoscroll
+   engine, no hover dependency, confined to its own viewport width. */
+[data-compact-modal="true"] .dealer-modal-compact-rail {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-rail::-webkit-scrollbar {
+  display: none;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-rail > * {
+  flex: 0 0 auto;
+}
+
+/* Short text chips (<=6): wrap as tiles, not a horizontal rail. */
+[data-compact-modal="true"] .dealer-modal-compact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+[data-compact-modal="true"] .dealer-modal-compact-chips > * {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+/* MinWin comparison table: keeps its own fixed-column grid rows intact,
+   confines the horizontal overflow to this named viewport instead of
+   the dialog/canvas. */
+[data-compact-modal="true"] .dealer-modal-compact-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safety net: nowrap left on any element not covered by a hook above
+   must never be the reason the canvas/dialog scrolls horizontally. */
+[data-compact-modal="true"] .dealer-modal-compact-scroll .whitespace-nowrap {
+  white-space: normal;
+}
+/* Chip labels stay one line; the group wraps as tiles instead. */
+[data-compact-modal="true"] .dealer-modal-compact-scroll .dealer-modal-compact-chips .whitespace-nowrap {
+  white-space: nowrap;
+}
+
+
+/* ================================================================================
+   T-02C fix-loop 2 — medium desktop tier (1280–1471px).
+
+   Between the compact contract below (<=1279px) and the 1472px canon above,
+   a handful of hero/cases/form panels still forced their full desktop pixel
+   widths and bled past the viewport. Keep the desktop composition; just let
+   the panels track the real fluid container instead of the fixed canon.
+   ================================================================================ */
+
+@media (min-width: 1280px) and (max-width: 1471px) {
+  /* Surface: the scroll-scene wrapper forced a literal 1472px panel via
+     `w-368 max-w-none`, ignoring its actual (fluid, sub-1472px) parent. */
+  .dealer-hero-surface-wrap {
+    left: 0;
+    width: 100%;
+  }
+
+  .dealer-surface-row {
+    max-width: 100%;
+  }
+
+  /* The section now inherits a fluid (sub-1472px) width, also true for the
+     prefers-reduced-motion/static branch which shares this same canon-pixel
+     overlay markup. Feature cards #1/#4 already fit; #2 (left 1011) and #3
+     (left 1064, both 300px wide) can run past the fluid right edge. Anchor
+     them from the right instead — the offsets reproduce their canon 1472px
+     position exactly at this tier's 1471px ceiling, so there's no jump at
+     the breakpoint, and both stay inside the section down to 1280px. */
+  .dealer-surface-features > :nth-child(2) {
+    left: auto !important;
+    right: 161px;
+  }
+
+  .dealer-surface-features > :nth-child(3) {
+    left: auto !important;
+    right: 108px;
+  }
+
+  /* Cases: the filter chip row is the one proven fixed-content offender —
+     give it its own scoped native scroll instead of stretching the section.
+     Detail row / gallery rail keep the desktop composition untouched. */
+  .dealer-cases-filters {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .dealer-cases-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Project form: the two-column row assumes 912 + 16 + 448 = 1376px, wider
+     than the fluid inner at this tier. Keep the two-column composition but
+     let both columns — and the fixed-width rows of children inside the
+     form column — shrink proportionally instead of forcing desktop pixels. */
+  .dealer-form-row {
+    min-width: 0;
+  }
+
+  .dealer-form-card {
+    min-width: 0;
+    flex: 1 1 68%;
+  }
+
+  .dealer-form-aside {
+    min-width: 0;
+    flex: 1 1 32%;
+  }
+
+  .dealer-form-upload-text,
+  .dealer-form-dropzone {
+    min-width: 0;
+    flex: 1 1 0%;
+  }
+
+  .dealer-form-field-row .dealer-form-field {
+    min-width: 0;
+    flex: 1 1 0%;
+  }
+
+  /* Narrower aside at this tier can no longer hold the nowrap title. */
+  .dealer-form-aside-title {
+    white-space: normal;
+  }
+  /* Footer: the 446px brand block plus the 835px chip row no longer fit
+     side-by-side inside the medium tier's real inner width. Keep one row
+     where possible, but let both peers shrink and the chips wrap locally. */
+  .dealer-footer-top-inner {
+    min-width: 0;
+    gap: 16px;
+  }
+
+  .dealer-footer-brand {
+    width: auto;
+    min-width: 0;
+    flex: 0 1 38%;
+  }
+
+  .dealer-footer-brand p {
+    white-space: normal;
+  }
+
+  .dealer-footer-chips {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1280px) and (max-height: 820px) {
+  .dealer-hero-text-card,
+  .dealer-hero-text-inner {
+    gap: 24px;
+  }
+
+  .dealer-hero-text-card {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+/* ================================================================================
+   T-02C — full landing responsive surface (phone/tablet, <1280px).
+
+   Single sitewide threshold shared with the catalog and hero-scene contracts
+   (`useIsCompactViewport` / `use-catalog-compact-layout.ts`): 1280px fine-pointer
+   is "desktop", already covered by the fixed-canon markup above and untouched
+   here. Everything below reflows the same JSX into natural-height, padded,
+   single-column (or lightly split) flow — no second design system, no new
+   fixed pixel canvases.
+   ================================================================================ */
+
+@media (max-width: 1279px) {
+  :root {
+    --dealer-header-pad-x: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --dealer-header-pad-x: 16px;
+  }
+}
+
+/* ---- Header: permanent mobile menu trigger ----
+   `useCompactHeaderState` forces `headerCompact=true` unconditionally below
+   1280px, so the floating glass button is the only chrome from first paint;
+   expanding it reuses the exact same Escape / outside-click / focus-return
+   effects already wired for the desktop post-hero compact header. */
+@media (max-width: 1279px) {
+  .dealer-sticky-header[data-compact="true"][data-expanded="true"] {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .dealer-sticky-header[data-compact="true"][data-expanded="true"] .dealer-header-shell {
+    grid-template-columns: 1fr auto;
+    height: var(--dealer-header-inner-h);
+  }
+
+  /* Nav panel floats below the header instead of pushing page content down. */
+  .dealer-sticky-header[data-compact="true"][data-expanded="true"] .dealer-header-nav-cell {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    justify-self: stretch;
+    justify-content: flex-start;
+    height: auto;
+    background: var(--dealer-surface-white);
+    border-radius: var(--dealer-radius-sm);
+    box-shadow: var(--dealer-shadow-glass);
+    padding: 8px 20px;
+    z-index: 60;
+  }
+
+  .dealer-header-nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-height: calc(100dvh - var(--dealer-header-top) - var(--dealer-header-inner-h) - 48px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dealer-header-nav-item {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    white-space: normal;
+    border-top: 1px solid var(--dealer-color-brand-decoration);
+  }
+
+  .dealer-header-nav-item:first-child {
+    border-top: none;
+  }
+
+  .dealer-header-nav-item:not(:last-child)::after {
+    content: none;
+  }
+}
+
+/* ---- Hero: no 420vh scroll-scene below the desktop contract ----
+   `HomeScrollExperience` renders the same natural-flow `StaticHero` branch
+   used for prefers-reduced-motion; only the geometry needs to go fluid here. */
+@media (max-width: 1279px) {
+  .dealer-home-stack {
+    gap: 32px;
+  }
+
+  .dealer-hero-static {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .dealer-hero-static-video-wrap {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    filter: none !important;
+    isolation: auto;
+    z-index: 0;
+  }
+
+  .dealer-hero-video-frame {
+    isolation: auto;
+    overflow: visible;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .dealer-hero-video-frame video,
+  .dealer-hero-video-frame img {
+    filter: none !important;
+  }
+
+  .dealer-hero-text-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px;
+  }
+
+  .dealer-hero-static-text {
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: var(--dealer-surface-white);
+  }
+
+  .dealer-hero-static .dealer-hero-glass-fill,
+  .dealer-hero-static .dealer-hero-corner-mark {
+    display: none;
+  }
+
+  .dealer-hero-static-h1 {
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.15;
+  }
+
+  .dealer-hero-static-cta {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dealer-hero-static-cta > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .dealer-hero-poster-img {
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .dealer-home-stack {
+    gap: 24px;
+  }
+}
+
+/* Shared CTA hook (hero, Surface, Design) — desktop widths are set via an
+   inline `style.width`, which needs `!important` to be overridden by CSS. */
+@media (max-width: 1279px) {
+  .dealer-btn-primary,
+  .dealer-btn-outline {
+    width: 100% !important;
+    min-height: 44px;
+  }
+}
+
+/* ---- Surface ("внутренняя отделка объектов") ---- */
+.dealer-surface-features {
+  display: contents;
+}
+
+.dealer-surface-stat-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1279px) {
+  .dealer-surface-section {
+    height: auto;
+    padding: 24px 20px;
+  }
+
+  .dealer-surface-container {
+    height: auto;
+  }
+
+  .dealer-surface-row {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    gap: 24px;
+  }
+
+  .dealer-surface-text-col {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    container-type: inline-size;
+    container-name: surface-text;
+  }
+
+  .dealer-surface-h2 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
+  }
+
+  .dealer-surface-copy {
+    width: 100%;
+  }
+
+  .dealer-surface-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dealer-surface-cta-row > * {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .dealer-surface-stats-row {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .dealer-surface-stat {
+    flex: 1 0 auto;
+    width: auto;
+    min-width: max-content;
+  }
+
+  .dealer-surface-stat-copy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.3em;
+  }
+
+  @container surface-text (max-width: 690px) {
+    .dealer-surface-stats-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .dealer-surface-stat {
+      flex: none;
+      width: auto;
+      min-width: 0;
+    }
+  }
+
+  .dealer-surface-image-col {
+    display: none;
+  }
+
+  .dealer-surface-image-mask {
+    display: none;
+  }
+
+  .dealer-surface-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+  }
+
+  .dealer-surface-feature-card {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .dealer-surface-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Design ("Свобода в дизайне") ---- */
+@media (max-width: 1279px) {
+  .dealer-design-section {
+    height: auto;
+    padding: 24px 20px;
+  }
+
+  .dealer-design-container {
+    height: auto;
+    gap: 32px;
+  }
+
+  .dealer-design-top-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dealer-design-content {
+    width: 100%;
+    min-width: 0;
+    gap: 20px !important;
+  }
+
+  .dealer-design-eyebrow {
+    white-space: normal;
+  }
+
+  .dealer-design-icon {
+    display: none;
+  }
+
+  .dealer-design-headline-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .dealer-design-headline,
+  .dealer-design-body {
+    width: 100%;
+    height: auto !important;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .dealer-design-h2 {
+    width: 100%;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.15;
+  }
+
+  .dealer-design-lead {
+    width: 100%;
+  }
+
+  .dealer-design-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .dealer-design-cta-row > * {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .dealer-design-cards-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .dealer-design-card {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    flex: none;
+  }
+}
+
+/* Phone: hide the 100px icon peer so the copy uses the full content width. */
+@media (max-width: 767px) {
+  .dealer-design-top-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dealer-design-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dealer-cases-filter-chip-label {
+  white-space: nowrap;
+}
+
+/* ---- Cases ---- */
+@media (max-width: 1279px) {
+  .dealer-cases-section {
+    height: auto;
+    padding: 24px 20px;
+  }
+
+  .dealer-cases-inner {
+    height: auto;
+    gap: 20px;
+  }
+
+  .dealer-cases-header {
+    height: auto;
+    gap: 12px;
+  }
+
+  .dealer-cases-h2 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
+  }
+
+  .dealer-cases-filters {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 44px;
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .dealer-cases-filter-chip {
+    height: auto;
+    min-height: 44px;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .dealer-cases-filter-chip-label {
+    white-space: normal;
+    text-align: left;
+  }
+
+  .dealer-cases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .dealer-cases-grid-card {
+    width: 100%;
+  }
+
+  .dealer-cases-more {
+    display: inline-flex;
+    min-height: 44px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background: var(--dealer-color-brand-primary);
+    color: var(--dealer-color-brand-white, #fff);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .dealer-cases-detail-row {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+
+  .dealer-cases-hero {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .dealer-cases-detail {
+    min-height: 0;
+    height: auto;
+  }
+
+  .dealer-cases-detail h3 {
+    font-size: clamp(22px, 5vw, 32px);
+    line-height: 1.15;
+  }
+
+  .dealer-cases-product-tiles {
+    flex-wrap: wrap;
+  }
+
+  .dealer-cases-product-tiles > * {
+    flex: 1 1 calc(50% - 8px);
+    max-width: none;
+  }
+
+  .dealer-cases-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dealer-cases-actions > * {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .dealer-modal-neighbor-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .dealer-modal-neighbor-btn {
+    display: flex;
+    min-height: 44px;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: var(--dealer-surface-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .dealer-modal-neighbor-btn.is-next {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+.dealer-modal-neighbor-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.dealer-modal-neighbor-btn {
+  display: flex;
+  min-height: 44px;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--dealer-surface-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  text-align: left;
+}
+
+.dealer-modal-neighbor-btn.is-next {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.dealer-modal-neighbor-thumb {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--dealer-surface-white);
+}
+
+
+.dealer-modal-neighbor-nav.is-desktop {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.dealer-modal-neighbor-nav.is-desktop .dealer-modal-neighbor-btn,
+.dealer-modal-neighbor-slot {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .dealer-modal-backdrop[data-neighbor-dock] {
+    padding: 0;
+  }
+
+  .dealer-modal-backdrop[data-neighbor-dock] [role='dialog'][data-compact-modal='true'] {
+    height: 100dvh;
+    max-height: 100dvh;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .dealer-modal-compact-footer {
+    width: 100%;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .dealer-modal-neighbor-nav.is-compact {
+    width: 100%;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  .dealer-modal-neighbor-nav.is-compact .dealer-modal-neighbor-btn {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .dealer-cases-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dealer-modal-neighbor-nav.is-compact {
+    flex-direction: row;
+  }
+}
+
+/* Native-scroll gallery rail (non-desktop-pointer): real touch swipe and
+   keyboard focus-follow-scroll instead of the transform/drag/wheel engine. */
+.cases-gallery-native {
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cases-gallery-native::-webkit-scrollbar {
+  display: none;
+}
+
+.cases-gallery-native [data-cases-gallery-card] {
+  scroll-snap-align: start;
+}
+
+/* ---- Project form (decorative, not wired — adaptation only) ---- */
+@media (max-width: 1279px) {
+  .dealer-form-section {
+    height: auto;
+    padding: 24px 20px;
+  }
+
+  .dealer-form-inner {
+    height: auto;
+    gap: 24px;
+  }
+
+  .dealer-form-header {
+    height: auto;
+    gap: 12px;
+  }
+
+  .dealer-form-h2 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
+  }
+
+  .dealer-form-intro {
+    width: 100%;
+  }
+
+  .dealer-form-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dealer-form-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .dealer-form-upload-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dealer-form-upload-text,
+  .dealer-form-dropzone {
+    width: 100%;
+    height: auto;
+  }
+
+  .dealer-form-field-row {
+    flex-direction: column;
+  }
+
+  .dealer-form-field {
+    width: 100%;
+  }
+
+  .dealer-form-input {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .dealer-form-textarea {
+    height: auto;
+    min-height: 96px;
+    font-size: 16px;
+  }
+
+  .dealer-form-submit-row {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    gap: 16px;
+  }
+
+  .dealer-form-submit-btn {
+    width: 100%;
+    height: 44px;
+  }
+
+  .dealer-form-consent {
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .dealer-form-consent-checkbox {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dealer-form-aside {
+    width: 100%;
+    height: auto;
+  }
+
+  .dealer-form-aside-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .dealer-form-aside-image-el {
+    height: 100%;
+  }
+
+  .dealer-form-aside-title {
+    white-space: normal;
+  }
+
+  .dealer-form-aside-caption {
+    width: 100%;
+  }
+}
+
+/* ---- Footer ---- */
+@media (max-width: 1279px) {
+  .dealer-footer-top {
+    padding: 20px;
+  }
+
+  .dealer-footer-top-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dealer-footer-brand {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .dealer-footer-brand p {
+    white-space: normal;
+  }
+
+  .dealer-footer-chips {
+    display: none;
+  }
+
+  .dealer-footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dealer-footer-about {
+    padding: 24px;
+  }
+
+  .dealer-footer-contact-value {
+    white-space: normal;
+  }
+
+  .dealer-footer-policy {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+.dealer-hero-play-btn {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dealer-hero-play-btn.is-playing {
+  background: transparent;
+}
+
+.dealer-hero-play-icon {
+  width: 72px;
+  height: 72px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+}
+
+.dealer-hero-poster-img {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dealer-hero-play-mark {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--dealer-color-brand-primary);
+  box-shadow: 0 8px 24px rgba(1, 88, 171, 0.35);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.dealer-hero-play-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #fff;
+  transform: translate(-50%, -50%);
+}
+
+.dealer-footer-chips {
+  display: none !important;
+}
+
+/* Титры поверх видео первого экрана (ролик без вшитых титров).
+   Белый текст с заголовком капсом, как в прежнем ролике; читаемость даёт мягкое затемнение
+   снизу, а не плашка. Блок прижат к правому нижнему углу: в стартовом состоянии левую часть
+   видео перекрывает стеклянная карточка с заголовком. Кегль от ширины видео (cqw). */
+.dealer-hero-captions {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 46%;
+  container-type: inline-size;
+  padding: 0 clamp(24px, 4%, 56px) clamp(24px, 6%, 64px);
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(8, 14, 24, 0.62) 0%, rgba(8, 14, 24, 0.28) 45%, rgba(8, 14, 24, 0) 100%);
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.dealer-hero-captions.is-active {
+  opacity: 1;
+}
+
+.dealer-hero-captions-cue {
+  max-width: min(56%, 640px);
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+  animation: dealer-hero-caption-in 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.dealer-hero-captions-title {
+  margin: 0;
+  font-family: var(--dealer-font-family);
+  font-size: clamp(13px, 1.6cqw, 22px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.dealer-hero-captions-text {
+  margin: 0;
+  font-family: var(--dealer-font-family);
+  font-size: clamp(12px, 1.2cqw, 18px);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.dealer-hero-captions-title + .dealer-hero-captions-text,
+.dealer-hero-captions-title + .dealer-hero-captions-list {
+  margin-top: clamp(4px, 0.7cqw, 10px);
+}
+
+.dealer-hero-captions-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: clamp(2px, 0.4cqw, 6px) clamp(14px, 2.2cqw, 32px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--dealer-font-family);
+  font-size: clamp(11px, 1.1cqw, 16px);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.dealer-hero-captions-list li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.dealer-hero-captions-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.85;
+}
+
+/* Мобильный ролик в карточке: компактнее, список в одну колонку только при нехватке места. */
+.dealer-hero-captions--compact {
+  justify-content: flex-start;
+  min-height: 60%;
+  padding: 0 14px 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-cue {
+  max-width: 100%;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-title {
+  font-size: 12px;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-text {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-title + .dealer-hero-captions-text,
+.dealer-hero-captions--compact .dealer-hero-captions-title + .dealer-hero-captions-list {
+  margin-top: 4px;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-list {
+  gap: 2px 16px;
+  font-size: 10.5px;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-list li {
+  padding-left: 9px;
+}
+
+.dealer-hero-captions--compact .dealer-hero-captions-list li::before {
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes dealer-hero-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dealer-hero-captions {
+    transition: none;
+  }
+  .dealer-hero-captions-cue {
+    animation: none;
+  }
+}

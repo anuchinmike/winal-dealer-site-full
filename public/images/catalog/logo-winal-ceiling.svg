@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712.28 144.29">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        fill: #1c569b;
+      }
+
+      .cls-5 {
+        font-family: Gilroy-Regular, Gilroy;
+        font-size: 48px;
+      }
+
+      .cls-6 {
+        font-family: Gilroy-Bold, Gilroy;
+        font-size: 149.14px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text class="cls-5" transform="translate(-.59 144.29) scale(1.29 .75)"><tspan x="0" y="0">П</tspan><tspan class="cls-3" x="31.68" y="0">ОТО</tspan><tspan x="129.02" y="0">Л</tspan><tspan class="cls-2" x="162.38" y="0">О</tspan><tspan class="cls-1" x="200.49" y="0">ЧНЫЕ РЕШЕНИЯ</tspan></text>
+  <text class="cls-6" transform="translate(-3 105.48) scale(1.56 1)"><tspan x="0" y="0">WINAL</tspan></text>
+  <g>
+    <path class="cls-4" d="M691.34,13.46l1.72-9.51h-3.3l.26-1.59h8.32l-.26,1.59h-3.3l-1.72,9.51h-1.72Z"/>
+    <path class="cls-4" d="M698.22,13.46l1.98-11.1h1.85l1.98,7.53h.13l4.62-7.53h1.98l-1.98,11.1h-1.72l1.45-7.8h-.13l-4.09,6.61h-1.06l-1.72-6.61h-.13l-1.32,7.8h-1.86Z"/>
+  </g>
+</svg>

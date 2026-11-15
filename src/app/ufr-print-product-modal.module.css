@@ -1,0 +1,125 @@
+.gallery {
+  min-width: 0;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.zoomLabel {
+  pointer-events: none;
+}
+
+.caption {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--pm-text-2);
+}
+
+.bottomRow {
+  align-items: start;
+}
+
+.surfaces {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--pm-hair);
+}
+
+.caseCard:hover {
+  border-color: rgba(1, 88, 171, 0.35);
+  box-shadow: var(--pm-sh-brand);
+}
+
+span.photoLink {
+  color: var(--pm-brand);
+  font-weight: 600;
+}
+
+.photo:focus-visible {
+  outline: 2px solid var(--pm-brand);
+  outline-offset: -4px;
+}
+
+.contact:focus-visible {
+  outline: 2px solid var(--pm-brand);
+  outline-offset: 2px;
+}
+
+.lettering {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 48px 80px 96px;
+  background: var(--dealer-surface-white);
+  color: var(--pm-text);
+}
+
+.roomNumber {
+  margin: 0;
+  font-size: clamp(64px, 10cqi, 128px);
+  line-height: 1;
+  font-weight: 600;
+  color: var(--pm-brand);
+}
+
+.roomName {
+  margin: 0;
+  font-size: clamp(24px, 3cqi, 40px);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.wayfinding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.wayfinding svg {
+  width: 24px;
+  height: 24px;
+}
+
+.letteringCaption {
+  max-width: 32ch;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--pm-text-2);
+}
+
+@container pm (max-width: 720px) {
+  .caseCard > .caseArrow {
+    display: none;
+  }
+
+  .lettering {
+    gap: 6px;
+    padding: 16px 24px 56px;
+  }
+
+  .lettering > p:first-child,
+  .letteringCaption {
+    display: none;
+  }
+
+  .wayfinding {
+    padding-top: 4px;
+  }
+}

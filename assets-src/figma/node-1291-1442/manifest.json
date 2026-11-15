@@ -1,0 +1,164 @@
+{
+  "figmaFileKey": "PS0BzL7Uw1QQvlYJrhMmfF",
+  "figmaNodeId": "1291:1442",
+  "exportedAt": "2026-08-09",
+  "assets": [
+    {
+      "role": "reference-frame",
+      "figmaNodeId": "1291:1442",
+      "format": "png",
+      "sourcePath": "assets-src/figma/node-1291-1442/reference/node-1291-1442--cases-frame.png",
+      "publicPath": null,
+      "sha256": "be860051ac268b60f9be6138de5c080e2d7457c2a374f26c4fb20145e8c589ba"
+    },
+    {
+      "role": "icon-all",
+      "figmaNodeId": "1315:1181",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-all.svg",
+      "publicPath": "public/images/home/cases/ui/icon-all.svg",
+      "sha256": "abfa99ce6ca7f3feb4a6495f1edf4b7b7a08e9f7e3480f7b7839b6b0ec6499a2"
+    },
+    {
+      "role": "icon-offices",
+      "figmaNodeId": "1315:1171",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-offices.svg",
+      "publicPath": "public/images/home/cases/ui/icon-offices.svg",
+      "sha256": "3b8b05f074f7eee46ab796e2f034424705166f27018a86ecb663a0200371800e"
+    },
+    {
+      "role": "icon-med",
+      "figmaNodeId": "1291:1456",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-med.svg",
+      "publicPath": "public/images/home/cases/ui/icon-med.svg",
+      "sha256": "8f0427cfda1f717350d19525f93160a68e80f0ff783a7ffe1985d7c16c4873fa"
+    },
+    {
+      "role": "icon-sport",
+      "figmaNodeId": "1291:1460",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-sport.svg",
+      "publicPath": "public/images/home/cases/ui/icon-sport.svg",
+      "sha256": "e04129c847ccb23325cac26aa4cf43f4a041a823c0e4ddb2107dba826a700235"
+    },
+    {
+      "role": "icon-education",
+      "figmaNodeId": "1291:1464",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-education.svg",
+      "publicPath": "public/images/home/cases/ui/icon-education.svg",
+      "sha256": "27e2838058b92cab4471d8e65c3a3d050447880bfb02826eb2209fdab7a7ae58"
+    },
+    {
+      "role": "icon-acoustics",
+      "figmaNodeId": "1291:1469",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-acoustics.svg",
+      "publicPath": "public/images/home/cases/ui/icon-acoustics.svg",
+      "sha256": "d230e50b330917c8783edc6668d343dcf7ed126dc359ca37f0fed65f2a9f334a"
+    },
+    {
+      "role": "icon-residential",
+      "figmaNodeId": "1291:1474",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-residential.svg",
+      "publicPath": "public/images/home/cases/ui/icon-residential.svg",
+      "sha256": "563dedcaa493494e248c51c382c95786794f4c01c5a3a2e0a7c66e175e5e0c67"
+    },
+    {
+      "role": "icon-public",
+      "figmaNodeId": "1291:1479",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-public.svg",
+      "publicPath": "public/images/home/cases/ui/icon-public.svg",
+      "sha256": "2ed34f207713cc940fbd302e87be741435111793da64103d8c838bc7869b3200"
+    },
+    {
+      "role": "chevron-right-glass",
+      "figmaNodeId": "1291:1487",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/chevron-right-glass.svg",
+      "publicPath": "public/images/home/cases/ui/chevron-right-glass.svg",
+      "sha256": "25ad81a319acaa30207b2cf7cb356dabb9354e8fbb237fbb21eefe0479430893"
+    },
+    {
+      "role": "arrow-white-left",
+      "figmaNodeId": "I1291:1501",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/arrow-white-left.svg",
+      "publicPath": "public/images/home/cases/ui/arrow-white-left.svg",
+      "sha256": "7fb68cec11588a8536f818f09efb5c7922a9d906e44684edec26a1cc67d36e4f"
+    },
+    {
+      "role": "icon-external-link",
+      "figmaNodeId": "I1291:1502",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/icon-external-link.svg",
+      "publicPath": "public/images/home/cases/ui/icon-external-link.svg",
+      "sha256": "12c8a774733b804370d65f48a25427af8fd4b177b5236b505ed71c5df57607b7"
+    },
+    {
+      "role": "caret-left-gallery",
+      "figmaNodeId": "1291:1529",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/caret-left-gallery.svg",
+      "publicPath": "public/images/home/cases/ui/caret-left-gallery.svg",
+      "sha256": "85fd6240c8fbb0d6e357408562004ea487769144f69a377497671d8f2e6f607f"
+    },
+    {
+      "role": "chevron-right-gallery",
+      "figmaNodeId": "1291:1532",
+      "format": "svg",
+      "sourcePath": "assets-src/figma/node-1291-1442/svg/chevron-right-gallery.svg",
+      "publicPath": "public/images/home/cases/ui/chevron-right-gallery.svg",
+      "sha256": "7679a712125be108a08de4762aec23b2a58588f572b746287836855fe3d2123a"
+    },
+    {
+      "role": "padel-centr-product-1-png",
+      "figmaNodeId": "1300:1706",
+      "format": "png",
+      "sourcePath": "assets-src/figma/node-1291-1442/products/padel-centr/product-1.png",
+      "publicPath": "public/images/home/cases/padel-centr/product-1.png",
+      "sha256": "6b1bc3aa0875e4929ba622d042f791aaee03a8ff37e0fc73c3641082c57c969d"
+    },
+    {
+      "role": "padel-centr-product-2-png",
+      "figmaNodeId": "1300:1730",
+      "format": "png",
+      "sourcePath": "assets-src/figma/node-1291-1442/products/padel-centr/product-2.png",
+      "publicPath": "public/images/home/cases/padel-centr/product-2.png",
+      "sha256": "87401e3342bf7ec930c39c24c57ca4bb8bff86a89aac9aba9e229d67bb22b7e5"
+    },
+    {
+      "role": "padel-centr-product-3-png",
+      "figmaNodeId": "1300:1732",
+      "format": "png",
+      "sourcePath": "assets-src/figma/node-1291-1442/products/padel-centr/product-3.png",
+      "publicPath": "public/images/home/cases/padel-centr/product-3.png",
+      "sha256": "75953b98331f400eda05e5090c772cff5a3da9bb31936ed5e67997b06ab21930"
+    },
+    {
+      "role": "padel-centr-product-4-png",
+      "figmaNodeId": "1300:1737",
+      "format": "png",
+      "sourcePath": "assets-src/figma/node-1291-1442/products/padel-centr/product-4.png",
+      "publicPath": "public/images/home/cases/padel-centr/product-4.png",
+      "sha256": "e46aa07a3167e18b5536f8d39cf97475ef8074a41460ff28cdd0c6d03f9d0658"
+    }
+  ],
+  "cases": [
+    "padel-centr",
+    "paneli-winal-na-100000-m2-kinostudii-gorkogo",
+    "aktovyy-zal-institut",
+    "soyz-holl-dremin",
+    "vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino",
+    "sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium",
+    "onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh",
+    "voenkomat-zelenograd",
+    "cheremushkinskiy-rayonnyy-sud",
+    "istoricheskiy-manezh-moskino-proekt-winal",
+    "vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk"
+  ]
+}

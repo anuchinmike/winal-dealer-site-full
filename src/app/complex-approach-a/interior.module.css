@@ -1,0 +1,152 @@
+/* Вариант A «Комплексного подхода»: общий кадр холла с точками.
+   Только токены дилерского сайта (globals.css). Точки и подписи повторяют экран монтажа
+   (tech/montazh-panelej/montazh.module.css: .hs/.led/.glow/.ray/.label). */
+
+.page {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.back { color: var(--dealer-color-brand-primary); font-size: 16px; font-weight: 600; text-underline-offset: 4px; }
+.toolbarNote { color: var(--dealer-color-text-description); font-size: 14px; font-weight: 500; }
+.back:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 4px; }
+
+.section { --fast: 200ms; --label-ms: 600ms; --ease: var(--dealer-motion-easing); --aside-w: 360px; --chrome: 330px; width: 100%; max-width: 1472px; padding: 48px; scroll-margin-top: 100px; }
+
+.header { display: grid; grid-template-columns: minmax(0, 1fr) var(--aside-w); align-items: end; gap: 24px; margin-bottom: 32px; }
+.titleGroup { min-width: 0; max-width: 820px; }
+.eyebrow { margin: 0 0 24px; color: var(--dealer-color-brand-primary); font-size: 16px; font-weight: 600; line-height: 1.2; text-transform: uppercase; }
+.headerAside { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.headerAside p { margin: 0; }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 16px 28px; color: var(--dealer-color-brand-white); background: var(--dealer-color-brand-primary);
+  text-decoration: none; border-radius: var(--dealer-radius-sm); font-size: 14px; font-weight: 600; line-height: 1.4;
+}
+.button:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 4px; }
+
+/* Кадр слева, список справа. Высота кадра ограничена окном: секция целиком помещается
+   на ноутбуке 1600×1000 при масштабе 200% (окно браузера около 1600×870). */
+.body { display: grid; grid-template-columns: minmax(0, 1fr) var(--aside-w); gap: 24px; align-items: stretch; }
+.scene { min-width: 0; }
+.frame {
+  position: relative; overflow: hidden; border-radius: var(--dealer-radius-sm);
+  width: min(100%, calc((100svh - var(--chrome)) * 1860 / 846));
+}
+.sceneImage { display: block; width: 100%; height: auto; }
+
+.hs {
+  position: absolute; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%);
+  width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0; border: 0; background: none;
+  cursor: pointer; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent;
+}
+.hs:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 0; border-radius: 50%; z-index: 3; }
+.on { z-index: 3; }
+.hs > span { pointer-events: none; }
+/* Точка-маркер в фирменном синем с номером: не путается со светильниками кадра.
+   Пульсирующее кольцо — только transform и opacity, ритм 2000 мс как dealer-motion. */
+.led {
+  position: absolute; left: 50%; top: 50%; width: 26px; height: 26px; transform: translate(-50%, -50%);
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--dealer-color-brand-primary); border: 2px solid var(--dealer-color-brand-white);
+  box-shadow: var(--dealer-shadow-icon-float);
+  color: var(--dealer-color-brand-white); font-size: 10px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums;
+  transition: transform var(--fast) var(--ease), background-color var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.glow {
+  position: absolute; left: 50%; top: 50%; width: 26px; height: 26px; margin: -13px; border-radius: 50%;
+  border: 2px solid var(--dealer-color-brand-white); background: var(--dealer-border-brand-soft);
+  opacity: 0; transform: scale(1);
+  animation: pulse var(--dealer-motion-duration) var(--ease) infinite; animation-delay: calc(var(--o) * -0.25s);
+}
+@keyframes pulse { 0% { opacity: 0.9; transform: scale(1); } 100% { opacity: 0; transform: scale(2.4); } }
+.on .led { transform: translate(-50%, -50%) scale(1.2); background: var(--dealer-color-brand-white); color: var(--dealer-color-brand-primary); border-color: var(--dealer-color-brand-primary); }
+@media (hover: hover) and (pointer: fine) { .hs:hover .led { transform: translate(-50%, -50%) scale(1.2); } }
+.ray {
+  position: absolute; left: 50%; top: calc(50% + 14px); width: 2px; height: 42px; margin-left: -1px; border-radius: 1px;
+  background: linear-gradient(var(--dealer-color-brand-white), rgba(255, 255, 255, 0));
+  transform-origin: top; transform: scaleY(0); transition: transform var(--label-ms) var(--ease);
+}
+.label {
+  position: absolute; left: 50%; top: calc(50% + 62px); display: flex; align-items: center; gap: 8px; white-space: nowrap;
+  padding: 9px 14px; border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-glass-panel);
+  -webkit-backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  border: 1px solid var(--dealer-border-glass); box-shadow: var(--dealer-effect-winal-glass-shadow);
+  font-size: 13px; font-weight: 600; line-height: 1; color: var(--dealer-color-brand-primary);
+  opacity: 0; pointer-events: none; transform: translate(-50%, -6px);
+  transition: opacity var(--label-ms) var(--ease), transform var(--label-ms) var(--ease);
+}
+.label b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.on .ray, .hs:focus-visible .ray { transform: scaleY(1); }
+.on .label, .hs:focus-visible .label { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: hover) and (pointer: fine) {
+  .hs:hover { z-index: 4; }
+  .hs:hover .ray { transform: scaleY(1); }
+  .hs:hover .label { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Список направлений и описание выбранного */
+.aside { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.list { display: flex; flex-direction: column; }
+.row {
+  display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; gap: 8px;
+  padding: 9px 12px; border: 0; border-bottom: 1px solid var(--dealer-color-brand-decoration);
+  border-radius: var(--dealer-radius-xs); background: none; font: inherit; text-align: left; cursor: pointer;
+  color: var(--dealer-color-text-secondary); transition: background-color var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.row b { font-size: 12px; font-weight: 700; color: var(--dealer-color-text-description); font-variant-numeric: tabular-nums; }
+.row span { font-size: 16px; font-weight: 500; line-height: 1.25; }
+.row[aria-pressed="true"] { background: var(--dealer-surface-white); color: var(--dealer-color-brand-primary); box-shadow: var(--dealer-shadow-glass); }
+.row[aria-pressed="true"] b { color: var(--dealer-color-brand-primary); }
+.row:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .row:hover { color: var(--dealer-color-brand-primary); } }
+
+.detail {
+  margin-top: auto; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: center;
+  padding: 12px 16px 12px 12px; background: var(--dealer-surface-white); border-radius: var(--dealer-radius-sm); box-shadow: var(--dealer-shadow-glass);
+}
+.detailImage { display: block; width: 72px; height: 96px; object-fit: contain; animation: fadeIn var(--label-ms) var(--ease); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.detailCopy h3 { margin: 0 0 6px; font-size: 18px; font-weight: 600; line-height: 1.2; color: var(--dealer-color-text-primary); }
+.detailCopy p { margin: 0 0 8px; font-size: 14px; line-height: 1.45; color: var(--dealer-color-text-secondary); }
+.detailLink { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--dealer-color-brand-primary); text-decoration: none; }
+.detailLink:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 4px; }
+
+@media (max-width: 1279px) {
+  .section { padding: 32px; --aside-w: 300px; --chrome: 300px; }
+  .header { grid-template-columns: minmax(0, 1fr) var(--aside-w); gap: 24px; }
+  .row span { font-size: 15px; }
+}
+@media (max-width: 1023px) {
+  .header { grid-template-columns: 1fr; }
+  .headerAside { max-width: 640px; }
+  .body { grid-template-columns: 1fr; }
+  .frame { width: 100%; }
+  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; }
+  .detail { margin-top: 0; }
+}
+@media (max-width: 767px) {
+  .label, .ray { display: none; }
+  .hs { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
+  .led { width: 20px; height: 20px; font-size: 8px; border-width: 1.5px; }
+  .glow { width: 20px; height: 20px; margin: -10px; }
+}
+@media (max-width: 639px) {
+  .page { padding: 20px 8px 40px; }
+  .toolbar { flex-direction: column; align-items: flex-start; gap: 8px; padding: 0 16px; }
+  .section { padding: 24px 16px; }
+  .eyebrow { margin-bottom: 16px; font-size: 14px; }
+  .button { width: 100%; padding-inline: 20px; }
+  .list { grid-template-columns: 1fr; }
+  .row span { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glow { animation: none; opacity: 0; }
+  .ray, .label, .led, .row { transition: none; }
+  .detailImage { animation: none; }
+}

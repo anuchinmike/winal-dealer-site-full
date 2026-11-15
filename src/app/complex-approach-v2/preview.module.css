@@ -1,0 +1,13 @@
+.page { width: 100%; max-width: 1520px; margin: 0 auto; padding: 32px 24px 80px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.back { color: var(--dealer-color-brand-primary); font-size: 16px; font-weight: 600; text-underline-offset: 4px; }
+.modes { display: flex; gap: 8px; }
+.modes button { min-height: 44px; padding: 12px 24px; border: 1px solid var(--dealer-border-glass); border-radius: var(--dealer-radius-xs); background: var(--dealer-surface-glass-panel); color: var(--dealer-color-brand-primary); font-size: 16px; font-weight: 600; cursor: pointer; }
+.modes button[aria-pressed="true"] { color: var(--dealer-color-brand-white); background: var(--dealer-color-brand-primary); border-color: var(--dealer-color-brand-primary); }
+.back:focus-visible, .modes button:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 4px; }
+@media(max-width:639px) {
+ .page { padding: 20px 8px 40px; }
+ .toolbar { align-items: flex-start; flex-direction: column; padding: 0 16px; gap: 16px; }
+ .modes { width: 100%; }
+ .modes button { flex: 1; padding-inline: 16px; font-size: 14px; }
+}

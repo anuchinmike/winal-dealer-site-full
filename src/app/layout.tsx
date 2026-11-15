@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { dealerConfig } from "@/lib/dealer-config";
+import { SmoothScroll } from "@/app/smooth-scroll";
+
+export const metadata: Metadata = {
+  title: `${dealerConfig.partnerName} — дилерский лендинг WINAL`,
+  description:
+    "MVP дилерского лендинга WINAL: панели, акустика, индивидуальные поверхности и объектная комплектация.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="ru">
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
+    </html>
+  );
+}

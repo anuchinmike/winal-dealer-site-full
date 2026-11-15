@@ -1,0 +1,1610 @@
+/* Экран «Монтаж панелей WINAL». Только токены дилерского сайта (globals.css).
+   Движение: 2000 мс ease-out (контракт dealer-motion.ts), 200 мс для быстрой обратной связи,
+   300 мс для выезжающих панелей (как у продуктовых модалок). Анимируем только transform, opacity, clip-path. */
+
+.page {
+  --lumen: #fff6e4;
+  --lumen-glow: rgba(255, 206, 140, 0.55);
+  --stage-from: #f3f5f8;
+  --stage-to: #e4e8ee;
+  --fast: 200ms;
+  --slide: 300ms;
+  /* Луч и подпись точки: 3 × --fast по просьбе 27.10 */
+  --label-ms: 600ms;
+  --ease: var(--dealer-motion-easing);
+  --ink-glass: linear-gradient(
+    160deg,
+    rgba(0, 9, 18, 0.78) 0%,
+    rgba(0, 9, 18, 0.56) 100%
+  );
+  position: relative;
+  min-height: 100vh;
+  padding: 24px 16px 64px;
+  background: var(--dealer-color-surface-page);
+  color: var(--dealer-color-text-primary);
+  font-family: var(--dealer-font-family);
+  overflow-x: clip;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: -24px -140px auto auto;
+  width: min(56vw, 760px);
+  aspect-ratio: 1;
+  background: url("/images/home/decor-w-left.webp") no-repeat right top /
+    contain;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.panel {
+  position: relative;
+  box-sizing: border-box;
+  max-width: var(--dealer-layout-panel-w);
+  margin: 0 auto;
+  padding: 48px;
+}
+.inner {
+  max-width: var(--dealer-layout-content-w);
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+
+/* Заголовок */
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px 48px;
+  align-items: end;
+}
+.headText {
+  display: grid;
+  gap: 24px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--dealer-color-brand-primary);
+}
+.h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--dealer-color-text-secondary);
+}
+.tabs {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  box-shadow: 0 4px 32px rgba(1, 88, 171, 0.1);
+  color: var(--dealer-color-text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color var(--fast) var(--ease),
+    color var(--fast) var(--ease);
+}
+.tabOn {
+  background: var(--dealer-color-brand-primary);
+  color: var(--dealer-color-brand-white);
+}
+@media (hover: hover) and (pointer: fine) {
+  .tab:not(.tabOn):hover {
+    color: var(--dealer-color-brand-primary);
+  }
+}
+
+.mechanic {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--dealer-color-text-muted);
+}
+.mechanic b {
+  color: var(--dealer-color-text-secondary);
+  font-weight: 600;
+}
+
+/* Факты и CTA */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 16px;
+  align-items: stretch;
+}
+.fact {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 24px;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-glass);
+}
+.fact b {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--dealer-color-brand-primary);
+}
+.fact span {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--dealer-color-text-secondary);
+}
+.cta {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 12px 48px;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-color-brand-primary);
+  color: var(--dealer-color-brand-white);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Сцена */
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--dealer-radius-md);
+  overflow: hidden;
+  background: radial-gradient(
+    120% 95% at 50% 42%,
+    var(--stage-from) 0%,
+    var(--stage-to) 78%
+  );
+  box-shadow: var(--dealer-shadow-glass);
+  perspective: 1400px;
+  user-select: none;
+  touch-action: manipulation;
+}
+.shift {
+  position: absolute;
+  inset: 0;
+  transition: transform var(--slide) var(--ease);
+}
+.scene {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  transform-origin: 50% 50%;
+}
+.room {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+.backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: default;
+}
+
+/* Точки Lumen */
+.hs {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity var(--fast) var(--ease);
+}
+.hs:focus-visible {
+  outline: 2px solid var(--dealer-color-brand-primary);
+  outline-offset: 0;
+  border-radius: 50%;
+}
+.on,
+.hs:focus-visible {
+  z-index: 3;
+}
+.hsHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.in {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.94);
+  animation: enter var(--dealer-motion-duration) var(--ease) forwards;
+  animation-delay: calc(var(--o) * 60ms);
+}
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.led {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(6px + var(--k) * 4px);
+  height: calc(6px + var(--k) * 4px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--lumen);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 0 10px 3px var(--lumen-glow);
+}
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--lumen-glow) 0%, transparent 65%);
+  animation: breath 3.6s ease-in-out infinite;
+  animation-delay: calc(var(--o) * -0.41s);
+}
+@keyframes breath {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.on .glow {
+  animation: none;
+  opacity: 1;
+  transform: scale(1.4);
+}
+/* Родственные точки одной карточки: загораются вместе при наведении на любую из них */
+.kin .glow {
+  animation: none;
+  opacity: 0.95;
+  transform: scale(1.25);
+}
+.kin .led {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+.ray {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 56px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: linear-gradient(var(--lumen), rgba(255, 246, 228, 0));
+  box-shadow: 0 0 8px var(--lumen-glow);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform var(--label-ms) var(--ease);
+}
+/* Подпись точки: стекло дилерского сайта, синий текст. Появление втрое медленнее быстрой обратной связи */
+.label {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 62px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 9px 14px;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-glass-panel);
+  -webkit-backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  border: 1px solid var(--dealer-border-glass);
+  box-shadow: var(--dealer-effect-winal-glass-shadow);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--dealer-color-brand-primary);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -6px);
+  transition:
+    opacity var(--label-ms) var(--ease),
+    transform var(--label-ms) var(--ease);
+}
+.label b {
+  color: var(--dealer-color-brand-primary);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.on:not(.hsQuiet) .ray,
+.hs:focus-visible .ray {
+  transform: scaleY(1);
+}
+.on:not(.hsQuiet) .label,
+.hs:focus-visible .label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hs:hover {
+    z-index: 3;
+  }
+  .hs:hover .ray {
+    transform: scaleY(1);
+  }
+  .hs:hover .label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Общие элементы карточки узла */
+.glassTitle {
+  display: grid;
+  gap: 6px;
+  padding: 16px 20px;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--ink-glass);
+  backdrop-filter: blur(var(--dealer-effect-main-liquid-glass-backdrop-blur));
+  -webkit-backdrop-filter: blur(
+    var(--dealer-effect-main-liquid-glass-backdrop-blur)
+  );
+  box-shadow: var(--dealer-effect-main-liquid-glass-drop-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--dealer-color-brand-white);
+  text-align: right;
+}
+.glassTitleCompact {
+  padding: 12px 14px;
+  gap: 4px;
+}
+.glassKicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+.glassName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.glassTitleCompact .glassName {
+  font-size: 16px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chip {
+  padding: 6px 10px;
+  border-radius: var(--dealer-radius-xs);
+  border: 1px solid var(--dealer-border-brand-soft);
+  background: var(--dealer-surface-white);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dealer-color-brand-primary);
+}
+.nodeNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navBtn {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--dealer-border-brand-soft);
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  color: var(--dealer-color-brand-primary);
+  font: 600 16px/1 var(--dealer-font-family);
+  cursor: pointer;
+  transition:
+    background-color var(--fast) var(--ease),
+    color var(--fast) var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .navBtn:hover {
+    background: var(--dealer-color-brand-primary);
+    color: var(--dealer-color-brand-white);
+  }
+}
+.navCount {
+  min-width: 48px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dealer-color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.navClose {
+  margin-left: auto;
+}
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dealer-color-text-secondary);
+}
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--dealer-color-text-muted);
+}
+
+/* ---------- Вариант 1: Док ---------- */
+.dock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  z-index: 6;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: var(--dealer-color-surface-page);
+  box-shadow: -20px 0 40px -20px rgba(0, 9, 18, 0.35);
+  transform: translateX(104%);
+  transition: transform var(--slide) var(--ease);
+  visibility: hidden;
+}
+.dockOpen {
+  transform: none;
+  visibility: visible;
+}
+.dockMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--stage-to);
+}
+.dockMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dockTitle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  max-width: calc(100% - 32px);
+}
+.dockBody {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 20px 24px 24px;
+  overflow: auto;
+}
+.dockGrab {
+  display: none;
+}
+.dockSwap {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--fast) var(--ease);
+}
+.dockSwapOn {
+  opacity: 1;
+}
+
+/* ---------- Вариант 2: Лента ---------- */
+.lentaWrap {
+  display: grid;
+  gap: 16px;
+}
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(0, 9, 18, 0.42);
+  opacity: 0;
+  transition: opacity var(--dealer-motion-duration) var(--ease);
+  -webkit-mask-image: radial-gradient(
+    circle 220px at calc(var(--vx) * 1%) calc(var(--vy) * 1%),
+    transparent 0 55%,
+    #000 100%
+  );
+  mask-image: radial-gradient(
+    circle 220px at calc(var(--vx) * 1%) calc(var(--vy) * 1%),
+    transparent 0 55%,
+    #000 100%
+  );
+}
+.veilOn {
+  opacity: 1;
+}
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 232px;
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 4px;
+  padding: 4px 4px 12px;
+  margin: -4px -4px 0;
+  scrollbar-width: none;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--dealer-radius-sm);
+  overflow: hidden;
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-glass);
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 0;
+  transition:
+    outline-color var(--fast) var(--ease),
+    transform var(--dealer-motion-duration) var(--ease);
+}
+.card:focus-visible {
+  outline-color: var(--dealer-color-brand-primary);
+}
+.cardOn {
+  outline-color: var(--dealer-color-brand-primary);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .cardImg {
+    transform: scale(1.04);
+  }
+}
+.cardMedia {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--stage-to);
+}
+.cardImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: 50% 50%;
+  transition: transform var(--dealer-motion-duration) var(--ease);
+}
+.cardNum {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 7px;
+  border-radius: 13px;
+  background: var(--lumen);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 0 10px 2px var(--lumen-glow);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dealer-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.cardBody {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px 14px;
+}
+.cardZone {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dealer-color-text-muted);
+}
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.detail {
+  position: relative;
+  min-height: 300px;
+  border-radius: var(--dealer-radius-md);
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-glass);
+  overflow: hidden;
+}
+.detailPane {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dealer-motion-duration) var(--ease);
+}
+.detailOn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.detailMedia {
+  position: relative;
+  overflow: hidden;
+  background: var(--stage-to);
+}
+.detailMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detailTitle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  max-width: calc(100% - 32px);
+}
+.detailBody {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 24px 28px;
+  overflow: auto;
+}
+.detailEmpty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  transition: opacity var(--fast) var(--ease);
+}
+.detailEmpty b {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ---------- Вариант 3: Приближение ---------- */
+.zoomStage {
+  isolation: isolate;
+}
+.zoomCard {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 7;
+  width: 38%;
+  display: grid;
+  grid-template-rows: minmax(0, 52%) minmax(0, 1fr);
+  border-radius: var(--dealer-radius-md);
+  overflow: hidden;
+  background: var(--dealer-surface-white);
+  box-shadow: 0 24px 60px -24px rgba(0, 9, 18, 0.45);
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+  transition:
+    opacity var(--fast) var(--ease),
+    transform var(--fast) var(--ease);
+  pointer-events: none;
+  visibility: hidden;
+}
+.zoomCardOn {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  visibility: visible;
+  transition-delay: 500ms;
+}
+.zoomMedia {
+  position: relative;
+  overflow: hidden;
+  background: var(--stage-to);
+}
+.zoomMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zoomTitle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  max-width: calc(100% - 32px);
+}
+.zoomBody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  padding: 18px 22px 22px;
+  overflow: auto;
+}
+.zoomBack {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: var(--ink-glass);
+  backdrop-filter: blur(var(--dealer-effect-main-liquid-glass-backdrop-blur));
+  -webkit-backdrop-filter: blur(
+    var(--dealer-effect-main-liquid-glass-backdrop-blur)
+  );
+  color: var(--dealer-color-brand-white);
+  font: 600 14px/1 var(--dealer-font-family);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity var(--fast) var(--ease),
+    transform var(--fast) var(--ease);
+  pointer-events: none;
+}
+.zoomBackOn {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition-delay: 500ms;
+}
+.zoomDim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 9, 18, 0) 55%,
+    rgba(0, 9, 18, 0.28) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--dealer-motion-duration) var(--ease);
+}
+.zoomDimOn {
+  opacity: 1;
+}
+.zoomMarker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  width: 14px;
+  height: 14px;
+  margin: -7px;
+  border-radius: 50%;
+  background: var(--lumen);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.95),
+    0 0 18px 6px var(--lumen-glow);
+  opacity: 0;
+  transition: opacity var(--fast) var(--ease);
+  pointer-events: none;
+}
+.zoomMarkerOn {
+  opacity: 1;
+  transition-delay: 600ms;
+}
+.zoomList {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+.zoomItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  box-shadow: var(--dealer-shadow-glass);
+  font: 500 13px/1.25 var(--dealer-font-family);
+  color: var(--dealer-color-text-secondary);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--fast) var(--ease),
+    color var(--fast) var(--ease);
+}
+.zoomItem b {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--lumen);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 0 8px 2px var(--lumen-glow);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dealer-color-text-primary);
+}
+.zoomItemOn {
+  border-color: var(--dealer-color-brand-primary);
+  color: var(--dealer-color-text-primary);
+}
+@media (hover: hover) and (pointer: fine) {
+  .zoomItem:hover {
+    color: var(--dealer-color-brand-primary);
+  }
+}
+
+/* ---------- Мобильная подпись под сценой ---------- */
+.caption {
+  display: none;
+}
+
+/* Переключатель решений в точке: сегменты, частое действие, движения нет */
+.solTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.solTab {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--dealer-border-brand-soft);
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  color: var(--dealer-color-brand-primary);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.solTabOn {
+  background: var(--dealer-color-brand-primary);
+  border-color: var(--dealer-color-brand-primary);
+  color: #fff;
+}
+.zoomExtra {
+  position: relative;
+  flex: none;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--stage-to);
+}
+.zoomExtra img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zoomItemCount {
+  margin-left: auto;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--dealer-surface-glass-panel);
+  border: 1px solid var(--dealer-border-brand-soft);
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dealer-color-brand-primary);
+}
+
+/* Карточка «сопряжение → ветки → решения» */
+.kCard {
+  grid-template-rows: minmax(0, 42%) minmax(0, 1fr);
+}
+.kIntro {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--dealer-color-text-secondary);
+}
+.kPlanned {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 4px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(160deg, #30425a, #000912);
+}
+.kPlanned b {
+  font-size: 16px;
+}
+.kPlanned span {
+  font-size: 13px;
+  opacity: 0.75;
+}
+.solGrid {
+  display: grid;
+  gap: 12px;
+}
+.solGroup {
+  display: grid;
+  gap: 6px;
+}
+.solGroupName {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dealer-color-text-muted);
+}
+.solThumbs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.solThumb {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--dealer-color-text-primary);
+}
+.solThumbPic {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--dealer-radius-xs);
+  border: 2px solid transparent;
+  background: var(--stage-to);
+  transition: border-color var(--fast) var(--ease);
+}
+.solThumbPic img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.solThumbPic i {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  padding: 6px;
+  font-size: 11px;
+  font-style: normal;
+  text-align: center;
+  color: var(--dealer-color-text-muted);
+}
+.solThumbOn .solThumbPic {
+  border-color: var(--dealer-color-brand-primary);
+}
+.solThumbName {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.solThumbOn .solThumbName {
+  color: var(--dealer-color-brand-primary);
+}
+.solThumbPlanned {
+  opacity: 0.7;
+}
+@media (hover: hover) and (pointer: fine) {
+  .solThumb:hover .solThumbPic {
+    border-color: var(--dealer-border-brand-soft);
+  }
+  .solThumbOn:hover .solThumbPic {
+    border-color: var(--dealer-color-brand-primary);
+  }
+}
+.kToc {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Панорама на телефоне: окно 3:4, внутри комната 16:9, двигается пальцем */
+.pano {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--stage-to);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.panoTrack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100% * 16 / 9 * 4 / 3);
+  will-change: transform;
+}
+.panoTrack .stage {
+  border-radius: 0;
+  height: 100%;
+}
+.panoHint {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  z-index: 6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 9, 18, 0.62);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  transition: opacity var(--fast) var(--ease);
+  pointer-events: none;
+}
+.panoHintOff {
+  opacity: 0;
+}
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 62vh;
+  max-height: 62dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  border-radius: var(--dealer-radius-md) var(--dealer-radius-md) 0 0;
+  background: var(--dealer-surface-white);
+  box-shadow: 0 -14px 40px rgba(0, 9, 18, 0.25);
+  transform: translateY(104%);
+  transition:
+    transform var(--slide) var(--ease),
+    max-height var(--slide) var(--ease);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.sheetOpen {
+  transform: none;
+}
+.sheetTall {
+  max-height: 94vh;
+  max-height: 94dvh;
+}
+.sheetGrab {
+  display: grid;
+  place-items: center;
+  height: 28px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.sheetGrab span {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #c3ccd7;
+}
+.sheetScroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px 20px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.sheetHead {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  padding-right: 52px;
+}
+.sheetKicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dealer-color-brand-primary);
+}
+.sheetTitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--dealer-color-text-primary);
+}
+.sheetClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sheetMedia {
+  position: relative;
+  flex: none;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--dealer-radius-sm);
+  background: var(--stage-to);
+}
+.sheetMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Телефон: три вертикальных кадра комнаты */
+.blocks {
+  display: grid;
+  gap: 20px;
+}
+.block {
+  display: grid;
+  gap: 10px;
+}
+.blockHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 0 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dealer-color-text-secondary);
+}
+.blockHead small {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dealer-color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Планшет ---------- */
+@media (max-width: 1279px) {
+  .panel {
+    padding: 32px;
+  }
+  .top {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .h1 {
+    font-size: 44px;
+  }
+  .facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .cta {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .dock {
+    width: 56%;
+  }
+  .dockExtra {
+    display: none;
+  }
+  .zoomCard {
+    width: 46%;
+  }
+  .zoomList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .detailPane {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* ---------- Телефон ---------- */
+@media (max-width: 720px) {
+  .page {
+    padding: 12px 12px 48px;
+  }
+  .panel {
+    padding: 20px 16px 24px;
+    border-radius: var(--dealer-radius-sm);
+  }
+  .inner {
+    gap: 20px;
+  }
+  .headText {
+    gap: 12px;
+  }
+  .eyebrow {
+    font-size: 12px;
+  }
+  .h1 {
+    font-size: 32px;
+  }
+  .tabs {
+    gap: 8px;
+  }
+  .tab {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .fact {
+    padding: 16px;
+  }
+  .fact b {
+    font-size: 24px;
+  }
+  .cta {
+    width: 100%;
+    min-height: 44px;
+  }
+  .stage {
+    border-radius: var(--dealer-radius-sm);
+  }
+  .label {
+    display: none;
+  }
+  .hs {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+  }
+  .caption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: var(--dealer-radius-sm);
+    background: var(--dealer-surface-white);
+    box-shadow: var(--dealer-shadow-glass);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .caption b {
+    color: var(--dealer-color-brand-primary);
+    font-variant-numeric: tabular-nums;
+  }
+  .caption span {
+    color: var(--dealer-color-text-muted);
+    font-weight: 500;
+  }
+
+  /* Док становится нижней шторкой во всю ширину экрана: внутри кадра 16:9 места нет */
+  .dockHost {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+  }
+  .dockHostOn {
+    pointer-events: auto;
+  }
+  .dockScrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 9, 18, 0.4);
+    opacity: 0;
+    transition: opacity var(--slide) var(--ease);
+  }
+  .dockHostOn .dockScrim {
+    opacity: 1;
+  }
+  .dock {
+    top: auto;
+    left: 0;
+    width: 100%;
+    max-height: 86vh;
+    max-height: 86dvh;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    border-radius: var(--dealer-radius-md) var(--dealer-radius-md) 0 0;
+    box-shadow: 0 -14px 40px rgba(0, 9, 18, 0.25);
+    transform: translateY(104%);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .dockOpen {
+    transform: none;
+  }
+  .dockGrab {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    background: #c3ccd7;
+  }
+  .dockMedia {
+    aspect-ratio: 16 / 10;
+  }
+  .dockBody {
+    padding: 16px 16px 20px;
+  }
+
+  .rail {
+    grid-auto-columns: 72%;
+  }
+  .detail {
+    min-height: 0;
+  }
+  .detailPane {
+    position: relative;
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  .detailOn {
+    display: grid;
+  }
+  .detailMedia {
+    aspect-ratio: 16 / 10;
+  }
+  .detailBody {
+    padding: 16px;
+  }
+  .detailEmpty {
+    position: relative;
+    min-height: 120px;
+  }
+
+  .zoomCard {
+    position: relative;
+    inset: auto;
+    width: auto;
+    grid-template-rows: auto minmax(0, 1fr);
+    box-shadow: var(--dealer-shadow-glass);
+    border-radius: var(--dealer-radius-sm);
+  }
+  .zoomCardOn {
+    transition-delay: 0ms;
+  }
+  .zoomCardOff {
+    display: none;
+  }
+  .zoomMedia {
+    aspect-ratio: 16 / 10;
+  }
+  .zoomBody {
+    padding: 14px 16px 16px;
+  }
+  .zoomBack {
+    top: 8px;
+    left: 8px;
+    height: 36px;
+    padding: 0 12px 0 10px;
+    font-size: 12px;
+  }
+  .zoomDim {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 9, 18, 0) 35%,
+      rgba(0, 9, 18, 0.35) 100%
+    );
+  }
+  .zoomList {
+    grid-template-columns: 1fr;
+  }
+  .kCard {
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .kMedia {
+    aspect-ratio: 16 / 10;
+  }
+  .zoomMarker {
+    width: 12px;
+    height: 12px;
+    margin: -6px;
+  }
+}
+
+
+/* ---------- Вариант «Маска» (26.10): комната без маски; наведение — плашка; клик — подлёт и белая маска справа ---------- */
+.maskStage {
+  overflow: hidden;
+}
+/* Белая маска справа: тот же svg, что в экране «Внутренняя отделка объектов», пропорции 808.5:839 */
+.maskCard {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 808.5 / 839;
+  border-radius: 0;
+  border: 0;
+  background: var(--dealer-surface-white);
+  -webkit-mask-image: url(/images/home/surface-main-mask.svg);
+  mask-image: url(/images/home/surface-main-mask.svg);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  box-shadow: none;
+  grid-template-rows: minmax(0, 46%) minmax(0, 1fr);
+  transform: translateX(6%);
+  transition:
+    opacity var(--slide) var(--ease),
+    transform var(--slide) var(--ease);
+}
+.maskCard.zoomCardOn {
+  transform: none;
+  transition-delay: 900ms;
+}
+/* Текст внутри маски отступает от скруглённого левого края */
+.maskCard .zoomBody {
+  padding: 18px 28px 24px calc(28px + 10%);
+}
+.maskCard .zoomMedia img {
+  object-position: 60% 50%;
+}
+.maskCard .zoomTitle {
+  left: calc(16px + 12%);
+  right: 16px;
+  max-width: none;
+}
+.maskStage .zoomDim {
+  background: linear-gradient(90deg, rgba(0, 9, 18, 0) 40%, rgba(0, 9, 18, 0.18) 100%);
+}
+
+
+/* Подлёт камеры: крупный кадр проявляется поверх увеличенной комнаты */
+.fly {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 600ms var(--ease);
+}
+.flyOn {
+  opacity: 1;
+  transition-delay: 1400ms;
+}
+
+/* ---------- Сниженное движение ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .in {
+    animation: enter 200ms linear forwards;
+    animation-delay: 0s;
+    transform: none;
+  }
+  .glow {
+    animation: none;
+    opacity: 0.7;
+  }
+  .ray,
+  .shift,
+  .dock,
+  .dockScrim,
+  .card,
+  .cardImg,
+  .detailPane,
+  .veil,
+  .zoomCard,
+  .zoomBack,
+  .zoomDim,
+  .zoomMarker,
+  .sheet,
+  .panoTrack,
+  .maskCard,
+  .label,
+  .fly {
+    transition-duration: 0ms;
+    transition-delay: 0ms;
+  }
+}
+
+/* Общая обвязка комнаты на лендинге и на отдельной странице. */
+.page.embedded {
+  width: min(1472px, 100%);
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  scroll-margin-top: 112px;
+}
+.embedded::before { display: none; }
+.embedded .panel { scroll-margin-top: 112px; }
+.embedded .h1 { max-width: 22ch; }
+.roomGuide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+.roomGuide p { margin: 0; max-width: 56ch; font-size: 14px; line-height: 1.5; color: var(--dealer-color-text-secondary); }
+.nodePicker { display: flex; align-items: center; justify-content: flex-end; gap: 12px; max-width: 100%; font-size: 14px; color: var(--dealer-color-text-secondary); }
+.nodePicker select {
+  min-height: 44px;
+  width: min(100%, 330px);
+  max-width: 100%;
+  padding: 10px 32px 10px 12px;
+  border: 1px solid var(--dealer-color-brand-primary);
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-surface-white);
+  color: var(--dealer-color-brand-primary);
+  font: inherit;
+  cursor: pointer;
+}
+.nodePicker select:focus-visible, .projectAction a:focus-visible { outline: 2px solid var(--dealer-color-brand-primary); outline-offset: 4px; }
+.projectAction { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; }
+.projectAction p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--dealer-color-text-secondary); }
+.projectAction .cta { min-height: 44px; font-size: 14px; }
+.projectAction .cta:hover { background: #004584; }
+.roomPreview { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--dealer-radius-md); background: var(--stage-from); }
+.roomPreview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.roomPreview p { position: absolute; bottom: 16px; left: 16px; right: 16px; margin: 0; padding: 10px 16px; background: var(--dealer-surface-white); color: var(--dealer-color-text-secondary); font-size: 14px; }
+@media (max-width: 720px) {
+  .roomGuide { gap: 12px; }
+  .nodePicker { width: 100%; }
+  .nodePicker select { flex: 1; min-width: 0; font-size: 16px; }
+  .projectAction { gap: 16px; }
+  .projectAction .cta { width: 100%; }
+  .roomPreview { min-height: 320px; }
+}

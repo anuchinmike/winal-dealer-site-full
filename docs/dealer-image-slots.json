@@ -1,0 +1,4046 @@
+{
+  "generatedAt": "2026-09-07T16:40:16.882Z",
+  "cardSlot": {
+    "width": 320,
+    "height": 798,
+    "dpr": 2,
+    "note": "union of homepage hover and T-02A lab boxes"
+  },
+  "files": [
+    {
+      "rel": "catalog/card-cloud-system-b.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 541,
+        "top": 0,
+        "width": 1643,
+        "height": 4096
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 2725,
+      "srcH": 4096
+    },
+    {
+      "rel": "catalog/card-cloud-system-c.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 544,
+        "top": 0,
+        "width": 1643,
+        "height": 4096
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 2731,
+      "srcH": 4096
+    },
+    {
+      "rel": "catalog/card-cloud-system-i.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 1502,
+        "top": 0,
+        "width": 1093,
+        "height": 2725
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 4096,
+      "srcH": 2725
+    },
+    {
+      "rel": "catalog/card-cloud-system-w.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 715,
+        "top": 0,
+        "width": 1643,
+        "height": 4096
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 3072,
+      "srcH": 4096
+    },
+    {
+      "rel": "catalog/card-cloud.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 541,
+        "top": 0,
+        "width": 1643,
+        "height": 4096
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 2725,
+      "srcH": 4096
+    },
+    {
+      "rel": "catalog/card-soundcore.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 1100,
+        "top": 0,
+        "width": 800,
+        "height": 1996
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 3000,
+      "srcH": 1996
+    },
+    {
+      "rel": "catalog/card-urban.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 420,
+        "top": 0,
+        "width": 359,
+        "height": 896
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1200,
+      "srcH": 896
+    },
+    {
+      "rel": "catalog/card-wallpro.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 292,
+        "top": 0,
+        "width": 423,
+        "height": 1056
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1008,
+      "srcH": 1056
+    },
+    {
+      "rel": "catalog/card-wisound.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 396,
+        "top": 0,
+        "width": 1203,
+        "height": 3000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1996,
+      "srcH": 3000
+    },
+    {
+      "rel": "catalog/ceiling-gkl-acryl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/ceiling-gkl-family.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 264,
+        "top": 0,
+        "width": 802,
+        "height": 2000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1331,
+      "srcH": 2000
+    },
+    {
+      "rel": "catalog/ceiling-gkl-pvc.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/ceiling-sml-acryl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/ceiling-sml-family.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 264,
+        "top": 0,
+        "width": 802,
+        "height": 2000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1331,
+      "srcH": 2000
+    },
+    {
+      "rel": "catalog/ceiling-sml-pvc.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/cloud-system-i.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 407,
+        "top": 0,
+        "width": 226,
+        "height": 564
+      },
+      "outW": 452,
+      "outH": 1128,
+      "srcW": 1040,
+      "srcH": 564
+    },
+    {
+      "rel": "catalog/invisible-basic.webp",
+      "role": "catalog-card",
+      "pos": "center 46%",
+      "extract": {
+        "left": 169,
+        "top": 0,
+        "width": 513,
+        "height": 1280
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 852,
+      "srcH": 1280
+    },
+    {
+      "rel": "catalog/invisible-clean.webp",
+      "role": "catalog-card",
+      "pos": "center 40%",
+      "extract": {
+        "left": 199,
+        "top": 0,
+        "width": 602,
+        "height": 1500
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1500
+    },
+    {
+      "rel": "catalog/invisible-reverse.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 469,
+        "top": 0,
+        "width": 342,
+        "height": 852
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1280,
+      "srcH": 852
+    },
+    {
+      "rel": "catalog/lumen-line.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 895,
+        "top": 0,
+        "width": 770,
+        "height": 1920
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 2560,
+      "srcH": 1920
+    },
+    {
+      "rel": "catalog/minwin-proxy.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 563,
+        "top": 0,
+        "width": 411,
+        "height": 1024
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1536,
+      "srcH": 1024
+    },
+    {
+      "rel": "catalog/mounting-profiles.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 255,
+        "top": 0,
+        "width": 342,
+        "height": 852
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 852,
+      "srcH": 852
+    },
+    {
+      "rel": "catalog/plinth-crystal-base.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 418,
+        "top": 0,
+        "width": 359,
+        "height": 895
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1194,
+      "srcH": 895
+    },
+    {
+      "rel": "catalog/plinth-hidden.webp",
+      "role": "catalog-card",
+      "pos": "center 56%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/plinth-strong-base.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 488,
+        "top": 0,
+        "width": 356,
+        "height": 887
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1331,
+      "srcH": 887
+    },
+    {
+      "rel": "catalog/radiator-screen-box.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 399,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1200,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/radiator-screen-overlay.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 350,
+        "top": 0,
+        "width": 301,
+        "height": 750
+      },
+      "outW": 602,
+      "outH": 1500,
+      "srcW": 1000,
+      "srcH": 750
+    },
+    {
+      "rel": "catalog/radiator-screen-window-sill.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 375,
+        "top": 0,
+        "width": 273,
+        "height": 682
+      },
+      "outW": 546,
+      "outH": 1364,
+      "srcW": 1024,
+      "srcH": 682
+    },
+    {
+      "rel": "catalog/radius-solutions.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 135,
+        "top": 0,
+        "width": 411,
+        "height": 1024
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 681,
+      "srcH": 1024
+    },
+    {
+      "rel": "catalog/rythmwall.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 420,
+        "top": 0,
+        "width": 359,
+        "height": 896
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1200,
+      "srcH": 896
+    },
+    {
+      "rel": "catalog/slat-wall-panels.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/soundcore-14.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 375,
+        "top": 0,
+        "width": 273,
+        "height": 681
+      },
+      "outW": 546,
+      "outH": 1362,
+      "srcW": 1024,
+      "srcH": 681
+    },
+    {
+      "rel": "catalog/soundcore-25.webp",
+      "role": "catalog-card",
+      "pos": "right center",
+      "extract": {
+        "left": 727,
+        "top": 0,
+        "width": 313,
+        "height": 780
+      },
+      "outW": 626,
+      "outH": 1560,
+      "srcW": 1040,
+      "srcH": 780
+    },
+    {
+      "rel": "catalog/ufr-print.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 135,
+        "top": 0,
+        "width": 411,
+        "height": 1024
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 681,
+      "srcH": 1024
+    },
+    {
+      "rel": "catalog/urban-c.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 417,
+        "top": 0,
+        "width": 359,
+        "height": 896
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1194,
+      "srcH": 896
+    },
+    {
+      "rel": "catalog/urban-w.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 420,
+        "top": 0,
+        "width": 359,
+        "height": 896
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1200,
+      "srcH": 896
+    },
+    {
+      "rel": "catalog/wall-gkl-acryl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/wall-gkl-polymer.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 436,
+        "top": 0,
+        "width": 329,
+        "height": 820
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1200,
+      "srcH": 820
+    },
+    {
+      "rel": "catalog/wall-gkl-pvc.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/wall-gsp-hpl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 448,
+        "top": 0,
+        "width": 385,
+        "height": 960
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1280,
+      "srcH": 960
+    },
+    {
+      "rel": "catalog/wall-gsp-pvc.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/wall-sml-acryl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/wall-sml-hpl.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 125,
+        "top": 0,
+        "width": 251,
+        "height": 625
+      },
+      "outW": 502,
+      "outH": 1250,
+      "srcW": 500,
+      "srcH": 625
+    },
+    {
+      "rel": "catalog/wall-sml-polymer.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 383,
+        "top": 0,
+        "width": 513,
+        "height": 1280
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1280,
+      "srcH": 1280
+    },
+    {
+      "rel": "catalog/wall-sml-pvc.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 299,
+        "top": 0,
+        "width": 401,
+        "height": 1000
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1000,
+      "srcH": 1000
+    },
+    {
+      "rel": "catalog/wallpro.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 393,
+        "top": 0,
+        "width": 254,
+        "height": 634
+      },
+      "outW": 508,
+      "outH": 1268,
+      "srcW": 1040,
+      "srcH": 634
+    },
+    {
+      "rel": "catalog/winisol.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 393,
+        "top": 0,
+        "width": 254,
+        "height": 634
+      },
+      "outW": 508,
+      "outH": 1268,
+      "srcW": 1040,
+      "srcH": 634
+    },
+    {
+      "rel": "catalog/wisound-lite.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 259,
+        "top": 0,
+        "width": 521,
+        "height": 1300
+      },
+      "outW": 640,
+      "outH": 1596,
+      "srcW": 1040,
+      "srcH": 1300
+    },
+    {
+      "rel": "catalog/wisound.webp",
+      "role": "catalog-card",
+      "pos": "50% 50%",
+      "extract": {
+        "left": 407,
+        "top": 0,
+        "width": 226,
+        "height": 564
+      },
+      "outW": 452,
+      "outH": 1128,
+      "srcW": 1040,
+      "srcH": 564
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/aktovyy-zal-institut/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-20.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-21.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/cheremushkinskiy-rayonnyy-sud/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/istoricheskiy-manezh-moskino-proekt-winal/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/onkobolnitsa-62-skolkovo-otdelka-sten-paneli-sml-pvh/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-20.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-21.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-22.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-23.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-24.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-25.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-26.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-27.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-28.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-29.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-30.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-31.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-32.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-33.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-34.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/padel-centr/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-2.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-2.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-3.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-3.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-4.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/product-4.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/padel-centr/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/product-2.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/product-3.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/product-4.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/paneli-winal-na-100000-m2-kinostudii-gorkogo/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/soyz-holl-dremin/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-20.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-21.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-22.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/gallery-23.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnaya-baza-podmoskovnye-zori-otdelka-panelyami-winal-sml-polimer-polikeram-soft-tach-premium/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/sportivnyy-kompleks-yuzhnoe-butovo-keis-winal/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/product-2.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-hollov-stenovymi-panelyami-winal-zhk-akademik-g-troiczk/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-20.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-21.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-22.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-23.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-24.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-25.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/gallery-26.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/vnutrennyaya-otdelka-mediczinskih-uchrezhdenij-romashkino/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-02.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-03.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-04.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-05.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-07.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-08.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-09.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-12.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-13.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-15.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-16.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/gallery-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/hero.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/product-1.webp",
+      "role": "case-product"
+    },
+    {
+      "rel": "home/cases/voenkomat-zelenograd/thumb.webp",
+      "role": "case-thumb"
+    },
+    {
+      "rel": "home/decor-glass-logo.webp",
+      "role": "fit",
+      "maxSide": 1920
+    },
+    {
+      "rel": "home/decor-w-left.webp",
+      "role": "fit",
+      "maxSide": 1920
+    },
+    {
+      "rel": "home/design-card-patterns.webp",
+      "role": "design-card",
+      "pos": "50% 50%"
+    },
+    {
+      "rel": "home/design-card-ral.webp",
+      "role": "design-card",
+      "pos": "50% 50%"
+    },
+    {
+      "rel": "home/design-card-ufr.webp",
+      "role": "design-card",
+      "pos": "center bottom"
+    },
+    {
+      "rel": "home/design-card-veneer.webp",
+      "role": "design-card",
+      "pos": "50% 50%"
+    },
+    {
+      "rel": "home/feature-card-acoustic.webp",
+      "role": "feature-card"
+    },
+    {
+      "rel": "home/feature-card-geometry.webp",
+      "role": "feature-card"
+    },
+    {
+      "rel": "home/feature-card-joints.webp",
+      "role": "feature-card"
+    },
+    {
+      "rel": "home/feature-card-surface.webp",
+      "role": "feature-card"
+    },
+    {
+      "rel": "home/feature-grid-main.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/freedom-card-organic.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/freedom-card-palette.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/freedom-card-stone.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/freedom-card-wood.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/hero-video-poster.webp",
+      "role": "fit",
+      "maxSide": 1920
+    },
+    {
+      "rel": "home/project-form/interior.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "home/surface-main-image.webp",
+      "role": "surface-main"
+    },
+    {
+      "rel": "product-modal/minwin/coating-acryl.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/minwin/full/coating-acryl.webp"
+    },
+    {
+      "rel": "product-modal/minwin/coating-aluminum.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/minwin/full/coating-aluminum.webp"
+    },
+    {
+      "rel": "product-modal/minwin/coating-hpl.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/minwin/full/coating-hpl.webp"
+    },
+    {
+      "rel": "product-modal/minwin/coating-polymer.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/minwin/full/coating-polymer.webp"
+    },
+    {
+      "rel": "product-modal/minwin/coating-pvc.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/minwin/full/coating-pvc.webp"
+    },
+    {
+      "rel": "product-modal/minwin/hero-board-corner.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/minwin/logo-glass.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/minwin/marketing-leaf.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/hero-interior.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/icon-close.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-b005.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-b039.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-b054.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-c001.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-c021.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/model-c022.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/rythmwall/ral-chart.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-akril-sml-derevo-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-akril-sml-derevo-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-akril-sml-sosna-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-akril-sml-sosna.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-negoruchie-derevo-winal-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-potolochnie-sml-pvh-hpl-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-sml-gsp-pvh-hpl-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-sml-gsp-pvh-hpl-8.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-sml-gsp-pvh-hpl.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-stenovie-sml-pvh-hpl-sk-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/reechnie-stenovye-paneli-sml-hpl-pvh-6.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/reechnie-stenovye-paneli-sml-hpl-pvh.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-acryl/gallery/sten-paneli-reechnie-derevo-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-hpl/gallery/paneli-reechnie-hpl-sml-alumini-lm1003-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-hpl/gallery/paneli-reechnie-hpl-sml-alumini-lm1003.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-negoruchie-derevo-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-pvh-sml-dub-skandinavski-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-pvh-sml-dub-skandinavski.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-pvh-sml-oreh-pekan-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-pvh-sml-oreh-pekan.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-sml-gsp-pvh-hpl-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-sml-gsp-pvh-hpl-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-sml-gsp-pvh-hpl-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/reechnie-stenovye-paneli-sml-hpl-pvh-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/reechnie-stenovye-paneli-sml-hpl-pvh-7.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/sten-paneli-reechnie-derevo-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/slat-sml-pvc/gallery/sten-paneli-reika-derevo-winal-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/beton-7038-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/dekorativnie-sten-paneli-gipsokarton-okrashenni-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/new-sandal-seriy-gkl-akril-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/otdelka-sten-ofisa-paneli-sml-list-gipsokarton-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/otdelka-sten-ofisa-paneli-sml-list-gipsokarton-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/otdelka-sten-ofisa-paneli-sml-list-gipsokarton-7.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/otdelka-sten-ofisa-paneli-sml-list-gipsokarton.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/padena-1-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-akril-gkl-loft-sten.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-akril-gkl-sten-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-akril-gkl-sten-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-gkl-beton-beli-uf.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-pvh-ral-5010.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-pvh-ral-5024.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-pvh-ral-6019-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-pvh-ral-7047.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gipsokarton-pvh-ral-9016-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gkl-pvh-dub-fil-grey.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gkl-pvh-padena.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gkl-pvh-yasen-mokko-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-gkl-pvh.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/panel-sml-ral-beton-7038-2-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/ral-7047-8-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sosna-2-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-panel-gipsokarton-okras-sosna-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-panel-pvh-gipsokarton-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-panel-pvh-gipsokarton-omega-profil.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-paneli-gipsokarton-gkl-pvh-bolnitsa-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-paneli-gipsokarton-gkl-pvh-bolnitsa.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-paneli-gipsokarton-gkl-pvh.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-paneli-sml-list-premium-laminirovannie-pvh-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-paneli-winal-gkl-sml-6-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-acryl/gallery/yasen_riviera_mokko-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-pvc/gallery/panel-akril-gkl-loft-sten.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-pvc/gallery/panel-gkl-pvh.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-pvc/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-pvc/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gkl-pvc/gallery/sten-potolok-paneli-hpl-sml-pvh-okras.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gsp-hpl/gallery/sten-panel-winal-hpl-1-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gsp-hpl/gallery/sten-panel-winal-hpl-gsp.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-gsp-pvc/gallery/panel-akril-gkl-gvlv-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/metal/alumini-lm-1001-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/metal/full/alumini-lm-1001-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/metal/lm-1003-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/metal/full/lm-1003-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/metal/titan-lm-1002-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/metal/full/titan-lm-1002-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/bela-avrora-lm-0438-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/bela-avrora-lm-0438-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/beli-mramor-lm-0453-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/beli-mramor-lm-0453-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/beli-parfir-lm-0429-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/beli-parfir-lm-0429-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/boston-svetli-lm-0437-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/boston-svetli-lm-0437-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/boston-temni-lm-0436-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/boston-temni-lm-0436-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/cherni-selen-lm-0432-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/cherni-selen-lm-0432-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/evora-bej-lm-0403-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/evora-bej-lm-0403-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/evora-seraia-lm-0402-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/evora-seraia-lm-0402-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/granit-sardinski-lm-0401-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/granit-sardinski-lm-0401-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/imperial-seri-lm-0447-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/imperial-seri-lm-0447-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/lm-0441-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/lm-0441-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/lm-0443-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/lm-0443-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/lm-0455-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/lm-0455-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/mramor-grey-temni-lm-0434-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/mramor-grey-temni-lm-0434-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/nightstone-lm-0440-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/nightstone-lm-0440-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/rustika-lm-0409-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/rustika-lm-0409-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/sahara-lm-0411-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/sahara-lm-0411-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/seri-mramor-lm-0454-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/seri-mramor-lm-0454-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/skorpio-lm-0439-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/skorpio-lm-0439-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/stukko-bejevi-lm-0445-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/stukko-bejevi-lm-0445-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/stukko-beli-lm-0446-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/stukko-beli-lm-0446-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/travertin-capuccino-lm-0406-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/travertin-capuccino-lm-0406-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/travertin-dimchati-lm-0407-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/travertin-dimchati-lm-0407-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/urban-lm-0415-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/urban-lm-0415-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/stone/urban-seri-lm-0416-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/stone/full/urban-seri-lm-0416-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-arkona-lm-0684-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-arkona-lm-0684-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-artizan-lm-0679-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-artizan-lm-0679-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-chester-lm-0622-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-chester-lm-0622-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-dimchati-lm-0661-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-dimchati-lm-0661-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-esperanza-lm-0666-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-esperanza-lm-0666-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-kasl-lm-0672-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-kasl-lm-0672-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-lion-lm-0608-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-lion-lm-0608-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-natural-lm-0637-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-natural-lm-0637-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-pallada-lm-0623-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-pallada-lm-0623-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-shamoni-lm-0627-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-shamoni-lm-0627-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-venge-lm-0603-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-venge-lm-0603-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-vengerski-beli-lm-0675-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-vengerski-beli-lm-0675-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-votan-lm-0686-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-votan-lm-0686-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/dub-zolotoi-lm-0673-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/dub-zolotoi-lm-0673-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/equador-lm-0664-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/equador-lm-0664-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/indiiski-shisham-lm-0617-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/indiiski-shisham-lm-0617-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/italianski-oreh-lm-0656-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/italianski-oreh-lm-0656-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/klen-kanyon-krupnolistni-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/klen-kanyon-krupnolistni-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/klen-vankuver-lm-0602-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/klen-vankuver-lm-0602-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/provans-lm-0641-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/provans-lm-0641-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/sanoma-lm-0665-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/sanoma-lm-0665-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/seri-dub-lm-0674-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/seri-dub-lm-0674-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/slavyanski-dub-lm-0633-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/slavyanski-dub-lm-0633-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-hpl-shared/coatings/wood/sosna-zimnaa-lm-0676-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-hpl-shared/coatings/wood/full/sosna-zimnaa-lm-0676-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-polymer-shared/gallery/sml-sten-paneli-winal-premium-1-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-high-glow-premium-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-silk-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-soft-premium-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-polymer-shared/gallery/sten-paneli-winal-sml-polytech-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/pvh-ral-5010.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/pvh-ral-5010.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-1013-6-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-1013-6-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-1015-6-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-1015-6-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-1021-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-1021-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-5024-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-5024-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-6019-6-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-6019-6-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-7005-4-e1652659080491-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-7005-4-e1652659080491-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-7037-4-e1652659250425-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-7037-4-e1652659250425-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-7038-4-e1652659328222-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-7038-4-e1652659328222-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-7047-8-2.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-7047-8-2.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-9010-3-e1652659445967-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-9010-3-e1652659445967-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/solids/ral-9010-4-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/solids/full/ral-9010-4-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/47a8d4e195965cc559d86284cbb51498-scaled-1-e1706223575205.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/47a8d4e195965cc559d86284cbb51498-scaled-1-e1706223575205.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/bari_bejevi-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/bari_bejevi-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/beton-7037-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/beton-7037-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/beton_chicago_bej-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/beton_chicago_bej-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/bronze-sand.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/bronze-sand.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/bronze-titan.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/bronze-titan.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub-zolotoy-pvh.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub-zolotoy-pvh.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_bomond_loft-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_bomond_loft-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_filadelfia_grey-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_filadelfia_grey-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_filadelfia_koniak-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_filadelfia_koniak-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_natural-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_natural-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_seriy_914-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_seriy_914-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/dub_tangent_natur-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/dub_tangent_natur-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/img_8123.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/img_8123.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/img_8216-scaled-e1742574118353.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/img_8216-scaled-e1742574118353.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/larche_capuchino-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/larche_capuchino-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/len-bejevi.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/len-bejevi.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/len-molochni.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/len-molochni.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/len-seri.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/len-seri.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/listvenniza_seraya_903-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/listvenniza_seraya_903-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/llistvenniza_capuccino_902-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/llistvenniza_capuccino_902-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/llistvenniza_krem_901-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/llistvenniza_krem_901-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft-belyy-pvh.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft-belyy-pvh.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft_capuccino-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft_capuccino-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft_cherni-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft_cherni-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft_grafit-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft_grafit-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft_grey-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft_grey-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/loft_vanil-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/loft_vanil-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/m1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/m1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/m2.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/m2.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/m3.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/m3.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/orex_132-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/orex_132-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/orex_american_classic-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/orex_american_classic-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/orex_american_mocco-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/orex_american_mocco-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/orex_amerikan_dimchati-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/orex_amerikan_dimchati-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/orex_kantri_904-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/orex_kantri_904-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/padena-1-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/padena-1-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/photo1677325126-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/photo1677325126-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/photo16773251262-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/photo16773251262-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/photo16773251265.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/photo16773251265.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/photo1677325669-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/photo1677325669-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/pvh-beton-7038.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/pvh-beton-7038.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/pvh-beton-beli.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/pvh-beton-beli.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/silver-sand.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/silver-sand.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/silver-titan.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/silver-titan.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen-zolotoy-pvh-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen-zolotoy-pvh-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen_riviera_ais-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen_riviera_ais-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen_riviera_grey-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen_riviera_grey-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen_riviera_krem-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen_riviera_krem-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen_riviera_mokko-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen_riviera_mokko-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-pvc-shared/coatings/textured/yasen_svetli-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-pvc-shared/coatings/textured/full/yasen_svetli-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-3d-01.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-3d-01.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-3d-02.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-3d-02.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-3d-03.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-3d-03.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-concrete-01.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-concrete-01.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-concrete-02.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-concrete-02.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-concrete-03.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-concrete-03.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-wood-01.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-wood-01.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-wood-02.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-wood-02.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coating-wood-03.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/full/coating-wood-03.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-beton-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-beton-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-carbon-blue-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-carbon-blue-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-carbon-dark-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-carbon-dark-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-bej-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-bej-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-black-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-black-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-brown-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-brown-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-grey-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-grey-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-light-grey-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-light-grey-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-koja-zel-3d.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-koja-zel-3d.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-stelo-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-stelo-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-stelo-2.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-stelo-2.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-stelo-3.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-stelo-3.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-stelo-4.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-stelo-4.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/3d/akril-tkan-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/3d/full/akril-tkan-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/concrete/akril-beton-7047.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/concrete/full/akril-beton-7047.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/concrete/beton-beli-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/concrete/full/beton-beli-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/concrete/beton_7037-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/concrete/full/beton_7037-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/concrete/beton_7038-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/concrete/full/beton_7038-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/akril-polimer-soft-tach-dub-kompinteri.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/akril-polimer-soft-tach-dub-kompinteri.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/akril-uf-oreh-temni.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/akril-uf-oreh-temni.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/buk_natural-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/buk_natural-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub-molochnyj-2-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub-molochnyj-2-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_capuccino-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_capuccino-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_franzuzski-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_franzuzski-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_pesochni-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_pesochni-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_pesochni_grafit-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_pesochni_grafit-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_slonovaia_kost-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_slonovaia_kost-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/dub_trufel-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/dub_trufel-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/klen_tanzai-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/klen_tanzai-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/new-listvennitsa-krem-gkl-akril-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/new-listvennitsa-krem-gkl-akril-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/new-listvennitsa-sahalinskaya-gkl-akril-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/new-listvennitsa-sahalinskaya-gkl-akril-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/new-sandal-seriy-gkl-akril-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/new-sandal-seriy-gkl-akril-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/olha-2-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/olha-2-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/coatings/wood/sosna-2-1.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wall-sml-acryl/coatings/wood/full/sosna-2-1.webp"
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/dekorativnie-sten-paneli-sml-list-ofis-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/dekorativnie-sten-paneli-sml-list-ofis.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-paneli-dlya-sten-antibakterial-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-paneli-sml-list-okrashenni-ral-9003-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-paneli-sml-list-okrashenni-ral-9003-sk-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-paneli-sml-list-okrashenni-ral-9003-sk-6.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-sten-paneli-sml-h-profil-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-sten-paneli-sml-h-profil.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/med-sten-paneli-sml-profil.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/meditsinskie-paneli-dlya-sten-antibakterial-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/ofis-sten-paneli-sml-okrasheni-akril-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/panel-RAL-9016-sml-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/panel-akril-sml-sten-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/panel-akril-sml-sten-22.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/panel-ral-9016-sml-sk-3-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/panel-sml-beton-beli-uf.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sml-list0okrashenni-ral-9003-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sml-list0okrashenni-ral-9003-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sml-list0okrashenni-ral-9003-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sml-list0okrashenni-ral-9003.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-17.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-19.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-21.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-22.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/paneli-sten-sml-list-okras-ral-shkola-6.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/pegas-slot-18.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/rzhd-slot-01.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/rzhd-slot-06.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-akril-YASEN-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-akril-lak-9016-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-akril-ral-7037-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-akril-ral-9003-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-ral-2004-3-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sml-ral-7024-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-panel-smal-beton-polikristall.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-panel-sml-ral-1003.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-panel-sml-ral-6018.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-panel-sml-ral-9001.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-panel-winal-akril-uf-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-hpl-sml-list-gkl-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-hpl-sml-list-gkl-winal-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-hpl-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-h-profil-ral-7024.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-1003-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-1003-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-1003-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-1003.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-6018-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-6018-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-list-okras-ral-6018-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-okrasheni-akril-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-okrasheni-ral-7037-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-okrasheni-ral-7037-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-okrasheni-ral-7037-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-paneli-sml-okrasheni-ral-7037.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolochnie-paneli-sml-okrasheni-akril-10.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolochnie-paneli-sml-okrasheni-akril-11.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolochnie-paneli-sml-okrasheni-akril-14.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolochnie-paneli-sml-okrasheni-akril-5.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/sten-potolok-paneli-hpl-sml-pvh-okras.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/gallery/stenovie-paneli-winal-gkl-sml-office-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/hero-diagram.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-acryl/ral-chart.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/med-sten-paneli-sml-h-profil-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/meditsinskie-paneli-dlya-sten-antibakterial-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/meditsinskie-paneli-hpl-dlya-sten-antibakterial-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/meditsinskie-sten-paneli-hpl-sml-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/meditsinskie-sten-paneli-hpl-sml-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/panel-hpl-sml-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/panel-sml-list-hpl-sk-open.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/sten-panel-sml-hpl-open.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/sten-panel-sml-hpl-sk.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/sten-panel-winal-hpl-sml-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/sten-paneli-meditsinskie-hpl-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-hpl/gallery/sten-paneli-winal-hpl-sml-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/panel-sml-pvh-akril-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/sten-panel-winal-sml-pvh-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/sten-paneli-hpl-sml-list-gkl-winal-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/sten-paneli-hpl-sml-list-gkl-winal-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/sten-paneli-hpl-sml-list-gkl-winal.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/sten-paneli-winal-hpl-sml.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-laminirovannie-pvh-sml-list-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-laminirovannie-pvh-sml-list-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-laminirovannie-pvh-sml-list-3.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-laminirovannie-pvh-sml-list-4.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-laminirovannie-pvh-sml-list-6.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenovie-paneli-winal-gkl-sml-office-1.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wall-sml-pvc/gallery/stenpaneli-winal-sml-hpl-office-2.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wisound/coating-01.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wisound/full/coating-01.webp"
+    },
+    {
+      "rel": "product-modal/wisound/coating-02.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wisound/full/coating-02.webp"
+    },
+    {
+      "rel": "product-modal/wisound/coating-03.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wisound/full/coating-03.webp"
+    },
+    {
+      "rel": "product-modal/wisound/coating-04.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wisound/full/coating-04.webp"
+    },
+    {
+      "rel": "product-modal/wisound/coating-05.webp",
+      "role": "coating-swatch",
+      "full": "product-modal/wisound/full/coating-05.webp"
+    },
+    {
+      "rel": "product-modal/wisound/diagram-exploded.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wisound/variant-wisound-cutaway.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wisound/variant-wisound-lite-cutaway.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "product-modal/wisound/wisound-space.webp",
+      "role": "fit",
+      "maxSide": 1600
+    },
+    {
+      "rel": "catalog/cards/wall-sml-pvc.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/wall-sml-pvc/gallery/sten-panel-winal-sml-pvh-2.jpg",
+      "id": "wall-sml-pvc"
+    },
+    {
+      "rel": "catalog/cards/wall-sml-hpl.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/wall-sml-hpl/gallery/sten-panel-sml-hpl-sk.jpg",
+      "id": "wall-sml-hpl"
+    },
+    {
+      "rel": "catalog/cards/wall-polymer-shared.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-high-glow-premium-1.jpg",
+      "id": "wall-polymer-shared"
+    },
+    {
+      "rel": "catalog/cards/wall-gkl-pvc.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/wall-gkl-pvc/gallery/panel-gkl-pvh.jpg",
+      "id": "wall-gkl-pvc"
+    },
+    {
+      "rel": "catalog/cards/wall-gsp-pvc.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/wall-gsp-pvc/gallery/panel-akril-gkl-gvlv-5.jpg",
+      "id": "wall-gsp-pvc"
+    },
+    {
+      "rel": "catalog/cards/slat-sml-acryl.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/slat-sml-acryl/gallery/paneli-reechnie-negoruchie-derevo-winal-1.jpg",
+      "id": "slat-sml-acryl"
+    },
+    {
+      "rel": "catalog/cards/slat-sml-pvc.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/slat-sml-pvc/gallery/paneli-reechnie-negoruchie-derevo-winal-2.jpg",
+      "id": "slat-sml-pvc"
+    },
+    {
+      "rel": "catalog/cards/slat-sml-hpl.webp",
+      "role": "catalog-card-from-gallery",
+      "source": "product-modal/slat-sml-hpl/gallery/paneli-reechnie-hpl-sml-alumini-lm1003.jpg",
+      "id": "slat-sml-hpl"
+    }
+  ]
+}
