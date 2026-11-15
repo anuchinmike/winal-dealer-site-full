@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProfilesHubPage() {
   return (
-    <InnerPage crumbs={[{ label: "Главная", href: "/" }, { label: "Каталог", href: "/#catalog-system" }, { label: profilesHub.title }]}>
+    <InnerPage crumbs={[{ label: "Главная", href: "/" }, { label: "Каталог", href: "/catalog" }, { label: profilesHub.title }]}>
       <ProfilesHubPageContent />
     </InnerPage>
   );

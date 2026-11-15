@@ -8,7 +8,7 @@ import { FooterSection } from "@/app/site-footer";
 // Same tokens, logo and nav labels as the home page header, without the hero scroll scene.
 
 const NAV_ITEMS = [
-  { label: "Каталог", href: "/#catalog-wall" },
+  { label: "Каталог", href: "/catalog" },
   { label: "Профили", href: "/catalog/profiles" },
   { label: "Монтаж", href: "/tech/montazh-panelej" },
   { label: "Проекты", href: "/#cases" },

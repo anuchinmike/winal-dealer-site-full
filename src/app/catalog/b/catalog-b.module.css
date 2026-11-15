@@ -1,0 +1,313 @@
+/* Variant B: winal.ru catalogue composition (photo cards, label, product list, description box)
+   in dealer tokens: dealer glass, radii, Gilroy, brand blue. */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  scroll-margin-top: 96px;
+  padding-top: 40px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.headingRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mark {
+  width: 40px;
+  height: 40px;
+  flex: none;
+}
+
+.h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--dealer-color-text-primary);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  gap: 16px;
+}
+
+.row2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.row3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Photo card */
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--dealer-radius-md);
+  background: var(--dealer-color-brand-decoration);
+  color: var(--dealer-color-brand-white);
+  container-type: inline-size;
+}
+
+.large {
+  min-height: 560px;
+}
+
+.small {
+  min-height: 440px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 900ms var(--dealer-motion-easing);
+}
+
+.card:hover .bg {
+  transform: scale(1.03);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, var(--dealer-surface-image-scrim-strong) 100%);
+  pointer-events: none;
+}
+
+.large::before {
+  background: linear-gradient(90deg, var(--dealer-surface-image-scrim-strong) 0%, rgba(0, 0, 0, 0) 45%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, var(--dealer-surface-image-scrim-soft) 100%);
+}
+
+.glass {
+  background: var(--dealer-surface-glass-panel);
+  border: 1px solid var(--dealer-border-glass);
+  border-radius: var(--dealer-radius-sm);
+  -webkit-backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  backdrop-filter: blur(var(--dealer-effect-winal-glass-backdrop-blur));
+  box-shadow: var(--dealer-effect-winal-glass-shadow);
+}
+
+/* Label in the top-right corner, as on winal.ru */
+.label {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 24px);
+  padding: 10px 20px 10px 16px;
+  border-radius: var(--dealer-radius-sm) 0 0 var(--dealer-radius-sm);
+  background: var(--dealer-color-brand-white);
+  color: var(--dealer-color-text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  box-shadow: var(--dealer-shadow-video);
+}
+
+.labelMark {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border-radius: 2px;
+  background: var(--dealer-color-brand-secondary);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+}
+
+.context {
+  position: absolute;
+  top: 28px;
+  left: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  opacity: 0.9;
+  max-width: 40%;
+}
+
+/* Description box in the bottom-right corner */
+.desc {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  width: min(300px, calc(100% - 48px));
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.descText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.btn {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--dealer-radius-xs);
+  background: var(--dealer-color-brand-primary);
+  color: var(--dealer-color-brand-white);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 200ms ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Product list on the left of a family card */
+.list {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  width: min(340px, calc(100% - 372px));
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(4px);
+}
+
+.thumb {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: var(--dealer-radius-xs);
+  object-fit: cover;
+  background: var(--dealer-color-brand-white);
+}
+
+.itemText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.itemDesc {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  opacity: 0.85;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chevron {
+  margin-left: auto;
+  flex: none;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.stretched {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.card > :not(.bg):not(.stretched) {
+  z-index: 1;
+}
+
+/* Tablet and phone: content flows under the label instead of absolute corners. */
+@media (max-width: 1023px) {
+  .row2,
+  .row3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .h2 {
+    font-size: clamp(26px, 6vw, 34px);
+  }
+
+  .large,
+  .small {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 96px 16px 16px;
+  }
+
+  .small {
+    min-height: 380px;
+  }
+
+  .large::before,
+  .small::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, var(--dealer-surface-image-scrim-strong) 75%);
+  }
+
+  .list,
+  .desc {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+
+  .context {
+    display: none;
+  }
+
+  .label {
+    top: 16px;
+    font-size: 14px;
+  }
+}

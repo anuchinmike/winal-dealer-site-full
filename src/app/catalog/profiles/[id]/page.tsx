@@ -29,7 +29,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
     <InnerPage
       crumbs={[
         { label: "Главная", href: "/" },
-        { label: "Каталог", href: "/#catalog-system" },
+        { label: "Каталог", href: "/catalog" },
         { label: profilesHub.title, href: PROFILES_HUB_HREF },
         { label: profile.name },
       ]}
