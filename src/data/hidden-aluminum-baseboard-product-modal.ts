@@ -16,7 +16,7 @@ const FEATURE_ICON = asset("/images/product-modal/rythmwall/icon-install.svg");
 export const HIDDEN_ALUMINUM_BASEBOARD_PRODUCT_MODAL_ID = "hidden-aluminum-baseboard-product-modal";
 
 export const hiddenAluminumBaseboardModalAssets = {
-  gallery: [`${BASE}/gallery-node.webp`, `${BASE}/gallery-studio.webp`, `${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
+  gallery: [`${BASE}/gallery-node.webp`, `${BASE}/gallery-studio.webp`, `${BASE}/gallery-01.webp`, `${BASE}/gallery-03.webp`] as const,
   closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
     white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
