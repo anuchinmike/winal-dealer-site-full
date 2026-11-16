@@ -2,6 +2,7 @@
 
 import type { CatalogModalSequenceItem } from "@/data/dealer-catalog-modal-sequence";
 import type { DealerCatalogAction } from "@/data/dealer-catalog-products";
+import { PRODUCT_PAGE_HREF_BY_ACTION } from "@/data/product-pages";
 import { PROFILE_IDS, PROFILES_HUB_ACTION, profileModalAction } from "@/data/profiles-product-modal";
 import { asset } from "@/lib/asset";
 
@@ -30,6 +31,7 @@ export function registerPageNavigator(next: ((href: string) => void) | null) {
 const PAGE_HREF_BY_ACTION: Partial<Record<string, string>> = {
   [PROFILES_HUB_ACTION]: "/catalog/profiles",
   ...Object.fromEntries(PROFILE_IDS.map((id) => [profileModalAction(id), `/catalog/profiles/${id}`])),
+  ...PRODUCT_PAGE_HREF_BY_ACTION,
 };
 
 export function pageHrefForAction(action: DealerCatalogAction): string | undefined {
