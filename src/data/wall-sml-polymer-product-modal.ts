@@ -26,6 +26,10 @@ export const WALL_SML_POLYMER_PRODUCT_MODAL_ID = "wall-sml-polymer-product-modal
 export const wallSmlPolymerModalAssets = {
   gallery: [
     {
+      src: `${GALLERY}/sml-polymer-karbon-sinij.webp`,
+      caption: "WINAL™ СМЛ Полимер: синий карбон",
+    },
+    {
       src: `${GALLERY}/sten-panel-sml-winal-high-glow-premium-1.webp`,
       caption: "Стеновые панели СМЛ Премиум высокий глянец",
     },
