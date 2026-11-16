@@ -37,11 +37,11 @@ export function SiteHeader() {
         </a>
         <a
           href="#project-form"
-          className="inline-flex h-10 shrink-0 items-center rounded bg-dealer-brand-primary px-4 text-xs font-semibold text-dealer-brand-white md:px-8"
+          className="hidden h-10 shrink-0 items-center rounded bg-dealer-brand-primary px-4 text-xs font-semibold text-dealer-brand-white sm:inline-flex md:px-8"
         >
           {dealerConfig.primaryCta}
         </a>
-        <SiteMobileMenu items={NAV_ITEMS} phone={dealerConfig.phone} phoneHref={`tel:${dealerConfig.phone.replace(/[^+\d]/g, "")}`} />
+        <SiteMobileMenu items={NAV_ITEMS} cta={dealerConfig.primaryCta} phone={dealerConfig.phone} phoneHref={`tel:${dealerConfig.phone.replace(/[^+\d]/g, "")}`} />
       </div>
     </header>
   );

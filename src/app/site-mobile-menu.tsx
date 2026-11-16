@@ -6,7 +6,7 @@ import { useEffect, useId, useRef, useState } from "react";
 
 // Burger menu of the site header below the lg breakpoint, where the inline nav is hidden.
 
-export function SiteMobileMenu({ items, phone, phoneHref }: { items: readonly { label: string; href: string }[]; phone: string; phoneHref: string }) {
+export function SiteMobileMenu({ items, cta, phone, phoneHref }: { items: readonly { label: string; href: string }[]; cta: string; phone: string; phoneHref: string }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -72,6 +72,13 @@ export function SiteMobileMenu({ items, phone, phoneHref }: { items: readonly { 
         </nav>
         <a href={phoneHref} className="mt-1 flex min-h-12 items-center border-t border-dealer-brand-decoration px-4 text-base font-semibold text-dealer-brand-primary">
           {phone}
+        </a>
+        <a
+          href="#project-form"
+          onClick={() => setOpen(false)}
+          className="m-2 flex h-11 items-center justify-center rounded bg-dealer-brand-primary text-sm font-semibold text-dealer-brand-white sm:hidden"
+        >
+          {cta}
         </a>
       </div>
     </>
