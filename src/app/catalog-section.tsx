@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type RefObject } from "react";
 import { useLenis } from "lenis/react";
@@ -17,7 +18,7 @@ import {
   type CatalogSidebarFeature,
 } from "../data/dealer-catalog-sidebar";
 
-const CATALOG_IMAGES = "/images/catalog";
+const CATALOG_IMAGES = asset("/images/catalog");
 
 const catalogAssets = {
   bullet: `${CATALOG_IMAGES}/bullet.svg`,

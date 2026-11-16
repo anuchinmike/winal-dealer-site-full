@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type InvisibleCleanFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type InvisibleCleanSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/invisible-clean";
+const BASE = asset("/images/product-modal/invisible-clean");
 
 export const INVISIBLE_CLEAN_PRODUCT_MODAL_ID = "invisible-clean-product-modal";
 
 export const invisibleCleanModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`, `${BASE}/gallery-04.webp`, `${BASE}/gallery-05.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const invisibleCleanProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-door.svg",
+      icon: asset("/images/product-modal/icons/phosphor-door.svg"),
       title: "Открывание на себя",
       description: "Классическое прямое открывание со скрытым коробом для монтажа в один уровень со стеной.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Огнестойкость EI30",
       description: "Предел огнестойкости EI30 для скрытой двери на СМЛ-основе.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Толщина полотна 40–42 мм",
       description: "Полотно 40–42 мм при ширине 400–1200 мм и высоте 1500–2780 мм.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "4 типа отделки",
       description: "Полотно декорируется акрилом, ПВХ, HPL или шпоном в связке со стеновыми панелями WINAL™.",
     },

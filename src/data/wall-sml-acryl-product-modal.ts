@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallSmlAcrylFeature = {
   icon: string;
   title: string;
@@ -25,7 +26,7 @@ export type WallSmlAcrylGalleryImage = {
   caption: string;
 };
 
-const BASE = "/images/product-modal/wall-sml-acryl";
+const BASE = asset("/images/product-modal/wall-sml-acryl");
 const COATINGS = `${BASE}/coatings`;
 const GALLERY = `${BASE}/gallery`;
 
@@ -104,13 +105,13 @@ export const wallSmlAcrylModalAssets = {
     { src: `${GALLERY}/med-paneli-sml-list-okrashenni-ral-9003-2.webp`, caption: "Медицинские панели для стен окрашенный СМЛ лист премиум, отбойная доска ламинированная ПВХ или HPL. Онкологическая больница поликлиника Тула" },
   ] as const,
   ralChart: `${BASE}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${BASE}/icon-hero-uv.svg`,
     moisture: `${BASE}/icon-hero-moisture.svg`,
     color: `${BASE}/icon-hero-color.svg`,

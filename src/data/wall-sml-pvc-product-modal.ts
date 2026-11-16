@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPvcCoatingGroups } from "@/data/wall-pvc-coatings";
 
 export type WallSmlPvcFeature = {
@@ -16,9 +17,9 @@ export type WallSmlPvcGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-sml-pvc/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-sml-pvc/gallery");
 
 export const WALL_SML_PVC_PRODUCT_MODAL_ID = "wall-sml-pvc-product-modal";
 
@@ -82,13 +83,13 @@ export const wallSmlPvcModalAssets = {
       caption: "Стеновые панели ламинированные ПВХ пленкой СМЛ лист премиум",
     },
   ] as const satisfies readonly WallSmlPvcGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,
@@ -154,7 +155,7 @@ export const wallSmlPvcProductModal = {
         "Ламинированная поверхность защищает стену от царапин, механических повреждений и не выцветает на солнце.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-wrench.svg",
+      icon: asset("/images/product-modal/icons/phosphor-wrench.svg"),
       title: "Два варианта крепления",
       description:
         "Используйте декоративные профили для открытого монтажа или скрытое крепление для эстетики монолитной стены.",

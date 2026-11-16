@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import {
   createContext,
@@ -46,8 +47,8 @@ const PRODUCT_NAV_COMPACT_SCALE = 0.8;
 const PRODUCT_NAV_MIN_HIT = 44;
 
 const GLASS_ARROW_SRC = {
-  prev: "/images/catalog/glass-arrow-left.svg",
-  next: "/images/catalog/glass-arrow-right.svg",
+  prev: asset("/images/catalog/glass-arrow-left.svg"),
+  next: asset("/images/catalog/glass-arrow-right.svg"),
 } as const;
 
 let pendingEnterX = 0;

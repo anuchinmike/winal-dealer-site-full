@@ -12,7 +12,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, typ
 import { clamp, useDealerHorizontalRail } from "@/app/dealer-horizontal-scroll";
 import { CatalogProductModals } from "@/app/catalog-product-modals";
 import { DealerProductModalNavProvider, PRODUCT_MODAL_SLIDE_CLEAR_MS, type ProductModalSlideMotion } from "@/app/dealer-product-modal-nav";
-import { registerDealerProductModalOpener } from "@/app/dealer-product-modal-bridge";
+import { openDealerProductModal, pageHrefForAction, registerDealerProductModalOpener } from "@/app/dealer-product-modal-bridge";
 import {
   getFamilyModalSequence,
   getStandaloneModalSequence,
@@ -883,6 +883,11 @@ export function CatalogProductRail({
 
   const openProductModal = useCallback(
     (action: DealerCatalogAction, trigger: HTMLElement, sequence: CatalogModalSequenceItem[]) => {
+      // Products that already have a page open it instead of the modal.
+      if (pageHrefForAction(action)) {
+        openDealerProductModal(action, trigger, sequence);
+        return;
+      }
       if (!CATALOG_MODAL_DIALOG_ID[action] || sequence.length === 0) {
         return;
       }

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CeilingGklPvcFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CeilingGklPvcSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/ceiling-gkl-pvc";
+const BASE = asset("/images/product-modal/ceiling-gkl-pvc");
 
 export const CEILING_GKL_PVC_PRODUCT_MODAL_ID = "ceiling-gkl-pvc-product-modal";
 
 export const ceilingGklPvcModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const ceilingGklPvcProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожарный класс КМ-1",
       description: "Параметр выводится только при подтверждённом сценарии готовой панели.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Декоративная ПВХ-поверхность",
       description: "Прочная ламинация снижает объем финишных работ на объекте.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Размеры 594×594 и 1194×594",
       description: "Готовые форматы плит для модульных растровых потолков.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-down-up.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-down-up.svg"),
       title: "Варианты подвеса и крепежа",
       description: "Монтаж в распространенные подвесные системы T-24 или на скрытый каркас 60×27 мм.",
     },

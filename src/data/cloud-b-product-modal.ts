@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CloudBFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CloudBSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/cloud-b";
+const BASE = asset("/images/product-modal/cloud-b");
 
 export const CLOUD_B_PRODUCT_MODAL_ID = "cloud-b-product-modal";
 
 export const cloudBModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,23 +32,23 @@ export const cloudBProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-speaker-high.svg",
+      icon: asset("/images/product-modal/icons/phosphor-speaker-high.svg"),
       title: "Двустороннее звукопоглощение",
       description:
         "Звук поглощается с обеих сторон баффла; на высоких потолках это эффективнее плоской панели той же площади.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-rows.svg",
+      icon: asset("/images/product-modal/icons/phosphor-rows.svg"),
       title: "Ритм потолка",
       description: "Вертикальные элементы задают геометрию и глубину, не закрывая перекрытие сплошным полем.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "КМ1 и малый вес",
       description: "Класс пожарной безопасности КМ1; масса около 3–4 кг/м², нагрузка на конструкции низкая.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-down-up.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-down-up.svg"),
       title: "Регулируемый подвес",
       description:
         "Тросовые подвесы позволяют задать высоту и ритм; потолок остаётся проницаемым для света и вентиляции.",

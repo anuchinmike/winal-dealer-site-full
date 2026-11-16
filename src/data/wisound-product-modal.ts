@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WisoundFeature = {
   icon: string;
   title: string;
@@ -14,16 +15,16 @@ export type WisoundVariant = {
   mutedAccent?: boolean;
 };
 
-const BASE = "/images/product-modal/wisound";
+const BASE = asset("/images/product-modal/wisound");
 
 export const WISOUND_PRODUCT_MODAL_ID = "wisound-product-modal";
 
 export const wisoundModalAssets = {
   gallery: [`${BASE}/diagram-exploded.webp`, `${BASE}/wisound-space.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   coatings: [
     `${BASE}/coating-01.webp`,

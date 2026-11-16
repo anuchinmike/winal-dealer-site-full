@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPvcCoatingGroups } from "@/data/wall-pvc-coatings";
 
 export type SlatSmlPvcFeature = {
@@ -16,9 +17,9 @@ export type SlatSmlPvcGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/slat-sml-pvc/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/slat-sml-pvc/gallery");
 
 export const SLAT_SML_PVC_PRODUCT_MODAL_ID = "slat-sml-pvc-product-modal";
 
@@ -37,13 +38,13 @@ export const slatSmlPvcModalAssets = {
     { src: `${GALLERY}/paneli-reechnie-pvh-sml-dub-skandinavski.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Дуб скандинавский" },
     { src: `${GALLERY}/paneli-reechnie-pvh-sml-dub-skandinavski-sk.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Дуб скандинавский, скрытое крепление" },
   ] as const satisfies readonly SlatSmlPvcGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,

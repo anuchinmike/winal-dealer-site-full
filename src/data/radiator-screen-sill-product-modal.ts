@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type RadiatorScreenSillFeature = {
   icon: string;
   title: string;
@@ -9,17 +10,17 @@ export type RadiatorScreenSillSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/radiator-screen-sill";
-const FEATURE_ICON = "/images/catalog/icon-perforation.svg";
+const BASE = asset("/images/product-modal/radiator-screen-sill");
+const FEATURE_ICON = asset("/images/catalog/icon-perforation.svg");
 
 export const RADIATOR_SCREEN_SILL_PRODUCT_MODAL_ID = "radiator-screen-sill-product-modal";
 
 export const radiatorScreenSillModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -37,17 +38,17 @@ export const radiatorScreenSillProductModal = {
       description: "Конструкция связывает подоконник и экран радиатора без визуальных разрывов.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-clockwise.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-clockwise.svg"),
       title: "Конвекция воздуха",
       description: "Декоративная перфорация лицевой панели сохраняет циркуляцию воздуха от отопительного прибора.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Огнестойкая основа",
       description: "КМ-0 относится к СМЛ-основе, не к универсальному готовому изделию.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-swatches.svg",
+      icon: asset("/images/product-modal/icons/phosphor-swatches.svg"),
       title: "Единый стиль",
       description: "Решение согласуется с остальными стеновыми панелями проекта.",
     },

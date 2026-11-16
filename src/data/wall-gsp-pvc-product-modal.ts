@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPvcCoatingGroups } from "@/data/wall-pvc-coatings";
 
 export type WallGspPvcFeature = {
@@ -16,9 +17,9 @@ export type WallGspPvcGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-gsp-pvc/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-gsp-pvc/gallery");
 
 export const WALL_GSP_PVC_PRODUCT_MODAL_ID = "wall-gsp-pvc-product-modal";
 
@@ -29,13 +30,13 @@ export const wallGspPvcModalAssets = {
       caption: "Панели для стен ламинированные ПВХ пленкой ГСП",
     },
   ] as const satisfies readonly WallGspPvcGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,
@@ -73,7 +74,7 @@ export const wallGspPvcProductModal = {
       description: "ГСП с ПВХ сочетает антивандальные свойства с привлекательной стоимостью готовой отделки.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Слабогорючая основа КМ-1",
       description: "Надежная базовая плита имеет сертификат соответствия классу пожарной опасности КМ-1.",
     },

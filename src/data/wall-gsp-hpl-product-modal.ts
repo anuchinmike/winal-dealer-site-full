@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallHplCoatingGroups } from "@/data/wall-hpl-coatings";
 
 export type WallGspHplFeature = {
@@ -16,10 +17,10 @@ export type WallGspHplGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const HPL_ICONS = "/images/product-modal/wall-hpl-shared/icons";
-const DEALER_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-gsp-hpl/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const HPL_ICONS = asset("/images/product-modal/wall-hpl-shared/icons");
+const DEALER_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-gsp-hpl/gallery");
 
 export const WALL_GSP_HPL_PRODUCT_MODAL_ID = "wall-gsp-hpl-product-modal";
 
@@ -28,13 +29,13 @@ export const wallGspHplModalAssets = {
     { src: `${GALLERY}/sten-panel-winal-hpl-gsp.webp`, caption: "Стеновые панели WINAL™ HPL ГСП" },
     { src: `${GALLERY}/sten-panel-winal-hpl-1-1.webp`, caption: "Стеновые панели ГСП HPL пластик" },
   ] as const satisfies readonly WallGspHplGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,
@@ -69,7 +70,7 @@ export const wallGspHplProductModal = {
         "Поверхность высокого давления обладает большой сопротивляемостью к истиранию и глубоким царапинам.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Слабогорючая основа КМ-1",
       description: "Надёжная базовая плита имеет подтверждённый сертификат пожарной безопасности КМ-1.",
     },
@@ -110,7 +111,7 @@ export const wallGspHplProductModal = {
       description: "Крупные панели удобны для масштабной сухой установки на прочную алюминиевую систему без мокрых работ.",
     },
     {
-      icon: "/images/product-modal/icons/figma-fingerprint.svg",
+      icon: asset("/images/product-modal/icons/figma-fingerprint.svg"),
       title: "Разнообразие фактур",
       description: "Широкий выбор декоров, имитирующих натуральное дерево, камень, металл, а также однотонные покрытия.",
     },

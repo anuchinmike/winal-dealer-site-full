@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type MinWinFeature = {
   icon: string;
   title: string;
@@ -16,19 +17,19 @@ export type MinWinCoating = {
   image: string;
 };
 
-const BASE = "/images/product-modal/minwin";
+const BASE = asset("/images/product-modal/minwin");
 
 export const MINWIN_PRODUCT_MODAL_ID = "minwin-product-modal";
 
 export const minwinModalAssets = {
   hero: `${BASE}/hero-board-corner.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     mold: `${BASE}/icon-mold.svg`,
     moisture: `${BASE}/icon-moisture.svg`,
     eco: `${BASE}/icon-eco.svg`,

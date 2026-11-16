@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { DealerCatalogAction } from "@/data/dealer-catalog-products";
 import type { ProfileId } from "@/data/profiles-product-modal";
 /**
@@ -74,7 +75,7 @@ export type KartaMarker = {
 };
 
 const img = (name: string, alt: string): KartaImage => ({
-  src: `/tech/montazh/nodes/${name}`,
+  src: asset(`/tech/montazh/nodes/${name}`),
   alt,
 });
 
@@ -125,7 +126,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "omega-t",
-            scene: "/images/product-modal/profiles/scenes/t2.html",
+            scene: asset("/images/product-modal/profiles/scenes/t2.html"),
             sq: "omega-t",
             profile: "t",
             title: "Омега + Т‑крышка WINAL™",
@@ -136,7 +137,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "h",
-            scene: "/images/product-modal/profiles/scenes/xh.html",
+            scene: asset("/images/product-modal/profiles/scenes/xh.html"),
             sq: "h",
             profile: "h",
             title: "H‑профиль WINAL™",
@@ -147,7 +148,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "omega-pi",
-            scene: "/images/product-modal/profiles/scenes/pi.html",
+            scene: asset("/images/product-modal/profiles/scenes/pi.html"),
             sq: "omega-p",
             profile: "pi",
             title: "Омега + Пи‑профиль WINAL™",
@@ -158,7 +159,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "omega-t-dekor",
-            scene: "/tech/montazh/scenes/t-dekor.html",
+            scene: asset("/tech/montazh/scenes/t-dekor.html"),
             sq: "omega-t-dekor",
             profile: "t",
             title: "Омега + Т‑крышка WINAL™ с декоративной полосой",
@@ -169,7 +170,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "lumen",
-            scene: "/images/product-modal/profiles/scenes/plmh.html",
+            scene: asset("/images/product-modal/profiles/scenes/plmh.html"),
             sq: "lumen",
             profile: "lumen",
             title: "WINAL™ LUMEN LINE",
@@ -187,7 +188,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "nevidimka",
-            scene: "/images/product-modal/profiles/scenes/gnevs.html",
+            scene: asset("/images/product-modal/profiles/scenes/gnevs.html"),
             sq: "nevidimka-soft-20261031",
             profile: "nev",
             title: "Соединительный профиль «Невидимка» WINAL™",
@@ -198,7 +199,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "mikroshov",
-            scene: "/images/product-modal/profiles/scenes/gmic.html",
+            scene: asset("/images/product-modal/profiles/scenes/gmic.html"),
             sq: "mikro-front-20261105",
             profile: "mic",
             title: "Профиль «Микрошов» WINAL™",
@@ -223,7 +224,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "qbw",
-            scene: "/images/product-modal/profiles/scenes/ginn.html",
+            scene: asset("/images/product-modal/profiles/scenes/ginn.html"),
             sq: "qbw-20261105",
             profile: "inn",
             title: "Внутренний угол WINAL™",
@@ -234,7 +235,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "l",
-            scene: "/images/product-modal/profiles/scenes/xl.html",
+            scene: asset("/images/product-modal/profiles/scenes/xl.html"),
             sq: "l-20261105",
             profile: "l",
             title: "L‑профиль WINAL™",
@@ -272,7 +273,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "l",
-            scene: "/images/product-modal/profiles/scenes/glhu.html",
+            scene: asset("/images/product-modal/profiles/scenes/glhu.html"),
             profile: "lh",
             title: "L‑профиль скрытого крепления WINAL™",
             name: "L-профиль скрытого крепления",
@@ -298,7 +299,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "skos45",
-            scene: "/tech/montazh/scenes/skos45.html",
+            scene: asset("/tech/montazh/scenes/skos45.html"),
             title: "Сборный внешний угол 45° WINAL™",
             name: "Скос 45°",
             sq: "skos45",
@@ -318,7 +319,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "r5",
-            scene: "/images/product-modal/profiles/scenes/gr5.html",
+            scene: asset("/images/product-modal/profiles/scenes/gr5.html"),
             profile: "r5",
             title: "Сборный внешний угол R5 WINAL™",
             name: "Радиус R-5",
@@ -339,7 +340,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "strela",
-            scene: "/images/product-modal/profiles/scenes/gstr.html",
+            scene: asset("/images/product-modal/profiles/scenes/gstr.html"),
             profile: "str",
             title: "Сборный внешний угол «Стрела» WINAL™",
             name: "«Стрела»",
@@ -368,7 +369,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "f1",
-            scene: "/images/product-modal/profiles/scenes/xf1.html",
+            scene: asset("/images/product-modal/profiles/scenes/xf1.html"),
             profile: "f",
             sq: "f-klej",
             title: "F‑профиль WINAL™ на клею",
@@ -379,7 +380,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "f2",
-            scene: "/images/product-modal/profiles/scenes/xf2.html",
+            scene: asset("/images/product-modal/profiles/scenes/xf2.html"),
             profile: "f",
             sq: "f-ugolok",
             title: "F‑профиль WINAL™ на уголке",
@@ -390,7 +391,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "zashchitnyj",
-            scene: "/images/product-modal/profiles/scenes/gpro.html",
+            scene: asset("/images/product-modal/profiles/scenes/gpro.html"),
             profile: "pro",
             sq: "zashchitnyj",
             title: "Защитный алюминиевый уголок WINAL™",
@@ -401,7 +402,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "r10",
-            scene: "/images/product-modal/profiles/scenes/gr10.html",
+            scene: asset("/images/product-modal/profiles/scenes/gr10.html"),
             profile: "r10",
             sq: "r10",
             title: "Угловой профиль R10 WINAL™",
@@ -420,7 +421,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "sbornyj-r",
-            scene: "/images/product-modal/profiles/scenes/gsmlr.html",
+            scene: asset("/images/product-modal/profiles/scenes/gsmlr.html"),
             profile: "sml",
             title: "Склеенный угол СМЛ закруглённый WINAL™",
             name: "Закругленный угол",
@@ -442,7 +443,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "sbornyj-45",
-            scene: "/images/product-modal/profiles/scenes/gsml.html",
+            scene: asset("/images/product-modal/profiles/scenes/gsml.html"),
             profile: "sml",
             title: "Склеенный угол СМЛ прямой WINAL™",
             name: "Прямой угол",
@@ -481,7 +482,7 @@ export const kartaCards: KartaCard[] = [
           {
             id: "crystal-base",
             sq: "crystal",
-            scene: "/tech/montazh/scenes/plintus-crystal.html",
+            scene: asset("/tech/montazh/scenes/plintus-crystal.html"),
             modal: "crystal_base_wnl_modal",
             title: "Плинтус WINAL™ Crystal Base WNL",
             name: "Crystal Base",
@@ -491,7 +492,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "strong-base",
-            scene: "/tech/montazh/scenes/plintus-strong.html",
+            scene: asset("/tech/montazh/scenes/plintus-strong.html"),
             sq: "strong",
             modal: "strong_base_wnl_modal",
             title: "Плинтус WINAL™ Strong Base",
@@ -502,7 +503,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "slim",
-            scene: "/tech/montazh/scenes/plintus-slim.html",
+            scene: asset("/tech/montazh/scenes/plintus-slim.html"),
             sq: "slim",
             title: "Плинтус WINAL™ Slim",
             name: "Slim",
@@ -512,7 +513,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "mini-base",
-            scene: "/tech/montazh/scenes/plintus-mini.html",
+            scene: asset("/tech/montazh/scenes/plintus-mini.html"),
             sq: "mini",
             modal: "mini_base_modal",
             title: "Плинтус WINAL™ Mini Base",
@@ -529,7 +530,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "lh",
-            scene: "/images/product-modal/profiles/scenes/glhp.html",
+            scene: asset("/images/product-modal/profiles/scenes/glhp.html"),
             sq: "hidden",
             profile: "lh",
             title: "L‑профиль скрытого крепления WINAL™",
@@ -540,7 +541,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "l",
-            scene: "/images/product-modal/profiles/scenes/xl.html",
+            scene: asset("/images/product-modal/profiles/scenes/xl.html"),
             sq: "open",
             profile: "l",
             title: "L‑профиль WINAL™",
@@ -564,7 +565,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "hidden",
-            scene: "/images/product-modal/profiles/scenes/glht-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/glht-potolok-chern.html"),
             sq: "hidden-20261114",
             profile: "lh",
             title: "L‑профиль скрытого крепления WINAL™",
@@ -575,7 +576,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "open",
-            scene: "/images/product-modal/profiles/scenes/xl-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/xl-potolok-chern.html"),
             sq: "open-20261114",
             profile: "l",
             title: "L‑профиль WINAL™",
@@ -586,7 +587,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "lumen-l",
-            scene: "/images/product-modal/profiles/scenes/plml-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/plml-potolok-chern.html"),
             sq: "lumen-20261114",
             profile: "lumen",
             title: "WINAL™ LUMEN LINE, L-профиль",
@@ -633,7 +634,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "h",
-            scene: "/images/product-modal/profiles/scenes/xh-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/xh-potolok-chern.html"),
             sq: "h-20261114",
             profile: "h",
             title: "H‑профиль WINAL™",
@@ -644,7 +645,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "omega-t",
-            scene: "/images/product-modal/profiles/scenes/t2-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/t2-potolok-chern.html"),
             sq: "omega-t-20261114",
             profile: "t",
             title: "Омега + Т‑крышка WINAL™",
@@ -665,7 +666,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "styk",
-            scene: "/images/product-modal/profiles/scenes/gnevs-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/gnevs-potolok-chern.html"),
             sq: "styk-20261114",
             profile: "nev",
             title: "Соединительный профиль «Невидимка» WINAL™",
@@ -676,7 +677,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "u-steny",
-            scene: "/images/product-modal/profiles/scenes/glht-potolok-chern.html",
+            scene: asset("/images/product-modal/profiles/scenes/glht-potolok-chern.html"),
             sq: "u-steny-20261114",
             profile: "lh",
             title: "L‑профиль скрытого крепления WINAL™",
@@ -700,7 +701,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "shov",
-            scene: "/images/product-modal/profiles/scenes/plmh.html",
+            scene: asset("/images/product-modal/profiles/scenes/plmh.html"),
             sq: "shov",
             profile: "lumen",
             title: "WINAL™ LUMEN LINE",
@@ -711,7 +712,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "ugol",
-            scene: "/images/product-modal/profiles/scenes/plmu.html",
+            scene: asset("/images/product-modal/profiles/scenes/plmu.html"),
             sq: "ugol-20261105",
             profile: "lumen",
             title: "WINAL™ LUMEN LINE, внешний угол",
@@ -722,7 +723,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "torec",
-            scene: "/images/product-modal/profiles/scenes/plml.html",
+            scene: asset("/images/product-modal/profiles/scenes/plml.html"),
             sq: "torec-20261105",
             profile: "lumen",
             title: "WINAL™ LUMEN LINE, L-профиль",
@@ -774,7 +775,7 @@ export const kartaCards: KartaCard[] = [
         solutions: [
           {
             id: "l",
-            scene: "/images/product-modal/profiles/scenes/xl.html",
+            scene: asset("/images/product-modal/profiles/scenes/xl.html"),
             sq: "l-20261102",
             name: "L-профиль",
             text: "Открытый торец панели оформляет L-профиль: он держит кромку и закрывает срез СМЛ. Профиль крепится к каркасу, панель заводится в полку.",
@@ -783,7 +784,7 @@ export const kartaCards: KartaCard[] = [
           },
           {
             id: "lumen-l",
-            scene: "/images/product-modal/profiles/scenes/plml.html",
+            scene: asset("/images/product-modal/profiles/scenes/plml.html"),
             sq: "lumen-20261105",
             name: "Lumen L",
             text: "Торец у примыкающей стены закрыт световым профилем Lumen L: между кромкой панели и стеной светящийся рассеиватель.",
@@ -821,8 +822,8 @@ export const kartaMarkers: KartaMarker[] = [
 
 /** Кадр комнаты v15 (масштаб 1:1): колонна, выступ со сборными углами 60 мм, внутренние углы на L скрытого крепления. */
 export const kartaRoom = {
-  src: "/tech/montazh/room-v15-2560.webp",
-  srcSet: "/tech/montazh/room-v15-1280.webp 1280w, /tech/montazh/room-v15-2560.webp 2560w",
+  src: asset("/tech/montazh/room-v15-2560.webp"),
+  srcSet: `${asset("/tech/montazh/")}room-v15-1280.webp 1280w, ${asset("/tech/montazh/")}room-v15-2560.webp 2560w`,
   width: 2560,
   height: 1440,
   alt: "Комната в разрезе: стены открытого и скрытого крепления, колонна, выступ со сборными углами и потолок на профилях WINAL",
@@ -831,9 +832,9 @@ export const kartaRoom = {
 /** Крупный кадр «подлёта» к точке: камера сдвинута к узлу. Нет файла — остаётся обычное приближение. */
 /** Квадратный крупный кадр варианта; файла ещё нет — компонент берёт кадр подлёта. */
 export const sqSrc = (m: KartaMarker, s: KartaSolution, w: 1400 | 700 = 1400) =>
-  s.sq ? `/tech/montazh/sq/sq-${m.id}-${s.sq}${w === 700 ? "-700" : ""}.webp` : null;
+  s.sq ? asset(`/tech/montazh/sq/sq-${m.id}-${s.sq}${w === 700 ? "-700" : ""}.webp`) : null;
 
-export const flySrc = (m: KartaMarker) => (m.fly ? `/tech/montazh/fly/fly-${m.fly}-1280.webp` : null);
+export const flySrc = (m: KartaMarker) => (m.fly ? asset(`/tech/montazh/fly/fly-${m.fly}-1280.webp`) : null);
 
 export const kartaCard = (key: string) =>
   kartaCards.find((c) => c.key === key)!;
@@ -876,8 +877,8 @@ export function blockMarkers(block: KartaBlock): KartaMarker[] {
 }
 
 export const blockImage = (block: KartaBlock) => ({
-  src: `/tech/montazh/room-v15-m${block.id}-1080.webp`,
-  srcSet: `/tech/montazh/room-v15-m${block.id}-640.webp 640w, /tech/montazh/room-v15-m${block.id}-1080.webp 1080w`,
+  src: asset(`/tech/montazh/room-v15-m${block.id}-1080.webp`),
+  srcSet: `${asset("/tech/montazh/")}room-v15-m${block.id}-640.webp 640w, ${asset("/tech/montazh/")}room-v15-m${block.id}-1080.webp 1080w`,
   width: BLOCK_W,
   height: 1440,
   alt: `Комната, кадр для телефона: ${block.title.toLowerCase()}`,

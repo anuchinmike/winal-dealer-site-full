@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CloudIFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CloudISpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/cloud-i";
+const BASE = asset("/images/product-modal/cloud-i");
 
 export const CLOUD_I_PRODUCT_MODAL_ID = "cloud-i-product-modal";
 
 export const cloudIModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const cloudIProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-speaker-high.svg",
+      icon: asset("/images/product-modal/icons/phosphor-speaker-high.svg"),
       title: "Двустороннее поглощение",
       description: "Панель работает обеими поверхностями, точечно корректируя акустику непосредственно над рабочими зонами.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Геометрия и размеры",
       description: "Квадратные, прямоугольные и круглые элементы: 600×600, 1200×600, 1200×1200, 2400×1200, Ø800 и Ø1200 мм.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-down-up.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-down-up.svg"),
       title: "Тросовый монтаж",
       description: "Крепление на регулируемых тросовых подвесах позволяет зонировать пространство без сплошного потолка.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Надежность КМ1 и RAL/NCS",
       description: "Класс пожарной опасности КМ1 и точный подбор цвета по каталогам RAL и NCS под дизайн проекта.",
     },

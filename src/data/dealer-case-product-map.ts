@@ -1,10 +1,11 @@
+import { asset } from "@/lib/asset";
 import {
   getCatalogEntryById,
   isDealerCatalogModalAction,
   type DealerCatalogAction,
 } from "@/data/dealer-catalog-products";
 
-const CASE_TILE_IMAGES = "/images/catalog/case-tiles";
+const CASE_TILE_IMAGES = asset("/images/catalog/case-tiles");
 
 /** Survives `sync-dealer-cases.py`. Keys match `DealerCaseProductTile.productLabel`. */
 export const caseProductCatalogIdByLabel: Record<string, string> = {

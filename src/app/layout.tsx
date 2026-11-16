@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { dealerConfig } from "@/lib/dealer-config";
 import { SmoothScroll } from "@/app/smooth-scroll";
+import { PageNavigatorBridge } from "@/app/page-navigator-bridge";
 
 export const metadata: Metadata = {
-  title: `${dealerConfig.partnerName} — дилерский лендинг WINAL`,
+  title: `${dealerConfig.partnerName} — WINAL в ${dealerConfig.region}`,
   description:
     "MVP дилерского лендинга WINAL: панели, акустика, индивидуальные поверхности и объектная комплектация.",
 };
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
+        <PageNavigatorBridge />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

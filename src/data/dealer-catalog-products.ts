@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { ProfileModalAction } from "@/data/profiles-product-modal";
 
 export type DealerCatalogAction =
@@ -75,7 +76,7 @@ export type DealerCatalogProduct = {
   children?: DealerCatalogChild[];
 };
 
-const CATALOG_IMAGES = "/images/catalog";
+const CATALOG_IMAGES = asset("/images/catalog");
 const image = (name: string) => `${CATALOG_IMAGES}/${name}.webp`;
 
 /** Figma-selected acoustic card covers — keep separate from winal.ru proxy assets. */
@@ -223,9 +224,9 @@ const products: Record<string, DealerCatalogProduct> = {
     catalogImages.wallSmlPvc,
     [
       child("wall-sml-acryl", "Стеновые панели WINAL™ СМЛ Акрил", "Панели с окраской акрилом для ровной стеновой поверхности.", catalogImages.wallSmlAcryl, "WINAL™ СМЛ Акрил", undefined, "wall_sml_acryl_modal"),
-      child("wall-sml-pvc", "Стеновые панели WINAL™ СМЛ ПВХ", "Панели с ПВХ-ламинацией и выбором декоративных покрытий.", "/images/catalog/cards/wall-sml-pvc.webp", "WINAL™ СМЛ ПВХ", undefined, "wall_sml_pvc_modal"),
-      child("wall-sml-hpl", "Стеновые панели WINAL™ СМЛ HPL", "Износостойкие стеновые панели с HPL-покрытием.", "/images/catalog/cards/wall-sml-hpl.webp", "WINAL™ СМЛ HPL", undefined, "wall_sml_hpl_modal"),
-      child("wall-sml-polymer", "Стеновые панели WINAL™ СМЛ Полимер", "Панели с практичным полимерным покрытием для интенсивной эксплуатации.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
+      child("wall-sml-pvc", "Стеновые панели WINAL™ СМЛ ПВХ", "Панели с ПВХ-ламинацией и выбором декоративных покрытий.", asset("/images/catalog/cards/wall-sml-pvc.webp"), "WINAL™ СМЛ ПВХ", undefined, "wall_sml_pvc_modal"),
+      child("wall-sml-hpl", "Стеновые панели WINAL™ СМЛ HPL", "Износостойкие стеновые панели с HPL-покрытием.", asset("/images/catalog/cards/wall-sml-hpl.webp"), "WINAL™ СМЛ HPL", undefined, "wall_sml_hpl_modal"),
+      child("wall-sml-polymer", "Стеновые панели WINAL™ СМЛ Полимер", "Панели с практичным полимерным покрытием для интенсивной эксплуатации.", asset("/images/catalog/cards/wall-polymer-shared.webp"), "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Негорючая СМЛ-основа для стабильной стеновой отделки." },
   ),
@@ -236,8 +237,8 @@ const products: Record<string, DealerCatalogProduct> = {
     catalogImages.wallGklPvc,
     [
       child("wall-gkl-acryl", "Стеновые панели WINAL™ ГКЛ Акрил", "Окрашенные акрилом панели на ГКЛ-основе.", catalogImages.wallGklAcryl, "WINAL™ ГКЛ Акрил", undefined, "wall_gkl_acryl_modal"),
-      child("wall-gkl-pvc", "Стеновые панели WINAL™ ГКЛ ПВХ", "Ламинированные ПВХ панели на ГКЛ-основе.", "/images/catalog/cards/wall-gkl-pvc.webp", "WINAL™ ГКЛ ПВХ", undefined, "wall_gkl_pvc_modal"),
-      child("wall-gkl-polymer", "Стеновые панели WINAL™ ГКЛ Полимер", "Панели на ГКЛ-основе с полимерным покрытием.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ ГКЛ Полимер", undefined, "wall_gkl_polymer_modal"),
+      child("wall-gkl-pvc", "Стеновые панели WINAL™ ГКЛ ПВХ", "Ламинированные ПВХ панели на ГКЛ-основе.", asset("/images/catalog/cards/wall-gkl-pvc.webp"), "WINAL™ ГКЛ ПВХ", undefined, "wall_gkl_pvc_modal"),
+      child("wall-gkl-polymer", "Стеновые панели WINAL™ ГКЛ Полимер", "Панели на ГКЛ-основе с полимерным покрытием.", asset("/images/catalog/cards/wall-polymer-shared.webp"), "WINAL™ ГКЛ Полимер", undefined, "wall_gkl_polymer_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Доступная ГКЛ-основа для чистовой отделки." },
   ),
@@ -247,7 +248,7 @@ const products: Record<string, DealerCatalogProduct> = {
     "Панели на прочной ГСП-основе для нагруженных интерьеров с ПВХ- и HPL-покрытием.",
     catalogImages.wallGspHpl,
     [
-      child("wall-gsp-pvc", "Стеновые панели WINAL™ ГСП ПВХ", "Доступные панели на ГСП-основе с ПВХ-ламинацией.", "/images/catalog/cards/wall-gsp-pvc.webp", "WINAL™ ГСП ПВХ", undefined, "wall_gsp_pvc_modal"),
+      child("wall-gsp-pvc", "Стеновые панели WINAL™ ГСП ПВХ", "Доступные панели на ГСП-основе с ПВХ-ламинацией.", asset("/images/catalog/cards/wall-gsp-pvc.webp"), "WINAL™ ГСП ПВХ", undefined, "wall_gsp_pvc_modal"),
       child("wall-gsp-hpl", "Стеновые панели WINAL™ ГСП HPL", "Доступные стеновые панели на ГСП-основе с HPL-покрытием.", catalogImages.wallGspHpl, "WINAL™ ГСП HPL", undefined, "wall_gsp_hpl_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Прочная ГСП-основа для нагруженных интерьеров." },
@@ -256,13 +257,13 @@ const products: Record<string, DealerCatalogProduct> = {
     "family-slat-wall-panels",
     "Реечные стеновые панели",
     "Декоративные рейки для выразительных стеновых акцентов и архитектурного ритма.",
-    "/images/catalog/cards/slat-sml-acryl.webp",
+    asset("/images/catalog/cards/slat-sml-acryl.webp"),
     [
       child(
         "slat-sml-acryl",
         "Реечные панели WINAL™ СМЛ Акрил",
         "Реечные панели на СМЛ-основе с окраской акрилом.",
-        "/images/catalog/cards/slat-sml-acryl.webp",
+        asset("/images/catalog/cards/slat-sml-acryl.webp"),
         "СМЛ Акрил",
         undefined,
         "slat_sml_acryl_modal",
@@ -271,7 +272,7 @@ const products: Record<string, DealerCatalogProduct> = {
         "slat-sml-pvc",
         "Реечные панели WINAL™ СМЛ ПВХ",
         "Реечные панели на СМЛ-основе с ПВХ-ламинацией.",
-        "/images/catalog/cards/slat-sml-pvc.webp",
+        asset("/images/catalog/cards/slat-sml-pvc.webp"),
         "СМЛ ПВХ",
         undefined,
         "slat_sml_pvc_modal",
@@ -280,7 +281,7 @@ const products: Record<string, DealerCatalogProduct> = {
         "slat-sml-hpl",
         "Реечные панели WINAL™ СМЛ HPL",
         "Реечные панели на СМЛ-основе с HPL-покрытием.",
-        "/images/catalog/cards/slat-sml-hpl.webp",
+        asset("/images/catalog/cards/slat-sml-hpl.webp"),
         "СМЛ HPL",
         undefined,
         "slat_sml_hpl_modal",

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WinisolFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type WinisolSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/winisol";
+const BASE = asset("/images/product-modal/winisol");
 
 export const WINISOL_PRODUCT_MODAL_ID = "winisol-product-modal";
 
 export const winisolModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const winisolProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-stack.svg",
+      icon: asset("/images/product-modal/icons/phosphor-stack.svg"),
       title: "Минеральное волокно",
       description: "Наполнитель на основе кварцевого песка работает внутри каркасных перегородочных конструкций.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-leaf.svg",
+      icon: asset("/images/product-modal/icons/phosphor-leaf.svg"),
       title: "Без фенолформальдегида",
       description: "Состав заявлен без фенолформальдегидных связующих.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Негорючий состав",
       description: "Минеральный состав поддерживает требования к безопасным системам.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-path.svg",
+      icon: asset("/images/product-modal/icons/phosphor-path.svg"),
       title: "Эластичность и удобство",
       description: "Эластичный материал не пылит и не колется, плотнее заполняя полости каркаса.",
     },

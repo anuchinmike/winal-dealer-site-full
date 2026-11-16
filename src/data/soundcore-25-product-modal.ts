@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type Soundcore25Feature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type Soundcore25SpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/soundcore-25";
+const BASE = asset("/images/product-modal/soundcore-25");
 
 export const SOUNDCORE_25_PRODUCT_MODAL_ID = "soundcore-25-product-modal";
 
 export const soundcore25ModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const soundcore25ProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-speaker-high.svg",
+      icon: asset("/images/product-modal/icons/phosphor-speaker-high.svg"),
       title: "NRC 0,85–0,95 с относом",
       description: "Акустическая эффективность NRC 0,85–0,95 достигается при монтаже с воздушным относом 50 мм.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-hammer.svg",
+      icon: asset("/images/product-modal/icons/phosphor-hammer.svg"),
       title: "Ударопрочность и стойкость",
       description: "Прочная плита выдерживает механические нагрузки и перепады температур в диапазоне −40…+60 °C.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожаробезопасность КМ-1",
       description: "Композит из древесного волокна и цемента сертифицирован по классу пожарной опасности КМ-1 (Г1).",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Кромки, фактуры, форматы",
       description: "Фактуры S, M, L, кромки ПК, VK, АПК и стеновые форматы 600×600, 600×1200, 600×2400 мм.",
     },

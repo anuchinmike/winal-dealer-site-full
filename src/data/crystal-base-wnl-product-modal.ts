@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CrystalBaseWnlFeature = {
   icon: string;
   title: string;
@@ -9,7 +10,7 @@ export type CrystalBaseWnlSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/crystal-base-wnl";
+const BASE = asset("/images/product-modal/crystal-base-wnl");
 
 export const CRYSTAL_BASE_WNL_PRODUCT_MODAL_ID = "crystal-base-wnl-product-modal";
 
@@ -20,10 +21,10 @@ export const crystalBaseWnlModalAssets = {
     `${BASE}/gallery-01.webp`,
     `${BASE}/gallery-02.webp`,
   ] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -36,22 +37,22 @@ export const crystalBaseWnlProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-rectangle.svg",
+      icon: asset("/images/product-modal/icons/phosphor-rectangle.svg"),
       title: "Лаконичный контур",
       description: "Визуально лёгкий профиль для аккуратного оформления стыка стена-пол без массивных накладок.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Линейка высот и толщин",
       description: "Типоразмеры WNL 100/12, 60/8, 60/10, 60/12 и 40/12 под панели различной толщины.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-bounding-box.svg",
+      icon: asset("/images/product-modal/icons/phosphor-bounding-box.svg"),
       title: "Точный подбор под лист",
       description: "Выбор идет по высоте и толщине узла стеновой панели.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-split-horizontal.svg",
+      icon: asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
       title: "Отдельно от Slim",
       description: "WNL-размеры не смешиваются со скрытым алюминиевым Slim-профилем.",
     },

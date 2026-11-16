@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallPvcCoatingSwatch = {
   id: string;
   image: string;
@@ -9,7 +10,7 @@ export type WallPvcCoatingGroup = {
   swatches: WallPvcCoatingSwatch[];
 };
 
-const BASE = "/images/product-modal/wall-pvc-shared/coatings";
+const BASE = asset("/images/product-modal/wall-pvc-shared/coatings");
 
 export const wallPvcCoatingGroups = [
   {
