@@ -89,7 +89,8 @@ const FAMILY_COVER: Record<string, string> = {
   "family-radiator-screens": "radiator-screen-window-sill",
 };
 
-function pageImage(id: string, fallback: string): string {
+/** 4:3 catalogue cover of a family or product (falls back to the card image). */
+export function catalogCoverImage(id: string, fallback: string): string {
   const key = FAMILY_COVER[id] ?? id;
   return PAGE_IMAGE_IDS.has(key) ? asset(`/images/catalog/page/${key}.webp`) : fallback;
 }
@@ -105,7 +106,7 @@ function buildSection(tabId: DealerCatalogTabId): CatalogPageSection {
         title: child.title,
         shortTitle: child.listTitle,
         description: child.description,
-        image: pageImage(child.id, child.image),
+        image: catalogCoverImage(child.id, child.image),
         action: child.action!,
         sequence: familySequence,
       }));
@@ -115,7 +116,7 @@ function buildSection(tabId: DealerCatalogTabId): CatalogPageSection {
       title: product.title,
       shortTitle: product.title,
       description: product.description,
-      image: pageImage(product.id, product.image),
+      image: catalogCoverImage(product.id, product.image),
       // A family opens on its first product and pages through the rest.
       action: first ? first.action : product.action,
       sequence: first ? familySequence : getStandaloneModalSequence(product),

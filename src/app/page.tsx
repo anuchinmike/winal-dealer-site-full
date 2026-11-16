@@ -231,7 +231,7 @@ function SurfaceSection() {
             </div>
             <div className="dealer-surface-cta-row flex items-start gap-6">
               <PrimaryButton label="Обсудить проект" width={217} href="#project-form" />
-              <OutlineButton label="Выполненные проекты" width={251} href="#cases" />
+              <OutlineButton label="Выполненные проекты" width={251} href={asset("/projects")} />
             </div>
             <div className="dealer-surface-stats-row flex h-[91px] w-full items-center gap-2 overflow-hidden">
               {[

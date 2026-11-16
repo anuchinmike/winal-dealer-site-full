@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { OpenProduct } from "@/app/catalog/catalog-kit";
 import type { CatalogModalSequenceItem } from "@/data/dealer-catalog-modal-sequence";
@@ -150,6 +151,7 @@ function SearchResults({ query, results, onReset, onPick }: { query: string; res
               <OpenProduct
                 action={item.action}
                 sequence={item.sequence}
+                catalogId={item.key}
                 className="group flex h-full w-full flex-col overflow-hidden rounded-lg bg-dealer-brand-white text-left transition-shadow hover:shadow-[0_8px_40px_rgba(1,88,171,0.14)]"
               >
                 <span className="block aspect-[4/3] w-full overflow-hidden bg-dealer-brand-decoration">
@@ -206,6 +208,9 @@ function Sections() {
               {section.title}
             </h2>
             <p className="text-base font-medium leading-6 text-dealer-text-description">{section.intro}</p>
+            <Link href={`/catalog/${section.id}`} className="text-sm font-semibold text-dealer-brand-primary transition-opacity hover:opacity-80">
+              Открыть раздел →
+            </Link>
             <ul className="grid grid-cols-2 gap-3">
               {section.features.map((feature) => (
                 <li key={feature.label} className="flex items-center gap-2 rounded-lg bg-dealer-brand-white p-3 text-xs font-semibold leading-4 text-dealer-text-secondary" style={{ boxShadow: "var(--dealer-shadow-video)" }}>
@@ -232,7 +237,7 @@ function Sections() {
 function FamilyCard({ entry }: { entry: CatalogPageEntry }) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg bg-dealer-brand-white" style={{ boxShadow: "var(--dealer-shadow-glass)" }}>
-      <OpenProduct action={entry.action} sequence={entry.sequence} className="group block aspect-[4/3] w-full overflow-hidden bg-dealer-brand-decoration" aria-label={`Открыть ${entry.title}`}>
+      <OpenProduct action={entry.action} sequence={entry.sequence} catalogId={entry.id} className="group block aspect-[4/3] w-full overflow-hidden bg-dealer-brand-decoration" aria-label={`Открыть ${entry.title}`}>
         <img src={entry.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
       </OpenProduct>
       <div className="flex flex-1 flex-col gap-3 p-5">
@@ -246,6 +251,7 @@ function FamilyCard({ entry }: { entry: CatalogPageEntry }) {
                 <OpenProduct
                   action={child.action}
                   sequence={child.sequence}
+                  catalogId={child.id}
                   className="inline-flex min-h-8 items-center rounded border border-[var(--dealer-border-brand-soft)] px-3 text-xs font-semibold text-dealer-brand-primary transition-colors hover:bg-dealer-brand-primary hover:text-dealer-brand-white"
                 >
                   {child.shortTitle}
@@ -258,6 +264,7 @@ function FamilyCard({ entry }: { entry: CatalogPageEntry }) {
           <OpenProduct
             action={entry.action}
             sequence={entry.sequence}
+            catalogId={entry.id}
             className="inline-flex h-10 items-center rounded bg-dealer-brand-primary px-6 text-xs font-semibold text-dealer-brand-white transition-opacity hover:opacity-90"
           >
             {entry.children.length > 0 ? `Смотреть серию · ${entry.children.length}` : "Подробнее"}

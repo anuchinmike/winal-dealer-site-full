@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   motion,
   useMotionValue,
@@ -609,7 +610,12 @@ const HERO_TEXT_CARD_BORDER_STYLE = {
 // Same four labels as the desktop inline "A | B | C | D" reading — rendered as a
 // list so the compact mobile panel can stack them, while desktop CSS re-joins
 // them with a generated "  |  " separator to keep the current visual unchanged.
-const HEADER_NAV_ITEMS = ["О бренде", "Каталог", "Реализованные проекты", "Контакты"];
+const HEADER_NAV_ITEMS = [
+  { label: "О бренде", href: "#complex-approach" },
+  { label: "Каталог", href: "/catalog" },
+  { label: "Реализованные проекты", href: "/projects" },
+  { label: "Контакты", href: "#project-form" },
+];
 
 function HeroTextCardContent({ children }: { children: ReactNode }) {
   return <div className="dealer-hero-text-inner relative z-[2] flex w-full flex-col items-start justify-start gap-12">{children}</div>;
@@ -653,8 +659,16 @@ function StickyHeader({
           {showMain ? (
             <ul className="dealer-header-nav-list">
               {HEADER_NAV_ITEMS.map((item) => (
-                <li key={item} className="dealer-header-nav-item">
-                  {item}
+                <li key={item.label} className="dealer-header-nav-item">
+                  {item.href.startsWith("#") ? (
+                    <a href={item.href} className="transition-colors hover:text-dealer-brand-primary">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="transition-colors hover:text-dealer-brand-primary">
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

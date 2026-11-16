@@ -11,7 +11,7 @@ const NAV_ITEMS = [
   { label: "Каталог", href: "/catalog" },
   { label: "Профили", href: "/catalog/profiles" },
   { label: "Монтаж", href: "/tech/montazh-panelej" },
-  { label: "Проекты", href: "/#cases" },
+  { label: "Проекты", href: "/projects" },
 ];
 
 export function SiteHeader() {

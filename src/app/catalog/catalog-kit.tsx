@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { CatalogProductModals } from "@/app/catalog-product-modals";
+import { PAGE_HREF_BY_CATALOG_ID } from "@/data/product-pages";
 import { openDealerProductModal, pageHrefForAction, registerDealerProductModalOpener } from "@/app/dealer-product-modal-bridge";
 import { DealerProductModalNavProvider, type DealerProductModalNavValue } from "@/app/dealer-product-modal-nav";
 import { useCatalogCompactLayout } from "@/app/use-catalog-compact-layout";
@@ -64,14 +65,16 @@ export function CatalogModalsHost() {
 type OpenProductProps = {
   action: DealerCatalogAction;
   sequence?: CatalogModalSequenceItem[];
+  /** Catalogue id of a family or product; its page wins over the action's page. */
+  catalogId?: string;
   className?: string;
   children: ReactNode;
   "aria-label"?: string;
 };
 
 /** A link when the product has its own page, otherwise a button that opens its modal. */
-export function OpenProduct({ action, sequence, className, children, ...rest }: OpenProductProps) {
-  const href = pageHrefForAction(action);
+export function OpenProduct({ action, sequence, catalogId, className, children, ...rest }: OpenProductProps) {
+  const href = (catalogId && PAGE_HREF_BY_CATALOG_ID[catalogId]) || pageHrefForAction(action);
   if (href) {
     return (
       <Link href={href} className={className} aria-label={rest["aria-label"]}>
