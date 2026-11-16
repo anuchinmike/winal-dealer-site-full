@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SiteHeader } from "@/app/site-chrome";
 import {
   motion,
   useMotionValue,
@@ -1152,8 +1153,9 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
     return (
       <CatalogLayoutProvider value={catalogLayoutValue}>
         <div className="dealer-home-stack relative z-10 flex w-368 max-w-full flex-col gap-60 py-6">
-          <div className="dealer-header-slot">
-            <StickyHeader {...headerProps} />
+          <div className="dealer-header-slot" style={{ maxWidth: 1376 }}>
+            {/* Same header as the inner pages of the multi-page version. */}
+            <SiteHeader />
           </div>
           <StaticHero assets={assets} />
           {surface}
@@ -1182,8 +1184,9 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
       </motion.div>
 
       <div className="relative z-10 flex w-368 max-w-full flex-col py-6">
-        <div className="dealer-header-slot">
-          <StickyHeader {...headerProps} />
+        <div className="dealer-header-slot" style={{ maxWidth: 1376 }}>
+          {/* Same header as the inner pages of the multi-page version. */}
+          <SiteHeader />
         </div>
 
         {/* Внешняя scroll-сцена: её высота задаёт общую длину анимации. */}

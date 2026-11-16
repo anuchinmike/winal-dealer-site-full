@@ -21,7 +21,7 @@ export function SiteHeader() {
       style={{ boxShadow: "var(--dealer-shadow-glass)" }}
     >
       <Link href="/" aria-label="WINAL, на главную" className="shrink-0">
-        <img src={asset("/images/home/footer-logo.svg")} alt="WINAL" width={150} height={27} className="h-[22px] w-auto md:h-[27px]" />
+        <img src={asset("/images/home/header-logo.svg")} alt="WINAL — панели для внутренней отделки" width={214} height={48} className="h-9 w-auto md:h-12" />
       </Link>
       <nav aria-label="Основная навигация" className="hidden items-center gap-8 text-sm font-medium text-dealer-text-secondary lg:flex">
         {NAV_ITEMS.map((item) => (
