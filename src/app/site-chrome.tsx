@@ -10,7 +10,7 @@ import { FooterSection } from "@/app/site-footer";
 const NAV_ITEMS = [
   { label: "Каталог", href: "/catalog" },
   { label: "Профили", href: "/catalog/profiles" },
-  { label: "Монтаж", href: "/tech/montazh-panelej" },
+  { label: "Монтаж", href: "/#montazh" },
   { label: "Проекты", href: "/projects" },
 ];
 
