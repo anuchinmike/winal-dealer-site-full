@@ -8,7 +8,6 @@ import { DealerProductModalNavProvider, type DealerProductModalNavValue } from "
 import { useCatalogCompactLayout } from "@/app/use-catalog-compact-layout";
 import type { CatalogModalSequenceItem } from "@/data/dealer-catalog-modal-sequence";
 import type { DealerCatalogAction } from "@/data/dealer-catalog-products";
-import { CATALOG_VARIANTS, type CatalogVariantId } from "@/data/dealer-catalog-page";
 
 /**
  * Product modals on the catalogue pages. Products that already have their own page
@@ -90,37 +89,5 @@ export function OpenProduct({ action, sequence, className, children, ...rest }: 
     >
       {children}
     </button>
-  );
-}
-
-/** Floating switcher between the catalogue page variants (review only). */
-export function CatalogVariantSwitcher({ current }: { current: CatalogVariantId }) {
-  return (
-    <nav
-      aria-label="Варианты страницы каталога"
-      className="fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/40 bg-white/60 p-1 text-xs font-semibold backdrop-blur-[20px]"
-      style={{ boxShadow: "var(--dealer-shadow-glass)" }}
-    >
-      <Link href="/catalog" className="rounded-full px-3 py-2 text-dealer-text-description transition-colors hover:text-dealer-brand-primary">
-        Варианты
-      </Link>
-      {CATALOG_VARIANTS.map((variant) => {
-        const active = variant.id === current;
-        return (
-          <Link
-            key={variant.id}
-            href={variant.href}
-            aria-current={active ? "page" : undefined}
-            className={
-              active
-                ? "rounded-full bg-dealer-brand-primary px-4 py-2 text-dealer-brand-white"
-                : "rounded-full px-4 py-2 text-dealer-text-secondary transition-colors hover:text-dealer-brand-primary"
-            }
-          >
-            {variant.id.toUpperCase()}
-          </Link>
-        );
-      })}
-    </nav>
   );
 }

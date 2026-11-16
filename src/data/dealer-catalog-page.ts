@@ -56,6 +56,44 @@ const SECTION_META: Record<DealerCatalogTabId, { label: string; icon: string }> 
   system: { label: "Системные решения", icon: asset("/images/catalog/tab-system.svg") },
 };
 
+/**
+ * Landscape 4:3 covers for the catalogue page (800×600, cropped from the product modal galleries).
+ * The home-page catalogue keeps its tall card images; they do not crop well into wide cards.
+ */
+const PAGE_IMAGE_IDS = new Set([
+  "wall-sml-acryl", "wall-sml-pvc", "wall-sml-hpl", "wall-sml-polymer",
+  "wall-gkl-acryl", "wall-gkl-pvc", "wall-gkl-polymer", "wall-gsp-pvc", "wall-gsp-hpl",
+  "slat-sml-acryl", "slat-sml-pvc", "slat-sml-hpl",
+  "ceiling-sml-acryl", "ceiling-sml-pvc", "ceiling-gkl-acryl", "ceiling-gkl-pvc",
+  "cloud-w", "cloud-c", "cloud-b", "cloud-i", "soundcore-14", "soundcore-25", "urban-w", "urban-c",
+  "wallpro", "winisol", "invisible-basic", "invisible-reverse", "invisible-clean",
+  "plinth-strong-base", "plinth-crystal-base", "plinth-hidden", "plinth-mini-base",
+  "radiator-screen-window-sill", "radiator-screen-box", "radiator-screen-overlay",
+  "rhythm-wall", "minwin", "radius-solutions", "ufr", "family-wisound", "family-profiles",
+]);
+
+/** Family cover = the cover of one of its products. */
+const FAMILY_COVER: Record<string, string> = {
+  "family-wall-sml": "wall-sml-acryl",
+  "family-wall-gkl": "wall-gkl-acryl",
+  "family-wall-gsp": "wall-gsp-hpl",
+  "family-slat-wall-panels": "slat-sml-acryl",
+  "family-ceiling-sml": "ceiling-sml-acryl",
+  "family-ceiling-gypsum": "ceiling-gkl-pvc",
+  "family-cloud-system": "cloud-b",
+  "family-soundcore": "soundcore-25",
+  "family-urban": "urban-w",
+  "family-winal-mute": "wallpro",
+  "family-invisible": "invisible-basic",
+  "family-plinths": "plinth-crystal-base",
+  "family-radiator-screens": "radiator-screen-window-sill",
+};
+
+function pageImage(id: string, fallback: string): string {
+  const key = FAMILY_COVER[id] ?? id;
+  return PAGE_IMAGE_IDS.has(key) ? asset(`/images/catalog/page/${key}.webp`) : fallback;
+}
+
 function buildSection(tabId: DealerCatalogTabId): CatalogPageSection {
   const sidebar = getCatalogSidebarContent(tabId);
   const entries: CatalogPageEntry[] = dealerCatalogProductsByTab[tabId].map((product) => {
@@ -67,8 +105,7 @@ function buildSection(tabId: DealerCatalogTabId): CatalogPageSection {
         title: child.title,
         shortTitle: child.listTitle,
         description: child.description,
-        image: child.image,
-        objectPosition: child.objectPosition,
+        image: pageImage(child.id, child.image),
         action: child.action!,
         sequence: familySequence,
       }));
@@ -78,8 +115,7 @@ function buildSection(tabId: DealerCatalogTabId): CatalogPageSection {
       title: product.title,
       shortTitle: product.title,
       description: product.description,
-      image: product.image,
-      objectPosition: product.objectPosition,
+      image: pageImage(product.id, product.image),
       // A family opens on its first product and pages through the rest.
       action: first ? first.action : product.action,
       sequence: first ? familySequence : getStandaloneModalSequence(product),
@@ -107,29 +143,3 @@ export const catalogPageSections: CatalogPageSection[] = CATALOG_TAB_ORDER.map(b
 export const CATALOG_PAGE_TITLE = "Каталог продуктов WINAL";
 export const CATALOG_PAGE_LEAD =
   "Стеновые, акустические, потолочные и системные решения для общественных и коммерческих интерьеров. Подберём продукт под задачу объекта и рассчитаем проект.";
-
-export const CATALOG_VARIANTS = [
-  {
-    id: "a",
-    href: "/catalog/a",
-    name: "Вариант A",
-    title: "Разделы и семейства",
-    description: "Описание раздела слева, справа светлые карточки семейств со списком продуктов.",
-  },
-  {
-    id: "b",
-    href: "/catalog/b",
-    name: "Вариант B",
-    title: "В стиле winal.ru",
-    description: "Большие фото семейств, стеклянные плашки с продуктами и описанием, как на основном сайте.",
-  },
-  {
-    id: "c",
-    href: "/catalog/c",
-    name: "Вариант C",
-    title: "Все продукты с поиском",
-    description: "Боковое меню по разделам, поиск по названию и все продукты сразу в одной сетке.",
-  },
-] as const;
-
-export type CatalogVariantId = (typeof CATALOG_VARIANTS)[number]["id"];
