@@ -430,7 +430,6 @@ const PRIMARY_SECTION: Record<string, DealerCatalogTabId> = {
   "family-cloud-system": "acoustic",
   wallpro: "system",
   "winal-isol": "system",
-  ufr: "system",
 };
 
 const SKIP = new Set(["family-profiles"]); // has its own pages under /catalog/profiles
