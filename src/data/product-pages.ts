@@ -428,7 +428,8 @@ const slugOf = (catalogId: string) => SLUG_BY_CATALOG_ID[catalogId] ?? catalogId
 const PRIMARY_SECTION: Record<string, DealerCatalogTabId> = {
   "family-wisound": "acoustic",
   "family-cloud-system": "acoustic",
-  "family-winal-mute": "acoustic",
+  wallpro: "system",
+  "winal-isol": "system",
   ufr: "system",
 };
 

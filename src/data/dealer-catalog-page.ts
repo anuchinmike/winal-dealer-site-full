@@ -66,7 +66,7 @@ const PAGE_IMAGE_IDS = new Set([
   "slat-sml-acryl", "slat-sml-pvc", "slat-sml-hpl",
   "ceiling-sml-acryl", "ceiling-sml-pvc", "ceiling-gkl-acryl", "ceiling-gkl-pvc",
   "cloud-w", "cloud-c", "cloud-b", "cloud-i", "soundcore-14", "soundcore-25", "urban-w", "urban-c",
-  "wallpro", "winisol", "invisible-basic", "invisible-reverse", "invisible-clean",
+  "wallpro", "winisol", "winal-isol", "family-plinths", "invisible-basic", "invisible-reverse", "invisible-clean",
   "plinth-strong-base", "plinth-crystal-base", "plinth-hidden", "plinth-mini-base",
   "radiator-screen-window-sill", "radiator-screen-box", "radiator-screen-overlay",
   "rhythm-wall", "minwin", "radius-solutions", "ufr", "family-wisound", "family-profiles",
@@ -83,9 +83,7 @@ const FAMILY_COVER: Record<string, string> = {
   "family-cloud-system": "cloud-b",
   "family-soundcore": "soundcore-25",
   "family-urban": "urban-w",
-  "family-winal-mute": "wallpro",
   "family-invisible": "invisible-basic",
-  "family-plinths": "plinth-crystal-base",
   "family-radiator-screens": "radiator-screen-window-sill",
 };
 
