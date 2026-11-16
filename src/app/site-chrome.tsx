@@ -3,6 +3,7 @@ import { asset } from "@/lib/asset";
 import { dealerConfig } from "@/lib/dealer-config";
 import { ProjectFormSection } from "@/app/project-form-section";
 import { FooterSection } from "@/app/site-footer";
+import { SiteMobileMenu } from "@/app/site-mobile-menu";
 
 // Header, breadcrumbs and page frame for inner pages of the multi-page version.
 // Same tokens, logo and nav labels as the home page header, without the hero scroll scene.
@@ -17,7 +18,7 @@ const NAV_ITEMS = [
 export function SiteHeader() {
   return (
     <header
-      className="flex w-full items-center justify-between gap-6 rounded-lg bg-dealer-brand-white px-5 py-4 md:px-8"
+      className="relative flex w-full items-center justify-between gap-3 rounded-lg md:gap-6 bg-dealer-brand-white px-5 py-4 md:px-8"
       style={{ boxShadow: "var(--dealer-shadow-glass)" }}
     >
       <Link href="/" aria-label="WINAL, на главную" className="shrink-0">
@@ -30,7 +31,7 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <div className="flex shrink-0 items-center gap-6">
+      <div className="flex shrink-0 items-center gap-2 md:gap-6">
         <a href={`tel:${dealerConfig.phone.replace(/[^+\d]/g, "")}`} className="hidden text-sm font-semibold text-dealer-text-secondary transition-colors hover:text-dealer-brand-primary xl:inline">
           {dealerConfig.phone}
         </a>
@@ -40,6 +41,7 @@ export function SiteHeader() {
         >
           {dealerConfig.primaryCta}
         </a>
+        <SiteMobileMenu items={NAV_ITEMS} phone={dealerConfig.phone} phoneHref={`tel:${dealerConfig.phone.replace(/[^+\d]/g, "")}`} />
       </div>
     </header>
   );
