@@ -14,7 +14,7 @@ const BASE = asset("/images/product-modal/wall-hpl-shared/coatings");
 
 export const wallHplCoatingGroups = [
   {
-    chip: "HPL деревянные",
+    chip: "HPL дерево",
     swatches: [
       { id: "dub-arkona-lm-0684-1", image: `${BASE}/wood/dub-arkona-lm-0684-1.webp`, label: "Дуб аркона LM-0684" },
       { id: "dub-artizan-lm-0679-1", image: `${BASE}/wood/dub-artizan-lm-0679-1.webp`, label: "Дуб артизан LM-0679" },
@@ -43,7 +43,7 @@ export const wallHplCoatingGroups = [
     ],
   },
   {
-    chip: "HPL каменные",
+    chip: "HPL камень",
     swatches: [
       { id: "bela-avrora-lm-0438-1", image: `${BASE}/stone/bela-avrora-lm-0438-1.webp`, label: "Бела Аврора LM-0438" },
       { id: "beli-mramor-lm-0453-1", image: `${BASE}/stone/beli-mramor-lm-0453-1.webp`, label: "Белый Мрамор LM-0453" },
