@@ -37,8 +37,6 @@ type WallSmlPolymerProductModalProps = {
 const CHIP_GRADIENT =
   "linear-gradient(143.68deg, rgba(1, 88, 171, 0.05) 14.835%, rgba(255, 255, 255, 0.013) 125.3%)";
 
-const RAL_GRADIENT =
-  "linear-gradient(-87.4deg, rgba(1, 88, 171, 0.05) 6.2528%, rgba(255, 255, 255, 0.013) 102.16%)";
 
 const ICON_BOX_SHADOW = "0 4px 32px rgba(1, 88, 171, 0.1)";
 
@@ -302,26 +300,6 @@ function SpecRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-function RalBlock() {
-  return (
-    <div
-      className="dealer-modal-compact-stack dealer-modal-compact-fluid flex h-[132px] shrink-0 items-center gap-[32px] overflow-hidden rounded-[4px] pr-[16px]"
-      style={{ backgroundImage: RAL_GRADIENT }}
-    >
-      <div className="dealer-modal-swatch-media relative aspect-square h-full shrink-0">
-        <img
-          src={wallSmlPolymerModalAssets.ralChart}
-          alt=""
-          className="absolute inset-0 size-full object-cover"
-        />
-      </div>
-      <p className="dealer-type-mini-regular min-w-0 flex-1 text-right text-dealer-brand-primary">
-        {wallSmlPolymerProductModal.ralNote}
-      </p>
-    </div>
-  );
-}
-
 function WallSmlPolymerModalContent({ compact = false }: { compact?: boolean }) {
   const [heroA, heroB, heroC, heroD] = wallSmlPolymerProductModal.heroFeatures;
   const galleryImages = [...wallSmlPolymerModalAssets.gallery];
@@ -414,7 +392,7 @@ function WallSmlPolymerModalContent({ compact = false }: { compact?: boolean }) 
 
       <div className="dealer-modal-row relative z-10 flex min-h-[455px] shrink-0 gap-[16px]">
         <div
-          className="dealer-modal-panel flex min-w-0 flex-1 flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-[3] flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-glass)" }}
         >
           <p className="dealer-modal-compact-h2 dealer-type-h2 shrink-0 text-black">{wallSmlPolymerProductModal.coatingTitle}</p>
@@ -426,11 +404,11 @@ function WallSmlPolymerModalContent({ compact = false }: { compact?: boolean }) 
         </div>
 
         <div
-          className="dealer-modal-panel flex min-w-0 flex-1 rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-[2] rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-video)" }}
         >
-          <div className="dealer-modal-compact-stack flex h-full min-w-0 w-full gap-[16px]">
-            <div className="flex min-w-0 flex-1 flex-col gap-[32px] pb-[13px]">
+          <div className="flex h-full min-w-0 w-full flex-col gap-[32px]">
+            <div className="flex min-w-0 flex-col gap-[24px]">
               <div className="flex flex-col gap-[10px]">
                 <p className="dealer-modal-compact-h2 dealer-type-h2 text-dealer-text-primary">{wallSmlPolymerProductModal.specs.title}</p>
                 <p className="dealer-type-h3 text-dealer-text-secondary">
@@ -443,11 +421,9 @@ function WallSmlPolymerModalContent({ compact = false }: { compact?: boolean }) 
                   <SpecRow key={row.label} label={row.label} value={row.value} />
                 ))}
               </div>
-
-              <RalBlock />
             </div>
 
-            <div className="flex min-w-0 flex-1 flex-col justify-center gap-[16px]">
+            <div className="dealer-modal-feature-grid grid min-w-0 grid-cols-1 gap-[16px]">
               {wallSmlPolymerProductModal.extraFeatures.map((feature) => (
                 <FeatureRow key={feature.title} feature={feature} className="w-full shrink-0" />
               ))}

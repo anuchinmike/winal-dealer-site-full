@@ -1403,6 +1403,11 @@ img {
   max-width: 100%;
 }
 
+/* Two-up feature grid under the specs -> single column. */
+[data-compact-modal="true"] .dealer-modal-feature-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 /* Any fixed-width desktop column (feature card, chip, …) -> fluid. */
 [data-compact-modal="true"] .dealer-modal-compact-fluid {
   width: 100%;

@@ -405,7 +405,7 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
 
       <div className="dealer-modal-row relative z-10 flex min-h-[455px] shrink-0 gap-[16px]">
         <div
-          className="dealer-modal-panel flex min-w-0 flex-1 flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-[3] flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-glass)" }}
         >
           <p className="dealer-modal-compact-h2 dealer-type-h2 shrink-0 text-black">{wallSmlPvcProductModal.coatingTitle}</p>
@@ -417,11 +417,11 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
         </div>
 
         <div
-          className="dealer-modal-panel flex min-w-0 flex-1 rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-[2] rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-video)" }}
         >
-          <div className="dealer-modal-compact-stack flex h-full min-w-0 w-full gap-[16px]">
-            <div className="flex min-w-0 flex-1 flex-col gap-[32px] pb-[13px]">
+          <div className="flex h-full min-w-0 w-full flex-col gap-[32px]">
+            <div className="flex min-w-0 flex-col gap-[24px]">
               <div className="flex flex-col gap-[10px]">
                 <p className="dealer-modal-compact-h2 dealer-type-h2 text-dealer-text-primary">{wallSmlPvcProductModal.specs.title}</p>
                 <p className="dealer-type-h3 text-dealer-text-secondary">
@@ -436,7 +436,7 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
               </div>
             </div>
 
-            <div className="flex min-w-0 flex-1 flex-col justify-center gap-[16px]">
+            <div className="dealer-modal-feature-grid grid min-w-0 grid-cols-1 gap-[16px]">
               {wallSmlPvcProductModal.extraFeatures.map((feature) => (
                 <FeatureRow key={feature.title} feature={feature} className="w-full shrink-0" />
               ))}
