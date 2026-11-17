@@ -1291,12 +1291,12 @@ export const profiles: readonly ProfileData[] = [
     "id": "nev",
     "node": "seam",
     "fastening": "Скрытое крепление",
-    "tab": "«Невидимка»",
-    "name": "Соединительный профиль «Невидимка»",
+    "tab": "H-профиль",
+    "name": "H-профиль скрытого крепления",
     "card": "Скрытый шов, торцы панелей в кромке",
     "thumb": asset("/images/product-modal/profiles/img/th-nev.webp"),
     "kicker": "Скрытое крепление · шов панелей",
-    "title": "Соединительный профиль «Невидимка» WINAL™",
+    "title": "H-профиль скрытого крепления WINAL™",
     "lead": "Профиль скрытого крепления для шва стеновых панелей: сам профиль и крепёж остаются под панелями, на лице видна только аккуратная линия стыка. Монтируется на подготовленную стену или на стойки ПС. Торцы панелей у стыка оклеены кромкой.",
     "feats": [
       {
@@ -1352,11 +1352,11 @@ export const profiles: readonly ProfileData[] = [
         "svgs": [
           {
             "src": asset("/images/product-modal/profiles/sec/hc2.svg"),
-            "alt": "Сечение профиля «Невидимка», вариант 2"
+            "alt": "Сечение H-профиля скрытого крепления, вариант 2"
           },
           {
             "src": asset("/images/product-modal/profiles/sec/hc3.svg"),
-            "alt": "Сечение профиля «Невидимка», вариант 3"
+            "alt": "Сечение H-профиля скрытого крепления, вариант 3"
           }
         ]
       }
@@ -1394,14 +1394,14 @@ export const profiles: readonly ProfileData[] = [
     "draw": [
       {
         "src": asset("/images/product-modal/profiles/sec/hc2.svg"),
-        "alt": "Сечение профиля «Невидимка», вариант 2"
+        "alt": "Сечение H-профиля скрытого крепления, вариант 2"
       }
     ],
     "drawCap": "Сечение профиля, мм",
     "mountTitle": "Крепление: скрытое",
     "mount": [
-      "<b>На стене:</b> «Невидимка» крепится дюбелями / саморезами через полку основания",
-      "<b>На каркасе:</b> «Невидимка» крепится саморезами к полке стойки ПС",
+      "<b>На стене:</b> H-профиль крепится дюбелями / саморезами через полку основания",
+      "<b>На каркасе:</b> H-профиль крепится саморезами к полке стойки ПС",
       "<b>Торцы панелей</b> у стыка оклеены кромкой, поэтому стык ровный и аккуратный"
     ],
     "prepTitle": "Подготовка основания",
@@ -1452,7 +1452,7 @@ export const profiles: readonly ProfileData[] = [
     "thumb": asset("/images/product-modal/profiles/img/th-mic.webp"),
     "kicker": "Скрытое крепление · шов панелей",
     "title": "Профиль «Микрошов» WINAL™",
-    "lead": "Вариант «Невидимки» с шипом, код QBKCG10, для панелей WINAL™ СМЛ <span class=\"nb\">10 мм</span>. Шип профиля закрывает стык панелей, поэтому торцы кромковать не нужно: панель дешевле и быстрее в производстве. Профиль крепится к стойкам ПС.",
+    "lead": "Вариант H-профиля скрытого крепления с шипом, код QBKCG10, для панелей WINAL™ СМЛ <span class=\"nb\">10 мм</span>. Шип профиля закрывает стык панелей, поэтому торцы кромковать не нужно: панель дешевле и быстрее в производстве. Профиль крепится к стойкам ПС.",
     "feats": [
       {
         "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
@@ -1555,7 +1555,7 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
           "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
@@ -1674,7 +1674,7 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
           "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
@@ -1810,7 +1810,7 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
           "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
@@ -1964,7 +1964,7 @@ export const profiles: readonly ProfileData[] = [
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
+          "text": "Склеен на производстве, стоит на H-профилях",
           "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
@@ -2105,7 +2105,7 @@ export const profiles: readonly ProfileData[] = [
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
+          "text": "Склеен на производстве, стоит на H-профилях",
           "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
@@ -2245,7 +2245,7 @@ export const profiles: readonly ProfileData[] = [
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
+          "text": "Склеен на производстве, стоит на H-профилях",
           "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
@@ -2265,11 +2265,11 @@ export const profiles: readonly ProfileData[] = [
     "fastening": "Скрытое крепление",
     "tab": "Угол из СМЛ",
     "name": "Сборный угол из СМЛ",
-    "card": "Склеен на производстве, стоит на «Невидимках»",
+    "card": "Склеен на производстве, стоит на H-профилях",
     "thumb": asset("/images/product-modal/profiles/img/th-sml.webp"),
     "kicker": "Сборный угол · скрытое крепление",
     "title": "Сборный угол из СМЛ WINAL™",
-    "lead": "Наружный угол из панелей WINAL™ СМЛ, склеенный на производстве специализированным клеем: на объект он приезжает готовым. Стыки угла с соседними панелями держат профили «Невидимка», поэтому крепёж не виден. Есть прямое и радиусное исполнение.",
+    "lead": "Наружный угол из панелей WINAL™ СМЛ, склеенный на производстве специализированным клеем: на объект он приезжает готовым. Стыки угла с соседними панелями держат H-профили скрытого крепления, поэтому крепёж не виден. Есть прямое и радиусное исполнение.",
     "feats": [
       {
         "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
@@ -2279,7 +2279,7 @@ export const profiles: readonly ProfileData[] = [
       {
         "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
-        "text": "Стыки держат профили «Невидимка» под панелями."
+        "text": "Стыки держат H-профили скрытого крепления под панелями."
       },
       {
         "icon": asset("/images/product-modal/icons/figma-radius.svg"),
@@ -2321,7 +2321,7 @@ export const profiles: readonly ProfileData[] = [
       },
       {
         "name": "Крепление",
-        "value": "скрытое, на профилях «Невидимка»"
+        "value": "скрытое, на H-профилях скрытого крепления"
       },
       {
         "name": "Основание",
@@ -2345,8 +2345,8 @@ export const profiles: readonly ProfileData[] = [
     "mountTitle": "Крепление: скрытое",
     "mount": [
       "<b>Угол из СМЛ</b> приходит собранным",
-      "<b>Профили «Невидимка»</b> крепятся к стене дюбелями / саморезами под панелями и держат стыки угла",
-      "<b>Радиусный угол:</b> стальной уголок крепится к углу стены дюбелями, на нём держатся «невидимки»"
+      "<b>H-профили скрытого крепления</b> крепятся к стене дюбелями / саморезами под панелями и держат стыки угла",
+      "<b>Радиусный угол:</b> стальной уголок крепится к углу стены дюбелями, на нём держатся H-профили"
     ],
     "prepTitle": "Подготовка стены",
     "prep": [
