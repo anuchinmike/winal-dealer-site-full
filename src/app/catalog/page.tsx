@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { InnerPage } from "@/app/site-chrome";
-import { CatalogModalsHost } from "@/app/catalog/catalog-kit";
 import { CatalogView } from "@/app/catalog/catalog-view";
 import { CATALOG_PAGE_LEAD, CATALOG_PAGE_TITLE } from "@/data/dealer-catalog-page";
 
@@ -14,7 +13,6 @@ export default function CatalogPage() {
         <p className="dealer-section-lead max-w-[720px]">{CATALOG_PAGE_LEAD}</p>
       </header>
       <CatalogView />
-      <CatalogModalsHost />
     </InnerPage>
   );
 }

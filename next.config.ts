@@ -12,6 +12,13 @@ const nextConfig: NextConfig = {
   basePath,
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
   allowedDevOrigins: ["192.168.1.118", "172.23.144.1"],
+  // The old installation pages are replaced by the «Монтаж» screen on the home page.
+  async redirects() {
+    return [
+      { source: "/tech/montazh-panelej", destination: "/#montazh", permanent: false },
+      { source: "/tech/montazh-panelej/:path*", destination: "/#montazh", permanent: false },
+    ];
+  },
   async headers() {
     if (siteIndexing) return [];
     return [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }];

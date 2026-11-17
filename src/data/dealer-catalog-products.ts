@@ -206,17 +206,6 @@ const products: Record<string, DealerCatalogProduct> = {
     ],
     { contextTitle: "Акустические панели", contextSubtitle: "Металлические решения для стен и потолков." },
   ),
-  "family-winal-mute": family(
-    "family-winal-mute",
-    "WINAL™ MUTE",
-    "Решения для снижения передачи шума через перегородки и конструкции.",
-    dealerCatalogImageAssets.cardWallPro,
-    [
-      child("wallpro", "WINAL™ WallPro", "Готовые каркасные перегородки для звукоизоляции помещений и точных узлов.", dealerCatalogImageAssets.cardWallPro, "WallPro", undefined, "wallpro_modal"),
-      child("winisol", "WINAL™ WINISOL", "Минераловатные плиты для звукоизоляции перегородок и облицовок.", catalogImages.winisol, "WINISOL", undefined, "winisol_modal"),
-    ],
-    { contextTitle: "Звукоизоляционные системы", contextSubtitle: "Перегородки и материалы для снижения передачи шума." },
-  ),
   "family-wall-sml": family(
     "family-wall-sml",
     "Стеновые панели на основе СМЛ",
@@ -373,6 +362,8 @@ const products: Record<string, DealerCatalogProduct> = {
   "soundcore-25": { id: "soundcore-25", title: "WINAL™ Soundcore 25", description: "Акустические панели из древесного волокна для стен общественных пространств.", image: catalogImages.soundcore25, action: "soundcore_25_modal", objectPosition: "right center", contextTitle: "Акустические панели", contextSubtitle: "Стеновые акустические панели из древесного волокна." },
   "urban-w": { id: "urban-w", title: "WINAL™ Urban W", description: "Металлические стеновые панели с минеральным звукопоглощающим наполнителем.", image: dealerCatalogImageAssets.cardUrban, action: "urban_w_modal", contextTitle: "Акустические панели", contextSubtitle: "Металлические стеновые решения с минеральным наполнителем." },
   "urban-c": { id: "urban-c", title: "WINAL™ Urban C", description: "Металлические потолочные панели с минеральным звукопоглощающим наполнителем.", image: catalogImages.urbanC, action: "urban_c_modal", contextTitle: "Акустические панели", contextSubtitle: "Металлические потолочные решения с минеральным наполнителем." },
+  wallpro: { id: "wallpro", title: "WINAL™ WallPro", description: "Готовые каркасные перегородки на СМЛ и ГКЛ для звукоизоляции помещений: Rw 58–64 дБ, сухая сборка, декоры поверхности.", image: dealerCatalogImageAssets.cardWallPro, action: "wallpro_modal", contextTitle: "Каркасные перегородки", contextSubtitle: "Звукоизоляция помещений и сухая сборка." },
+  "winal-isol": { id: "winal-isol", title: "WINAL™ Isol", description: "Звукоизоляционный наполнитель из минерального волокна для каркасных перегородок и облицовок.", image: catalogImages.winisol, action: "winisol_modal", contextTitle: "Звукоизоляционный наполнитель", contextSubtitle: "Минеральное волокно, плиты 50, 75 и 100 мм." },
   ufr: { id: "ufr", title: "UFR-печать на панелях и профилях", description: "Индивидуальная графика, навигация и декор на панелях и профилях открытого крепления.", image: catalogImages.ufr, action: "ufr_print_modal", contextTitle: "UFR печать", contextSubtitle: "Графика, навигация и декор на совместимых поверхностях." },
 };
 
@@ -417,10 +408,10 @@ function projectForTab(tabId: DealerCatalogTabId, ...ids: string[]): DealerCatal
 }
 
 export const dealerCatalogProductsByTab: Record<DealerCatalogTabId, DealerCatalogProduct[]> = {
-  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "family-winal-mute"),
-  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "rhythm-wall", "family-slat-wall-panels", "minwin", "family-wisound", "cloud-w", "soundcore-25", "urban-w", "ufr", "radius-solutions"),
+  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "wallpro", "winal-isol"),
+  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "radius-solutions", "ufr", "rhythm-wall", "family-slat-wall-panels", "minwin", "family-wisound", "cloud-w", "soundcore-25", "urban-w"),
   ceiling: projectForTab("ceiling", "family-ceiling-sml", "family-ceiling-gypsum", "family-wisound", "family-cloud-system", "soundcore-14", "urban-c"),
-  system: projectForTab("system", "family-winal-mute", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "ufr"),
+  system: projectForTab("system", "wallpro", "winal-isol", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "ufr", "radius-solutions"),
 };
 
 export function isDealerCatalogModalAction(action: DealerCatalogAction | undefined): boolean {
