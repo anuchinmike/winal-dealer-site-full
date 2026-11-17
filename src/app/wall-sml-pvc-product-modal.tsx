@@ -324,7 +324,7 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
   };
 
   return (
-    <div className="dealer-modal-canvas flex h-[926px] w-[1376px] flex-col gap-[16px]">
+    <div className="dealer-modal-canvas flex min-h-[926px] w-[1376px] flex-col gap-[16px]">
       <div className="dealer-modal-row relative z-0 flex h-[455px] gap-[16px]">
         <div className="dealer-modal-hero-media relative z-0 flex h-full w-[548px] shrink-0 items-center justify-between overflow-hidden rounded-[8px] px-4">
           <button
@@ -403,9 +403,9 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
         </div>
       </div>
 
-      <div className="dealer-modal-row relative z-10 flex h-[455px] gap-[16px]">
+      <div className="dealer-modal-row relative z-10 flex min-h-[455px] shrink-0 gap-[16px]">
         <div
-          className="dealer-modal-panel flex h-full min-w-0 flex-1 flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-1 flex-col gap-[20px] overflow-visible rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-glass)" }}
         >
           <p className="dealer-modal-compact-h2 dealer-type-h2 shrink-0 text-black">{wallSmlPvcProductModal.coatingTitle}</p>
@@ -417,7 +417,7 @@ function WallSmlPvcModalContent({ compact = false }: { compact?: boolean }) {
         </div>
 
         <div
-          className="dealer-modal-panel flex h-full min-w-0 flex-1 rounded-[8px] p-[28px] backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-1 rounded-[8px] p-[28px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-video)" }}
         >
           <div className="dealer-modal-compact-stack flex h-full min-w-0 w-full gap-[16px]">
