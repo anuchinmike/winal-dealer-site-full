@@ -1,3 +1,7 @@
+/**
+ * Everything that changes from one dealer to the next. A new dealer site starts by filling this file.
+ * Empty strings are treated as «not filled»: contacts hide the row, legal pages show a highlighted gap.
+ */
 export const dealerConfig = {
   partnerName: "2design.pro",
   region: "Сочи",
@@ -7,4 +11,39 @@ export const dealerConfig = {
   socialLabels: ["Telegram", "WhatsApp", "Чат"],
   primaryCta: "Обсудить проект",
   secondaryCta: "Смотреть выполненные проекты",
-} as const;
+
+  /** Contacts page. */
+  contacts: {
+    /** Office or showroom address, one line. */
+    address: "",
+    /** Opening hours, one line each. */
+    hours: ["Пн–Пт с 9:00 до 18:00"] as string[],
+    /** Messenger links; an empty href hides the button. */
+    messengers: [
+      { label: "Telegram", href: "" },
+      { label: "WhatsApp", href: "" },
+    ],
+  },
+
+  /**
+   * Operator of personal data: the dealer's legal entity. Feeds the privacy policy, the consent and the requisites on the contacts page.
+   * Until `approved` is true the legal pages carry a «draft» banner.
+   */
+  legal: {
+    approved: false,
+    /** Full name of the legal entity, e.g. ООО «Название». */
+    operator: "",
+    inn: "",
+    ogrn: "",
+    /** Legal address. */
+    address: "",
+    /** Mailbox for requests about personal data; falls back to `email`. */
+    privacyEmail: "",
+    /** Date of the current edition, DD.MM.YYYY. */
+    edition: "17.11.2026",
+    /** Web analytics counters on the site (e.g. «Яндекс Метрика»). Empty: none. */
+    analytics: [] as string[],
+  },
+};
+
+export const dealerPhoneHref = `tel:${dealerConfig.phone.replace(/[^+\d]/g, "")}`;

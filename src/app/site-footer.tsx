@@ -1,5 +1,7 @@
+import Link from "next/link";
+import { CONSENT_HREF, PRIVACY_HREF } from "@/app/legal-content";
 import { asset } from "@/lib/asset";
-import { dealerConfig } from "@/lib/dealer-config";
+import { dealerConfig, dealerPhoneHref } from "@/lib/dealer-config";
 
 const IMAGES = asset("/images/home");
 
@@ -67,13 +69,17 @@ export function FooterSection() {
             <div className="flex w-full items-center gap-4">
               <img src={assets.contactPhone} alt="" width={24} height={24} className="size-6 shrink-0" />
               <p className="dealer-footer-contact-value flex-1 text-xl font-medium leading-normal text-dealer-text-description">
-                {dealerConfig.phone}
+                <a href={dealerPhoneHref} className="hover:text-dealer-brand-primary">
+                  {dealerConfig.phone}
+                </a>
               </p>
             </div>
             <div className="flex w-full items-center gap-4">
               <img src={assets.contactEmail} alt="" width={24} height={24} className="size-6 shrink-0" />
               <p className="dealer-footer-contact-value flex-1 text-xl font-medium leading-normal text-dealer-text-description">
-                {dealerConfig.email}
+                <a href={`mailto:${dealerConfig.email}`} className="hover:text-dealer-brand-primary">
+                  {dealerConfig.email}
+                </a>
               </p>
             </div>
           </div>
@@ -87,7 +93,13 @@ export function FooterSection() {
 
       <div className="flex w-full items-center justify-center rounded pt-2">
         <p className="dealer-footer-policy dealer-text-trim text-xl font-semibold leading-none text-dealer-text-description whitespace-pre">
-          Политика конфиденциальности&nbsp;&nbsp;|&nbsp;&nbsp;Согласие на обработку персональных данных
+          <Link href={PRIVACY_HREF} className="transition-colors hover:text-dealer-brand-primary">
+            Политика конфиденциальности
+          </Link>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <Link href={CONSENT_HREF} className="transition-colors hover:text-dealer-brand-primary">
+            Согласие на обработку персональных данных
+          </Link>
         </p>
       </div>
     </footer>

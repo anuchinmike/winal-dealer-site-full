@@ -11,8 +11,10 @@ import { SiteMobileMenu } from "@/app/site-mobile-menu";
 const NAV_ITEMS = [
   { label: "Каталог", href: "/catalog" },
   { label: "Профили", href: "/catalog/profiles" },
-  { label: "Монтаж", href: "/#montazh" },
+  { label: "Монтаж", href: "/montazh" },
   { label: "Проекты", href: "/projects" },
+  { label: "Документы", href: "/documents" },
+  { label: "Контакты", href: "/contacts" },
 ];
 
 export function SiteHeader() {
