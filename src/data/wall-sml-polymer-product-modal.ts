@@ -113,7 +113,7 @@ export const wallSmlPolymerProductModal = {
       { label: "Покрытие", value: "полимерное" },
     ] satisfies WallSmlPolymerSpecRow[],
   },
-  ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
+  ralNote: "Панели могут быть окрашены в любой оттенок по RAL, NCS или Tikkurila",
   extraFeatures: [
     {
       icon: asset("/images/product-modal/icons/figma-fingerprint.svg"),

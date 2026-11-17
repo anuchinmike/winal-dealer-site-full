@@ -112,7 +112,7 @@ export const wallGklPolymerProductModal = {
       { label: "Покрытие", value: "полимерное покрытие" },
     ] satisfies WallGklPolymerSpecRow[],
   },
-  ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
+  ralNote: "Панели могут быть окрашены в любой оттенок по RAL, NCS или Tikkurila",
   extraFeatures: [
     {
       icon: asset("/images/product-modal/icons/phosphor-thumbs-up.svg"),

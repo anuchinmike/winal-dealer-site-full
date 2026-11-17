@@ -35,8 +35,6 @@ const baseCoatingGroups = [
   {
     chip: "Акрил дерево",
     swatches: [
-      { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
-      { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный" },
       { id: "buk_natural-1", image: `${COATINGS}/wood/buk_natural-1.webp`, label: "Бук натуральный" },
       { id: "dub_capuccino-1", image: `${COATINGS}/wood/dub_capuccino-1.webp`, label: "Дуб капуччино" },
       { id: "dub_franzuzski-1", image: `${COATINGS}/wood/dub_franzuzski-1.webp`, label: "Дуб французский" },
@@ -75,10 +73,41 @@ export function withCoatingChips(
 }
 
 /** 3D-покрытия выпускаются только как полимерные, поэтому в акриловых карточках их нет. */
-export const wallAcrylCoatingGroups: WallAcrylCoatingGroup[] = baseCoatingGroups.slice(1);
+/** Покраска в любой цвет палитр Tikkurila, RAL и NCS: палитры целиком не показываем, только сам факт. */
+export const paintPaletteGroup: WallAcrylCoatingGroup = {
+    chip: "Покраска в любой цвет",
+    swatches: [
+      { id: "paint-tikkurila", image: "/images/product-modal/paint-palettes/tikkurila.webp", label: "Tikkurila" },
+      { id: "paint-ral", image: "/images/product-modal/paint-palettes/ral.webp", label: "RAL" },
+      { id: "paint-ncs", image: "/images/product-modal/paint-palettes/ncs.webp", label: "NCS" },
+    ],
+  };
 
-export const wallPolymerCoatingGroups = withCoatingChips(baseCoatingGroups, [
-  "Полимер 3D",
-  "Полимер дерево",
-  "Полимер бетон",
-]);
+export const wallAcrylCoatingGroups: WallAcrylCoatingGroup[] = [paintPaletteGroup, ...baseCoatingGroups.slice(1)];
+
+const POLYMER = "/images/product-modal/wall-polymer-shared/coatings";
+
+/** Софт-тач и глянец есть только в полимерном исполнении. */
+const polymerFinishGroups = [
+  {
+    chip: "Полимер софт-тач",
+    swatches: [
+      { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
+      { id: "polikeram-soft-touch", image: `${POLYMER}/soft/polikeram-soft-touch.webp`, label: "Поликерам Софт Тач" },
+    ],
+  },
+  {
+    chip: "Полимер глянец",
+    swatches: [
+      { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный УФ" },
+      { id: "high-gloss", image: `${POLYMER}/gloss/high-gloss.webp`, label: "Высокий глянец" },
+      { id: "polytech-gloss", image: `${POLYMER}/gloss/polytech-gloss.webp`, label: "Polytech глянец гладкий" },
+    ],
+  },
+] satisfies WallAcrylCoatingGroup[];
+
+export const wallPolymerCoatingGroups = [
+  paintPaletteGroup,
+  ...withCoatingChips(baseCoatingGroups, ["Полимер 3D", "Полимер дерево", "Полимер бетон"]),
+  ...polymerFinishGroups,
+];

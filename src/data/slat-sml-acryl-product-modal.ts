@@ -103,7 +103,7 @@ export const slatSmlAcrylProductModal = {
       { label: "Крепление", value: "открытое / скрытое" },
     ] satisfies SlatSmlAcrylSpecRow[],
   },
-  ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
+  ralNote: "Панели могут быть окрашены в любой оттенок по RAL, NCS или Tikkurila",
   extraFeatures: [
     {
       icon: slatSmlAcrylModalAssets.icons.strength,

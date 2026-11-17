@@ -1,4 +1,5 @@
 import { asset } from "@/lib/asset";
+import { paintPaletteGroup } from "@/data/wall-acryl-coatings";
 export type WallGklAcrylFeature = {
   icon: string;
   title: string;
@@ -103,11 +104,10 @@ export const wallGklAcrylProductModal = {
   ] satisfies WallGklAcrylFeature[],
   coatingTitle: "Покрытия",
   coatingGroups: [
+    paintPaletteGroup,
     {
       chip: "Акрил дерево",
       swatches: [
-        { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
-        { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный" },
         { id: "buk_natural-1", image: `${COATINGS}/wood/buk_natural-1.webp`, label: "Бук натуральный" },
         { id: "dub_capuccino-1", image: `${COATINGS}/wood/dub_capuccino-1.webp`, label: "Дуб капуччино" },
         { id: "dub_franzuzski-1", image: `${COATINGS}/wood/dub_franzuzski-1.webp`, label: "Дуб французский" },
@@ -145,7 +145,7 @@ export const wallGklAcrylProductModal = {
       { label: "Покрытие", value: "многослойная акриловая окраска" },
     ] satisfies WallGklAcrylSpecRow[],
   },
-  ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
+  ralNote: "Панели могут быть окрашены в любой оттенок по RAL, NCS или Tikkurila",
   extraFeatures: [
     {
       icon: wallGklAcrylModalAssets.icons.sound,
