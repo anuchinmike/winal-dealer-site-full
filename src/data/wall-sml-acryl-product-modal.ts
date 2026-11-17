@@ -158,25 +158,6 @@ export const wallSmlAcrylProductModal = {
   coatingTitle: "Покрытия",
   coatingGroups: [
     {
-      chip: "Акрил 3D",
-      swatches: [
-        { id: "akril-stelo-1", image: `${COATINGS}/3d/akril-stelo-1.webp`, label: "Кристалл гласс 3D" },
-        { id: "akril-stelo-2", image: `${COATINGS}/3d/akril-stelo-2.webp`, label: "Кристалл гласс 3D" },
-        { id: "akril-stelo-3", image: `${COATINGS}/3d/akril-stelo-3.webp`, label: "Кристалл гласс 3D" },
-        { id: "akril-stelo-4", image: `${COATINGS}/3d/akril-stelo-4.webp`, label: "Кристалл гласс 3D" },
-        { id: "akril-koja-brown-3d", image: `${COATINGS}/3d/akril-koja-brown-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-koja-bej-3d", image: `${COATINGS}/3d/akril-koja-bej-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-koja-zel-3d", image: `${COATINGS}/3d/akril-koja-zel-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-koja-light-grey-3d", image: `${COATINGS}/3d/akril-koja-light-grey-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-koja-grey-3d", image: `${COATINGS}/3d/akril-koja-grey-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-koja-black-3d", image: `${COATINGS}/3d/akril-koja-black-3d.webp`, label: "Экзотик скин 3D" },
-        { id: "akril-carbon-blue-3d", image: `${COATINGS}/3d/akril-carbon-blue-3d.webp`, label: "Карбон 3D" },
-        { id: "akril-carbon-dark-3d", image: `${COATINGS}/3d/akril-carbon-dark-3d.webp`, label: "Карбон 3D" },
-        { id: "akril-beton-1", image: `${COATINGS}/3d/akril-beton-1.webp`, label: "Бетон 3D" },
-        { id: "akril-tkan-1", image: `${COATINGS}/3d/akril-tkan-1.webp`, label: "Ткань 3D" },
-      ],
-    },
-    {
       chip: "Акрил дерево",
       swatches: [
         { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },

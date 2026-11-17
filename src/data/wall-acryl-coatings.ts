@@ -12,7 +12,7 @@ export type WallAcrylCoatingGroup = {
 
 const COATINGS = asset("/images/product-modal/wall-sml-acryl/coatings");
 
-export const wallAcrylCoatingGroups = [
+const baseCoatingGroups = [
   {
     chip: "Акрил 3D",
     swatches: [
@@ -74,7 +74,10 @@ export function withCoatingChips(
   }));
 }
 
-export const wallPolymerCoatingGroups = withCoatingChips(wallAcrylCoatingGroups, [
+/** 3D-покрытия выпускаются только как полимерные, поэтому в акриловых карточках их нет. */
+export const wallAcrylCoatingGroups: WallAcrylCoatingGroup[] = baseCoatingGroups.slice(1);
+
+export const wallPolymerCoatingGroups = withCoatingChips(baseCoatingGroups, [
   "Полимер 3D",
   "Полимер дерево",
   "Полимер бетон",
