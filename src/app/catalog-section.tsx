@@ -375,11 +375,14 @@ function CatalogFactsSection({
 
   // Compact раскрывает факты в потоке и переиспользует свёрнутую ветку ниже:
   // overlay поверх иконок нужен только десктопной колонке фиксированной высоты.
-  const useOverlayFacts = factsExpanded && !compact;
+  // Overlay оставлен для истории: на невысоких экранах он обрезал факты, поэтому
+  // раскрытый список теперь всегда идёт в потоке, а колонка растёт по содержимому.
+  const useOverlayFacts = false;
 
   return (
     <div
       ref={middleRef}
+      data-facts-expanded={factsExpanded ? "true" : "false"}
       className={
         compact
           ? "catalog-sidebar-middle flex flex-col gap-4"

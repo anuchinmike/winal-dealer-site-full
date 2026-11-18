@@ -408,10 +408,10 @@ function projectForTab(tabId: DealerCatalogTabId, ...ids: string[]): DealerCatal
 }
 
 export const dealerCatalogProductsByTab: Record<DealerCatalogTabId, DealerCatalogProduct[]> = {
-  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "wallpro", "winal-isol"),
-  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "radius-solutions", "ufr", "rhythm-wall", "family-slat-wall-panels", "minwin", "family-wisound", "cloud-w", "soundcore-25", "urban-w"),
+  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "ufr"),
+  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "minwin", "radius-solutions", "rhythm-wall", "family-slat-wall-panels", "family-wisound", "cloud-w", "soundcore-25", "urban-w", "ufr"),
   ceiling: projectForTab("ceiling", "family-ceiling-sml", "family-ceiling-gypsum", "family-wisound", "family-cloud-system", "soundcore-14", "urban-c"),
-  system: projectForTab("system", "wallpro", "winal-isol", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "ufr", "radius-solutions"),
+  system: projectForTab("system", "wallpro", "winal-isol", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "radius-solutions"),
 };
 
 export function isDealerCatalogModalAction(action: DealerCatalogAction | undefined): boolean {

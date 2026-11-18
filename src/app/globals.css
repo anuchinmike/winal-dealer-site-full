@@ -434,6 +434,21 @@ img {
   overflow: hidden;
 }
 
+/* Раскрытые факты: колонка растёт по содержимому, чтобы текст не обрезался
+   на невысоких экранах; секция становится выше, лента остаётся своей высоты. */
+.catalog-sidebar:has([data-facts-expanded="true"]) {
+  max-height: none;
+  overflow: visible;
+}
+
+.catalog-sidebar:has([data-facts-expanded="true"]) .catalog-sidebar-middle {
+  flex: none;
+}
+
+.catalog-content-row:has([data-facts-expanded="true"]) {
+  align-items: flex-start;
+}
+
 .catalog-rail-column {
   height: calc(
     var(--catalog-rail-h) + var(--catalog-rail-pagination-gap) + var(--catalog-pagination-h)
