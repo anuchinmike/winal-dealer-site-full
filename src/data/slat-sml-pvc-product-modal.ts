@@ -25,18 +25,14 @@ export const SLAT_SML_PVC_PRODUCT_MODAL_ID = "slat-sml-pvc-product-modal";
 
 export const slatSmlPvcModalAssets = {
   gallery: [
-    { src: `${GALLERY}/paneli-reechnie-negoruchie-derevo-winal-2.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ под дерево" },
+    { src: `${GALLERY}/slat-sml-pvc-3d.webp`, caption: "Реечная панель WINAL™ СМЛ ПВХ под дерево" },
     { src: `${GALLERY}/sten-paneli-reika-derevo-winal-1.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ под дерево" },
     { src: `${GALLERY}/sten-paneli-reechnie-derevo-winal-2.webp`, caption: "Реечные панели WINAL™ под дерево" },
-    { src: `${GALLERY}/paneli-reechnie-pvh-sml-oreh-pekan.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Орех пекан" },
-    { src: `${GALLERY}/paneli-reechnie-pvh-sml-oreh-pekan-sk.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Орех пекан, скрытое крепление" },
     { src: `${GALLERY}/reechnie-stenovye-paneli-sml-hpl-pvh-7.webp`, caption: "Реечные стеновые панели в офисе" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl-5.webp`, caption: "Реечные стеновые панели в коридоре отеля" },
     { src: `${GALLERY}/reechnie-stenovye-paneli-sml-hpl-pvh-3.webp`, caption: "Реечные стеновые панели в ресторане" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl-11.webp`, caption: "Реечные стеновые панели в коридоре отеля" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl-10.webp`, caption: "Реечные стеновые панели в зоне ресепшн" },
-    { src: `${GALLERY}/paneli-reechnie-pvh-sml-dub-skandinavski.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Дуб скандинавский" },
-    { src: `${GALLERY}/paneli-reechnie-pvh-sml-dub-skandinavski-sk.webp`, caption: "Реечные панели WINAL™ СМЛ ПВХ Дуб скандинавский, скрытое крепление" },
   ] as const satisfies readonly SlatSmlPvcGalleryImage[],
   closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {

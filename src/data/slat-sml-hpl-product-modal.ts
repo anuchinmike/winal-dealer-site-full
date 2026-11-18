@@ -26,8 +26,7 @@ export const SLAT_SML_HPL_PRODUCT_MODAL_ID = "slat-sml-hpl-product-modal";
 
 export const slatSmlHplModalAssets = {
   gallery: [
-    { src: `${GALLERY}/paneli-reechnie-hpl-sml-alumini-lm1003.webp`, caption: "Реечные панели WINAL™ СМЛ HPL Металлик LM-1003" },
-    { src: `${GALLERY}/paneli-reechnie-hpl-sml-alumini-lm1003-sk.webp`, caption: "Реечные панели WINAL™ СМЛ HPL Металлик LM-1003, скрытое крепление" },
+    { src: `${GALLERY}/slat-sml-hpl-3d.webp`, caption: "Реечная панель WINAL™ СМЛ HPL" },
   ] as const satisfies readonly SlatSmlHplGalleryImage[],
   closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {

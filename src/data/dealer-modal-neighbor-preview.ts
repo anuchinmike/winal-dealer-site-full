@@ -26,9 +26,9 @@ export const MODAL_NEIGHBOR_PREVIEW_BY_ACTION = {
     asset("/images/product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-high-glow-premium-1.webp"),
   wall_gkl_polymer_modal:
     asset("/images/product-modal/wall-polymer-shared/gallery/sten-panel-sml-winal-high-glow-premium-1.webp"),
-  slat_sml_acryl_modal: asset("/images/product-modal/slat-sml-acryl/gallery/paneli-reechnie-negoruchie-derevo-winal-1.webp"),
-  slat_sml_pvc_modal: asset("/images/product-modal/slat-sml-pvc/gallery/paneli-reechnie-negoruchie-derevo-winal-2.webp"),
-  slat_sml_hpl_modal: asset("/images/product-modal/slat-sml-hpl/gallery/paneli-reechnie-hpl-sml-alumini-lm1003.webp"),
+  slat_sml_acryl_modal: asset("/images/product-modal/slat-sml-acryl/gallery/slat-sml-acryl-3d.webp"),
+  slat_sml_pvc_modal: asset("/images/product-modal/slat-sml-pvc/gallery/slat-sml-pvc-3d.webp"),
+  slat_sml_hpl_modal: asset("/images/product-modal/slat-sml-hpl/gallery/slat-sml-hpl-3d.webp"),
   cloud_w_modal: asset("/images/product-modal/cloud-w/gallery-01.webp"),
   cloud_c_modal: asset("/images/product-modal/cloud-c/gallery-01.webp"),
   cloud_b_modal: asset("/images/product-modal/cloud-b/gallery-01.webp"),

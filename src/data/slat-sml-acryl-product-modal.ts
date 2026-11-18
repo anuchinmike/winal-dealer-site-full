@@ -24,7 +24,7 @@ export const SLAT_SML_ACRYL_PRODUCT_MODAL_ID = "slat-sml-acryl-product-modal";
 
 export const slatSmlAcrylModalAssets = {
   gallery: [
-    { src: `${GALLERY}/paneli-reechnie-negoruchie-derevo-winal-1.webp`, caption: "Реечные панели WINAL™ под дерево" },
+    { src: `${GALLERY}/slat-sml-acryl-3d.webp`, caption: "Реечная панель WINAL™ СМЛ Акрил" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl-10.webp`, caption: "Реечные стеновые панели в зоне ресепшн" },
     { src: `${GALLERY}/paneli-reechnie-akril-sml-derevo-2.webp`, caption: "Реечные панели WINAL™ СМЛ Акрил под дерево" },
     { src: `${GALLERY}/paneli-reechnie-akril-sml-derevo-3.webp`, caption: "Реечные панели WINAL™ СМЛ Акрил под дерево" },
@@ -32,8 +32,6 @@ export const slatSmlAcrylModalAssets = {
     { src: `${GALLERY}/paneli-reechnie-potolochnie-sml-pvh-hpl-sk.webp`, caption: "Реечные потолочные панели в офисе" },
     { src: `${GALLERY}/paneli-reechnie-stenovie-sml-pvh-hpl-sk-2.webp`, caption: "Реечные стеновые панели в офисе" },
     { src: `${GALLERY}/reechnie-stenovye-paneli-sml-hpl-pvh.webp`, caption: "Реечные стеновые панели в офисе" },
-    { src: `${GALLERY}/paneli-reechnie-akril-sml-sosna.webp`, caption: "Реечные панели WINAL™ СМЛ Акрил Сосна" },
-    { src: `${GALLERY}/paneli-reechnie-akril-sml-sosna-sk.webp`, caption: "Реечные панели WINAL™ СМЛ Акрил Сосна, скрытое крепление" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl-8.webp`, caption: "Реечные стеновые панели в офисе" },
     { src: `${GALLERY}/reechnie-stenovye-paneli-sml-hpl-pvh-6.webp`, caption: "Реечные стеновые панели в офисе" },
     { src: `${GALLERY}/paneli-reechnie-sml-gsp-pvh-hpl.webp`, caption: "Реечные стеновые панели в офисе" },
