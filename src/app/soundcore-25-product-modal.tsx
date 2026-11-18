@@ -4,6 +4,7 @@ import { useState, type ReactNode, type RefObject } from "react";
 import { openCasePhotoGallery } from "@/app/case-fancybox";
 import { DealerProductModalShell } from "@/app/dealer-product-modal-shell";
 import { HeroGlassNavButton } from "@/app/hero-glass-nav-button";
+import { SoundcoreTextureTiles } from "@/app/soundcore-texture-tiles";
 import {
   SOUNDCORE_25_PRODUCT_MODAL_ID,
   soundcore25ModalAssets,
@@ -183,11 +184,7 @@ function Soundcore25ModalContent() {
           </Soundcore25SpecRow>
 
           <Soundcore25SpecRow label={soundcore25ProductModal.execution.textures.label}>
-            <div className="dealer-modal-compact-chips flex flex-wrap gap-2">
-              {soundcore25ProductModal.execution.textures.chips.map((texture) => (
-                <Soundcore25ValueChip key={texture}>{texture}</Soundcore25ValueChip>
-              ))}
-            </div>
+            <SoundcoreTextureTiles />
           </Soundcore25SpecRow>
 
           <Soundcore25SpecRow label={soundcore25ProductModal.execution.edges.label}>

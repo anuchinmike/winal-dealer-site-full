@@ -15,7 +15,7 @@ const BASE = asset("/images/product-modal/soundcore-25");
 export const SOUNDCORE_25_PRODUCT_MODAL_ID = "soundcore-25-product-modal";
 
 export const soundcore25ModalAssets = {
-  gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
+  gallery: [`${BASE}/render-joint.webp`, `${BASE}/render-panel-m.webp`, `${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`] as const,
   closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
     white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
