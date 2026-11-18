@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode, type RefObject } from "react";
-import { openCasePhotoGallery } from "@/app/case-fancybox";
+import { coatingLightboxSrc, openCasePhotoGallery } from "@/app/case-fancybox";
 import { DealerProductModalShell } from "@/app/dealer-product-modal-shell";
 import { HeroGlassNavButton } from "@/app/hero-glass-nav-button";
 import {
@@ -57,19 +57,15 @@ function WisoundSpecRow({ label, children }: { label: string; children: ReactNod
   );
 }
 
-function WisoundPerforationTile({ pattern }: { pattern: WisoundPerforationPattern }) {
-  const [pinned, setPinned] = useState(false);
-
+function WisoundPerforationTile({ pattern, onOpen }: { pattern: WisoundPerforationPattern; onOpen: (trigger: HTMLElement) => void }) {
   return (
-    <figure className="wisound-perforation-tile m-0 flex min-w-0 flex-col gap-2">
+    <figure className="m-0 flex w-[68px] shrink-0 flex-col gap-1.5">
       <button
         type="button"
         data-perforation={pattern.name}
-        aria-label={`${pattern.name}. Показать крупный план`}
-        aria-pressed={pinned}
-        onClick={() => setPinned((value) => !value)}
-        className="group relative block aspect-[3/4] w-full cursor-pointer overflow-hidden rounded-lg border border-dealer-brand-decoration focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dealer-brand-primary"
-        style={{ background: "linear-gradient(180deg, #f1f5f9 0%, #dfe8f1 100%)" }}
+        aria-label={`${pattern.name}. Открыть фото`}
+        onClick={(event) => onOpen(event.currentTarget)}
+        className="group relative block aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dealer-brand-primary"
       >
         <img
           src={pattern.panel}
@@ -77,7 +73,7 @@ function WisoundPerforationTile({ pattern }: { pattern: WisoundPerforationPatter
           width={960}
           height={960}
           loading="lazy"
-          className="absolute inset-0 size-full scale-[1.12] object-cover"
+          className="absolute inset-0 size-full scale-[1.2] object-cover"
         />
         <img
           src={pattern.macro}
@@ -85,10 +81,10 @@ function WisoundPerforationTile({ pattern }: { pattern: WisoundPerforationPatter
           width={960}
           height={960}
           loading="lazy"
-          className={`absolute inset-0 size-full object-cover transition-opacity duration-200 ease-out motion-reduce:transition-none [@media(hover:hover)]:group-hover:opacity-100 ${pinned ? "opacity-100" : "opacity-0"}`}
+          className="absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-200 ease-out motion-reduce:transition-none [@media(hover:hover)]:group-hover:opacity-100"
         />
       </button>
-      <figcaption className="dealer-type-mini-semibold text-center text-dealer-text-primary">{pattern.name}</figcaption>
+      <figcaption className="dealer-type-mini-regular text-center text-dealer-text-primary">{pattern.name}</figcaption>
     </figure>
   );
 }
@@ -123,6 +119,17 @@ function WisoundModalContent() {
   const galleryImages = [...wisoundModalAssets.gallery];
   const [galleryIndex, setGalleryIndex] = useState(0);
   const safeGalleryIndex = galleryIndex % galleryImages.length;
+
+  const openPerforationGallery = (patternIndex: number, trigger: HTMLElement) => {
+    openCasePhotoGallery(
+      wisoundProductModal.perforation.patterns.flatMap((pattern) => [
+        { src: coatingLightboxSrc(pattern.panel), caption: pattern.name },
+        { src: pattern.macro, caption: `${pattern.name} · ${wisoundProductModal.perforation.macroCaption}` },
+      ]),
+      patternIndex * 2,
+      trigger,
+    );
+  };
 
   const openGallery = () => {
     openCasePhotoGallery(galleryImages, safeGalleryIndex);
@@ -206,16 +213,14 @@ function WisoundModalContent() {
           className="dealer-modal-panel flex min-w-0 flex-1 flex-col gap-5 overflow-hidden rounded-lg p-7 backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-glass)" }}
         >
-          <div className="flex w-full flex-col gap-3">
-            <WisoundSpecRow label={wisoundProductModal.perforation.label}>
-              <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.perforation.description}</p>
-            </WisoundSpecRow>
-            <div className="wisound-perforation-grid grid grid-cols-6 gap-3">
-              {wisoundProductModal.perforation.patterns.map((pattern) => (
-                <WisoundPerforationTile key={pattern.name} pattern={pattern} />
+          <WisoundSpecRow label={wisoundProductModal.perforation.label}>
+            <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.perforation.description}</p>
+            <div className="dealer-modal-compact-rail flex gap-2">
+              {wisoundProductModal.perforation.patterns.map((pattern, index) => (
+                <WisoundPerforationTile key={pattern.name} pattern={pattern} onOpen={(trigger) => openPerforationGallery(index, trigger)} />
               ))}
             </div>
-          </div>
+          </WisoundSpecRow>
 
           <WisoundSpecRow label={wisoundProductModal.coatings.label}>
             <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.coatings.description}</p>

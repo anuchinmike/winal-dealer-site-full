@@ -71,6 +71,7 @@ export const wisoundProductModal = {
   ] satisfies WisoundFeature[],
   perforation: {
     label: "Типы перфорации",
+    macroCaption: "крупный план",
     description: "Шесть вариантов перфорации — от равномерной сетки до декоративных прорезей. Диаметр отверстий 5–20 мм, шаг 18–30 мм.",
     patterns: [
       { name: "RH", panel: `${BASE}/perforation/wisound-rh-panel.webp`, macro: `${BASE}/perforation/wisound-rh-macro.webp` },
