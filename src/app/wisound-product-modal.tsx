@@ -9,6 +9,7 @@ import {
   wisoundModalAssets,
   wisoundProductModal,
   type WisoundFeature,
+  type WisoundPerforationPattern,
   type WisoundVariant,
 } from "@/data/wisound-product-modal";
 
@@ -56,6 +57,42 @@ function WisoundSpecRow({ label, children }: { label: string; children: ReactNod
   );
 }
 
+function WisoundPerforationTile({ pattern }: { pattern: WisoundPerforationPattern }) {
+  const [pinned, setPinned] = useState(false);
+
+  return (
+    <figure className="wisound-perforation-tile m-0 flex min-w-0 flex-col gap-2">
+      <button
+        type="button"
+        data-perforation={pattern.name}
+        aria-label={`${pattern.name}. Показать крупный план`}
+        aria-pressed={pinned}
+        onClick={() => setPinned((value) => !value)}
+        className="group relative block aspect-[3/4] w-full cursor-pointer overflow-hidden rounded-lg border border-dealer-brand-decoration focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dealer-brand-primary"
+        style={{ background: "linear-gradient(180deg, #f1f5f9 0%, #dfe8f1 100%)" }}
+      >
+        <img
+          src={pattern.panel}
+          alt=""
+          width={960}
+          height={960}
+          loading="lazy"
+          className="absolute inset-0 size-full scale-[1.12] object-cover"
+        />
+        <img
+          src={pattern.macro}
+          alt=""
+          width={960}
+          height={960}
+          loading="lazy"
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-200 ease-out motion-reduce:transition-none [@media(hover:hover)]:group-hover:opacity-100 ${pinned ? "opacity-100" : "opacity-0"}`}
+        />
+      </button>
+      <figcaption className="dealer-type-mini-semibold text-center text-dealer-text-primary">{pattern.name}</figcaption>
+    </figure>
+  );
+}
+
 function WisoundVariantCard({ variant }: { variant: WisoundVariant }) {
   const [brand, product] = variant.productName.split("™ ");
 
@@ -92,8 +129,8 @@ function WisoundModalContent() {
   };
 
   return (
-    <div className="dealer-modal-canvas flex h-[926px] w-[1376px] flex-col gap-4">
-      <div className="dealer-modal-row flex min-h-0 flex-1 items-start gap-4">
+    <div className="dealer-modal-canvas flex min-h-[926px] w-[1376px] flex-col gap-4">
+      <div className="dealer-modal-row flex h-[455px] shrink-0 items-start gap-4">
         <div className="dealer-modal-hero-media relative flex h-[455px] w-[548px] shrink-0 items-center justify-between overflow-hidden rounded-lg px-4">
           <button
             type="button"
@@ -164,19 +201,21 @@ function WisoundModalContent() {
         </div>
       </div>
 
-      <div className="dealer-modal-row flex min-h-0 flex-1 items-start gap-4">
+      <div className="dealer-modal-row flex min-h-[455px] shrink-0 gap-4">
         <div
-          className="dealer-modal-panel flex h-full min-w-0 flex-1 flex-col gap-5 overflow-hidden rounded-lg p-7 backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-1 flex-col gap-5 overflow-hidden rounded-lg p-7 backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-glass)" }}
         >
-          <WisoundSpecRow label={wisoundProductModal.perforation.label}>
-            <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.perforation.description}</p>
-            <div className="dealer-modal-compact-rail flex gap-2">
+          <div className="flex w-full flex-col gap-3">
+            <WisoundSpecRow label={wisoundProductModal.perforation.label}>
+              <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.perforation.description}</p>
+            </WisoundSpecRow>
+            <div className="wisound-perforation-grid grid grid-cols-6 gap-3">
               {wisoundProductModal.perforation.patterns.map((pattern) => (
-                <img key={pattern.name} src={pattern.image} alt={pattern.name} width={60} height={60} className="size-[60px] shrink-0" />
+                <WisoundPerforationTile key={pattern.name} pattern={pattern} />
               ))}
             </div>
-          </WisoundSpecRow>
+          </div>
 
           <WisoundSpecRow label={wisoundProductModal.coatings.label}>
             <p className="dealer-type-mini-regular text-dealer-text-primary">{wisoundProductModal.coatings.description}</p>
@@ -212,7 +251,7 @@ function WisoundModalContent() {
         </div>
 
         <div
-          className="dealer-modal-panel flex h-full min-w-0 flex-1 flex-col justify-between rounded-lg p-7 backdrop-blur-[10px]"
+          className="dealer-modal-panel flex min-w-0 flex-1 flex-col justify-between rounded-lg p-7 backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-video)" }}
         >
           <div className="dealer-modal-compact-stack flex gap-4">

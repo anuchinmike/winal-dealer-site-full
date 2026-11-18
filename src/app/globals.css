@@ -1496,6 +1496,10 @@ img {
   flex: 0 0 auto;
 }
 
+[data-compact-modal="true"] .wisound-perforation-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 /* Short text chips (<=6): wrap as tiles, not a horizontal rail. */
 [data-compact-modal="true"] .dealer-modal-compact-chips {
   display: flex;

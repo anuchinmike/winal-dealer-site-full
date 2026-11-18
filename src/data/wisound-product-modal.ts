@@ -1,4 +1,9 @@
-import { asset } from "@/lib/asset";
+export type WisoundPerforationPattern = {
+  name: string;
+  panel: string;
+  macro: string;
+};
+
 export type WisoundFeature = {
   icon: string;
   title: string;
@@ -68,13 +73,13 @@ export const wisoundProductModal = {
     label: "Типы перфорации",
     description: "Шесть вариантов перфорации — от равномерной сетки до декоративных прорезей. Диаметр отверстий 5–20 мм, шаг 18–30 мм.",
     patterns: [
-      { name: "Cube", image: `${BASE}/perforation-cube.svg` },
-      { name: "RX", image: `${BASE}/perforation-rx.svg` },
-      { name: "Slots", image: `${BASE}/perforation-slots.svg` },
-      { name: "Space", image: `${BASE}/perforation-space.svg` },
-      { name: "RH", image: `${BASE}/perforation-rh.svg` },
-      { name: "Lines", image: `${BASE}/perforation-lines.svg` },
-    ],
+      { name: "RH", panel: `${BASE}/perforation/wisound-rh-panel.webp`, macro: `${BASE}/perforation/wisound-rh-macro.webp` },
+      { name: "RX", panel: `${BASE}/perforation/wisound-rx-panel.webp`, macro: `${BASE}/perforation/wisound-rx-macro.webp` },
+      { name: "Cube", panel: `${BASE}/perforation/wisound-cube-panel.webp`, macro: `${BASE}/perforation/wisound-cube-macro.webp` },
+      { name: "Space", panel: `${BASE}/perforation/wisound-space-panel.webp`, macro: `${BASE}/perforation/wisound-space-macro.webp` },
+      { name: "Slots", panel: `${BASE}/perforation/wisound-slots-panel.webp`, macro: `${BASE}/perforation/wisound-slots-macro.webp` },
+      { name: "Lines", panel: `${BASE}/perforation/wisound-lines-panel.webp`, macro: `${BASE}/perforation/wisound-lines-macro.webp` },
+    ] satisfies WisoundPerforationPattern[],
   },
   coatings: {
     label: "Виды покрытий",
