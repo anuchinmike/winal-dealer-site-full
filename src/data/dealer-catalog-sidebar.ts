@@ -81,7 +81,7 @@ const ceilingSidebarContent: CatalogSidebarContent = {
     "Панели, острова, баффлы и потолочные модули для визуальной задачи, акустики, света и технических требований проекта.",
   features: [
     { icon: catalogSidebarAssets.iconCeilingComposition, label: "Свобода композиции" },
-    { icon: catalogSidebarAssets.iconCeilingVolume, label: "Раскрытие объёма" },
+    { icon: catalogSidebarAssets.iconCeilingVolume, label: "Кессонные потолки" },
     { icon: catalogSidebarAssets.iconCeilingLight, label: "Интеграция света" },
     { icon: catalogSidebarAssets.iconCeilingComfort, label: "Акустический комфорт" },
   ],

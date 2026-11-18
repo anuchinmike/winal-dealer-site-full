@@ -2,6 +2,7 @@ export type WisoundPerforationPattern = {
   name: string;
   panel: string;
   macro: string;
+  black: string;
 };
 
 export type WisoundFeature = {
@@ -72,14 +73,15 @@ export const wisoundProductModal = {
   perforation: {
     label: "Типы перфорации",
     macroCaption: "крупный план",
+    blackCaption: "Black Edition, чёрный СМЛ",
     description: "Шесть вариантов перфорации — от равномерной сетки до декоративных прорезей. Диаметр отверстий 5–20 мм, шаг 18–30 мм.",
     patterns: [
-      { name: "RH", panel: `${BASE}/perforation/wisound-rh-panel.webp`, macro: `${BASE}/perforation/wisound-rh-macro.webp` },
-      { name: "RX", panel: `${BASE}/perforation/wisound-rx-panel.webp`, macro: `${BASE}/perforation/wisound-rx-macro.webp` },
-      { name: "Cube", panel: `${BASE}/perforation/wisound-cube-panel.webp`, macro: `${BASE}/perforation/wisound-cube-macro.webp` },
-      { name: "Space", panel: `${BASE}/perforation/wisound-space-panel.webp`, macro: `${BASE}/perforation/wisound-space-macro.webp` },
-      { name: "Slots", panel: `${BASE}/perforation/wisound-slots-panel.webp`, macro: `${BASE}/perforation/wisound-slots-macro.webp` },
-      { name: "Lines", panel: `${BASE}/perforation/wisound-lines-panel.webp`, macro: `${BASE}/perforation/wisound-lines-macro.webp` },
+      { name: "RH", panel: `${BASE}/perforation/wisound-rh-panel.webp`, macro: `${BASE}/perforation/wisound-rh-macro.webp`, black: `${BASE}/perforation/wisound-rh-black.webp` },
+      { name: "RX", panel: `${BASE}/perforation/wisound-rx-panel.webp`, macro: `${BASE}/perforation/wisound-rx-macro.webp`, black: `${BASE}/perforation/wisound-rx-black.webp` },
+      { name: "Cube", panel: `${BASE}/perforation/wisound-cube-panel.webp`, macro: `${BASE}/perforation/wisound-cube-macro.webp`, black: `${BASE}/perforation/wisound-cube-black.webp` },
+      { name: "Space", panel: `${BASE}/perforation/wisound-space-panel.webp`, macro: `${BASE}/perforation/wisound-space-macro.webp`, black: `${BASE}/perforation/wisound-space-black.webp` },
+      { name: "Slots", panel: `${BASE}/perforation/wisound-slots-panel.webp`, macro: `${BASE}/perforation/wisound-slots-macro.webp`, black: `${BASE}/perforation/wisound-slots-black.webp` },
+      { name: "Lines", panel: `${BASE}/perforation/wisound-lines-panel.webp`, macro: `${BASE}/perforation/wisound-lines-macro.webp`, black: `${BASE}/perforation/wisound-lines-black.webp` },
     ] satisfies WisoundPerforationPattern[],
   },
   coatings: {

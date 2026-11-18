@@ -125,8 +125,9 @@ function WisoundModalContent() {
       wisoundProductModal.perforation.patterns.flatMap((pattern) => [
         { src: coatingLightboxSrc(pattern.panel), caption: pattern.name },
         { src: pattern.macro, caption: `${pattern.name} · ${wisoundProductModal.perforation.macroCaption}` },
+        { src: pattern.black, caption: `${pattern.name} · ${wisoundProductModal.perforation.blackCaption}` },
       ]),
-      patternIndex * 2,
+      patternIndex * 3,
       trigger,
     );
   };

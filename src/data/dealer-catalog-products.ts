@@ -286,6 +286,7 @@ const products: Record<string, DealerCatalogProduct> = {
     [
       child("ceiling-sml-acryl", "Потолочные панели WINAL™ СМЛ Акрил", "Потолочные панели на СМЛ-основе с окраской акрилом.", catalogImages.ceilingSmlAcryl, "WINAL™ СМЛ Акрил", undefined, "ceiling_sml_acryl_modal"),
       child("ceiling-sml-pvc", "Потолочные панели WINAL™ СМЛ ПВХ", "Потолочные панели на СМЛ-основе с ПВХ-покрытием.", catalogImages.ceilingSmlPvc, "WINAL™ СМЛ ПВХ", undefined, "ceiling_sml_pvc_modal"),
+      child("ceiling-sml-polymer", "Потолочные панели WINAL™ СМЛ Полимер", "Панели на СМЛ-основе с практичным полимерным покрытием.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
     ],
     { contextTitle: "Потолочные панели", contextSubtitle: "СМЛ-основа для стабильной отделки общественных интерьеров." },
   ),
@@ -399,18 +400,27 @@ const catalogContextByTab: Record<string, Partial<Record<DealerCatalogTabId, Cat
   },
 };
 
+/** Children hidden in a specific tab (e.g. wall-only variants inside a ceiling carousel). */
+const hiddenChildrenByTab: Record<string, Partial<Record<DealerCatalogTabId, string[]>>> = {
+  "family-cloud-system": { ceiling: ["cloud-w"] },
+};
+
 function projectForTab(tabId: DealerCatalogTabId, ...ids: string[]): DealerCatalogProduct[] {
   return ids.map((id) => {
     const product = products[id];
     const context = catalogContextByTab[id]?.[tabId];
-    return context ? { ...product, ...context } : product;
+    const hidden = hiddenChildrenByTab[id]?.[tabId];
+    const projected = context ? { ...product, ...context } : product;
+    return hidden && projected.children
+      ? { ...projected, children: projected.children.filter((item) => !hidden.includes(item.id)) }
+      : projected;
   });
 }
 
 export const dealerCatalogProductsByTab: Record<DealerCatalogTabId, DealerCatalogProduct[]> = {
   acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "ufr"),
   wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "minwin", "radius-solutions", "rhythm-wall", "family-slat-wall-panels", "family-wisound", "cloud-w", "soundcore-25", "urban-w", "ufr"),
-  ceiling: projectForTab("ceiling", "family-ceiling-sml", "family-ceiling-gypsum", "family-wisound", "family-cloud-system", "soundcore-14", "urban-c"),
+  ceiling: projectForTab("ceiling", "family-ceiling-sml", "family-ceiling-gypsum", "family-wisound", "family-cloud-system", "soundcore-14", "urban-c", "ufr"),
   system: projectForTab("system", "wallpro", "winal-isol", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "radius-solutions"),
 };
 
