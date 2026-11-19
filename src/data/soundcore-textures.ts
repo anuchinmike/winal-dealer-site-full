@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type SoundcoreTexture = {
   name: string;
   caption: string;
@@ -6,7 +7,7 @@ export type SoundcoreTexture = {
   macro: string;
 };
 
-const BASE = "/images/product-modal/soundcore-textures";
+const BASE = asset("/images/product-modal/soundcore-textures");
 
 export const soundcoreTextureMacroCaption = "крупный план";
 

@@ -77,15 +77,15 @@ export function withCoatingChips(
 export const paintPaletteGroup: WallAcrylCoatingGroup = {
     chip: "Покраска в любой цвет",
     swatches: [
-      { id: "paint-tikkurila", image: "/images/product-modal/paint-palettes/tikkurila.webp", label: "Tikkurila" },
-      { id: "paint-ral", image: "/images/product-modal/paint-palettes/ral.webp", label: "RAL" },
-      { id: "paint-ncs", image: "/images/product-modal/paint-palettes/ncs.webp", label: "NCS" },
+      { id: "paint-tikkurila", image: asset("/images/product-modal/paint-palettes/tikkurila.webp"), label: "Tikkurila" },
+      { id: "paint-ral", image: asset("/images/product-modal/paint-palettes/ral.webp"), label: "RAL" },
+      { id: "paint-ncs", image: asset("/images/product-modal/paint-palettes/ncs.webp"), label: "NCS" },
     ],
   };
 
 export const wallAcrylCoatingGroups: WallAcrylCoatingGroup[] = [paintPaletteGroup, ...baseCoatingGroups.slice(1)];
 
-const POLYMER = "/images/product-modal/wall-polymer-shared/coatings";
+const POLYMER = asset("/images/product-modal/wall-polymer-shared/coatings");
 
 /** Софт-тач и глянец есть только в полимерном исполнении. */
 const polymerFinishGroups = [

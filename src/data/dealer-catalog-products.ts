@@ -286,7 +286,7 @@ const products: Record<string, DealerCatalogProduct> = {
     [
       child("ceiling-sml-acryl", "Потолочные панели WINAL™ СМЛ Акрил", "Потолочные панели на СМЛ-основе с окраской акрилом.", catalogImages.ceilingSmlAcryl, "WINAL™ СМЛ Акрил", undefined, "ceiling_sml_acryl_modal"),
       child("ceiling-sml-pvc", "Потолочные панели WINAL™ СМЛ ПВХ", "Потолочные панели на СМЛ-основе с ПВХ-покрытием.", catalogImages.ceilingSmlPvc, "WINAL™ СМЛ ПВХ", undefined, "ceiling_sml_pvc_modal"),
-      child("ceiling-sml-polymer", "Потолочные панели WINAL™ СМЛ Полимер", "Панели на СМЛ-основе с практичным полимерным покрытием.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
+      child("ceiling-sml-polymer", "Потолочные панели WINAL™ СМЛ Полимер", "Панели на СМЛ-основе с практичным полимерным покрытием.", asset("/images/catalog/cards/wall-polymer-shared.webp"), "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
     ],
     { contextTitle: "Потолочные панели", contextSubtitle: "СМЛ-основа для стабильной отделки общественных интерьеров." },
   ),

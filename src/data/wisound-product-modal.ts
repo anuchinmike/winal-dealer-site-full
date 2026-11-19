@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WisoundPerforationPattern = {
   name: string;
   panel: string;
