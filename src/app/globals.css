@@ -726,24 +726,151 @@ img {
   padding: 0;
 }
 
+/* Меню М3: капслок в цвет подзаголовков сайта, между пунктами зелёные
+   квадраты под знак WINAL. Активный пункт (секция на экране) — тёмный. */
+.dealer-header-nav-list {
+  gap: var(--dealer-header-nav-gap, 22px);
+}
+
 .dealer-header-nav-item {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--dealer-color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--dealer-header-nav-gap, 22px);
   white-space: nowrap;
 }
 
 .dealer-header-nav-item:not(:last-child)::after {
-  content: "\00a0\00a0|\00a0\00a0";
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 1.5px;
+  background: var(--dealer-color-brand-secondary);
+  transform: skewX(-8deg);
+}
+
+.dealer-header-nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dealer-color-brand-primary);
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+
+.dealer-header-nav-link:hover,
+.dealer-header-nav-link[aria-current="true"] {
+  color: var(--dealer-color-text-primary);
+}
+
+.dealer-header-nav-link:focus-visible {
+  outline: 2px solid var(--dealer-color-brand-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .dealer-header-glass-cell {
   justify-self: end;
   display: flex;
   align-items: center;
+  gap: 28px;
   height: 100%;
   overflow: visible;
+}
+
+/* Контакты в шапке (вариант D): номер, под ним Telegram · MAX · Почта. */
+.dealer-header-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.dealer-header-phone {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--dealer-color-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dealer-header-messengers {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--dealer-color-text-muted);
+  white-space: nowrap;
+}
+
+.dealer-header-messenger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--dealer-color-brand-primary);
+  text-decoration: none;
+}
+
+.dealer-header-phone:hover,
+.dealer-header-messenger:hover {
+  color: var(--dealer-color-brand-secondary);
+}
+
+/* Меню и контакты делят свободное место: меню по центру между логотипом и
+   контактами, чтобы на 1280–1440 ничего не наезжало. */
+@media (min-width: 1280px) {
+  .dealer-header-shell {
+    grid-template-columns: auto 1fr auto;
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  :root {
+    --dealer-header-nav-gap: 16px;
+  }
+
+  .dealer-header-messengers-label {
+    display: none;
+  }
+}
+
+/* Desktop после hero: шапка сворачивается до стеклянной кнопки, контакты прячем. */
+@media (min-width: 1280px) {
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-contacts {
+    display: none;
+  }
+}
+
+/* Телефон и планшет: контакты слева, кнопка меню справа. */
+@media (max-width: 1279px) {
+  .dealer-sticky-header .dealer-header-glass-cell {
+    justify-self: stretch;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .dealer-header-contacts {
+    align-items: flex-start;
+  }
+
+  .dealer-header-phone {
+    font-size: 17px;
+  }
+
+  .dealer-header-messengers-label {
+    display: none;
+  }
+
+  /* Раскрытое меню: контакты уже видны в свёрнутом виде, в панели не дублируем. */
+  .dealer-sticky-header[data-compact="true"][data-expanded="true"] .dealer-header-contacts {
+    display: none;
+  }
 }
 
 .dealer-header-logo {
@@ -1707,6 +1834,7 @@ img {
   .dealer-header-nav-list {
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
     width: 100%;
     max-height: calc(100dvh - var(--dealer-header-top) - var(--dealer-header-inner-h) - 48px);
     overflow-y: auto;
@@ -1727,6 +1855,13 @@ img {
 
   .dealer-header-nav-item:not(:last-child)::after {
     content: none;
+  }
+
+  .dealer-header-nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
   }
 }
 

@@ -16,6 +16,7 @@ import {
 } from "./catalog-layout-context";
 import { isViewportAlignedVisible } from "./use-viewport-aligned-visibility";
 import { HeroCaptions } from "./hero-captions";
+import { HeaderContacts } from "./header-contacts";
 
 type HeroAssets = {
   headerLogo: string;
@@ -609,7 +610,46 @@ const HERO_TEXT_CARD_BORDER_STYLE = {
 // Same four labels as the desktop inline "A | B | C | D" reading — rendered as a
 // list so the compact mobile panel can stack them, while desktop CSS re-joins
 // them with a generated "  |  " separator to keep the current visual unchanged.
-const HEADER_NAV_ITEMS = ["О бренде", "Каталог", "Реализованные проекты", "Контакты"];
+// Пункты меню идут в порядке разделов главной; id совпадают с якорями секций.
+const HEADER_NAV_ITEMS = [
+  { label: "Каталог", targetId: "catalog" },
+  { label: "Решения", targetId: "complex-approach" },
+  { label: "Дизайн", targetId: "design" },
+  { label: "Монтаж", targetId: "montazh" },
+  { label: "Проекты", targetId: "cases" },
+] as const;
+
+type HeaderNavTargetId = (typeof HEADER_NAV_ITEMS)[number]["targetId"];
+
+// Активный пункт: секция, пересекающая полосу около 40% высоты экрана.
+function useActiveHeaderSection(): HeaderNavTargetId | null {
+  const [active, setActive] = useState<HeaderNavTargetId | null>(null);
+
+  useEffect(() => {
+    const sections = HEADER_NAV_ITEMS.map((item) => document.getElementById(item.targetId)).filter(
+      (el): el is HTMLElement => el !== null,
+    );
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id as HeaderNavTargetId);
+          } else {
+            setActive((current) => (current === entry.target.id ? null : current));
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  return active;
+}
 
 function HeroTextCardContent({ children }: { children: ReactNode }) {
   return <div className="dealer-hero-text-inner relative z-[2] flex w-full flex-col items-start justify-start gap-12">{children}</div>;
@@ -620,15 +660,19 @@ function StickyHeader({
   compact,
   expanded,
   onLogoClick,
+  onNavigate,
   glassLogoButtonRef,
 }: {
   assets: HeroAssets;
   compact: boolean;
   expanded: boolean;
   onLogoClick: () => void;
+  onNavigate: () => void;
   glassLogoButtonRef?: RefObject<HTMLButtonElement | null>;
 }) {
   const showMain = !compact || expanded;
+  const lenis = useLenis();
+  const activeSection = useActiveHeaderSection();
 
   return (
     <header
@@ -653,14 +697,27 @@ function StickyHeader({
           {showMain ? (
             <ul className="dealer-header-nav-list">
               {HEADER_NAV_ITEMS.map((item) => (
-                <li key={item} className="dealer-header-nav-item">
-                  {item}
+                <li key={item.targetId} className="dealer-header-nav-item">
+                  <a
+                    href={`#${item.targetId}`}
+                    className="dealer-header-nav-link"
+                    aria-current={activeSection === item.targetId ? "true" : undefined}
+                    onClick={(event) => {
+                      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                      event.preventDefault();
+                      onNavigate();
+                      scrollToSection(item.targetId, lenis);
+                    }}
+                  >
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
           ) : null}
         </nav>
         <div className="dealer-header-glass-cell">
+          <HeaderContacts />
           <button
             ref={glassLogoButtonRef}
             type="button"
@@ -994,6 +1051,8 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
     });
   }, [headerCompact, setHeaderExpanded]);
 
+  const closeHeaderMenu = useCallback(() => setHeaderExpanded(false), [setHeaderExpanded]);
+
   useEffect(() => {
     if (!headerExpanded) {
       return;
@@ -1094,6 +1153,7 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
     compact: headerCompact,
     expanded: headerExpanded,
     onLogoClick: handleLogoClick,
+    onNavigate: closeHeaderMenu,
     glassLogoButtonRef,
   };
 
