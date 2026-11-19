@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPolymerCoatingGroups } from "@/data/wall-acryl-coatings";
 
 export type WallSmlPolymerFeature = {
@@ -16,9 +17,9 @@ export type WallSmlPolymerGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-polymer-shared/gallery";
+const SML_ACRYL = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-polymer-shared/gallery");
 
 export const WALL_SML_POLYMER_PRODUCT_MODAL_ID = "wall-sml-polymer-product-modal";
 
@@ -46,13 +47,13 @@ export const wallSmlPolymerModalAssets = {
     },
   ] as const satisfies readonly WallSmlPolymerGalleryImage[],
   ralChart: `${SML_ACRYL}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL}/icon-hero-color.svg`,
@@ -115,7 +116,7 @@ export const wallSmlPolymerProductModal = {
   ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
   extraFeatures: [
     {
-      icon: "/images/product-modal/icons/figma-fingerprint.svg",
+      icon: asset("/images/product-modal/icons/figma-fingerprint.svg"),
       title: "Тактильный Soft Touch и Сатин",
       description:
         "Матовые покрытия Silk и Поликерам деликатно рассеивают свет, предлагая современную эстетику.",

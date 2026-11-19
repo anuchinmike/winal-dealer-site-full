@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 /* Generated from the profile modal prototype (variant A). Text fields may contain inline <b> / <span class="nb"> markup. */
 
 export const PROFILE_IDS = ["open", "pi", "t", "h", "uth", "l", "f", "el", "nev", "mic", "lh", "inn", "ut", "r5", "str", "sml", "qby", "r10", "pro", "thr", "lumen", "slat"] as const;
@@ -62,9 +63,9 @@ export const profilesHub = {
   title: "Профили WINAL™",
   description:
     "Монтажные, угловые и световые профили для стеновых панелей WINAL™. Выберите узел, чтобы увидеть подходящие профили, способ крепления и исполнения.",
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
-  arrowWhite: "/images/product-modal/rythmwall/arrow-white.svg",
-  sampleIcon: "/images/product-modal/icons/phosphor-cube.svg",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
+  arrowWhite: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+  sampleIcon: asset("/images/product-modal/icons/phosphor-cube.svg"),
 } as const;
 
 export const profiles: readonly ProfileData[] = [
@@ -75,28 +76,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Омега-профиль",
     "name": "Омега-профиль",
     "card": "Омега без заглушки, паз и крепёж на виду",
-    "thumb": "/images/product-modal/profiles/img/th-open.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-open.webp"),
     "kicker": "Монтажный профиль · открытое крепление",
     "title": "Омега‑профиль WINAL™",
     "lead": "Прижимной профиль на стыке стеновых панелей. Монтируется на подготовленную стену или на каркас и подходит для любых панелей WINAL™. Полки омеги прижимают кромки соседних панелей, саморез проходит через дно профиля в основание.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "Сухой монтаж",
         "text": "Панели ставятся без клея, стык держит прижим омеги."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепёж подбирают по основанию: дюбель / саморез."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Любые панели WINAL™",
         "text": "Один профиль для всех панелей WINAL™."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-split-horizontal.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
         "title": "Паз под заглушку",
         "text": "В паз защёлкивается Пи-профиль или Т-крышка."
       }
@@ -105,19 +106,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/open.html"
+        "src": asset("/images/product-modal/profiles/scenes/open.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-omega.webp"
+        "src": asset("/images/product-modal/profiles/img/s-omega.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/omega.svg",
+            "src": asset("/images/product-modal/profiles/sec/omega.svg"),
             "alt": "Сечение омега-профиля: ширина 30 мм, полки 8,5 мм, паз 13 мм, стенка 0,5–1 мм"
           }
         ]
@@ -159,7 +160,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/omega.svg",
+        "src": asset("/images/product-modal/profiles/sec/omega.svg"),
         "alt": "Сечение омега-профиля: ширина 30 мм, полки 8,5 мм, паз 13 мм, стенка 0,5–1 мм"
       }
     ],
@@ -185,40 +186,40 @@ export const profiles: readonly ProfileData[] = [
           "id": "open",
           "title": "Открытый стык",
           "text": "Омега без заглушки, паз и крепёж на виду",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         },
         {
           "id": "pi",
           "title": "Омега + Пи-профиль",
           "text": "Узкая заглушка закрывает саморезы",
-          "thumb": "/images/product-modal/profiles/img/th-pi.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pi.webp")
         },
         {
           "id": "t",
           "title": "Омега + Т-крышка",
           "text": "Широкая крышка, прямая или закруглённая",
-          "thumb": "/images/product-modal/profiles/img/th-t.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-t.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-lam.webp",
+        "image": asset("/images/product-modal/profiles/img/f-lam.webp"),
         "title": "Ламинация",
         "text": "Декоративная плёнка: древесные и фактурные декоры."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать по рисунку проекта, в том числе в связке с Пи-профилем."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/open.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/open.webp")
   },
   {
     "id": "pi",
@@ -227,28 +228,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Омега + Пи",
     "name": "Омега + Пи-профиль",
     "card": "Узкая заглушка закрывает саморезы",
-    "thumb": "/images/product-modal/profiles/img/th-pi.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-pi.webp"),
     "kicker": "Узел открытого крепления · стык с заглушкой",
     "title": "Омега + Пи‑профиль WINAL™",
     "lead": "Узел из двух профилей. Омега прижимает кромки панелей и крепится саморезом через дно, Пи-профиль защёлкивается в паз омеги и закрывает саморезы. Монтаж на подготовленную стену или на каркас, подходит для любых панелей WINAL™.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж скрыт",
         "text": "Пи-профиль закрывает саморезы в пазу омеги."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Узкий шов",
         "text": "Лицо Пи-профиля — <span class=\"nb\">10,8 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепёж подбирают по основанию: дюбель / саморез."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Любые панели WINAL™",
         "text": "Узел работает со всеми панелями WINAL™."
       }
@@ -257,28 +258,28 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/pi.html"
+        "src": asset("/images/product-modal/profiles/scenes/pi.html")
       },
       {
         "name": "Вид Пи-профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-pi.webp"
+        "src": asset("/images/product-modal/profiles/img/s-pi.webp")
       },
       {
         "name": "Вид омеги",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-omega.webp"
+        "src": asset("/images/product-modal/profiles/img/s-omega.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/omega.svg",
+            "src": asset("/images/product-modal/profiles/sec/omega.svg"),
             "alt": "Сечение омега-профиля: ширина 30 мм, полки 8,5 мм, паз 13 мм, стенка 0,5–1 мм"
           },
           {
-            "src": "/images/product-modal/profiles/sec/pi.svg",
+            "src": asset("/images/product-modal/profiles/sec/pi.svg"),
             "alt": "Сечение Пи-профиля: ширина 10,8 мм, высота 6 мм, внутренний размер 9 мм"
           }
         ]
@@ -316,7 +317,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/pi.svg",
+        "src": asset("/images/product-modal/profiles/sec/pi.svg"),
         "alt": "Сечение Пи-профиля: ширина 10,8 мм, высота 6 мм, внутренний размер 9 мм"
       }
     ],
@@ -342,40 +343,40 @@ export const profiles: readonly ProfileData[] = [
           "id": "open",
           "title": "Открытый стык",
           "text": "Омега без заглушки, паз и крепёж на виду",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         },
         {
           "id": "pi",
           "title": "Омега + Пи-профиль",
           "text": "Узкая заглушка закрывает саморезы",
-          "thumb": "/images/product-modal/profiles/img/th-pi.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pi.webp")
         },
         {
           "id": "t",
           "title": "Омега + Т-крышка",
           "text": "Широкая крышка, прямая или закруглённая",
-          "thumb": "/images/product-modal/profiles/img/th-t.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-t.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-lam.webp",
+        "image": asset("/images/product-modal/profiles/img/f-lam.webp"),
         "title": "Ламинация",
         "text": "Декоративная плёнка: древесные и фактурные декоры."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать на связке омеги и Пи-профиля, если позволяет рисунок."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/pi.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/pi.webp")
   },
   {
     "id": "t",
@@ -384,28 +385,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Омега + Т",
     "name": "Омега + Т-крышка",
     "card": "Широкая крышка, прямая или закруглённая",
-    "thumb": "/images/product-modal/profiles/img/th-t.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-t.webp"),
     "kicker": "Узел открытого крепления · стык с крышкой",
     "title": "Омега + Т‑крышка WINAL™",
     "lead": "Широкая Т-крышка защёлкивается в паз омеги и закрывает стык панелей вместе с крепежом. Два исполнения крышки: прямая <span class=\"nb\">30 мм</span> и закруглённая <span class=\"nb\">32 мм</span>. Монтаж на подготовленную стену или на каркас, подходит для любых панелей WINAL™.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Широкий шов",
         "text": "Крышка закрывает стык и крепёж целиком."
       },
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Прямая или закруглённая",
         "text": "Лицо крышки <span class=\"nb\">30 мм</span> или <span class=\"nb\">32 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепёж подбирают по основанию: дюбель / саморез."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Любые панели WINAL™",
         "text": "Узел работает со всеми панелями WINAL™."
       }
@@ -414,33 +415,33 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Прямая",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/t2.html"
+        "src": asset("/images/product-modal/profiles/scenes/t2.html")
       },
       {
         "name": "Закруглённая",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/t3.html"
+        "src": asset("/images/product-modal/profiles/scenes/t3.html")
       },
       {
         "name": "Вид прямой",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-t2.webp"
+        "src": asset("/images/product-modal/profiles/img/s-t2.webp")
       },
       {
         "name": "Вид закругл.",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-t3.webp"
+        "src": asset("/images/product-modal/profiles/img/s-t3.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/t2.svg",
+            "src": asset("/images/product-modal/profiles/sec/t2.svg"),
             "alt": "Сечение прямой Т-крышки: ширина 30 мм"
           },
           {
-            "src": "/images/product-modal/profiles/sec/t3.svg",
+            "src": asset("/images/product-modal/profiles/sec/t3.svg"),
             "alt": "Сечение закруглённой Т-крышки: ширина 32 мм"
           }
         ]
@@ -482,11 +483,11 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/t2.svg",
+        "src": asset("/images/product-modal/profiles/sec/t2.svg"),
         "alt": "Сечение прямой Т-крышки: ширина 30 мм"
       },
       {
-        "src": "/images/product-modal/profiles/sec/t3.svg",
+        "src": asset("/images/product-modal/profiles/sec/t3.svg"),
         "alt": "Сечение закруглённой Т-крышки: ширина 32 мм"
       }
     ],
@@ -512,40 +513,40 @@ export const profiles: readonly ProfileData[] = [
           "id": "open",
           "title": "Открытый стык",
           "text": "Омега без заглушки, паз и крепёж на виду",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         },
         {
           "id": "pi",
           "title": "Омега + Пи-профиль",
           "text": "Узкая заглушка закрывает саморезы",
-          "thumb": "/images/product-modal/profiles/img/th-pi.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pi.webp")
         },
         {
           "id": "t",
           "title": "Омега + Т-крышка",
           "text": "Широкая крышка, прямая или закруглённая",
-          "thumb": "/images/product-modal/profiles/img/th-t.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-t.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-lam.webp",
+        "image": asset("/images/product-modal/profiles/img/f-lam.webp"),
         "title": "Ламинация",
         "text": "Декоративная плёнка: древесные и фактурные декоры."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать на лице крышки по рисунку проекта."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/t.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/t.webp")
   },
   {
     "id": "h",
@@ -554,28 +555,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "H",
     "name": "H-профиль",
     "card": "Широкая лицевая полка, шов без крышки",
-    "thumb": "/images/product-modal/profiles/img/th-h.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-h.webp"),
     "kicker": "Соединительный профиль · открытое крепление",
     "title": "H‑профиль WINAL™",
     "lead": "Профиль для открытого стыка стеновых панелей с широкой лицевой полкой: шов готов сразу, отдельная крышка не нужна. Крепится к основанию через полку, монтаж на подготовленную стену или на каркас.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Шов без крышки",
         "text": "Лицевая полка сразу закрывает края панелей."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под толщину панели",
         "text": "WINAL™ ГКЛ <span class=\"nb\">12,5 мм</span> и СМЛ 8, 10, <span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепится через полку: дюбель / саморез."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Цвет и печать",
         "text": "Окраска по RAL и UFR-печать по проекту."
       }
@@ -584,19 +585,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xh.html"
+        "src": asset("/images/product-modal/profiles/scenes/xh.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-h.webp"
+        "src": asset("/images/product-modal/profiles/img/s-h.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/xh.svg",
+            "src": asset("/images/product-modal/profiles/sec/xh.svg"),
             "alt": "Сечение H-профиля"
           }
         ]
@@ -634,7 +635,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/xh.svg",
+        "src": asset("/images/product-modal/profiles/sec/xh.svg"),
         "alt": "Сечение H-профиля"
       }
     ],
@@ -659,35 +660,35 @@ export const profiles: readonly ProfileData[] = [
           "id": "uth",
           "title": "Ультратонкий H-профиль",
           "text": "Тонкий шов, QBG9 и QBG11",
-          "thumb": "/images/product-modal/profiles/img/th-uth1.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-uth1.webp")
         },
         {
           "id": "open",
           "title": "Омега-профиль",
           "text": "Открытый стык или база под заглушку",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         },
         {
           "id": "el",
           "title": "Т-профиль «Ёлочка»",
           "text": "Вставляется прямо в шов",
-          "thumb": "/images/product-modal/profiles/img/th-el.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-el.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать на лицевой полке по рисунку проекта."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/h.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/h.webp")
   },
   {
     "id": "uth",
@@ -696,28 +697,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Ультратонкий H",
     "name": "Ультратонкий H-профиль",
     "card": "Тонкий шов, QBG9 и QBG11",
-    "thumb": "/images/product-modal/profiles/img/th-uth1.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-uth1.webp"),
     "kicker": "Соединительный профиль · открытое крепление",
     "title": "Ультратонкий H‑профиль WINAL™",
     "lead": "Узкий соединительный профиль для тонкой линии шва между панелями WINAL™ СМЛ 8 и <span class=\"nb\">10 мм</span>. Два исполнения сечения, коды QBG9 и QBG11 по толщине панели. Крепится через полку, монтаж на подготовленную стену или на каркас.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Тонкий шов",
         "text": "Узкая лицевая часть, линия шва почти без зазора."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Код по толщине",
         "text": "QBG9 для СМЛ <span class=\"nb\">8 мм</span>, QBG11 для СМЛ <span class=\"nb\">10 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-split-horizontal.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
         "title": "Два сечения",
         "text": "Варианты 1 и 2 под одни и те же панели."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепится через полку: дюбель / саморез."
       }
@@ -726,33 +727,33 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Вариант 1",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xuth1.html"
+        "src": asset("/images/product-modal/profiles/scenes/xuth1.html")
       },
       {
         "name": "Вариант 2",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xuth2.html"
+        "src": asset("/images/product-modal/profiles/scenes/xuth2.html")
       },
       {
         "name": "Вид: вариант 1",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-uth1.webp"
+        "src": asset("/images/product-modal/profiles/img/s-uth1.webp")
       },
       {
         "name": "Вид: вариант 2",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-uth2.webp"
+        "src": asset("/images/product-modal/profiles/img/s-uth2.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/xuth1.svg",
+            "src": asset("/images/product-modal/profiles/sec/xuth1.svg"),
             "alt": "Сечение ультратонкого H-профиля, вариант 1"
           },
           {
-            "src": "/images/product-modal/profiles/sec/xuth2.svg",
+            "src": asset("/images/product-modal/profiles/sec/xuth2.svg"),
             "alt": "Сечение ультратонкого H-профиля, вариант 2"
           }
         ]
@@ -790,11 +791,11 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/xuth1.svg",
+        "src": asset("/images/product-modal/profiles/sec/xuth1.svg"),
         "alt": "Сечение ультратонкого H-профиля, вариант 1"
       },
       {
-        "src": "/images/product-modal/profiles/sec/xuth2.svg",
+        "src": asset("/images/product-modal/profiles/sec/xuth2.svg"),
         "alt": "Сечение ультратонкого H-профиля, вариант 2"
       }
     ],
@@ -819,30 +820,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "h",
           "title": "H-профиль",
           "text": "Широкая лицевая полка, шов без крышки",
-          "thumb": "/images/product-modal/profiles/img/th-h.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-h.webp")
         },
         {
           "id": "open",
           "title": "Омега-профиль",
           "text": "Открытый стык или база под заглушку",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         },
         {
           "id": "el",
           "title": "Т-профиль «Ёлочка»",
           "text": "Вставляется прямо в шов",
-          "thumb": "/images/product-modal/profiles/img/th-el.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-el.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/uth.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/uth.webp")
   },
   {
     "id": "l",
@@ -851,28 +852,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "L",
     "name": "L-профиль",
     "card": "Торец, старт облицовки, внутренний угол",
-    "thumb": "/images/product-modal/profiles/img/th-l.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-l.webp"),
     "kicker": "Торцевой профиль · открытое крепление",
     "title": "L‑профиль WINAL™",
     "lead": "Открытый L-профиль закрывает торец панели на конце стены, служит стартовым профилем, внутренним углом и примыканием к потолку или полу. Крепится через широкую полку, монтаж на подготовленную стену или на каркас.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Торец закрыт",
         "text": "Кромка панели на конце стены не остаётся открытой."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Старт, угол, примыкание",
         "text": "Стартовый профиль, внутренний угол, примыкание к потолку и полу."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под толщину панели",
         "text": "WINAL™ ГКЛ <span class=\"nb\">12,5 мм</span> и СМЛ 6, 8, 10, <span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "На стену или каркас",
         "text": "Крепится через широкую полку: дюбель / саморез."
       }
@@ -881,19 +882,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xl.html"
+        "src": asset("/images/product-modal/profiles/scenes/xl.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-l.webp"
+        "src": asset("/images/product-modal/profiles/img/s-l.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/xl.svg",
+            "src": asset("/images/product-modal/profiles/sec/xl.svg"),
             "alt": "Сечение L-профиля"
           }
         ]
@@ -931,7 +932,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/xl.svg",
+        "src": asset("/images/product-modal/profiles/sec/xl.svg"),
         "alt": "Сечение L-профиля"
       }
     ],
@@ -956,34 +957,34 @@ export const profiles: readonly ProfileData[] = [
           "id": "f",
           "title": "F-профиль",
           "text": "Наружный угол на клею или на уголке",
-          "thumb": "/images/product-modal/profiles/img/th-f1.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-f1.webp")
         },
         {
           "id": "h",
           "title": "H-профиль",
           "text": "Шов панелей без крышки",
-          "thumb": "/images/product-modal/profiles/img/th-h.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-h.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-lam.webp",
+        "image": asset("/images/product-modal/profiles/img/f-lam.webp"),
         "title": "Ламинация",
         "text": "Декоративная плёнка: древесные и фактурные декоры."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать на лицевой полке по рисунку проекта."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/l.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/l.webp")
   },
   {
     "id": "f",
@@ -992,28 +993,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "F",
     "name": "F-профиль",
     "card": "Наружный угол на клею или на уголке",
-    "thumb": "/images/product-modal/profiles/img/th-f1.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-f1.webp"),
     "kicker": "Угловой профиль · открытое крепление",
     "title": "F‑профиль WINAL™",
     "lead": "Профиль для наружного угла облицовки. Два исполнения: разнополочный и равнополочный. Профиль приклеивают или ставят на металлический уголок; коды QBF9, QBF11 и QBF13 по толщине панели.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Наружный угол",
         "text": "Закрывает торцы панелей на внешнем углу."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Клей или уголок",
         "text": "Профиль на специализированном клею или на металлическом уголке."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под толщину панели",
         "text": "WINAL™ ГКЛ <span class=\"nb\">12,5 мм</span> и СМЛ 6–<span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Ламинация и печать",
         "text": "Окраска RAL, ламинация, UFR-печать."
       }
@@ -1022,33 +1023,33 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "На клею",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xf1.html"
+        "src": asset("/images/product-modal/profiles/scenes/xf1.html")
       },
       {
         "name": "На уголке",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xf2.html"
+        "src": asset("/images/product-modal/profiles/scenes/xf2.html")
       },
       {
         "name": "Вид: вариант 1",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-f1.webp"
+        "src": asset("/images/product-modal/profiles/img/s-f1.webp")
       },
       {
         "name": "Вид: вариант 2",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-f2.webp"
+        "src": asset("/images/product-modal/profiles/img/s-f2.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/xf1.svg",
+            "src": asset("/images/product-modal/profiles/sec/xf1.svg"),
             "alt": "Сечение F-профиля, вариант 1"
           },
           {
-            "src": "/images/product-modal/profiles/sec/xf2.svg",
+            "src": asset("/images/product-modal/profiles/sec/xf2.svg"),
             "alt": "Сечение F-профиля, вариант 2"
           }
         ]
@@ -1090,11 +1091,11 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/xf1.svg",
+        "src": asset("/images/product-modal/profiles/sec/xf1.svg"),
         "alt": "Сечение F-профиля, вариант 1"
       },
       {
-        "src": "/images/product-modal/profiles/sec/xf2.svg",
+        "src": asset("/images/product-modal/profiles/sec/xf2.svg"),
         "alt": "Сечение F-профиля, вариант 2"
       }
     ],
@@ -1120,34 +1121,34 @@ export const profiles: readonly ProfileData[] = [
           "id": "l",
           "title": "L-профиль",
           "text": "Торец, старт облицовки, внутренний угол",
-          "thumb": "/images/product-modal/profiles/img/th-l.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-l.webp")
         },
         {
           "id": "h",
           "title": "H-профиль",
           "text": "Шов панелей без крышки",
-          "thumb": "/images/product-modal/profiles/img/th-h.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-h.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-lam.webp",
+        "image": asset("/images/product-modal/profiles/img/f-lam.webp"),
         "title": "Ламинация",
         "text": "Декоративная плёнка: древесные и фактурные декоры."
       },
       {
-        "image": "/images/product-modal/profiles/img/f-ufr.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ufr.webp"),
         "title": "UFR-печать",
         "text": "Печать на лицевой полке по рисунку проекта."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/f.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/f.webp")
   },
   {
     "id": "el",
@@ -1156,28 +1157,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "«Ёлочка»",
     "name": "Т-профиль «Ёлочка»",
     "card": "Вставляется прямо в шов",
-    "thumb": "/images/product-modal/profiles/img/th-el.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-el.webp"),
     "kicker": "Декоративный профиль · открытый шов",
     "title": "Т‑профиль «Ёлочка» WINAL™",
     "lead": "Декоративный профиль вставляется прямо в шов между панелями, профиль под швом не нужен. Шов делают чуть уже ножки «Ёлочки» или равным ей. Подходит для панелей WINAL™ СМЛ и ГСП 8, 10 и <span class=\"nb\">12 мм</span>.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-split-horizontal.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
         "title": "Без профиля под швом",
         "text": "«Ёлочку» ставят прямо в шов готовой облицовки."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под толщину панели",
         "text": "WINAL™ СМЛ и ГСП 8, 10, <span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Стена или каркас",
         "text": "Панели монтируют на подготовленную стену или каркас."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Окраска по RAL",
         "text": "Цвет по каталогу RAL под отделку стен."
       }
@@ -1186,19 +1187,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/xel.html"
+        "src": asset("/images/product-modal/profiles/scenes/xel.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-el.webp"
+        "src": asset("/images/product-modal/profiles/img/s-el.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/xel.svg",
+            "src": asset("/images/product-modal/profiles/sec/xel.svg"),
             "alt": "Сечение Т-профиля «Ёлочка»"
           }
         ]
@@ -1236,7 +1237,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/xel.svg",
+        "src": asset("/images/product-modal/profiles/sec/xel.svg"),
         "alt": "Сечение Т-профиля «Ёлочка»"
       }
     ],
@@ -1261,60 +1262,60 @@ export const profiles: readonly ProfileData[] = [
           "id": "h",
           "title": "H-профиль",
           "text": "Широкая лицевая полка, шов без крышки",
-          "thumb": "/images/product-modal/profiles/img/th-h.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-h.webp")
         },
         {
           "id": "uth",
           "title": "Ультратонкий H-профиль",
           "text": "Тонкий шов, QBG9 и QBG11",
-          "thumb": "/images/product-modal/profiles/img/th-uth1.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-uth1.webp")
         },
         {
           "id": "open",
           "title": "Омега-профиль",
           "text": "Открытый стык или база под заглушку",
-          "thumb": "/images/product-modal/profiles/img/th-open.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-open.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/el.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/el.webp")
   },
   {
     "id": "nev",
     "node": "seam",
     "fastening": "Скрытое крепление",
-    "tab": "«Невидимка»",
-    "name": "Соединительный профиль «Невидимка»",
+    "tab": "H-профиль",
+    "name": "H-профиль скрытого крепления",
     "card": "Скрытый шов, торцы панелей в кромке",
-    "thumb": "/images/product-modal/profiles/img/th-nev.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-nev.webp"),
     "kicker": "Скрытое крепление · шов панелей",
-    "title": "Соединительный профиль «Невидимка» WINAL™",
+    "title": "H-профиль скрытого крепления WINAL™",
     "lead": "Профиль скрытого крепления для шва стеновых панелей: сам профиль и крепёж остаются под панелями, на лице видна только аккуратная линия стыка. Монтируется на подготовленную стену или на стойки ПС. Торцы панелей у стыка оклеены кромкой.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
         "text": "Профиль и саморезы остаются под панелями."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Стена или каркас",
         "text": "На стену дюбелями / саморезами, на каркас саморезами к полке ПС."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "СМЛ и ГКЛ",
         "text": "WINAL™ СМЛ 6, 8, 10, <span class=\"nb\">12 мм</span> и ГКЛ <span class=\"nb\">12,5 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Под толщину панели",
         "text": "Размеры профиля подбирают по толщине панели."
       }
@@ -1323,39 +1324,39 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "На стене",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gnevs.html"
+        "src": asset("/images/product-modal/profiles/scenes/gnevs.html")
       },
       {
         "name": "На стойках ПС",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gnevp.html"
+        "src": asset("/images/product-modal/profiles/scenes/gnevp.html")
       },
       {
         "name": "Вариант 3",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gnev3.html"
+        "src": asset("/images/product-modal/profiles/scenes/gnev3.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-nev.webp"
+        "src": asset("/images/product-modal/profiles/img/s-nev.webp")
       },
       {
         "name": "Вид: вариант 3",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-nev3.webp"
+        "src": asset("/images/product-modal/profiles/img/s-nev3.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/hc2.svg",
-            "alt": "Сечение профиля «Невидимка», вариант 2"
+            "src": asset("/images/product-modal/profiles/sec/hc2.svg"),
+            "alt": "Сечение H-профиля скрытого крепления, вариант 2"
           },
           {
-            "src": "/images/product-modal/profiles/sec/hc3.svg",
-            "alt": "Сечение профиля «Невидимка», вариант 3"
+            "src": asset("/images/product-modal/profiles/sec/hc3.svg"),
+            "alt": "Сечение H-профиля скрытого крепления, вариант 3"
           }
         ]
       }
@@ -1392,15 +1393,15 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/hc2.svg",
-        "alt": "Сечение профиля «Невидимка», вариант 2"
+        "src": asset("/images/product-modal/profiles/sec/hc2.svg"),
+        "alt": "Сечение H-профиля скрытого крепления, вариант 2"
       }
     ],
     "drawCap": "Сечение профиля, мм",
     "mountTitle": "Крепление: скрытое",
     "mount": [
-      "<b>На стене:</b> «Невидимка» крепится дюбелями / саморезами через полку основания",
-      "<b>На каркасе:</b> «Невидимка» крепится саморезами к полке стойки ПС",
+      "<b>На стене:</b> H-профиль крепится дюбелями / саморезами через полку основания",
+      "<b>На каркасе:</b> H-профиль крепится саморезами к полке стойки ПС",
       "<b>Торцы панелей</b> у стыка оклеены кромкой, поэтому стык ровный и аккуратный"
     ],
     "prepTitle": "Подготовка основания",
@@ -1416,30 +1417,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "mic",
           "title": "«Микрошов»",
           "text": "Шип закрывает стык, кромка не нужна",
-          "thumb": "/images/product-modal/profiles/img/th-mic.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-mic.webp")
         },
         {
           "id": "lh",
           "title": "L-профиль скрытого крепления",
           "text": "Пол, потолок и внутренний угол",
-          "thumb": "/images/product-modal/profiles/img/th-lh.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-lh.webp")
         },
         {
           "id": "inn",
           "title": "Внутренний угол",
           "text": "QB-W09 под СМЛ 8 и 10 мм",
-          "thumb": "/images/product-modal/profiles/img/th-inn.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-inn.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/nev.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/nev.webp")
   },
   {
     "id": "mic",
@@ -1448,28 +1449,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "«Микрошов»",
     "name": "Профиль «Микрошов»",
     "card": "Шип закрывает стык, кромка не нужна",
-    "thumb": "/images/product-modal/profiles/img/th-mic.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-mic.webp"),
     "kicker": "Скрытое крепление · шов панелей",
     "title": "Профиль «Микрошов» WINAL™",
-    "lead": "Вариант «Невидимки» с шипом, код QBKCG10, для панелей WINAL™ СМЛ <span class=\"nb\">10 мм</span>. Шип профиля закрывает стык панелей, поэтому торцы кромковать не нужно: панель дешевле и быстрее в производстве. Профиль крепится к стойкам ПС.",
+    "lead": "Вариант H-профиля скрытого крепления с шипом, код QBKCG10, для панелей WINAL™ СМЛ <span class=\"nb\">10 мм</span>. Шип профиля закрывает стык панелей, поэтому торцы кромковать не нужно: панель дешевле и быстрее в производстве. Профиль крепится к стойкам ПС.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Шов закрыт шипом",
         "text": "Шип «микрошва» закрывает стык панелей."
       },
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "Торцы без кромки",
         "text": "Панель проще и быстрее в производстве."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
         "text": "Саморезы остаются под панелями."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под СМЛ 10 мм",
         "text": "Код QBKCG10, шип <span class=\"nb\">5 мм</span>."
       }
@@ -1478,19 +1479,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gmic.html"
+        "src": asset("/images/product-modal/profiles/scenes/gmic.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-mic.webp"
+        "src": asset("/images/product-modal/profiles/img/s-mic.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/hc1.svg",
+            "src": asset("/images/product-modal/profiles/sec/hc1.svg"),
             "alt": "Сечение профиля «Микрошов» QBKCG10"
           }
         ]
@@ -1532,7 +1533,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/hc1.svg",
+        "src": asset("/images/product-modal/profiles/sec/hc1.svg"),
         "alt": "Сечение профиля «Микрошов» QBKCG10"
       }
     ],
@@ -1554,32 +1555,32 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
-          "thumb": "/images/product-modal/profiles/img/th-nev.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
         {
           "id": "lh",
           "title": "L-профиль скрытого крепления",
           "text": "Пол, потолок и внутренний угол",
-          "thumb": "/images/product-modal/profiles/img/th-lh.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-lh.webp")
         },
         {
           "id": "inn",
           "title": "Внутренний угол",
           "text": "QB-W09 под СМЛ 8 и 10 мм",
-          "thumb": "/images/product-modal/profiles/img/th-inn.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-inn.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/mic.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/mic.webp")
   },
   {
     "id": "lh",
@@ -1588,28 +1589,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "L скрытый",
     "name": "L-профиль скрытого крепления",
     "card": "Пол, потолок и внутренний угол",
-    "thumb": "/images/product-modal/profiles/img/th-lh.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-lh.webp"),
     "kicker": "Торцевой профиль · скрытое крепление",
     "title": "L‑профиль скрытого крепления WINAL™",
     "lead": "Профиль для примыкания облицовки к полу и потолку и для внутреннего угла. Язык профиля входит в паз кромки панели, поэтому крепёж остаётся скрытым. К полу и потолку профиль крепится саморезами к направляющей ПН каркаса, во внутреннем углу — дюбелями к стене.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
         "text": "Язык профиля входит в паз кромки панели."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Пол, потолок, угол",
         "text": "Примыкание к полу, к потолку и внутренний угол."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Каркас или стена",
         "text": "К направляющей ПН саморезами, к стене дюбелями."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под СМЛ 10 мм",
         "text": "Узлы показаны для WINAL™ СМЛ <span class=\"nb\">10 мм</span>."
       }
@@ -1618,22 +1619,22 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Пол",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/glhp.html"
+        "src": asset("/images/product-modal/profiles/scenes/glhp.html")
       },
       {
         "name": "Потолок",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/glht.html"
+        "src": asset("/images/product-modal/profiles/scenes/glht.html")
       },
       {
         "name": "Внутренний угол",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/glhu.html"
+        "src": asset("/images/product-modal/profiles/scenes/glhu.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-lh.webp"
+        "src": asset("/images/product-modal/profiles/img/s-lh.webp")
       }
     ],
     "specs": [
@@ -1673,32 +1674,32 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
-          "thumb": "/images/product-modal/profiles/img/th-nev.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
         {
           "id": "mic",
           "title": "«Микрошов»",
           "text": "Шип закрывает стык, кромка не нужна",
-          "thumb": "/images/product-modal/profiles/img/th-mic.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-mic.webp")
         },
         {
           "id": "inn",
           "title": "Внутренний угол",
           "text": "QB-W09 под СМЛ 8 и 10 мм",
-          "thumb": "/images/product-modal/profiles/img/th-inn.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-inn.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/lh.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/lh.webp")
   },
   {
     "id": "inn",
@@ -1707,28 +1708,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Внутр. угол",
     "name": "Внутренний угол",
     "card": "QB-W09 под СМЛ 8 и 10 мм",
-    "thumb": "/images/product-modal/profiles/img/th-inn.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-inn.webp"),
     "kicker": "Угловой профиль · скрытое крепление",
     "title": "Внутренний угол WINAL™",
     "lead": "Профиль для внутреннего угла облицовки из панелей WINAL™ СМЛ 8 и <span class=\"nb\">10 мм</span>. Два кода по толщине панели: QB‑W09‑420 и QB‑W09‑480. Профиль крепится к стене дюбелями / саморезами до монтажа панелей.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Скругление в углу",
         "text": "Профиль закрывает внутренний угол со скруглением."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Код по толщине",
         "text": "QB‑W09‑420 для СМЛ <span class=\"nb\">8 мм</span>, QB‑W09‑480 для СМЛ <span class=\"nb\">10 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Монтаж до панелей",
         "text": "Профиль крепят к стене дюбелями / саморезами."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Окраска по RAL",
         "text": "Цвет по каталогу RAL под отделку стен."
       }
@@ -1737,19 +1738,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/ginn.html"
+        "src": asset("/images/product-modal/profiles/scenes/ginn.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-inn.webp"
+        "src": asset("/images/product-modal/profiles/img/s-inn.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/inn.svg",
+            "src": asset("/images/product-modal/profiles/sec/inn.svg"),
             "alt": "Сечение внутреннего угла"
           }
         ]
@@ -1787,7 +1788,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/inn.svg",
+        "src": asset("/images/product-modal/profiles/sec/inn.svg"),
         "alt": "Сечение внутреннего угла"
       }
     ],
@@ -1809,32 +1810,32 @@ export const profiles: readonly ProfileData[] = [
       "items": [
         {
           "id": "nev",
-          "title": "«Невидимка»",
+          "title": "H-профиль",
           "text": "Скрытый шов, торцы панелей в кромке",
-          "thumb": "/images/product-modal/profiles/img/th-nev.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-nev.webp")
         },
         {
           "id": "mic",
           "title": "«Микрошов»",
           "text": "Шип закрывает стык, кромка не нужна",
-          "thumb": "/images/product-modal/profiles/img/th-mic.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-mic.webp")
         },
         {
           "id": "lh",
           "title": "L-профиль скрытого крепления",
           "text": "Пол, потолок и внутренний угол",
-          "thumb": "/images/product-modal/profiles/img/th-lh.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-lh.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/inn.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/inn.webp")
   },
   {
     "id": "ut",
@@ -1843,28 +1844,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Ультратонкий",
     "name": "Сборный внешний угол Ультратонкий",
     "card": "QBXY под СМЛ 8, 10, 12 мм",
-    "thumb": "/images/product-modal/profiles/img/th-ut.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-ut.webp"),
     "kicker": "Сборный угол · скрытое крепление",
     "title": "Сборный внешний угол Ультратонкий WINAL™",
     "lead": "Наружный угол облицовки, который собирают на производстве: на объект он приезжает готовым. Кромки панелей под профиль подфрезеровывают, поэтому профиль стоит заподлицо с панелью. Коды QBXY9.3, QBXY11.3 и QBXY13.3 по толщине панели.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-cube.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
         "title": "Готов с производства",
         "text": "Угол собран на заводе, на объекте его только монтируют."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Заподлицо с панелью",
         "text": "Профиль не выступает над плоскостью облицовки."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Код по толщине",
         "text": "QBXY9.3, 11.3, 13.3 для СМЛ 8, 10, <span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Скрытое крепление",
         "text": "Профиль крепится через полку под панелью."
       }
@@ -1873,19 +1874,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gut.html"
+        "src": asset("/images/product-modal/profiles/scenes/gut.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-ut.webp"
+        "src": asset("/images/product-modal/profiles/img/s-ut.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/ho1.svg",
+            "src": asset("/images/product-modal/profiles/sec/ho1.svg"),
             "alt": "Сечение сборного угла Ультратонкий"
           }
         ]
@@ -1927,7 +1928,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/ho1.svg",
+        "src": asset("/images/product-modal/profiles/sec/ho1.svg"),
         "alt": "Сечение сборного угла Ультратонкий"
       }
     ],
@@ -1952,30 +1953,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "r5",
           "title": "Сборный угол R5",
           "text": "Скругление R5 под СМЛ 6 и 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r5.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r5.webp")
         },
         {
           "id": "str",
           "title": "Сборный угол «Стрела»",
           "text": "QBYJ10 для НГ-панелей",
-          "thumb": "/images/product-modal/profiles/img/th-str.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-str.webp")
         },
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
-          "thumb": "/images/product-modal/profiles/img/th-sml.webp"
+          "text": "Склеен на производстве, стоит на H-профилях",
+          "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/ut.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/ut.webp")
   },
   {
     "id": "r5",
@@ -1984,28 +1985,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "R5",
     "name": "Сборный внешний угол R5",
     "card": "Скругление R5 под СМЛ 6 и 8 мм",
-    "thumb": "/images/product-modal/profiles/img/th-r5.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-r5.webp"),
     "kicker": "Сборный угол · скрытое крепление",
     "title": "Сборный внешний угол R5 WINAL™",
     "lead": "Наружный угол со скруглением R5 для панелей WINAL™ СМЛ 6 и <span class=\"nb\">8 мм</span>. Угол собирают на производстве, на объект он приезжает готовым. Кромки панелей под профиль подфрезеровывают, профиль стоит заподлицо с панелью.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-cube.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
         "title": "Готов с производства",
         "text": "Угол собран на заводе, на объекте его только монтируют."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Заподлицо с панелью",
         "text": "Профиль не выступает над плоскостью облицовки."
       },
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Скругление R5",
         "text": "Мягкое ребро наружного угла."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Под СМЛ 6 и 8 мм",
         "text": "Для тонких панелей WINAL™ СМЛ."
       }
@@ -2014,19 +2015,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gr5.html"
+        "src": asset("/images/product-modal/profiles/scenes/gr5.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-r5.webp"
+        "src": asset("/images/product-modal/profiles/img/s-r5.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/ho2.svg",
+            "src": asset("/images/product-modal/profiles/sec/ho2.svg"),
             "alt": "Сечение сборного угла R5"
           }
         ]
@@ -2068,7 +2069,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/ho2.svg",
+        "src": asset("/images/product-modal/profiles/sec/ho2.svg"),
         "alt": "Сечение сборного угла R5"
       }
     ],
@@ -2093,30 +2094,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "ut",
           "title": "Сборный угол Ультратонкий",
           "text": "QBXY под СМЛ 8, 10, 12 мм",
-          "thumb": "/images/product-modal/profiles/img/th-ut.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-ut.webp")
         },
         {
           "id": "str",
           "title": "Сборный угол «Стрела»",
           "text": "QBYJ10 для НГ-панелей",
-          "thumb": "/images/product-modal/profiles/img/th-str.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-str.webp")
         },
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
-          "thumb": "/images/product-modal/profiles/img/th-sml.webp"
+          "text": "Склеен на производстве, стоит на H-профилях",
+          "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/r5.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/r5.webp")
   },
   {
     "id": "str",
@@ -2125,28 +2126,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "«Стрела»",
     "name": "Сборный внешний угол «Стрела»",
     "card": "QBYJ10 для НГ-панелей",
-    "thumb": "/images/product-modal/profiles/img/th-str.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-str.webp"),
     "kicker": "Сборный угол · НГ-панели",
     "title": "Сборный внешний угол «Стрела» WINAL™",
     "lead": "Наружный угол для НГ-панелей, код QBYJ10. Угол собирают на производстве, на объект он приезжает готовым. Кромки панелей под профиль подфрезеровывают, профиль стоит заподлицо с панелью.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-cube.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
         "title": "Готов с производства",
         "text": "Угол собран на заводе, на объекте его только монтируют."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Заподлицо с панелью",
         "text": "Профиль не выступает над плоскостью облицовки."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-split-horizontal.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
         "title": "Грань 45°",
         "text": "Профиль <span class=\"nb\">20 мм</span> с гранью под 45°."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Для НГ-панелей",
         "text": "Профиль предназначен только для НГ-панелей."
       }
@@ -2155,19 +2156,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gstr.html"
+        "src": asset("/images/product-modal/profiles/scenes/gstr.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-str.webp"
+        "src": asset("/images/product-modal/profiles/img/s-str.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/str.svg",
+            "src": asset("/images/product-modal/profiles/sec/str.svg"),
             "alt": "Сечение угла «Стрела»"
           }
         ]
@@ -2209,7 +2210,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/str.svg",
+        "src": asset("/images/product-modal/profiles/sec/str.svg"),
         "alt": "Сечение угла «Стрела»"
       }
     ],
@@ -2233,30 +2234,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "ut",
           "title": "Сборный угол Ультратонкий",
           "text": "QBXY под СМЛ 8, 10, 12 мм",
-          "thumb": "/images/product-modal/profiles/img/th-ut.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-ut.webp")
         },
         {
           "id": "r5",
           "title": "Сборный угол R5",
           "text": "Скругление R5 под СМЛ 6 и 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r5.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r5.webp")
         },
         {
           "id": "sml",
           "title": "Сборный угол из СМЛ",
-          "text": "Склеен на производстве, стоит на «Невидимках»",
-          "thumb": "/images/product-modal/profiles/img/th-sml.webp"
+          "text": "Склеен на производстве, стоит на H-профилях",
+          "thumb": asset("/images/product-modal/profiles/img/th-sml.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/str.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/str.webp")
   },
   {
     "id": "sml",
@@ -2264,29 +2265,29 @@ export const profiles: readonly ProfileData[] = [
     "fastening": "Скрытое крепление",
     "tab": "Угол из СМЛ",
     "name": "Сборный угол из СМЛ",
-    "card": "Склеен на производстве, стоит на «Невидимках»",
-    "thumb": "/images/product-modal/profiles/img/th-sml.webp",
+    "card": "Склеен на производстве, стоит на H-профилях",
+    "thumb": asset("/images/product-modal/profiles/img/th-sml.webp"),
     "kicker": "Сборный угол · скрытое крепление",
     "title": "Сборный угол из СМЛ WINAL™",
-    "lead": "Наружный угол из панелей WINAL™ СМЛ, склеенный на производстве специализированным клеем: на объект он приезжает готовым. Стыки угла с соседними панелями держат профили «Невидимка», поэтому крепёж не виден. Есть прямое и радиусное исполнение.",
+    "lead": "Наружный угол из панелей WINAL™ СМЛ, склеенный на производстве специализированным клеем: на объект он приезжает готовым. Стыки угла с соседними панелями держат H-профили скрытого крепления, поэтому крепёж не виден. Есть прямое и радиусное исполнение.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-cube.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
         "title": "Склеен на производстве",
         "text": "Угол приезжает на объект готовым."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
-        "text": "Стыки держат профили «Невидимка» под панелями."
+        "text": "Стыки держат H-профили скрытого крепления под панелями."
       },
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Прямой или радиусный",
         "text": "Два исполнения угла из СМЛ."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "СМЛ 6–12 мм",
         "text": "WINAL™ СМЛ 6, 8, 10, <span class=\"nb\">12 мм</span>."
       }
@@ -2295,22 +2296,22 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Прямой угол",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gsml.html"
+        "src": asset("/images/product-modal/profiles/scenes/gsml.html")
       },
       {
         "name": "Радиусный угол",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gsmlr.html"
+        "src": asset("/images/product-modal/profiles/scenes/gsmlr.html")
       },
       {
         "name": "Вид: прямой",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/r-sml.webp"
+        "src": asset("/images/product-modal/profiles/img/r-sml.webp")
       },
       {
         "name": "Вид: радиусный",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/r-smlr.webp"
+        "src": asset("/images/product-modal/profiles/img/r-smlr.webp")
       }
     ],
     "specs": [
@@ -2320,7 +2321,7 @@ export const profiles: readonly ProfileData[] = [
       },
       {
         "name": "Крепление",
-        "value": "скрытое, на профилях «Невидимка»"
+        "value": "скрытое, на H-профилях скрытого крепления"
       },
       {
         "name": "Основание",
@@ -2344,8 +2345,8 @@ export const profiles: readonly ProfileData[] = [
     "mountTitle": "Крепление: скрытое",
     "mount": [
       "<b>Угол из СМЛ</b> приходит собранным",
-      "<b>Профили «Невидимка»</b> крепятся к стене дюбелями / саморезами под панелями и держат стыки угла",
-      "<b>Радиусный угол:</b> стальной уголок крепится к углу стены дюбелями, на нём держатся «невидимки»"
+      "<b>H-профили скрытого крепления</b> крепятся к стене дюбелями / саморезами под панелями и держат стыки угла",
+      "<b>Радиусный угол:</b> стальной уголок крепится к углу стены дюбелями, на нём держатся H-профили"
     ],
     "prepTitle": "Подготовка стены",
     "prep": [
@@ -2361,30 +2362,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "ut",
           "title": "Сборный угол Ультратонкий",
           "text": "QBXY под СМЛ 8, 10, 12 мм",
-          "thumb": "/images/product-modal/profiles/img/th-ut.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-ut.webp")
         },
         {
           "id": "r5",
           "title": "Сборный угол R5",
           "text": "Скругление R5 под СМЛ 6 и 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r5.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r5.webp")
         },
         {
           "id": "str",
           "title": "Сборный угол «Стрела»",
           "text": "QBYJ10 для НГ-панелей",
-          "thumb": "/images/product-modal/profiles/img/th-str.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-str.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/th-sml.webp",
+        "image": asset("/images/product-modal/profiles/img/th-sml.webp"),
         "title": "Отделка панели",
         "text": "Угол из тех же панелей WINAL™ СМЛ, что и облицовка."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/sml.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/sml.webp")
   },
   {
     "id": "qby",
@@ -2393,28 +2394,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "QBY",
     "name": "Радиусный внешний угол",
     "card": "QBY9.3 и QBY11.3",
-    "thumb": "/images/product-modal/profiles/img/th-qby.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-qby.webp"),
     "kicker": "Угловой профиль · скрытое крепление",
     "title": "Радиусный внешний угол WINAL™",
     "lead": "Профиль наружного угла со скруглением для панелей WINAL™ СМЛ 8 и <span class=\"nb\">10 мм</span>, коды QBY9.3 и QBY11.3. Профиль крепится саморезами через полку в стену и через ногу в соседнюю стену, панели заходят кромками в карманы профиля без клея.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Скруглённый угол",
         "text": "Профиль формирует радиусное ребро угла."
       },
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "Панели без клея",
         "text": "Кромки панелей заходят в карманы профиля."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Крепление на две стены",
         "text": "Саморезы через полку и через ногу."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Код по толщине",
         "text": "QBY9.3 для СМЛ <span class=\"nb\">8 мм</span>, QBY11.3 для СМЛ <span class=\"nb\">10 мм</span>."
       }
@@ -2423,19 +2424,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gqby.html"
+        "src": asset("/images/product-modal/profiles/scenes/gqby.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-qby.webp"
+        "src": asset("/images/product-modal/profiles/img/s-qby.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/ho3.svg",
+            "src": asset("/images/product-modal/profiles/sec/ho3.svg"),
             "alt": "Сечение радиусного угла QBY"
           }
         ]
@@ -2473,7 +2474,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/ho3.svg",
+        "src": asset("/images/product-modal/profiles/sec/ho3.svg"),
         "alt": "Сечение радиусного угла QBY"
       }
     ],
@@ -2498,30 +2499,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "r10",
           "title": "Угловой профиль R10",
           "text": "Дуга R10 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r10.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r10.webp")
         },
         {
           "id": "pro",
           "title": "Защитный уголок",
           "text": "15 мм, на готовый угол",
-          "thumb": "/images/product-modal/profiles/img/th-pro.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pro.webp")
         },
         {
           "id": "thr",
           "title": "Угловой профиль с порожком",
           "text": "QBDD8.3 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-thr.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-thr.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/qby.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/qby.webp")
   },
   {
     "id": "r10",
@@ -2530,28 +2531,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "R10",
     "name": "Угловой профиль R10",
     "card": "Дуга R10 под СМЛ 8 мм",
-    "thumb": "/images/product-modal/profiles/img/th-r10.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-r10.webp"),
     "kicker": "Угловой профиль · скрытое крепление",
     "title": "Угловой профиль R10 WINAL™",
     "lead": "Декоративный профиль наружного угла с дугой R10 под панели WINAL™ СМЛ <span class=\"nb\">8 мм</span>. Профиль крепится к стене саморезами через ногу, панели заходят торцами в карманы без клея, а дуга закрывает торцы на углу.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/figma-radius.svg",
+        "icon": asset("/images/product-modal/icons/figma-radius.svg"),
         "title": "Дуга R10",
         "text": "Дуга закрывает торцы панелей на углу."
       },
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "Панели без клея",
         "text": "Торцы заходят в карманы профиля."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Крепление через ногу",
         "text": "Саморезы в стену, крепёж под панелями."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под СМЛ 8 мм",
         "text": "Нога <span class=\"nb\">7 мм</span>, уступ <span class=\"nb\">3 мм</span>."
       }
@@ -2560,19 +2561,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gr10.html"
+        "src": asset("/images/product-modal/profiles/scenes/gr10.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-r10.webp"
+        "src": asset("/images/product-modal/profiles/img/s-r10.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/ho4.svg",
+            "src": asset("/images/product-modal/profiles/sec/ho4.svg"),
             "alt": "Сечение углового профиля R10"
           }
         ]
@@ -2610,7 +2611,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/ho4.svg",
+        "src": asset("/images/product-modal/profiles/sec/ho4.svg"),
         "alt": "Сечение углового профиля R10"
       }
     ],
@@ -2635,30 +2636,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "qby",
           "title": "Радиусный угол QBY",
           "text": "QBY9.3 и QBY11.3",
-          "thumb": "/images/product-modal/profiles/img/th-qby.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-qby.webp")
         },
         {
           "id": "pro",
           "title": "Защитный уголок",
           "text": "15 мм, на готовый угол",
-          "thumb": "/images/product-modal/profiles/img/th-pro.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pro.webp")
         },
         {
           "id": "thr",
           "title": "Угловой профиль с порожком",
           "text": "QBDD8.3 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-thr.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-thr.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/r10.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/r10.webp")
   },
   {
     "id": "pro",
@@ -2667,28 +2668,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Защитный",
     "name": "Защитный алюминиевый уголок",
     "card": "15 мм, на готовый угол",
-    "thumb": "/images/product-modal/profiles/img/th-pro.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-pro.webp"),
     "kicker": "Уголок · наружный угол",
     "title": "Защитный алюминиевый уголок WINAL™",
     "lead": "Алюминиевый уголок <span class=\"nb\">15 × 15 мм</span> для наружного угла облицовки. Его ставят на готовый угол после монтажа панелей: уголок закрывает ребро угла.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Наружный угол",
         "text": "Закрывает ребро готового угла облицовки."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "15 × 15 мм",
         "text": "Стенка <span class=\"nb\">0,8 мм</span>, длина <span class=\"nb\">3 м</span>."
       },
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "После монтажа",
         "text": "Ставится, когда панели уже смонтированы."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-cube.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-cube.svg"),
         "title": "Алюминий",
         "text": "Металлический уголок под любые панели угла."
       }
@@ -2697,19 +2698,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gpro.html"
+        "src": asset("/images/product-modal/profiles/scenes/gpro.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-pro.webp"
+        "src": asset("/images/product-modal/profiles/img/s-pro.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/pro.svg",
+            "src": asset("/images/product-modal/profiles/sec/pro.svg"),
             "alt": "Сечение защитного уголка"
           }
         ]
@@ -2739,7 +2740,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/pro.svg",
+        "src": asset("/images/product-modal/profiles/sec/pro.svg"),
         "alt": "Сечение защитного уголка"
       }
     ],
@@ -2763,30 +2764,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "qby",
           "title": "Радиусный угол QBY",
           "text": "QBY9.3 и QBY11.3",
-          "thumb": "/images/product-modal/profiles/img/th-qby.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-qby.webp")
         },
         {
           "id": "r10",
           "title": "Угловой профиль R10",
           "text": "Дуга R10 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r10.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r10.webp")
         },
         {
           "id": "thr",
           "title": "Угловой профиль с порожком",
           "text": "QBDD8.3 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-thr.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-thr.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/pro.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/pro.webp")
   },
   {
     "id": "thr",
@@ -2795,28 +2796,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "С порожком",
     "name": "Угловой профиль с порожком",
     "card": "QBDD8.3 под СМЛ 8 мм",
-    "thumb": "/images/product-modal/profiles/img/th-thr.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-thr.webp"),
     "kicker": "Угловой профиль · переход",
     "title": "Угловой профиль с порожком WINAL™",
     "lead": "Угловой профиль для перехода облицовки с порожком, код QBDD8.3, под панели WINAL™ СМЛ <span class=\"nb\">8 мм</span>. Нижняя панель заходит торцом в карман профиля, панель стены ложится тылом на широкую полку кромкой к порожку.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-split-horizontal.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-split-horizontal.svg"),
         "title": "Переход с порожком",
         "text": "Порожек отделяет кромку панели стены."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-ruler.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-ruler.svg"),
         "title": "Под СМЛ 8 мм",
         "text": "Широкая полка <span class=\"nb\">36 мм</span> под панель стены."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-wrench.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-wrench.svg"),
         "title": "Скрытое крепление",
         "text": "Саморезами в одну сторону или в обе."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "Код QBDD8.3",
         "text": "Длина профиля <span class=\"nb\">3 м</span>."
       }
@@ -2825,19 +2826,19 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/gthr.html"
+        "src": asset("/images/product-modal/profiles/scenes/gthr.html")
       },
       {
         "name": "Вид профиля",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-thr.webp"
+        "src": asset("/images/product-modal/profiles/img/s-thr.webp")
       },
       {
         "name": "Сечение",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/thr.svg",
+            "src": asset("/images/product-modal/profiles/sec/thr.svg"),
             "alt": "Сечение углового профиля с порожком"
           }
         ]
@@ -2875,7 +2876,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/thr.svg",
+        "src": asset("/images/product-modal/profiles/sec/thr.svg"),
         "alt": "Сечение углового профиля с порожком"
       }
     ],
@@ -2900,30 +2901,30 @@ export const profiles: readonly ProfileData[] = [
           "id": "qby",
           "title": "Радиусный угол QBY",
           "text": "QBY9.3 и QBY11.3",
-          "thumb": "/images/product-modal/profiles/img/th-qby.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-qby.webp")
         },
         {
           "id": "r10",
           "title": "Угловой профиль R10",
           "text": "Дуга R10 под СМЛ 8 мм",
-          "thumb": "/images/product-modal/profiles/img/th-r10.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-r10.webp")
         },
         {
           "id": "pro",
           "title": "Защитный уголок",
           "text": "15 мм, на готовый угол",
-          "thumb": "/images/product-modal/profiles/img/th-pro.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-pro.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/thr.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/thr.webp")
   },
   {
     "id": "lumen",
@@ -2932,28 +2933,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Lumen Line",
     "name": "WINAL™ LUMEN LINE",
     "card": "Световой профиль для шва и углов",
-    "thumb": "/images/product-modal/profiles/img/th-lm2.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-lm2.webp"),
     "kicker": "Световой профиль · открытое крепление",
     "title": "WINAL™ LUMEN LINE",
     "lead": "Световой профиль для стыков и углов стеновых панелей. В линейке три профиля: H для шва между панелями, L для торца панели у стены и профиль наружного угла. Внутри профиля светодиодная лента под рассеивателем: подсветка выделяет геометрию стены.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Свет в шве и на углу",
         "text": "Подсветка стыков и углов панелей."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-squares-four.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-squares-four.svg"),
         "title": "Три профиля",
         "text": "H, L и наружный угол в одной системе."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-stack.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-stack.svg"),
         "title": "QBGD13",
         "text": "H с рассеивателем под панель <span class=\"nb\">12 мм</span>."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Окраска по RAL",
         "text": "Цвет корпуса по каталогу RAL."
       }
@@ -2962,43 +2963,43 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "H: шов",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/plmh.html"
+        "src": asset("/images/product-modal/profiles/scenes/plmh.html")
       },
       {
         "name": "L: торец",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/plml.html"
+        "src": asset("/images/product-modal/profiles/scenes/plml.html")
       },
       {
         "name": "Наружный угол",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/plmu.html"
+        "src": asset("/images/product-modal/profiles/scenes/plmu.html")
       },
       {
         "name": "H в сборе",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-lm2.webp"
+        "src": asset("/images/product-modal/profiles/img/s-lm2.webp")
       },
       {
         "name": "L в сборе",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-lm1.webp"
+        "src": asset("/images/product-modal/profiles/img/s-lm1.webp")
       },
       {
         "name": "Угол в сборе",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-lm3.webp"
+        "src": asset("/images/product-modal/profiles/img/s-lm3.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/lm2.svg",
+            "src": asset("/images/product-modal/profiles/sec/lm2.svg"),
             "alt": "Сечение Lumen Line H"
           },
           {
-            "src": "/images/product-modal/profiles/sec/lm1.svg",
+            "src": asset("/images/product-modal/profiles/sec/lm1.svg"),
             "alt": "Сечение Lumen Line L"
           }
         ]
@@ -3036,7 +3037,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/lm2.svg",
+        "src": asset("/images/product-modal/profiles/sec/lm2.svg"),
         "alt": "Сечение Lumen Line H"
       }
     ],
@@ -3061,24 +3062,24 @@ export const profiles: readonly ProfileData[] = [
           "id": "slat",
           "title": "Профили для реечных панелей",
           "text": "Скрытое крепление, рейка без стыков",
-          "thumb": "/images/product-modal/profiles/img/th-rslj.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-rslj.webp")
         },
         {
           "id": "el",
           "title": "Т-профиль «Ёлочка»",
           "text": "Декоративный профиль в шов",
-          "thumb": "/images/product-modal/profiles/img/th-el.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-el.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/lumen.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/lumen.webp")
   },
   {
     "id": "slat",
@@ -3087,28 +3088,28 @@ export const profiles: readonly ProfileData[] = [
     "tab": "Реечные панели",
     "name": "Профили для реечных панелей",
     "card": "Скрытое крепление, рейка без стыков",
-    "thumb": "/images/product-modal/profiles/img/th-rslj.webp",
+    "thumb": asset("/images/product-modal/profiles/img/th-rslj.webp"),
     "kicker": "Реечные панели · скрытое крепление",
     "title": "Профили для реечных панелей WINAL™",
     "lead": "Система из трёх отдельных изделий для реечных стен: соединительный профиль, Пи‑профиль для реечных панелей и экран. Профиль крепится к стене саморезами по техпазу, панели заходят пропилом в торце на его полку без клея. Пи‑профиль вклеивается в паз между панелями, поэтому у рейки нет видимых стыков.",
     "feats": [
       {
-        "icon": "/images/product-modal/icons/phosphor-eye-slash.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-eye-slash.svg"),
         "title": "Крепёж не виден",
         "text": "Саморезы идут по техпазу в полке профиля."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-rows.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-rows.svg"),
         "title": "Рейка без стыков",
         "text": "Пи‑профиль вклеивается в паз между панелями."
       },
       {
-        "icon": "/images/product-modal/icons/figma-dry-mount.svg",
+        "icon": asset("/images/product-modal/icons/figma-dry-mount.svg"),
         "title": "Панели без клея",
         "text": "Панель заходит пропилом в торце на полку профиля."
       },
       {
-        "icon": "/images/product-modal/icons/phosphor-palette.svg",
+        "icon": asset("/images/product-modal/icons/phosphor-palette.svg"),
         "title": "Экран для подсветки",
         "text": "Защёлкивается в Пи‑профиль там, где нужен свет."
       }
@@ -3117,33 +3118,33 @@ export const profiles: readonly ProfileData[] = [
       {
         "name": "Узел монтажа",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/pslj.html"
+        "src": asset("/images/product-modal/profiles/scenes/pslj.html")
       },
       {
         "name": "С экраном",
         "kind": "scene",
-        "src": "/images/product-modal/profiles/scenes/psls.html"
+        "src": asset("/images/product-modal/profiles/scenes/psls.html")
       },
       {
         "name": "Профиль",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-sl1.webp"
+        "src": asset("/images/product-modal/profiles/img/s-sl1.webp")
       },
       {
         "name": "Пи‑профиль",
         "kind": "img",
-        "src": "/images/product-modal/profiles/img/s-sl2.webp"
+        "src": asset("/images/product-modal/profiles/img/s-sl2.webp")
       },
       {
         "name": "Сечения",
         "kind": "svg",
         "svgs": [
           {
-            "src": "/images/product-modal/profiles/sec/sl1.svg",
+            "src": asset("/images/product-modal/profiles/sec/sl1.svg"),
             "alt": "Сечение реечного профиля"
           },
           {
-            "src": "/images/product-modal/profiles/sec/sl2.svg",
+            "src": asset("/images/product-modal/profiles/sec/sl2.svg"),
             "alt": "Сечение «П-шки» QBU8.2"
           }
         ]
@@ -3181,7 +3182,7 @@ export const profiles: readonly ProfileData[] = [
     ],
     "draw": [
       {
-        "src": "/images/product-modal/profiles/sec/sl1.svg",
+        "src": asset("/images/product-modal/profiles/sec/sl1.svg"),
         "alt": "Сечение реечного профиля"
       }
     ],
@@ -3207,29 +3208,29 @@ export const profiles: readonly ProfileData[] = [
           "id": "lumen",
           "title": "WINAL™ LUMEN LINE",
           "text": "Световой профиль для шва и углов",
-          "thumb": "/images/product-modal/profiles/img/th-lm2.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-lm2.webp")
         },
         {
           "id": "el",
           "title": "Т-профиль «Ёлочка»",
           "text": "Декоративный профиль в шов",
-          "thumb": "/images/product-modal/profiles/img/th-el.webp"
+          "thumb": asset("/images/product-modal/profiles/img/th-el.webp")
         }
       ]
     },
     "fins": [
       {
-        "image": "/images/product-modal/profiles/img/f-ral.webp",
+        "image": asset("/images/product-modal/profiles/img/f-ral.webp"),
         "title": "Окраска по RAL",
         "text": "Любой цвет по каталогу RAL под отделку стен."
       },
       {
-        "image": "/images/product-modal/profiles/img/th-sl3.webp",
+        "image": asset("/images/product-modal/profiles/img/th-sl3.webp"),
         "title": "Экран без отделки",
         "text": "Светопропускающий пластик для подсветки."
       }
     ],
-    "cardImage": "/images/product-modal/profiles/card/slat.webp"
+    "cardImage": asset("/images/product-modal/profiles/card/slat.webp")
   }
 ];
 

@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useMemo, type Dispatch, type RefObject, type SetStateAction } from "react";
 import { Fancybox } from "@fancyapps/ui";
@@ -14,8 +16,8 @@ import { DealerProductModalShell } from "@/app/dealer-product-modal-shell";
 import { HeroGlassNavButton } from "@/app/hero-glass-nav-button";
 import { ModalNeighborNav } from "@/app/dealer-modal-neighbor-nav";
 
-const UI = "/images/home/cases/ui";
-const CLOSE_ICON = "/images/product-modal/rythmwall/icon-close.webp";
+const UI = asset("/images/home/cases/ui");
+const CLOSE_ICON = asset("/images/product-modal/rythmwall/icon-close.webp");
 const CASES_DIALOG_ID = "dealer-cases-modal";
 
 const uiAssets = {
@@ -170,17 +172,12 @@ export function CaseDetailBody({
             <img src={uiAssets.arrowWhiteLeft} alt="" width={12} height={10} className="h-[10px] w-3 shrink-0" />
             <span className="text-xs font-semibold leading-normal text-dealer-brand-white">Открыть галерею</span>
           </button>
-          <a
-            href={activeCase.wpUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/projects/${activeCase.slug}`}
             className="inline-flex h-10 min-w-[160px] items-center justify-center gap-2 rounded border border-dealer-brand-primary px-12 py-3"
           >
-            <span className="whitespace-nowrap text-xs font-semibold leading-normal text-dealer-brand-primary">
-              Этот кейс на winal.ru
-            </span>
-            <img src={uiAssets.iconExternalLink} alt="" width={12} height={12} className="size-3 shrink-0" />
-          </a>
+            <span className="whitespace-nowrap text-xs font-semibold leading-normal text-dealer-brand-primary">Страница проекта</span>
+          </Link>
         </div>
       </div>
     </div>

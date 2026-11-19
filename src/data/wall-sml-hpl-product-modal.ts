@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallHplCoatingGroups } from "@/data/wall-hpl-coatings";
 
 export type WallSmlHplFeature = {
@@ -16,10 +17,10 @@ export type WallSmlHplGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const HPL_ICONS = "/images/product-modal/wall-hpl-shared/icons";
-const DEALER_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-sml-hpl/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const HPL_ICONS = asset("/images/product-modal/wall-hpl-shared/icons");
+const DEALER_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-sml-hpl/gallery");
 
 export const WALL_SML_HPL_PRODUCT_MODAL_ID = "wall-sml-hpl-product-modal";
 
@@ -74,13 +75,13 @@ export const wallSmlHplModalAssets = {
       caption: "Медицинские панели для стен в кабинете и палате антибактериальные негорючие СМЛ",
     },
   ] as const satisfies readonly WallSmlHplGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,
@@ -104,7 +105,7 @@ export const wallSmlHplProductModal = {
   secondaryCta: "Получить образцы",
   heroFeatures: [
     {
-      icon: "/images/product-modal/icons/phosphor-hammer.svg",
+      icon: asset("/images/product-modal/icons/phosphor-hammer.svg"),
       title: "Защита от сильного истирания",
       description:
         "Твёрдый HPL-пластик является антивандальным: он надёжно защищает стену от ударов и ежедневных нагрузок.",
@@ -154,7 +155,7 @@ export const wallSmlHplProductModal = {
         "Декоративный слой предлагает натуральные фактуры дерева, камня, металла и строгие монохромные оттенки RAL.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-wrench.svg",
+      icon: asset("/images/product-modal/icons/phosphor-wrench.svg"),
       title: "Удобная система крепления",
       description:
         "Различные типы алюминиевых профилей (открытые и скрытые) позволяют аккуратно оформить узлы примыканий.",

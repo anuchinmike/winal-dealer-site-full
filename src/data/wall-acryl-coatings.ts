@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallAcrylCoatingSwatch = {
   id: string;
   image: string;
@@ -9,11 +10,11 @@ export type WallAcrylCoatingGroup = {
   swatches: WallAcrylCoatingSwatch[];
 };
 
-const COATINGS = "/images/product-modal/wall-sml-acryl/coatings";
+const COATINGS = asset("/images/product-modal/wall-sml-acryl/coatings");
 
 export const wallAcrylCoatingGroups = [
   {
-    chip: "Акриловые 3D",
+    chip: "Акрил 3D",
     swatches: [
       { id: "akril-stelo-1", image: `${COATINGS}/3d/akril-stelo-1.webp`, label: "Кристалл гласс 3D" },
       { id: "akril-stelo-2", image: `${COATINGS}/3d/akril-stelo-2.webp`, label: "Кристалл гласс 3D" },
@@ -32,7 +33,7 @@ export const wallAcrylCoatingGroups = [
     ],
   },
   {
-    chip: "Акриловые древесные",
+    chip: "Акрил дерево",
     swatches: [
       { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
       { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный" },
@@ -53,7 +54,7 @@ export const wallAcrylCoatingGroups = [
     ],
   },
   {
-    chip: "Акриловые бетон",
+    chip: "Акрил бетон",
     swatches: [
       { id: "beton-beli-1", image: `${COATINGS}/concrete/beton-beli-1.webp`, label: "Бетон белый" },
       { id: "beton_7038-1", image: `${COATINGS}/concrete/beton_7038-1.webp`, label: "Бетон 7038" },
@@ -74,7 +75,7 @@ export function withCoatingChips(
 }
 
 export const wallPolymerCoatingGroups = withCoatingChips(wallAcrylCoatingGroups, [
-  "Полимерные 3D",
-  "Полимерные древесные",
-  "Полимерные бетон",
+  "Полимер 3D",
+  "Полимер дерево",
+  "Полимер бетон",
 ]);

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPolymerCoatingGroups } from "@/data/wall-acryl-coatings";
 
 export type WallGklPolymerFeature = {
@@ -16,9 +17,9 @@ export type WallGklPolymerGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-polymer-shared/gallery";
+const SML_ACRYL = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-polymer-shared/gallery");
 const GKL_GALLERY_CAPTION = "Стеновые панели WINAL™ с полимерным покрытием";
 
 export const WALL_GKL_POLYMER_PRODUCT_MODAL_ID = "wall-gkl-polymer-product-modal";
@@ -47,13 +48,13 @@ export const wallGklPolymerModalAssets = {
     },
   ] as const satisfies readonly WallGklPolymerGalleryImage[],
   ralChart: `${SML_ACRYL}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL}/icon-hero-color.svg`,
@@ -81,7 +82,7 @@ export const wallGklPolymerProductModal = {
       description: "Полимерный слой создаёт эстетику дорогих интерьеров на базе доступного гипсокартона.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Слабогорючая основа КМ-1",
       description: "Проверенный базовый лист обеспечивает необходимую пожарную безопасность класса КМ-1.",
     },
@@ -92,7 +93,7 @@ export const wallGklPolymerProductModal = {
         "Покрытие High Glow формирует выразительный зеркальный блеск на стенах офисных и торговых площадей.",
     },
     {
-      icon: "/images/product-modal/icons/figma-fingerprint.svg",
+      icon: asset("/images/product-modal/icons/figma-fingerprint.svg"),
       title: "Сатин и Soft Touch",
       description:
         "Специальные матовые фактуры деликатно рассеивают свет и обеспечивают приятные тактильные ощущения.",
@@ -114,7 +115,7 @@ export const wallGklPolymerProductModal = {
   ralNote: "Панели могут быть окрашены в любой оттенок по RAL",
   extraFeatures: [
     {
-      icon: "/images/product-modal/icons/phosphor-thumbs-up.svg",
+      icon: asset("/images/product-modal/icons/phosphor-thumbs-up.svg"),
       title: "Готовая чистовая поверхность",
       description: "Панели готовы к установке без последующего грунтования или окраски на объекте.",
     },

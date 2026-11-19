@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type RythmWallModelCode = "C001" | "C021" | "C022" | "B005" | "B039" | "B054";
 
 export type RythmWallSeries = "C" | "B";
@@ -20,7 +21,7 @@ export type RythmWallFeature = {
   description: string;
 };
 
-const BASE = "/images/product-modal/rythmwall";
+const BASE = asset("/images/product-modal/rythmwall");
 
 export const RYTHMWALL_PRODUCT_MODAL_ID = "rythmwall-product-modal";
 
@@ -56,7 +57,7 @@ export const rythmWallExtraFeatures: RythmWallFeature[] = [
     description: "Возможность создания изогнутых и нестандартных форм",
   },
   {
-    icon: "/images/product-modal/icons/winal-flame.svg",
+    icon: asset("/images/product-modal/icons/winal-flame.svg"),
     title: "Пожарная безопасность",
     description: "Негорючие или трудногорючие панели, соответствующие всем нормам",
   },

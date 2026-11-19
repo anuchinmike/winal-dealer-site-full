@@ -1,8 +1,12 @@
 "use client";
+import Link from "next/link";
+import { CONSENT_HREF, PRIVACY_HREF } from "@/app/legal-content";
+import { asset } from "@/lib/asset";
+import { dealerConfig } from "@/lib/dealer-config";
 
 import { useId, useRef, useState, type DragEvent, type FormEvent } from "react";
 
-const IMAGES = "/images/home/project-form";
+const IMAGES = asset("/images/home/project-form");
 
 const assets = {
   uploadIcon: `${IMAGES}/upload-icon.svg`,
@@ -250,11 +254,11 @@ export function ProjectFormSection() {
                 </label>
                 <p className="text-xs font-normal leading-normal text-dealer-text-primary">
                   <span>Даю </span>
-                  <span className="text-dealer-brand-primary">согласие на обработку моих персональных данных</span>
+                  <Link href={CONSENT_HREF} target="_blank" className="text-dealer-brand-primary underline-offset-2 hover:underline">согласие на обработку моих персональных данных</Link>
                   <span> и ознакомлен(а)</span>
                   <br />
                   <span>с </span>
-                  <span className="text-dealer-brand-primary">Политикой обработки персональных данных</span>
+                  <Link href={PRIVACY_HREF} target="_blank" className="text-dealer-brand-primary underline-offset-2 hover:underline">Политикой обработки персональных данных</Link>
                   <span>.</span>
                 </p>
               </div>
@@ -266,8 +270,8 @@ export function ProjectFormSection() {
             style={{ boxShadow: "var(--dealer-shadow-glass)" }}
           >
             <div className="flex w-full flex-col gap-2">
-              <p className="text-[32px] font-semibold leading-none text-dealer-text-primary">2design.pro</p>
-              <p className="text-xl font-semibold leading-none text-dealer-text-muted">представитель WINAL в Сочи</p>
+              <p className="text-[32px] font-semibold leading-none text-dealer-text-primary">{dealerConfig.partnerName}</p>
+              <p className="text-xl font-semibold leading-none text-dealer-text-muted">представитель WINAL в {dealerConfig.region}</p>
             </div>
 
             <Divider />
@@ -277,8 +281,8 @@ export function ProjectFormSection() {
                 icon={assets.iconPhone}
                 iconWidth={36}
                 iconHeight={36}
-                title="+7 (862) 123-45-67"
-                subtitle="Пн-Пт с 9:00 до 18:00"
+                title={dealerConfig.phone}
+                subtitle={dealerConfig.contacts.hours[0] ?? "Позвоните нам"}
               />
               <ContactRow
                 icon={assets.iconTelegram}
@@ -291,7 +295,7 @@ export function ProjectFormSection() {
                 icon={assets.iconEmail}
                 iconWidth={36}
                 iconHeight={36}
-                title="info@design.pro"
+                title={dealerConfig.email}
                 subtitle="Напишите нам на почту "
               />
             </div>

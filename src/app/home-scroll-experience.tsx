@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { SiteHeader } from "@/app/site-chrome";
 import {
   motion,
   useMotionValue,
@@ -609,7 +611,12 @@ const HERO_TEXT_CARD_BORDER_STYLE = {
 // Same four labels as the desktop inline "A | B | C | D" reading — rendered as a
 // list so the compact mobile panel can stack them, while desktop CSS re-joins
 // them with a generated "  |  " separator to keep the current visual unchanged.
-const HEADER_NAV_ITEMS = ["О бренде", "Каталог", "Реализованные проекты", "Контакты"];
+const HEADER_NAV_ITEMS = [
+  { label: "О бренде", href: "#complex-approach" },
+  { label: "Каталог", href: "/catalog" },
+  { label: "Реализованные проекты", href: "/projects" },
+  { label: "Контакты", href: "#project-form" },
+];
 
 function HeroTextCardContent({ children }: { children: ReactNode }) {
   return <div className="dealer-hero-text-inner relative z-[2] flex w-full flex-col items-start justify-start gap-12">{children}</div>;
@@ -653,8 +660,16 @@ function StickyHeader({
           {showMain ? (
             <ul className="dealer-header-nav-list">
               {HEADER_NAV_ITEMS.map((item) => (
-                <li key={item} className="dealer-header-nav-item">
-                  {item}
+                <li key={item.label} className="dealer-header-nav-item">
+                  {item.href.startsWith("#") ? (
+                    <a href={item.href} className="transition-colors hover:text-dealer-brand-primary">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="transition-colors hover:text-dealer-brand-primary">
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -1138,8 +1153,9 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
     return (
       <CatalogLayoutProvider value={catalogLayoutValue}>
         <div className="dealer-home-stack relative z-10 flex w-368 max-w-full flex-col gap-60 py-6">
-          <div className="dealer-header-slot">
-            <StickyHeader {...headerProps} />
+          <div className="dealer-header-slot" style={{ maxWidth: 1376 }}>
+            {/* Same header as the inner pages of the multi-page version. */}
+            <SiteHeader />
           </div>
           <StaticHero assets={assets} />
           {surface}
@@ -1168,8 +1184,9 @@ export function HomeScrollExperience({ assets, surface, children }: HomeScrollEx
       </motion.div>
 
       <div className="relative z-10 flex w-368 max-w-full flex-col py-6">
-        <div className="dealer-header-slot">
-          <StickyHeader {...headerProps} />
+        <div className="dealer-header-slot" style={{ maxWidth: 1376 }}>
+          {/* Same header as the inner pages of the multi-page version. */}
+          <SiteHeader />
         </div>
 
         {/* Внешняя scroll-сцена: её высота задаёт общую длину анимации. */}

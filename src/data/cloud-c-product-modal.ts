@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CloudCFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CloudCSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/cloud-c";
+const BASE = asset("/images/product-modal/cloud-c");
 
 export const CLOUD_C_PRODUCT_MODAL_ID = "cloud-c-product-modal";
 
 export const cloudCModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`, `${BASE}/gallery-04.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const cloudCProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-speaker-high.svg",
+      icon: asset("/images/product-modal/icons/phosphor-speaker-high.svg"),
       title: "Акустика NRC до 0,95",
       description: "Поглощение звука в диапазоне 500–4000 Гц эффективно сокращает время реверберации в помещениях.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Потолочные форматы",
       description: "Типоразмеры 594×594 и 1194×594 мм для установки в подвесные системы или прямого крепления к перекрытию.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожаробезопасность КМ1",
       description: "Соответствие классу КМ1 и влагостойкость до 95% для общественных и коммерческих объектов.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Вес и палитра RAL/NCS",
       description: "Малая масса ~3–4 кг/м² снижает нагрузку на подвесы, а палитра RAL/NCS дает гибкость в дизайне потолка.",
     },

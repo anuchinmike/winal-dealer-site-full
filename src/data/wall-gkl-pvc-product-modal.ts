@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { wallPvcCoatingGroups } from "@/data/wall-pvc-coatings";
 
 export type WallGklPvcFeature = {
@@ -16,9 +17,9 @@ export type WallGklPvcGalleryImage = {
   caption: string;
 };
 
-const SML_ACRYL_ICONS = "/images/product-modal/wall-sml-acryl";
-const PVC_ICONS = "/images/product-modal/wall-pvc-shared/icons";
-const GALLERY = "/images/product-modal/wall-gkl-pvc/gallery";
+const SML_ACRYL_ICONS = asset("/images/product-modal/wall-sml-acryl");
+const PVC_ICONS = asset("/images/product-modal/wall-pvc-shared/icons");
+const GALLERY = asset("/images/product-modal/wall-gkl-pvc/gallery");
 
 export const WALL_GKL_PVC_PRODUCT_MODAL_ID = "wall-gkl-pvc-product-modal";
 
@@ -45,13 +46,13 @@ export const wallGklPvcModalAssets = {
       caption: "Стеновые панели гипсокартон ГКЛ ламинированные пленкой ПВХ",
     },
   ] as const satisfies readonly WallGklPvcGalleryImage[],
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_ACRYL_ICONS}/icon-hero-uv.svg`,
     moisture: `${SML_ACRYL_ICONS}/icon-hero-moisture.svg`,
     color: `${SML_ACRYL_ICONS}/icon-hero-color.svg`,
@@ -79,12 +80,12 @@ export const wallGklPvcProductModal = {
       description: "Доступный ГКЛ ПВХ обходится дешевле коммерческих обоев, значительно превосходя их по прочности.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-shield-check.svg",
+      icon: asset("/images/product-modal/icons/phosphor-shield-check.svg"),
       title: "Прочная ПВХ-ламинация",
       description: "Надежная пленка точно передает фактуры бетона, дерева и камня, не требуя дополнительной защиты.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Слабогорючая основа КМ-1",
       description: "Гипсокартонный лист имеет подтверждённый класс пожарной опасности КМ-1 для коммерческих зданий.",
     },
@@ -125,7 +126,7 @@ export const wallGklPvcProductModal = {
       description: "Каркасная сборка позволяет отказаться от длительных «мокрых» процессов штукатурки и шпаклевки.",
     },
     {
-      icon: "/images/product-modal/icons/figma-dry-mount.svg",
+      icon: asset("/images/product-modal/icons/figma-dry-mount.svg"),
       title: "Без подготовки черновой стены",
       description:
         "Готовое решение скрывает базовые неровности и позволяет незаметно проложить коммуникации за профилем.",

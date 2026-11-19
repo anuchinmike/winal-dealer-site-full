@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallGklAcrylFeature = {
   icon: string;
   title: string;
@@ -25,9 +26,9 @@ export type WallGklAcrylGalleryImage = {
   caption: string;
 };
 
-const SML_BASE = "/images/product-modal/wall-sml-acryl";
+const SML_BASE = asset("/images/product-modal/wall-sml-acryl");
 const COATINGS = `${SML_BASE}/coatings`;
-const GALLERY = "/images/product-modal/wall-gkl-acryl/gallery";
+const GALLERY = asset("/images/product-modal/wall-gkl-acryl/gallery");
 
 export const WALL_GKL_ACRYL_PRODUCT_MODAL_ID = "wall-gkl-acryl-product-modal";
 
@@ -50,13 +51,13 @@ export const wallGklAcrylModalAssets = {
     { src: `${GALLERY}/otdelka-sten-ofisa-paneli-sml-list-gipsokarton-1.webp`, caption: "Отделка стен офиса Норникель декоративными панелями гипсокартон окрашенный" },
   ] as const,
   ralChart: `${SML_BASE}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${SML_BASE}/icon-hero-uv.svg`,
     moisture: `${SML_BASE}/icon-hero-moisture.svg`,
     color: `${SML_BASE}/icon-hero-color.svg`,
@@ -76,19 +77,19 @@ export const wallGklAcrylProductModal = {
   secondaryCta: "Получить образцы",
   heroFeatures: [
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Слабогорючая основа КМ-1",
       description:
         "Базовый гипсокартонный лист соответствует требованиям пожарной безопасности для общественных зон.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Готовая окраска акрилом",
       description:
         "Многослойное УФ-покрытие устойчиво к выцветанию и не требует специального ухода в процессе эксплуатации.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-coins.svg",
+      icon: asset("/images/product-modal/icons/phosphor-coins.svg"),
       title: "Рациональный бюджет ремонта",
       description:
         "Отсутствие черновой подготовки стен и штукатурки существенно снижает общую стоимость коммерческой отделки.",
@@ -103,7 +104,7 @@ export const wallGklAcrylProductModal = {
   coatingTitle: "Покрытия",
   coatingGroups: [
     {
-      chip: "Акриловые 3D",
+      chip: "Акрил 3D",
       swatches: [
         { id: "akril-stelo-1", image: `${COATINGS}/3d/akril-stelo-1.webp`, label: "Кристалл гласс 3D" },
         { id: "akril-stelo-2", image: `${COATINGS}/3d/akril-stelo-2.webp`, label: "Кристалл гласс 3D" },
@@ -122,7 +123,7 @@ export const wallGklAcrylProductModal = {
       ],
     },
     {
-      chip: "Акриловые древесные",
+      chip: "Акрил дерево",
       swatches: [
         { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
         { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный" },
@@ -143,7 +144,7 @@ export const wallGklAcrylProductModal = {
       ],
     },
     {
-      chip: "Акриловые бетон",
+      chip: "Акрил бетон",
       swatches: [
         { id: "beton-beli-1", image: `${COATINGS}/concrete/beton-beli-1.webp`, label: "Бетон белый" },
         { id: "beton_7038-1", image: `${COATINGS}/concrete/beton_7038-1.webp`, label: "Бетон 7038" },
@@ -178,7 +179,7 @@ export const wallGklAcrylProductModal = {
         "Крупноформатные панели надежно скрывают дефекты черновой плоскости и прячут инженерные коммуникации.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Длинные форматы до 3600 мм",
       description:
         "Увеличенные габариты листов помогают перекрывать высокие стены с минимальным числом горизонтальных стыков.",

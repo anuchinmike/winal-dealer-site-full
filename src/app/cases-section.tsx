@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
@@ -39,7 +40,7 @@ function useIsCompactViewport() {
 
 type GalleryFilterId = DealerCaseCategoryId | "all";
 
-const UI = "/images/home/cases/ui";
+const UI = asset("/images/home/cases/ui");
 
 const galleryFilterChips: { id: GalleryFilterId; label: string; icon: string }[] = [
   { id: "all", label: "Все", icon: `${UI}/icon-all.svg` },

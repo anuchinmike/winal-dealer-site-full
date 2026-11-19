@@ -1,27 +1,18 @@
 import type { Metadata } from "next";
-import { CatalogSection } from "@/app/catalog-section";
+import { InnerPage } from "@/app/site-chrome";
+import { CatalogView } from "@/app/catalog/catalog-view";
+import { CATALOG_PAGE_LEAD, CATALOG_PAGE_TITLE } from "@/data/dealer-catalog-page";
 
-export const metadata: Metadata = {
-  title: "Каталог WINAL — поверхность адаптации",
-  // Оценочная DEV-поверхность: из индекса исключаем и на уровне маршрута, а не только на хосте.
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: { index: false, follow: false },
-  },
-};
+export const metadata: Metadata = { title: CATALOG_PAGE_TITLE, description: CATALOG_PAGE_LEAD };
 
-/**
- * /catalog — изолированный маршрут с тем же блоком каталога, что и на главной.
- * Данные, модалки и motion берутся из существующих источников; отличается только
- * композиция на планшетах и телефонах (см. `[data-catalog-lab]` в globals.css).
- */
-export default function CatalogLabPage() {
+export default function CatalogPage() {
   return (
-    <main data-catalog-lab className="catalog-lab-page">
-      <h1 className="sr-only">Каталог WINAL</h1>
-      <CatalogSection variant="lab" />
-    </main>
+    <InnerPage crumbs={[{ label: "Главная", href: "/" }, { label: "Каталог" }]}>
+      <header className="flex flex-col gap-4 pt-4">
+        <h1 className="dealer-section-title">{CATALOG_PAGE_TITLE}</h1>
+        <p className="dealer-section-lead max-w-[720px]">{CATALOG_PAGE_LEAD}</p>
+      </header>
+      <CatalogView />
+    </InnerPage>
   );
 }

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type CeilingSmlAcrylFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type CeilingSmlAcrylSpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/ceiling-sml-acryl";
+const BASE = asset("/images/product-modal/ceiling-sml-acryl");
 
 export const CEILING_SML_ACRYL_PRODUCT_MODAL_ID = "ceiling-sml-acryl-product-modal";
 
 export const ceilingSmlAcrylModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const ceilingSmlAcrylProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Негорючая основа СМЛ",
       description: "Плита из стекломагниевого листа обеспечивает огнестойкость уровня КМ-0 на уровне основы.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Заводская окраска акрилом",
       description: "Ровное покрытие не требует финишной отделки на объекте.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-ruler.svg",
+      icon: asset("/images/product-modal/icons/phosphor-ruler.svg"),
       title: "Стандартные потолочные модули",
       description: "Выпуск в форматах 594×594 и 1194×594 мм для типовых потолочных конструкций.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-wrench.svg",
+      icon: asset("/images/product-modal/icons/phosphor-wrench.svg"),
       title: "Универсальный монтаж",
       description: "Установка в видимую подвесную систему T-24 или скрытый монтаж на профиль 60×27 мм.",
     },

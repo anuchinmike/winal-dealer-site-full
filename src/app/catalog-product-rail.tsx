@@ -7,12 +7,14 @@ import {
   dealerMotionOpacityTransform,
   dealerMotionTransform,
 } from "@/app/dealer-motion";
+import Link from "next/link";
+import { PAGE_HREF_BY_CATALOG_ID } from "@/data/product-pages";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent } from "react";
 import { clamp, useDealerHorizontalRail } from "@/app/dealer-horizontal-scroll";
 import { CatalogProductModals } from "@/app/catalog-product-modals";
 import { DealerProductModalNavProvider, PRODUCT_MODAL_SLIDE_CLEAR_MS, type ProductModalSlideMotion } from "@/app/dealer-product-modal-nav";
-import { registerDealerProductModalOpener } from "@/app/dealer-product-modal-bridge";
+import { openDealerProductModal, pageHrefForAction, registerDealerProductModalOpener } from "@/app/dealer-product-modal-bridge";
 import {
   getFamilyModalSequence,
   getStandaloneModalSequence,
@@ -115,11 +117,25 @@ function CatalogPrimaryButton({
   onClick,
   dialogId,
   action,
+  href,
 }: {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   dialogId?: string;
   action: DealerCatalogAction;
+  /** Family page in the multi-page version: the button becomes a link to it. */
+  href?: string;
 }) {
+  if (href) {
+    return (
+      <Link
+        href={href}
+        onClick={(event) => event.stopPropagation()}
+        className="catalog-card-primary-btn inline-flex items-center justify-center self-start rounded border border-dealer-brand-decoration px-6 py-3 text-xs font-medium leading-normal text-dealer-brand-decoration transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+      >
+        Подробнее
+      </Link>
+    );
+  }
   const isModalAction = isDealerCatalogModalAction(action);
   const isFamilyExpand = action === "family_expand";
   const isDisabled = !isModalAction && !isFamilyExpand;
@@ -317,6 +333,7 @@ function CatalogCardBody({
             }
             dialogId={primaryDialogId}
             action={card.action}
+            href={card.kind === "parent" ? PAGE_HREF_BY_CATALOG_ID[card.id] : undefined}
           />
         </div>
       </div>
@@ -883,6 +900,11 @@ export function CatalogProductRail({
 
   const openProductModal = useCallback(
     (action: DealerCatalogAction, trigger: HTMLElement, sequence: CatalogModalSequenceItem[]) => {
+      // Products that already have a page open it instead of the modal.
+      if (pageHrefForAction(action)) {
+        openDealerProductModal(action, trigger, sequence);
+        return;
+      }
       if (!CATALOG_MODAL_DIALOG_ID[action] || sequence.length === 0) {
         return;
       }

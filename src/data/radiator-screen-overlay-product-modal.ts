@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type RadiatorScreenOverlayFeature = {
   icon: string;
   title: string;
@@ -9,16 +10,16 @@ export type RadiatorScreenOverlaySpecItem = {
   value: string;
 };
 
-const BASE = "/images/product-modal/radiator-screen-overlay";
+const BASE = asset("/images/product-modal/radiator-screen-overlay");
 
 export const RADIATOR_SCREEN_OVERLAY_PRODUCT_MODAL_ID = "radiator-screen-overlay-product-modal";
 
 export const radiatorScreenOverlayModalAssets = {
   gallery: [`${BASE}/gallery-01.webp`, `${BASE}/gallery-02.webp`, `${BASE}/gallery-03.webp`, `${BASE}/gallery-04.webp`, `${BASE}/gallery-05.webp`] as const,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
 } as const;
 
@@ -31,22 +32,22 @@ export const radiatorScreenOverlayProductModal = {
   secondaryCta: "Получить образцы",
   features: [
     {
-      icon: "/images/product-modal/icons/phosphor-rectangle.svg",
+      icon: asset("/images/product-modal/icons/phosphor-rectangle.svg"),
       title: "Быстрое перекрытие ниш",
       description: "Оптимален для реконструкций: монтируется поверх существующего радиатора без объемного короба.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-arrows-clockwise.svg",
+      icon: asset("/images/product-modal/icons/phosphor-arrows-clockwise.svg"),
       title: "Тепловая конвекция",
       description: "Перфорация сохраняет проход воздуха без обещаний роста теплоотдачи.",
     },
     {
-      icon: "/images/product-modal/icons/winal-flame.svg",
+      icon: asset("/images/product-modal/icons/winal-flame.svg"),
       title: "Пожаростойкая база",
       description: "КМ-0 относится к СМЛ-основе, не к универсальному готовому изделию.",
     },
     {
-      icon: "/images/product-modal/icons/phosphor-palette.svg",
+      icon: asset("/images/product-modal/icons/phosphor-palette.svg"),
       title: "Сочетаемость декоров",
       description: "Поверхность подбирается в связке со стеновыми панелями проекта.",
     },

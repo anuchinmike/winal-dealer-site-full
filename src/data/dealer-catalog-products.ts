@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { ProfileModalAction } from "@/data/profiles-product-modal";
 
 export type DealerCatalogAction =
@@ -75,7 +76,7 @@ export type DealerCatalogProduct = {
   children?: DealerCatalogChild[];
 };
 
-const CATALOG_IMAGES = "/images/catalog";
+const CATALOG_IMAGES = asset("/images/catalog");
 const image = (name: string) => `${CATALOG_IMAGES}/${name}.webp`;
 
 /** Figma-selected acoustic card covers — keep separate from winal.ru proxy assets. */
@@ -205,17 +206,6 @@ const products: Record<string, DealerCatalogProduct> = {
     ],
     { contextTitle: "Акустические панели", contextSubtitle: "Металлические решения для стен и потолков." },
   ),
-  "family-winal-mute": family(
-    "family-winal-mute",
-    "WINAL™ MUTE",
-    "Решения для снижения передачи шума через перегородки и конструкции.",
-    dealerCatalogImageAssets.cardWallPro,
-    [
-      child("wallpro", "WINAL™ WallPro", "Готовые каркасные перегородки для звукоизоляции помещений и точных узлов.", dealerCatalogImageAssets.cardWallPro, "WallPro", undefined, "wallpro_modal"),
-      child("winisol", "WINAL™ WINISOL", "Минераловатные плиты для звукоизоляции перегородок и облицовок.", catalogImages.winisol, "WINISOL", undefined, "winisol_modal"),
-    ],
-    { contextTitle: "Звукоизоляционные системы", contextSubtitle: "Перегородки и материалы для снижения передачи шума." },
-  ),
   "family-wall-sml": family(
     "family-wall-sml",
     "Стеновые панели на основе СМЛ",
@@ -223,9 +213,9 @@ const products: Record<string, DealerCatalogProduct> = {
     catalogImages.wallSmlPvc,
     [
       child("wall-sml-acryl", "Стеновые панели WINAL™ СМЛ Акрил", "Панели с окраской акрилом для ровной стеновой поверхности.", catalogImages.wallSmlAcryl, "WINAL™ СМЛ Акрил", undefined, "wall_sml_acryl_modal"),
-      child("wall-sml-pvc", "Стеновые панели WINAL™ СМЛ ПВХ", "Панели с ПВХ-ламинацией и выбором декоративных покрытий.", "/images/catalog/cards/wall-sml-pvc.webp", "WINAL™ СМЛ ПВХ", undefined, "wall_sml_pvc_modal"),
-      child("wall-sml-hpl", "Стеновые панели WINAL™ СМЛ HPL", "Износостойкие стеновые панели с HPL-покрытием.", "/images/catalog/cards/wall-sml-hpl.webp", "WINAL™ СМЛ HPL", undefined, "wall_sml_hpl_modal"),
-      child("wall-sml-polymer", "Стеновые панели WINAL™ СМЛ Полимер", "Панели с практичным полимерным покрытием для интенсивной эксплуатации.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
+      child("wall-sml-pvc", "Стеновые панели WINAL™ СМЛ ПВХ", "Панели с ПВХ-ламинацией и выбором декоративных покрытий.", asset("/images/catalog/cards/wall-sml-pvc.webp"), "WINAL™ СМЛ ПВХ", undefined, "wall_sml_pvc_modal"),
+      child("wall-sml-hpl", "Стеновые панели WINAL™ СМЛ HPL", "Износостойкие стеновые панели с HPL-покрытием.", asset("/images/catalog/cards/wall-sml-hpl.webp"), "WINAL™ СМЛ HPL", undefined, "wall_sml_hpl_modal"),
+      child("wall-sml-polymer", "Стеновые панели WINAL™ СМЛ Полимер", "Панели с практичным полимерным покрытием для интенсивной эксплуатации.", asset("/images/catalog/cards/wall-polymer-shared.webp"), "WINAL™ СМЛ Полимер", undefined, "wall_sml_polymer_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Негорючая СМЛ-основа для стабильной стеновой отделки." },
   ),
@@ -236,8 +226,8 @@ const products: Record<string, DealerCatalogProduct> = {
     catalogImages.wallGklPvc,
     [
       child("wall-gkl-acryl", "Стеновые панели WINAL™ ГКЛ Акрил", "Окрашенные акрилом панели на ГКЛ-основе.", catalogImages.wallGklAcryl, "WINAL™ ГКЛ Акрил", undefined, "wall_gkl_acryl_modal"),
-      child("wall-gkl-pvc", "Стеновые панели WINAL™ ГКЛ ПВХ", "Ламинированные ПВХ панели на ГКЛ-основе.", "/images/catalog/cards/wall-gkl-pvc.webp", "WINAL™ ГКЛ ПВХ", undefined, "wall_gkl_pvc_modal"),
-      child("wall-gkl-polymer", "Стеновые панели WINAL™ ГКЛ Полимер", "Панели на ГКЛ-основе с полимерным покрытием.", "/images/catalog/cards/wall-polymer-shared.webp", "WINAL™ ГКЛ Полимер", undefined, "wall_gkl_polymer_modal"),
+      child("wall-gkl-pvc", "Стеновые панели WINAL™ ГКЛ ПВХ", "Ламинированные ПВХ панели на ГКЛ-основе.", asset("/images/catalog/cards/wall-gkl-pvc.webp"), "WINAL™ ГКЛ ПВХ", undefined, "wall_gkl_pvc_modal"),
+      child("wall-gkl-polymer", "Стеновые панели WINAL™ ГКЛ Полимер", "Панели на ГКЛ-основе с полимерным покрытием.", asset("/images/catalog/cards/wall-polymer-shared.webp"), "WINAL™ ГКЛ Полимер", undefined, "wall_gkl_polymer_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Доступная ГКЛ-основа для чистовой отделки." },
   ),
@@ -247,7 +237,7 @@ const products: Record<string, DealerCatalogProduct> = {
     "Панели на прочной ГСП-основе для нагруженных интерьеров с ПВХ- и HPL-покрытием.",
     catalogImages.wallGspHpl,
     [
-      child("wall-gsp-pvc", "Стеновые панели WINAL™ ГСП ПВХ", "Доступные панели на ГСП-основе с ПВХ-ламинацией.", "/images/catalog/cards/wall-gsp-pvc.webp", "WINAL™ ГСП ПВХ", undefined, "wall_gsp_pvc_modal"),
+      child("wall-gsp-pvc", "Стеновые панели WINAL™ ГСП ПВХ", "Доступные панели на ГСП-основе с ПВХ-ламинацией.", asset("/images/catalog/cards/wall-gsp-pvc.webp"), "WINAL™ ГСП ПВХ", undefined, "wall_gsp_pvc_modal"),
       child("wall-gsp-hpl", "Стеновые панели WINAL™ ГСП HPL", "Доступные стеновые панели на ГСП-основе с HPL-покрытием.", catalogImages.wallGspHpl, "WINAL™ ГСП HPL", undefined, "wall_gsp_hpl_modal"),
     ],
     { contextTitle: "Стеновые панели", contextSubtitle: "Прочная ГСП-основа для нагруженных интерьеров." },
@@ -256,13 +246,13 @@ const products: Record<string, DealerCatalogProduct> = {
     "family-slat-wall-panels",
     "Реечные стеновые панели",
     "Декоративные рейки для выразительных стеновых акцентов и архитектурного ритма.",
-    "/images/catalog/cards/slat-sml-acryl.webp",
+    asset("/images/catalog/cards/slat-sml-acryl.webp"),
     [
       child(
         "slat-sml-acryl",
         "Реечные панели WINAL™ СМЛ Акрил",
         "Реечные панели на СМЛ-основе с окраской акрилом.",
-        "/images/catalog/cards/slat-sml-acryl.webp",
+        asset("/images/catalog/cards/slat-sml-acryl.webp"),
         "СМЛ Акрил",
         undefined,
         "slat_sml_acryl_modal",
@@ -271,7 +261,7 @@ const products: Record<string, DealerCatalogProduct> = {
         "slat-sml-pvc",
         "Реечные панели WINAL™ СМЛ ПВХ",
         "Реечные панели на СМЛ-основе с ПВХ-ламинацией.",
-        "/images/catalog/cards/slat-sml-pvc.webp",
+        asset("/images/catalog/cards/slat-sml-pvc.webp"),
         "СМЛ ПВХ",
         undefined,
         "slat_sml_pvc_modal",
@@ -280,7 +270,7 @@ const products: Record<string, DealerCatalogProduct> = {
         "slat-sml-hpl",
         "Реечные панели WINAL™ СМЛ HPL",
         "Реечные панели на СМЛ-основе с HPL-покрытием.",
-        "/images/catalog/cards/slat-sml-hpl.webp",
+        asset("/images/catalog/cards/slat-sml-hpl.webp"),
         "СМЛ HPL",
         undefined,
         "slat_sml_hpl_modal",
@@ -372,6 +362,8 @@ const products: Record<string, DealerCatalogProduct> = {
   "soundcore-25": { id: "soundcore-25", title: "WINAL™ Soundcore 25", description: "Акустические панели из древесного волокна для стен общественных пространств.", image: catalogImages.soundcore25, action: "soundcore_25_modal", objectPosition: "right center", contextTitle: "Акустические панели", contextSubtitle: "Стеновые акустические панели из древесного волокна." },
   "urban-w": { id: "urban-w", title: "WINAL™ Urban W", description: "Металлические стеновые панели с минеральным звукопоглощающим наполнителем.", image: dealerCatalogImageAssets.cardUrban, action: "urban_w_modal", contextTitle: "Акустические панели", contextSubtitle: "Металлические стеновые решения с минеральным наполнителем." },
   "urban-c": { id: "urban-c", title: "WINAL™ Urban C", description: "Металлические потолочные панели с минеральным звукопоглощающим наполнителем.", image: catalogImages.urbanC, action: "urban_c_modal", contextTitle: "Акустические панели", contextSubtitle: "Металлические потолочные решения с минеральным наполнителем." },
+  wallpro: { id: "wallpro", title: "WINAL™ WallPro", description: "Готовые каркасные перегородки на СМЛ и ГКЛ для звукоизоляции помещений: Rw 58–64 дБ, сухая сборка, декоры поверхности.", image: dealerCatalogImageAssets.cardWallPro, action: "wallpro_modal", contextTitle: "Каркасные перегородки", contextSubtitle: "Звукоизоляция помещений и сухая сборка." },
+  "winal-isol": { id: "winal-isol", title: "WINAL™ Isol", description: "Звукоизоляционный наполнитель из минерального волокна для каркасных перегородок и облицовок.", image: catalogImages.winisol, action: "winisol_modal", contextTitle: "Звукоизоляционный наполнитель", contextSubtitle: "Минеральное волокно, плиты 50, 75 и 100 мм." },
   ufr: { id: "ufr", title: "UFR-печать на панелях и профилях", description: "Индивидуальная графика, навигация и декор на панелях и профилях открытого крепления.", image: catalogImages.ufr, action: "ufr_print_modal", contextTitle: "UFR печать", contextSubtitle: "Графика, навигация и декор на совместимых поверхностях." },
 };
 
@@ -416,10 +408,10 @@ function projectForTab(tabId: DealerCatalogTabId, ...ids: string[]): DealerCatal
 }
 
 export const dealerCatalogProductsByTab: Record<DealerCatalogTabId, DealerCatalogProduct[]> = {
-  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "family-winal-mute"),
-  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "rhythm-wall", "family-slat-wall-panels", "minwin", "family-wisound", "cloud-w", "soundcore-25", "urban-w", "ufr", "radius-solutions"),
+  acoustic: projectForTab("acoustic", "family-wisound", "family-cloud-system", "family-soundcore", "family-urban", "wallpro", "winal-isol"),
+  wall: projectForTab("wall", "family-wall-sml", "family-wall-gkl", "family-wall-gsp", "radius-solutions", "ufr", "rhythm-wall", "family-slat-wall-panels", "minwin", "family-wisound", "cloud-w", "soundcore-25", "urban-w"),
   ceiling: projectForTab("ceiling", "family-ceiling-sml", "family-ceiling-gypsum", "family-wisound", "family-cloud-system", "soundcore-14", "urban-c"),
-  system: projectForTab("system", "family-winal-mute", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "ufr"),
+  system: projectForTab("system", "wallpro", "winal-isol", "family-invisible", "family-profiles", "family-plinths", "family-radiator-screens", "ufr", "radius-solutions"),
 };
 
 export function isDealerCatalogModalAction(action: DealerCatalogAction | undefined): boolean {

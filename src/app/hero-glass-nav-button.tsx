@@ -1,8 +1,9 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { dealerMotionTransform } from "@/app/dealer-motion";
 
-const CHEVRON_RIGHT_GLASS = "/images/home/cases/ui/chevron-right-glass.svg";
+const CHEVRON_RIGHT_GLASS = asset("/images/home/cases/ui/chevron-right-glass.svg");
 
 export function HeroGlassNavButton({
   ariaLabel,

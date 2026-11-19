@@ -31,7 +31,7 @@
   inset: -24px -140px auto auto;
   width: min(56vw, 760px);
   aspect-ratio: 1;
-  background: url("/images/home/decor-w-left.webp") no-repeat right top /
+  background: url("../../../../public/images/home/decor-w-left.webp") no-repeat right top /
     contain;
   opacity: 0.16;
   pointer-events: none;
@@ -1476,8 +1476,8 @@
   border-radius: 0;
   border: 0;
   background: var(--dealer-surface-white);
-  -webkit-mask-image: url(/images/home/surface-main-mask.svg);
-  mask-image: url(/images/home/surface-main-mask.svg);
+  -webkit-mask-image: url(../../../../public/images/home/surface-main-mask.svg);
+  mask-image: url(../../../../public/images/home/surface-main-mask.svg);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;

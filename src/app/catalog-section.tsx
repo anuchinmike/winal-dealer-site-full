@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type RefObject } from "react";
 import { useLenis } from "lenis/react";
@@ -17,7 +19,7 @@ import {
   type CatalogSidebarFeature,
 } from "../data/dealer-catalog-sidebar";
 
-const CATALOG_IMAGES = "/images/catalog";
+const CATALOG_IMAGES = asset("/images/catalog");
 
 const catalogAssets = {
   bullet: `${CATALOG_IMAGES}/bullet.svg`,
@@ -484,21 +486,18 @@ function scrollToProjectForm(lenis: ReturnType<typeof useLenis>) {
 }
 
 function CatalogSidebarCta() {
-  const lenis = useLenis();
-
   return (
     <div className="catalog-sidebar-cta mt-auto shrink-0 flex justify-start">
-      <button
-        type="button"
+      <Link
+        href="/catalog"
         className="catalog-sidebar-cta-btn inline-flex min-w-40 items-center justify-center gap-2 rounded px-12 py-3"
         style={{ background: "var(--dealer-color-brand-primary)" }}
-        onClick={() => scrollToProjectForm(lenis)}
       >
         <span className="text-xs font-semibold leading-normal text-dealer-brand-white whitespace-nowrap">
-          Обсудить проект
+          Открыть каталог
         </span>
         <img src={catalogAssets.arrowWhite} alt="" width={12} height={10} className="h-[10px] w-3" />
-      </button>
+      </Link>
     </div>
   );
 }

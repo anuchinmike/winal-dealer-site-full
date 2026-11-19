@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import Image from "next/image";
 import { type CSSProperties, type MouseEvent, useEffect, useState } from "react";
@@ -19,7 +20,7 @@ const solutions = [
 
 type SolutionId = (typeof solutions)[number]["id"];
 
-const cutout = (id: string) => "/images/complex-approach-v2/" + id + "-cutout.webp";
+const cutout = (id: string) => asset("/images/complex-approach-v2/") + id + "-cutout.webp";
 const num = (i: number) => String(i + 1).padStart(2, "0");
 
 // Повторный клик по той же вкладке каталога: хэш не меняется, поэтому шлём hashchange сами.
@@ -83,7 +84,7 @@ export function ComplexApproachInterior({ catalogBase = "" }: { catalogBase?: st
           </p>
           <a href={catalogBase + "#project-form"} className={["dealer-btn-primary", styles.button].join(" ")}>
             Подобрать комплектацию
-            <Image src="/images/home/arrow-white.svg" alt="" width={12} height={10} />
+            <Image src={asset("/images/home/arrow-white.svg")} alt="" width={12} height={10} />
           </a>
         </div>
       </header>
@@ -92,7 +93,7 @@ export function ComplexApproachInterior({ catalogBase = "" }: { catalogBase?: st
         <div className={styles.scene}>
           <div className={styles.frame}>
             <Image
-              src="/images/complex-approach-v1/hero.webp"
+              src={asset("/images/complex-approach-v1/hero.webp")}
               alt="Лобби бизнес-центра со стеновыми и потолочными панелями WINAL, акустическими островами, скрытой дверью и экранами радиаторов"
               width={1860}
               height={846}
@@ -146,7 +147,7 @@ export function ComplexApproachInterior({ catalogBase = "" }: { catalogBase?: st
               <p>{current.text}</p>
               <a href={catalogBase + "#catalog-" + current.tab} onClick={repeatCatalogNavigation} className={styles.detailLink}>
                 Смотреть в каталоге
-                <Image src="/images/home/arrow-blue.svg" alt="" width={12} height={10} />
+                <Image src={asset("/images/home/arrow-blue.svg")} alt="" width={12} height={10} />
               </a>
             </div>
           </div>

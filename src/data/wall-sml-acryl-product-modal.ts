@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export type WallSmlAcrylFeature = {
   icon: string;
   title: string;
@@ -25,7 +26,7 @@ export type WallSmlAcrylGalleryImage = {
   caption: string;
 };
 
-const BASE = "/images/product-modal/wall-sml-acryl";
+const BASE = asset("/images/product-modal/wall-sml-acryl");
 const COATINGS = `${BASE}/coatings`;
 const GALLERY = `${BASE}/gallery`;
 
@@ -104,13 +105,13 @@ export const wallSmlAcrylModalAssets = {
     { src: `${GALLERY}/med-paneli-sml-list-okrashenni-ral-9003-2.webp`, caption: "Медицинские панели для стен окрашенный СМЛ лист премиум, отбойная доска ламинированная ПВХ или HPL. Онкологическая больница поликлиника Тула" },
   ] as const,
   ralChart: `${BASE}/ral-chart.webp`,
-  closeIcon: "/images/product-modal/rythmwall/icon-close.webp",
+  closeIcon: asset("/images/product-modal/rythmwall/icon-close.webp"),
   arrows: {
-    white: "/images/product-modal/rythmwall/arrow-white.svg",
-    blue: "/images/product-modal/rythmwall/arrow-blue.svg",
+    white: asset("/images/product-modal/rythmwall/arrow-white.svg"),
+    blue: asset("/images/product-modal/rythmwall/arrow-blue.svg"),
   },
   icons: {
-    fire: "/images/product-modal/icons/winal-flame.svg",
+    fire: asset("/images/product-modal/icons/winal-flame.svg"),
     uv: `${BASE}/icon-hero-uv.svg`,
     moisture: `${BASE}/icon-hero-moisture.svg`,
     color: `${BASE}/icon-hero-color.svg`,
@@ -157,7 +158,7 @@ export const wallSmlAcrylProductModal = {
   coatingTitle: "Покрытия",
   coatingGroups: [
     {
-      chip: "Акриловые 3D",
+      chip: "Акрил 3D",
       swatches: [
         { id: "akril-stelo-1", image: `${COATINGS}/3d/akril-stelo-1.webp`, label: "Кристалл гласс 3D" },
         { id: "akril-stelo-2", image: `${COATINGS}/3d/akril-stelo-2.webp`, label: "Кристалл гласс 3D" },
@@ -176,7 +177,7 @@ export const wallSmlAcrylProductModal = {
       ],
     },
     {
-      chip: "Акриловые древесные",
+      chip: "Акрил дерево",
       swatches: [
         { id: "akril-polimer-soft-tach-dub-kompinteri", image: `${COATINGS}/wood/akril-polimer-soft-tach-dub-kompinteri.webp`, label: "Дуб Компинтери" },
         { id: "akril-uf-oreh-temni", image: `${COATINGS}/wood/akril-uf-oreh-temni.webp`, label: "Орех Темный" },
@@ -197,7 +198,7 @@ export const wallSmlAcrylProductModal = {
       ],
     },
     {
-      chip: "Акриловые бетон",
+      chip: "Акрил бетон",
       swatches: [
         { id: "beton-beli-1", image: `${COATINGS}/concrete/beton-beli-1.webp`, label: "Бетон белый" },
         { id: "beton_7038-1", image: `${COATINGS}/concrete/beton_7038-1.webp`, label: "Бетон 7038" },
