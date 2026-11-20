@@ -27,6 +27,34 @@ export const WALL_GKL_POLYMER_PRODUCT_MODAL_ID = "wall-gkl-polymer-product-modal
 export const wallGklPolymerModalAssets = {
   gallery: [
     {
+      src: `${GALLERY}/gkl-polymer-shagreen-seryj.webp`,
+      caption: "WINAL™ ГКЛ Полимер: Серый полимер с фактурой шагрени",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-high-glow-bordo.webp`,
+      caption: "WINAL™ ГКЛ Полимер: High Glow, бордо",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-karbon-sinij.webp`,
+      caption: "WINAL™ ГКЛ Полимер: Синий карбон",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-polytech-shampan.webp`,
+      caption: "WINAL™ ГКЛ Полимер: Polytech, шампань",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-polytech-sinij.webp`,
+      caption: "WINAL™ ГКЛ Полимер: Polytech, синий",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-high-glow-grafit.webp`,
+      caption: "WINAL™ ГКЛ Полимер: High Glow, графит",
+    },
+    {
+      src: `${GALLERY}/gkl-polymer-high-glow-bordo-2.webp`,
+      caption: "WINAL™ ГКЛ Полимер: High Glow, бордо",
+    },
+    {
       src: `${GALLERY}/sten-panel-sml-winal-high-glow-premium-1.webp`,
       caption: GKL_GALLERY_CAPTION,
     },
