@@ -417,7 +417,7 @@ export function ProductPageContent({ product, links }: { product: ProductPageDat
       {links.related?.cards.length ? (
         <section aria-labelledby="related-title" className="flex flex-col gap-5">
           <SectionHeading id="related-title" title={links.related.title} />
-          <CardGrid cards={links.related.cards} columns={4} />
+          <CardGrid cards={links.related.cards} columns={4} compact />
         </section>
       ) : null}
     </div>

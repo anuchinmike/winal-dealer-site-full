@@ -23,7 +23,9 @@ export type PageCardData = {
   chips?: readonly string[];
 };
 
-export function PageCard({ card, headingLevel = 3 }: { card: PageCardData; headingLevel?: 2 | 3 }) {
+/** `compact`: on phones the card keeps the image, title and product list; the description shows from md up
+ *  (used in «Ещё в разделе», where 8 full cards made a very long column on a phone — Mikhail, 20.11). */
+export function PageCard({ card, headingLevel = 3, compact = false }: { card: PageCardData; headingLevel?: 2 | 3; compact?: boolean }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <Link
@@ -37,7 +39,7 @@ export function PageCard({ card, headingLevel = 3 }: { card: PageCardData; headi
       <span className="flex flex-1 flex-col gap-2 p-4 md:p-5">
         {card.kicker ? <span className="text-xs font-semibold text-dealer-text-muted">{card.kicker}</span> : null}
         <Heading className="text-lg font-semibold leading-6 text-dealer-text-primary md:text-xl">{card.title}</Heading>
-        {card.description ? <span className="text-sm font-medium leading-5 text-dealer-text-description">{card.description}</span> : null}
+        {card.description ? <span className={`${compact ? "hidden md:block " : ""}text-sm font-medium leading-5 text-dealer-text-description`}>{card.description}</span> : null}
         {card.chips?.length ? (
           <span className="mt-auto flex flex-wrap gap-1.5 pt-2">
             {card.chips.map((chip) => (
@@ -52,13 +54,13 @@ export function PageCard({ card, headingLevel = 3 }: { card: PageCardData; headi
   );
 }
 
-export function CardGrid({ cards, columns = 3 }: { cards: readonly PageCardData[]; columns?: 2 | 3 | 4 }) {
+export function CardGrid({ cards, columns = 3, compact = false }: { cards: readonly PageCardData[]; columns?: 2 | 3 | 4; compact?: boolean }) {
   const cols = { 2: "sm:grid-cols-2", 3: "sm:grid-cols-2 xl:grid-cols-3", 4: "grid-cols-2 md:grid-cols-3 xl:grid-cols-4" }[columns];
   return (
     <ul className={`grid gap-3 md:gap-6 ${cols}`}>
       {cards.map((card) => (
         <li key={card.href}>
-          <PageCard card={card} />
+          <PageCard card={card} compact={compact} />
         </li>
       ))}
     </ul>

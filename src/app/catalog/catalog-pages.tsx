@@ -235,7 +235,7 @@ export function FamilyPageContent({ family }: { family: ProductFamily }) {
             Весь раздел →
           </Link>
         </div>
-        <CardGrid cards={sectionCards(section, family.catalogId).slice(0, 8)} columns={4} />
+        <CardGrid cards={sectionCards(section, family.catalogId).slice(0, 8)} columns={4} compact />
       </section>
     </div>
   );
