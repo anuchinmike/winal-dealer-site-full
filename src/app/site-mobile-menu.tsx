@@ -3,10 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import { asset } from "@/lib/asset";
+import { SiteHeaderNav } from "@/app/site-header-nav";
 
-// Burger menu of the site header below the lg breakpoint, where the inline nav is hidden.
+// Меню шапки ниже 1280px, где строчное меню скрыто (шапка М3, как на dev.dealer.winal.ru):
+// в полосе слева контакты, справа кнопка «Меню»; логотип и пункты — в раскрытой панели.
 
-export function SiteMobileMenu({ items, cta, phone, phoneHref }: { items: readonly { label: string; href: string }[]; cta: string; phone: string; phoneHref: string }) {
+export function SiteMobileMenu({ cta }: { cta: string }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -43,40 +46,27 @@ export function SiteMobileMenu({ items, cta, phone, phoneHref }: { items: readon
         aria-controls={panelId}
         aria-label={open ? "Закрыть меню" : "Открыть меню"}
         onClick={() => setOpen((value) => !value)}
-        className="flex size-10 shrink-0 items-center justify-center rounded border border-[var(--dealer-border-brand-soft)] text-dealer-brand-primary lg:hidden"
+        className="dealer-site-menu-btn"
       >
-        <svg aria-hidden viewBox="0 0 20 20" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-          {open ? <path d="m5 5 10 10M15 5 5 15" /> : <path d="M3 6h14M3 10h14M3 14h14" />}
-        </svg>
+        {open ? null : <span className="dealer-site-menu-label">Меню</span>}
+        <img src={asset("/images/home/decor-glass-logo.webp")} alt="" width={40} height={40} className="dealer-site-menu-img" />
       </button>
       <div
         id={panelId}
         hidden={!open}
-        className="absolute inset-x-0 top-[calc(100%+8px)] z-50 rounded-lg bg-dealer-brand-white p-2 lg:hidden"
+        className="dealer-site-menu-panel absolute inset-x-0 top-[calc(100%+8px)] z-50 rounded-lg bg-dealer-brand-white px-5 py-3"
         style={{ boxShadow: "var(--dealer-shadow-glass)" }}
       >
+        <Link href="/" aria-label="WINAL, на главную" onClick={() => setOpen(false)} className="mb-2 inline-flex py-2">
+          <img src={asset("/images/home/header-logo.svg")} alt="WINAL — панели для внутренней отделки" width={214} height={48} className="h-9 w-auto" />
+        </Link>
         <nav aria-label="Меню">
-          <ul className="flex flex-col">
-            {items.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="flex min-h-12 items-center rounded px-4 text-base font-semibold text-dealer-text-primary transition-colors hover:bg-dealer-brand-primary/5 hover:text-dealer-brand-primary"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <SiteHeaderNav onNavigate={() => setOpen(false)} />
         </nav>
-        <a href={phoneHref} className="mt-1 flex min-h-12 items-center border-t border-dealer-brand-decoration px-4 text-base font-semibold text-dealer-brand-primary">
-          {phone}
-        </a>
         <a
           href="#project-form"
           onClick={() => setOpen(false)}
-          className="m-2 flex h-11 items-center justify-center rounded bg-dealer-brand-primary text-sm font-semibold text-dealer-brand-white sm:hidden"
+          className="mt-2 flex h-11 items-center justify-center rounded bg-dealer-brand-primary text-sm font-semibold text-dealer-brand-white sm:hidden"
         >
           {cta}
         </a>

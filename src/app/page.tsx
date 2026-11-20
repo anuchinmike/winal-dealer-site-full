@@ -344,6 +344,7 @@ function DesignCard({ label, caption, image, imageStyle }: DesignCardProps) {
 function DesignSection() {
   return (
     <section
+      id="design"
       data-header-density-trigger
       className="dealer-design-section dealer-section-glass flex h-[1034px] w-368 max-w-full flex-col items-center rounded-lg p-12"
     >
