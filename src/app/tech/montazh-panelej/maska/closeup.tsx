@@ -2,6 +2,7 @@
 import { asset } from "@/lib/asset";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   flySrc,
   sqSrc,
@@ -270,7 +271,11 @@ export function CloseUp({ k, mobile = false }: { k: KartaState; mobile?: boolean
     };
   }, [mobile, on]);
 
-  return (
+  // Телефон: слой во весь экран — порталом в <body>, иначе fixed считается от стеклянной секции
+  // (mobile приходит из useMobile только после монтирования, так что при гидрации портала нет)
+  const portalHost = mobile && typeof document !== "undefined" ? document.body : null;
+
+  const layer = (
     <div
       className={`${cu.root} ${on ? cu.on : ""} ${mobile ? cu.mobile : ""}`}
       data-montazh-closeup=""
@@ -454,4 +459,7 @@ export function CloseUp({ k, mobile = false }: { k: KartaState; mobile?: boolean
       </div>
     </div>
   );
+
+  if (mobile) return portalHost ? createPortal(layer, portalHost) : null;
+  return layer;
 }

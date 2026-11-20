@@ -176,21 +176,21 @@ function FeatureOverlayCard({
         boxShadow: "var(--dealer-shadow-glass)",
       }}
     >
-      <div className="relative flex h-full w-full flex-col items-end justify-between overflow-hidden rounded-lg p-3">
-        <img src={image} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full rounded-lg object-cover" style={imageStyle} />
+      <div className="dealer-surface-feature-inner relative flex h-full w-full flex-col items-end justify-between overflow-hidden rounded-lg p-3">
+        <img src={image} alt="" loading="lazy" decoding="async" className="dealer-surface-feature-img absolute inset-0 size-full rounded-lg object-cover" style={imageStyle} />
         {scrim ? (
           <div
-            className="absolute inset-0 rounded-lg"
+            className="dealer-surface-feature-scrim absolute inset-0 rounded-lg"
             style={{ background: "var(--dealer-surface-image-scrim-soft)" }}
           />
         ) : null}
         <div
-          className="relative flex items-center rounded p-[6px] backdrop-blur-[10px]"
+          className="dealer-surface-feature-icon relative flex items-center rounded p-[6px] backdrop-blur-[10px]"
           style={{ background: "var(--dealer-surface-white)", boxShadow: "var(--dealer-shadow-icon-float)" }}
         >
           <img src={icon} alt="" width={20} height={20} className="size-5" />
         </div>
-        <div className="relative flex w-full flex-col items-end gap-[10px] py-3">
+        <div className="dealer-surface-feature-text relative flex w-full flex-col items-end gap-[10px] py-3">
           <h4 className="dealer-text-trim text-right text-base font-semibold leading-[0.85] text-dealer-brand-white whitespace-pre-line">
             {title}
           </h4>

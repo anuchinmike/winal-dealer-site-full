@@ -2885,3 +2885,267 @@ img {
     display: none;
   }
 }
+
+/* ==== Phones (≤767px): mobile review 20.11 ====
+   Header: a slim frosted app bar with the wordmark and the menu button instead of a
+   floating glass logo that sat on top of headings, cards and form fields. */
+@media (max-width: 767px) {
+  :root {
+    --dealer-header-top: 0px;
+    --dealer-header-inner-h: 56px;
+    --dealer-header-glass-size: 40px;
+    --dealer-header-glass-frame: 44px;
+  }
+
+  .dealer-home-stack {
+    padding-top: 0;
+  }
+
+  .dealer-sticky-header[data-compact="true"],
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) {
+    height: var(--dealer-header-inner-h);
+    padding: 0 var(--dealer-header-pad-x);
+    background: rgba(255, 255, 255, 0.96);
+    border: 0;
+    border-bottom: 1px solid var(--dealer-border-glass);
+    border-radius: 0;
+    box-shadow: 0 1px 12px rgba(0, 9, 18, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dealer-sticky-header[data-compact="true"] .dealer-header-shell,
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-shell {
+    grid-template-columns: 1fr auto;
+    height: var(--dealer-header-inner-h);
+    min-height: 0;
+  }
+
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-logo-cell {
+    position: static;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    overflow: visible;
+  }
+
+  .dealer-sticky-header[data-compact="true"] .dealer-header-logo {
+    width: 116px;
+    height: 26px;
+  }
+
+  .dealer-sticky-header[data-compact="true"]:not([data-expanded="true"]) .dealer-header-glass-btn,
+  .dealer-sticky-header[data-compact="true"] .dealer-header-glass-btn {
+    animation: none;
+    flex-direction: row-reverse;
+    gap: 6px;
+    width: auto;
+    height: 44px;
+    min-width: 44px;
+    padding: 0 0 0 8px;
+  }
+
+  .dealer-header-menu-label {
+    font-size: 11px;
+  }
+
+  .dealer-header-glass-img {
+    margin-top: 0;
+  }
+
+  .dealer-sticky-header[data-compact="true"][data-expanded="true"] .dealer-header-nav-cell {
+    margin-top: 0;
+    border-radius: 0 0 var(--dealer-radius-sm) var(--dealer-radius-sm);
+  }
+
+  /* Anchor jumps land below the bar */
+  [id] {
+    scroll-margin-top: calc(var(--dealer-header-inner-h) + 12px);
+  }
+}
+
+/* Surface section on phones: the four non-clickable photo plaques (≈1100px of scroll) become a
+   compact feature list — a small photo, the title and one line — and the three proof points
+   sit in one row. Production feedback 20.11: "big non-clickable plaques clutter the screen". */
+@media (max-width: 767px) {
+  .dealer-surface-section {
+    padding: 24px 16px;
+  }
+
+  .dealer-surface-row {
+    gap: 0;
+  }
+
+  .dealer-surface-text-col {
+    gap: 24px;
+  }
+
+  .dealer-surface-stats-row,
+  .dealer-surface-text-col .dealer-surface-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 8px;
+  }
+
+  .dealer-surface-text-col .dealer-surface-stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .dealer-surface-text-col .dealer-surface-stat > div:first-child {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+
+  .dealer-surface-text-col .dealer-surface-stat-copy {
+    flex-direction: column;
+    white-space: normal;
+    gap: 2px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .dealer-surface-features {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 24px;
+    border-top: 1px solid var(--dealer-color-brand-decoration);
+  }
+
+  .dealer-surface-feature-card.dealer-surface-feature-card {
+    aspect-ratio: auto;
+    padding: 12px 0;
+    border-radius: 0;
+    overflow: visible;
+    background: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid var(--dealer-color-brand-decoration);
+  }
+
+  .dealer-surface-feature-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 0;
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .dealer-surface-feature-img {
+    position: static;
+    flex: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+  }
+
+  .dealer-surface-feature-scrim,
+  .dealer-surface-feature-icon {
+    display: none;
+  }
+
+  .dealer-surface-feature-text {
+    flex: 1;
+    min-width: 0;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .dealer-surface-feature-text h4 {
+    white-space: normal;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--dealer-color-text-primary);
+  }
+
+  .dealer-surface-feature-text p {
+    width: auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--dealer-color-text-description);
+  }
+}
+
+/* Catalogue on phones: the products come straight after the tabs. The category heading and
+   intro stay in the markup for screen readers only (production feedback 20.11). */
+@media (max-width: 767px) {
+  [data-catalog-lab] .catalog-sidebar-header {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* Touch baseline (mobile review 20.11): no grey tap flash, no font inflation in landscape,
+   and taps on controls fire without the double-tap-zoom wait. Press feedback stays on :active. */
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+a,
+button,
+[role="button"],
+select,
+summary,
+label {
+  touch-action: manipulation;
+}
+
+/* Phones: long stacks of image cards become swipeable rails (native scroll + snap), with the
+   next card peeking so the swipe is discoverable. Custom finishes: 4 × 575px cards → one row. */
+@media (max-width: 767px) {
+  .dealer-design-cards-row.dealer-design-cards-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 4px 2px 12px;
+  }
+
+  .dealer-design-cards-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dealer-design-cards-row > .dealer-design-card {
+    flex: 0 0 78%;
+    width: 78%;
+    aspect-ratio: 4 / 5;
+    scroll-snap-align: start;
+  }
+
+  .dealer-design-container.dealer-design-container {
+    gap: 24px;
+  }
+}
+
+/* Footer cards on phones no longer touch the screen edges */
+@media (max-width: 767px) {
+  .dealer-footer.dealer-footer {
+    width: calc(100% - 32px);
+    margin-inline: auto;
+    gap: 16px;
+  }
+}
