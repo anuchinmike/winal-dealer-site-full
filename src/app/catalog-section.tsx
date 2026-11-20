@@ -570,6 +570,7 @@ export function CatalogSection({ variant = "page" }: { variant?: "page" | "lab" 
   return (
     <section
       ref={sectionRef}
+      id="catalog"
       data-catalog-section
       {...(variant === "lab"
         ? // Зеркалит JS-состояние compact для QA: должно совпадать с медиазапросом в globals.css.
