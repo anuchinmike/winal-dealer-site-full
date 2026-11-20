@@ -555,9 +555,19 @@
 }
 /* Телефон: слой на весь экран, кадр сверху во всю ширину, площадка ниже, прокрутка внутри слоя */
 .mobile {
+  /* На телефоне слой рендерится порталом в <body> (20.11): внутри секции position: fixed
+     привязывался к стеклянной панели с backdrop-filter, и крупный кадр обрезался её высотой.
+     Поэтому токены экрана монтажа (.page в montazh.module.css) задаём здесь же. */
+  --fast: 200ms;
+  --slide: 300ms;
+  --label-ms: 600ms;
+  --ease: var(--dealer-motion-easing);
+  --ink-glass: linear-gradient(160deg, rgba(0, 9, 18, 0.78) 0%, rgba(0, 9, 18, 0.56) 100%);
   position: fixed;
   inset: 0;
-  z-index: 60;
+  z-index: 70;
+  font-family: var(--dealer-font-family);
+  color: var(--dealer-color-text-primary);
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
@@ -580,7 +590,7 @@
   flex-direction: column;
   gap: 20px;
   min-height: 100%;
-  padding: 16px 16px 40px;
+  padding: 16px 16px calc(88px + env(safe-area-inset-bottom, 0px));
 }
 .mobile .frame {
   width: 100%;
@@ -630,10 +640,15 @@
 .mobile .profileTagName {
   font-size: 15px;
 }
+/* Выход в комнату на телефоне всегда под рукой: кнопка закреплена внизу экрана,
+   пока листается длинная колонка с вариантами (20.11) */
 .mobile .back {
-  bottom: 12px;
-  left: 12px;
-  height: 40px;
+  position: fixed;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  left: 16px;
+  z-index: 3;
+  height: 44px;
+  box-shadow: 0 6px 20px rgba(0, 9, 18, 0.25);
 }
 .mobile.on .back {
   transition-delay: 300ms;

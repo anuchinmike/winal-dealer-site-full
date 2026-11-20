@@ -46,7 +46,9 @@ export function MaskaScreen({ embedded = false }: { embedded?: boolean }) {
   const guide = (
     <div className={styles.roomGuide}>
       {/* «← Вся комната» — на кадре слева снизу (Михаил 14.11); пока узел открыт, подсказку не показываем */}
-      <p id="montazh-help">{marker ? "" : "Выберите точку в комнате, чтобы рассмотреть узел и варианты его исполнения."}</p>
+      <p id="montazh-help">{marker ? "" : mobile
+        ? "Нажмите на точку в комнате или выберите узел в списке, чтобы увидеть его подробнее."
+        : "Выберите точку в комнате, чтобы рассмотреть узел и варианты его исполнения."}</p>
       <label className={styles.nodePicker}>
         <span>Узел</span>
         <select aria-label="Выбрать узел монтажа" value={marker?.id ?? ""} onChange={(e) => select(e.target.value || null)}>

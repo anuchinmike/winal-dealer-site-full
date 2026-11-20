@@ -639,15 +639,15 @@ function StickyHeader({
     >
       <div className="dealer-header-shell">
         <div className="dealer-header-logo-cell dealer-header-main">
-          {showMain ? (
-            <img
-              src={assets.headerLogo}
-              alt="WINAL"
-              width={214}
-              height={48}
-              className="dealer-header-logo"
-            />
-          ) : null}
+          {/* Always rendered: phones keep the wordmark in a slim app bar while the header is compact;
+              on desktop the compact state hides this cell via CSS. */}
+          <img
+            src={assets.headerLogo}
+            alt="WINAL"
+            width={214}
+            height={48}
+            className="dealer-header-logo"
+          />
         </div>
         <nav className="dealer-header-nav-cell dealer-header-main" aria-label="Основная навигация">
           {showMain ? (
