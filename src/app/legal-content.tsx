@@ -13,13 +13,13 @@ export const CONSENT_HREF = "/consent";
 /** A field of the operator that is not filled in yet. */
 function Field({ value, name }: { value: string; name: string }) {
   if (value) return <>{value}</>;
-  return <mark className="rounded bg-[#fff3c4] px-1 text-dealer-text-primary">[{name}]</mark>;
+  return <span className="text-dealer-text-description">[{name}]</span>;
 }
 
 export function OperatorLine() {
   return (
     <>
-      <Field value={legal.operator} name="наименование оператора" />, ИНН <Field value={legal.inn} name="ИНН" />, ОГРН{" "}
+      <Field value={legal.operator} name="наименование дилера" />, ИНН <Field value={legal.inn} name="ИНН" />, ОГРН{" "}
       <Field value={legal.ogrn} name="ОГРН" />, адрес: <Field value={legal.address} name="юридический адрес" />
     </>
   );
@@ -28,8 +28,8 @@ export function OperatorLine() {
 export function DraftBanner() {
   if (legal.approved) return null;
   return (
-    <p role="note" className="rounded-lg border border-[#e5c96b] bg-[#fffaf0] p-4 text-sm font-medium leading-5 text-dealer-text-secondary">
-      Проект документа. Дилер утверждает текст под свой фактический порядок обработки данных и заполняет выделенные реквизиты до запуска сайта.
+    <p role="note" className="rounded-lg border border-[var(--dealer-border-brand-soft)] bg-dealer-brand-white p-4 text-sm font-medium leading-5 text-dealer-text-secondary">
+      Шаблон документа. Реквизиты оператора подставляются для каждого дилера при запуске его сайта.
     </p>
   );
 }
