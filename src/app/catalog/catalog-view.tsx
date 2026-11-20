@@ -103,8 +103,10 @@ export function CatalogView() {
             className="h-10 w-full rounded border border-[var(--dealer-border-brand-soft)] bg-dealer-brand-white pl-9 pr-3 text-sm font-medium text-dealer-text-primary outline-none placeholder:text-dealer-text-description focus-visible:border-dealer-brand-primary"
           />
         </label>
-        <nav aria-label="Разделы каталога" className="-mx-2 min-w-0 overflow-x-auto px-2 lg:order-1 lg:mx-0 lg:px-0">
-          <ul className="flex w-max gap-1">
+        {/* Below lg all four sections are visible at once (2×2 on phones, one row from sm) instead of a
+            sideways strip where only the first one and a half fitted (Mikhail, 20.11). */}
+        <nav aria-label="Разделы каталога" className="min-w-0 lg:order-1">
+          <ul className="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:w-max">
             {catalogPageSections.map((section) => (
               <li key={section.id}>
                 <a
@@ -116,11 +118,12 @@ export function CatalogView() {
                     update("");
                     requestAnimationFrame(() => document.getElementById(section.anchor)?.scrollIntoView());
                   }}
-                  className="flex h-10 items-center gap-2 whitespace-nowrap rounded px-3 text-sm font-semibold text-dealer-text-secondary transition-colors hover:bg-dealer-brand-primary/10 hover:text-dealer-brand-primary"
+                  className="flex h-10 items-center gap-2 whitespace-nowrap rounded bg-dealer-brand-white px-3 text-sm font-semibold text-dealer-text-secondary lg:bg-transparent transition-colors hover:bg-dealer-brand-primary/10 hover:text-dealer-brand-primary"
                 >
                   <img src={section.icon} alt="" width={20} height={20} className="h-5 w-5" />
-                  {section.label}
-                  <span className="text-dealer-text-description">{section.productCount}</span>
+                  <span className="lg:hidden">{section.label.split(" ")[0]}</span>
+                  <span className="hidden lg:inline">{section.label}</span>
+                  <span className="ml-auto text-dealer-text-description lg:ml-0">{section.productCount}</span>
                 </a>
               </li>
             ))}
